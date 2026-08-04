@@ -1,6 +1,14 @@
 # Ligen Power Website
 
+**Current version: `0.0.1`**
+
 Ligen Power's public website and lightweight content-management dashboard. The project uses static HTML/CSS/JavaScript for the storefront and PHP/JSON endpoints for dynamic products, datasheets, news, events, FAQs, enquiries, and blog content.
+
+## Release
+
+### 0.0.1
+
+Initial managed website release with the professional product catalogue, dynamic datasheets, News & Events publishing, FAQ management, persistent admin navigation, and the refreshed LFP battery catalogue.
 
 ## Requirements
 
