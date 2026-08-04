@@ -804,6 +804,35 @@
         }
     }
 
+    function loadDynamicNewsEvents() {
+        return fetch('api/manage-news-events.php').then(response => response.json()).then(data => {
+            if (!data.success || !Array.isArray(data.items) || !data.items.length) return;
+            const grid = document.getElementById('news-grid-view');
+            const fragment = document.createDocumentFragment();
+            data.items.forEach(item => {
+				const articleUrl = item.article_url && /^[a-z0-9.-]+\.[a-z]{2,}(\/.*)?$/i.test(item.article_url) ? 'https://' + item.article_url : item.article_url;
+                const card = document.createElement('div');
+                card.className = 'news-card';
+				if (articleUrl) card.onclick = () => { window.location.href = articleUrl; };
+                const image = document.createElement('img'); image.className = 'news-card-image'; image.src = item.image; image.alt = item.title || 'Ligen Power update'; image.onerror = function(){ this.style.display='none'; };
+                const content = document.createElement('div'); content.className = 'news-card-content';
+                const badge = document.createElement('span'); badge.className = 'news-card-badge' + (item.type === 'event' ? ' event' : ''); badge.textContent = item.type === 'event' ? 'Event' : 'News';
+                const meta = document.createElement('div'); meta.className = 'news-card-meta';
+                const date = document.createElement('span'); const parsedDate = item.date ? new Date(item.date + 'T00:00:00') : null;
+                date.innerHTML = '<i class="far fa-calendar"></i> ' + (parsedDate ? parsedDate.toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'}) : 'Recent'); meta.appendChild(date);
+                if (item.location) { const location=document.createElement('span'); location.innerHTML='<i class="fas fa-location-dot"></i> '; location.appendChild(document.createTextNode(item.location)); meta.appendChild(location); }
+                const title = document.createElement('h3'); title.className='news-card-title'; title.textContent=item.title;
+                const excerpt = document.createElement('p'); excerpt.className='news-card-excerpt'; excerpt.textContent=item.excerpt || '';
+                content.appendChild(badge); content.appendChild(meta); content.appendChild(title); content.appendChild(excerpt);
+				if (articleUrl) { const link=document.createElement('a'); link.href=articleUrl; link.className='news-card-link'; link.innerHTML='Read More <i class="fas fa-arrow-right"></i>'; link.addEventListener('click',e=>e.stopPropagation()); content.appendChild(link); }
+                card.appendChild(image); card.appendChild(content); fragment.appendChild(card);
+            });
+            grid.prepend(fragment);
+            const timeline = document.getElementById('news-timeline-view');
+            if (timeline) { timeline.innerHTML=''; grid.querySelectorAll('.news-card').forEach(card => timeline.appendChild(createTimelineItem(card))); }
+        }).catch(error => console.warn('Dynamic News & Events unavailable:', error));
+    }
+
     // Initialize timeline view on page load
     window.addEventListener('DOMContentLoaded', function() {
         const cards = document.querySelectorAll('#news-grid-view .news-card');
@@ -814,6 +843,7 @@
                 timelineView.appendChild(timelineItem);
             });
         }
+		loadDynamicNewsEvents();
     });
 
     // Header and footer loaded by header-loader.js

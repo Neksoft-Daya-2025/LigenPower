@@ -1,0 +1,65 @@
+{
+    "faqs": [
+        {
+            "id": "faq-default-1",
+            "category": "Inverters",
+            "question": "What size inverter is suitable for my home?",
+            "answer": "Choose an inverter after calculating the total wattage of the appliances you want to run simultaneously. Add a safety margin of approximately 20\u201325% and confirm the required backup duration before selecting the battery capacity.",
+            "sort_order": 10,
+            "published": true,
+            "created_at": "2026-08-04T00:00:00+05:30",
+            "updated_at": "2026-08-04T00:00:00+05:30"
+        },
+        {
+            "id": "faq-default-2",
+            "category": "Battery Management",
+            "question": "What does a Battery Management System do?",
+            "answer": "A BMS monitors voltage, current and temperature, balances battery cells, and protects the battery against overcharge, deep discharge, short circuit and unsafe operating conditions.",
+            "sort_order": 20,
+            "published": true,
+            "created_at": "2026-08-04T00:00:00+05:30",
+            "updated_at": "2026-08-04T00:00:00+05:30"
+        },
+        {
+            "id": "faq-default-3",
+            "category": "Power Batteries",
+            "question": "How can I improve the service life of my battery?",
+            "answer": "Use the recommended charger, avoid deep discharge, keep terminals clean and secure, ensure proper ventilation, and store the battery away from excessive heat and moisture.",
+            "sort_order": 30,
+            "published": true,
+            "created_at": "2026-08-04T00:00:00+05:30",
+            "updated_at": "2026-08-04T00:00:00+05:30"
+        },
+        {
+            "id": "faq-default-4",
+            "category": "Solar Solutions",
+            "question": "Can a solar inverter work during a power cut?",
+            "answer": "It depends on the system design. A hybrid or off-grid solar inverter with compatible battery storage can provide backup during an outage, while a standard grid-tied system normally shuts down for safety.",
+            "sort_order": 40,
+            "published": true,
+            "created_at": "2026-08-04T00:00:00+05:30",
+            "updated_at": "2026-08-04T00:00:00+05:30"
+        },
+        {
+            "id": "faq-default-5",
+            "category": "Warranty & Support",
+            "question": "How do I register my Ligen Power product for warranty?",
+            "answer": "Use the Register Your Product option on the Ligen Power website and submit the product serial number, purchase details and invoice. Keep the original invoice available for future warranty support.",
+            "sort_order": 50,
+            "published": true,
+            "created_at": "2026-08-04T00:00:00+05:30",
+            "updated_at": "2026-08-04T00:00:00+05:30"
+        },
+        {
+            "id": "faq-default-6",
+            "category": "Orders & Delivery",
+            "question": "How can I get product pricing or place an order?",
+            "answer": "Use the Request a Quote option on the relevant product page or contact an authorized Ligen Power merchant. The team will confirm availability, applicable pricing and delivery details for your location.",
+            "sort_order": 60,
+            "published": true,
+            "created_at": "2026-08-04T00:00:00+05:30",
+            "updated_at": "2026-08-04T00:00:00+05:30"
+        }
+    ],
+    "updated_at": "2026-08-04T13:45:07+02:00"
+}

@@ -41,8 +41,6 @@ const searchDatabase = {
         { name: '48V LFP Batteries', category: 'Power Batteries', url: '48v-lfp-batteries', keywords: ['battery', '48v', 'lfp', 'lithium', 'iron', 'phosphate', 'power', 'energy', 'storage', '50ah'] },
         { name: '36V 15Ah LFP Battery', category: 'Power Batteries', url: '36v-15ah-lfp-battery', keywords: ['battery', '36v', '15ah', 'lfp', 'lithium', 'iron', 'phosphate', 'power', 'energy', 'storage'] },
         
-        // E-Cycle
-        { name: 'LIGEN E-WAY Electric Cycle', category: 'E-Cycle', url: 'electric-cycle', keywords: ['electric', 'cycle', 'bike', 'e-cycle', 'e-bike', 'mobility', 'transport', 'eway', 'ligen', 'way'] },
         
         // Solar Street Light
         { name: '48W Hybrid Solar Street Light', category: 'Solar Street Light', url: '48w-hybrid-solar-street-light', keywords: ['solar', 'street', 'light', '48w', 'hybrid', 'led', 'lighting', 'lamp', 'outdoor'] },
@@ -56,7 +54,6 @@ const searchDatabase = {
         { name: 'Mobility Solutions', url: 'mobility', keywords: ['mobility', 'transport', 'two wheeler', 'three wheeler', 'e-rickshaw', 'ev battery', 'lfp pack'] },
         { name: '48V 30Ah Two-Wheeler LFP Pack', category: 'Mobility', url: 'mobility#two-wheeler-packs', keywords: ['48v', '30ah', 'two wheeler', '2w', 'scooter', 'lfp', 'battery pack'] },
         { name: '48V 100Ah E-Rickshaw LFP Pack', category: 'Mobility', url: 'mobility#three-wheeler-packs', keywords: ['48v', '100ah', 'three wheeler', 'e-rickshaw', 'rikshaw', '3w', 'lfp'] },
-        { name: 'E-Cycle', url: 'electric-cycle', keywords: ['electric', 'cycle', 'bike', 'e-cycle', 'e-bike', 'mobility'] },
         { name: 'Solar Street Light', url: 'solar-street-light', keywords: ['solar', 'street', 'light', 'led', 'lighting', 'hybrid'] }
     ]
 };

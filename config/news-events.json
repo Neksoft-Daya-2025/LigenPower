@@ -1,0 +1,18 @@
+{
+    "items": [
+        {
+            "id": "ne-1785842899-ca6ae6",
+            "type": "news",
+            "title": "testaght",
+            "date": "2026-08-04",
+            "location": "mumbai",
+            "excerpt": "rg5htehrgsrv",
+            "article_url": "https://google.com",
+            "image": "uploads/news-events/news-20260804-132819-ce459c.png",
+            "published": true,
+            "created_at": "2026-08-04T13:28:19+02:00",
+            "updated_at": "2026-08-04T13:28:19+02:00"
+        }
+    ],
+    "updated_at": "2026-08-04T13:28:19+02:00"
+}

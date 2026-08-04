@@ -4,7 +4,7 @@
 
     // Chatbot configuration
     const chatbotConfig = {
-        welcomeMessage: "Hello! 👋 Welcome to Ligen Power®. I'm your intelligent assistant with comprehensive information about all our products, services, and company details. I can help you with:\n\n• Product information (Inverters, BMS, Batteries, Solar Solutions, E-Cycles)\n• Specifications and models\n• Pricing and quotations\n• Contact information\n• Warranty registration\n• Working hours\n• Dealer programs\n• Website and social media links\n• External information access\n• And much more!\n\nWhat would you like to know?",
+        welcomeMessage: "Hello! 👋 Welcome to Ligen Power®. I'm your intelligent assistant with comprehensive information about all our products, services, and company details. I can help you with:\n\n• Product information (Inverters, BMS, LFP Batteries, Solar Solutions)\n• Specifications and models\n• Pricing and quotations\n• Contact information\n• Warranty registration\n• Working hours\n• Dealer programs\n• Website and social media links\n• External information access\n• And much more!\n\nWhat would you like to know?",
         placeholder: "Ask me anything or request web information...",
         companyName: "Ligen Power®",
         supportEmail: "info@ligenpower.com",
@@ -87,19 +87,14 @@
                 "48W Hybrid Street Light"
             ],
             features: "Solar + Grid hybrid, automatic operation, weatherproof, long-lasting LED, motion sensor options"
-        },
-        eCycle: {
-            name: "Electric Cycle (E-Cycle)",
-            description: "Electric bicycles powered by Ligen Power® battery technology",
-            features: "Long range, powerful motor, removable battery, eco-friendly, smart display"
-        }
+		}
     };
 
     const companyInfo = {
         name: "Ligen Power®",
         tagline: "Deep-Tech Powering Sustainability",
         about: "A Deep-Tech Start-up pioneering indigenous technologies to redefine the future of energy. We develop patented Li-Ion Battery Integrated Inverters and BMS, creating innovations in battery safety, longevity, and efficiency.",
-        specialties: "BMS, Solar Street Lights, E-Bicycles, Power Back-up Solutions, Solar Power Back-up Solutions, Li-Ion Battery Integrated Inverters, Lithium Battery Packs, and Energy Storage Solutions",
+		specialties: "BMS, Solar Street Lights, Power Back-up Solutions, Solar Power Back-up Solutions, Li-Ion Battery Integrated Inverters, LFP Battery Packs, and Energy Storage Solutions",
         registeredOffice: "Amossys Portable Power LLP, Shed No-B4-05(FF), B4-06(FF), B4-07(FF) & B4-08(FF), BIADA Industrial Area, Sikandarpur, Bihta, Patna, Bihar - 801103",
         rdCenter: "Amossys Portable Power LLP, 1st Floor, Incubation Center, Indian Institute of Technology, Patna, Amhara Road, BIHTA - 801106, Patna, Bihar",
         workingHours: {
@@ -193,7 +188,6 @@
 ☀️ **Solar PCU**: MPPT Solar PCU (2000VA to 5000VA)
 ⚙️ **PWM PCU**: Cost-effective PWM Solar PCU solutions
 💡 **Solar Street Lights**: Hybrid 24W and 48W solutions
-🚲 **E-Cycles**: Electric bicycles with Ligen Power® technology
 
 Which product would you like detailed information about?`,
             `Our product portfolio includes:
@@ -204,7 +198,6 @@ Which product would you like detailed information about?`,
 • **Solar PCU** - 3 MPPT models
 • **PWM PCU** - 6 PWM models
 • **Solar Street Lights** - 2 hybrid models
-• **E-Cycles** - Electric bicycles
 
 All products feature our patented technology. Which one interests you?`
         ],
@@ -302,26 +295,6 @@ Which solar solution are you interested in?`,
 - Hybrid Solar Street Lights (24W and 48W)
 
 All feature efficient energy conversion and reliable operation.`
-        ],
-        ecycle: [
-            `**Electric Cycle (E-Cycle)** - Powered by Ligen Power® Battery Technology
-
-**Features:**
-• Long range per charge
-• Powerful motor for easy riding
-• Removable battery for convenient charging
-• Eco-friendly transportation
-• Smart display for battery and speed monitoring
-
-Experience green mobility with our E-Cycles powered by our advanced battery technology.`,
-            `Our **E-Cycles** feature:
-- Long battery range
-- Powerful motor
-- Removable battery
-- Eco-friendly design
-- Smart display
-
-Powered by Ligen Power®'s advanced battery technology.`
         ],
         price: [
             `For detailed pricing information, please contact our sales team:
@@ -1096,14 +1069,6 @@ For detailed assistance:
                 return responses.price[Math.floor(Math.random() * responses.price.length)];
             }
             return responses.solar[Math.floor(Math.random() * responses.solar.length)];
-        }
-
-        // Check for specific product: E-Cycle
-        if (input.match(/(e-cycle|electric cycle|electric bicycle|e-bike|ebike|mobility)/)) {
-            if (input.match(/(price|cost|buy|purchase|rate|quotation|quote)/)) {
-                return responses.price[Math.floor(Math.random() * responses.price.length)];
-            }
-            return responses.ecycle[Math.floor(Math.random() * responses.ecycle.length)];
         }
 
         // Check for general product inquiries

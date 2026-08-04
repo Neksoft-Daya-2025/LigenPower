@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
     <title>Datasheets - Technical Specifications | Ligen Power®</title>
-    <meta name="description" content="Download technical datasheets for Ligen Power® products including Grid Inverters, Solar Inverters, BMS, Power Batteries, E-Cycles, and Solar Street Lights." />
+    <meta name="description" content="Download technical datasheets for Ligen Power® products including Grid Inverters, Solar Inverters, BMS, LFP Batteries, and Solar Street Lights." />
     <style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
     
     <style id='classic-theme-styles-inline-css' type='text/css'>
@@ -241,6 +241,8 @@
                         <p>Download technical specifications and datasheets for all Ligen Power® products</p>
                     </div>
                 </section>
+
+				<div id="admin-datasheets-root" aria-live="polite"></div>
 
                 <!-- Grid Inverters Category -->
                 <section class="category-section">
@@ -683,29 +685,6 @@
                     </div>
                 </section>
 
-                <!-- E-Cycle Category -->
-                <section class="category-section">
-                    <div class="container">
-                        <div class="category-header">
-                            <h2>E-Cycles</h2>
-                            <p>Technical specifications and datasheets for electric cycle products</p>
-                        </div>
-                        <div class="product-grid">
-                            <div class="datasheet-card">
-                                <div class="product-image">
-                                    <img src="assets/images/cycleproduct.png" alt="Ligen Power® Evolution Series" />
-                                </div>
-                                <h3>Ligen Power® Evolution Series</h3>
-                                <p>Electric cycle technical datasheet</p>
-                                <a href="assets/datasheets/ecycle/E-Cycle Specification.pdf" class="download-btn" target="_blank">
-                                    <i class="fas fa-download"></i>
-                                    Download PDF
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
                 <!-- Solar Street Light Category -->
                 <section class="category-section">
                     <div class="container">
@@ -746,6 +725,36 @@
     </div>
 
     <script>
+		function loadAdminDatasheets() {
+			fetch('api/manage-datasheets.php').then(function(response) { return response.json(); }).then(function(data) {
+				if (!data.success || !data.datasheets || !data.datasheets.length) return;
+				var root = document.getElementById('admin-datasheets-root');
+				var groups = {};
+				data.datasheets.forEach(function(item) { var category = item.category || 'Other'; (groups[category] = groups[category] || []).push(item); });
+				Object.keys(groups).sort().forEach(function(category) {
+					var section = document.createElement('section'); section.className = 'category-section';
+					var container = document.createElement('div'); container.className = 'container';
+					var header = document.createElement('div'); header.className = 'category-header';
+					var heading = document.createElement('h2'); heading.textContent = category;
+					var intro = document.createElement('p'); intro.textContent = 'Latest verified technical datasheets published by Ligen Power.';
+					var grid = document.createElement('div'); grid.className = 'product-grid';
+					header.appendChild(heading); header.appendChild(intro); container.appendChild(header);
+					groups[category].forEach(function(item) {
+						var card = document.createElement('div'); card.className = 'datasheet-card';
+						var imageWrap = document.createElement('div'); imageWrap.className = 'product-image';
+						var image = document.createElement('img'); image.src = item.image || 'assets/images/Ligen-Registered-logo.png'; image.alt = item.title || 'Product datasheet';
+						image.onerror = function() { this.onerror = null; this.src = 'assets/images/Ligen-Registered-logo.png'; };
+						var title = document.createElement('h3'); title.textContent = item.title || 'Product Datasheet';
+						var description = document.createElement('p'); description.textContent = item.description || 'Download the complete technical specifications.';
+						var link = document.createElement('a'); link.href = item.pdf_url; link.className = 'download-btn'; link.setAttribute('download', ''); link.innerHTML = '<i class="fas fa-download"></i> Download PDF';
+						imageWrap.appendChild(image); card.appendChild(imageWrap); card.appendChild(title); card.appendChild(description); card.appendChild(link); grid.appendChild(card);
+					});
+					container.appendChild(grid); section.appendChild(container); root.appendChild(section);
+				});
+			}).catch(function(error) { console.warn('Datasheet catalogue unavailable:', error); });
+		}
+		loadAdminDatasheets();
+
         // Header and footer loaded by header-loader.js
         window.addEventListener('load', function() {
             window.scrollTo(0, 0);

@@ -764,10 +764,10 @@
 		const defaultProducts = {
 			'electric-cycle-1': {
 				id: 'electric-cycle-1',
-				name: 'LIGEN E-WAY Electric Cycle',
+				name: 'Ligen 12V 100Ah LFP Battery',
 				price: 49999,
 				image: 'assets/images/md2.png',
-				description: 'Premium electric cycle with advanced battery technology'
+				description: 'Long-life LFP battery with advanced BMS protection'
 			}
 		};
 
@@ -801,7 +801,7 @@
 					localStorage.setItem('products', JSON.stringify(products));
 				}
 			} else {
-				// Default to electric cycle if no product ID
+				// Default to the featured LFP battery if no product ID
 				product = products.find(p => p.id === 'electric-cycle-1') || defaultProducts['electric-cycle-1'] || products[0];
 				console.log('Using default product:', product);
 			}
@@ -820,10 +820,10 @@
 				console.error('Creating fallback product object');
 				product = {
 					id: 'electric-cycle-1',
-					name: 'LIGEN E-WAY Electric Cycle',
+					name: 'Ligen 12V 100Ah LFP Battery',
 					price: 49999,
 					image: 'assets/images/md2.png',
-					description: 'Premium electric cycle with advanced battery technology'
+					description: 'Long-life LFP battery with advanced BMS protection'
 				};
 			}
 
