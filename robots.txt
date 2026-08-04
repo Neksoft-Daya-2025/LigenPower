@@ -1,0 +1,13 @@
+# Ligen Power® - https://ligenpower.com
+User-agent: *
+Allow: /
+
+# Optional: disallow admin/test pages from indexing (uncomment if needed)
+# Disallow: /dashboard.html
+# Disallow: /configure-and-test-smtp.html
+# Disallow: /test-smtp-now.html
+# Disallow: /test-email.html
+# Disallow: /test-menu.html
+
+# Sitemap (add when sitemap.xml is available)
+Sitemap: https://ligenpower.com/sitemap.xml

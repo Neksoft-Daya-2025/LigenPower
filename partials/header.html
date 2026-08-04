@@ -1,0 +1,2410 @@
+    		<div class="top-announcement-bar" style="background-color: #33766c; color: #ffffff; padding: 18px 0; font-size: 13px; width: 100%; box-sizing: border-box; position: relative; z-index: 9999; display: block !important; overflow: hidden; visibility: visible !important; opacity: 1 !important;">
+			<div style="width: 100%; max-width: 100%; margin: 0 auto; padding: 0 60px; display: flex; justify-content: space-between; align-items: center; box-sizing: border-box;">
+				<div style="display: flex; align-items: center; gap: 0; flex: 1; min-width: 0; overflow: hidden;">
+					<div style="display: flex; align-items: center; gap: 12px; padding: 0 8px; white-space: nowrap;">
+						<span style="font-weight: 800; font-size: 14px; letter-spacing: 0.5px; text-transform: uppercase; color: #ffffff; text-shadow: 0 1px 3px rgba(0,0,0,0.2); flex-shrink: 0;">Announcements</span>
+						<marquee behavior="scroll" direction="left" scrollamount="3" style="display: inline-block; white-space: nowrap;" id="announcement-marquee">Beat the Heat with Ligen Power Grid / Solar Inverters</marquee>
+					</div>
+				</div>
+				<div style="display: flex; align-items: center; gap: 0; flex: 0 0 auto; margin-left: auto;" id="top-links-container">
+					<a href="about-us" style="color: #ffffff; text-decoration: none; display: flex; align-items: center; gap: 8px; padding: 0 12px; transition: opacity 0.2s;">
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline-block; vertical-align: middle; flex-shrink: 0;">
+							<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+							<polyline points="9 22 9 12 15 12 15 22"></polyline>
+						</svg>
+						<span style="white-space: nowrap;">About Us</span>
+					</a>
+					<span style="border-left: 1px solid rgba(255,255,255,0.3); height: 18px; margin: 0 8px; flex-shrink: 0;"></span>
+					<a href="certificates" style="color: #ffffff; text-decoration: none; display: flex; align-items: center; gap: 8px; padding: 0 12px; transition: opacity 0.2s;">
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline-block; vertical-align: middle; flex-shrink: 0;">
+							<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+							<polyline points="14 2 14 8 20 8"></polyline>
+							<line x1="16" y1="13" x2="8" y2="13"></line>
+							<line x1="16" y1="17" x2="8" y2="17"></line>
+							<polyline points="10 9 9 9 8 9"></polyline>
+						</svg>
+						<span style="white-space: nowrap;">Certifications</span>
+					</a>
+					<span style="border-left: 1px solid rgba(255,255,255,0.3); height: 18px; margin: 0 8px; flex-shrink: 0;"></span>
+					<a href="blog" style="color: #ffffff; text-decoration: none; display: flex; align-items: center; gap: 8px; padding: 0 12px; transition: opacity 0.2s;">
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline-block; vertical-align: middle; flex-shrink: 0;">
+							<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+							<path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+							<line x1="8" y1="6" x2="16" y2="6"></line>
+							<line x1="8" y1="10" x2="16" y2="10"></line>
+						</svg>
+						<span style="white-space: nowrap;">Blog</span>
+					</a>
+					<span style="border-left: 1px solid rgba(255,255,255,0.3); height: 18px; margin: 0 8px; flex-shrink: 0;"></span>
+					<a href="https://merchant.ligenpower.com/register" target="_blank" rel="noopener noreferrer" style="color: #ffffff; text-decoration: none; display: flex; align-items: center; gap: 8px; padding: 0 12px; transition: opacity 0.2s; font-weight: 600;">
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline-block; vertical-align: middle; flex-shrink: 0;">
+							<path d="M3 9h18v12H3z"></path>
+							<path d="M8 9V5a4 4 0 0 1 8 0v4"></path>
+						</svg>
+						<span style="white-space: nowrap;">Register as Merchant</span>
+					</a>
+					<span style="border-left: 1px solid rgba(255,255,255,0.3); height: 18px; margin: 0 8px; flex-shrink: 0;"></span>
+					<a href="https://merchant.ligenpower.com/" target="_blank" rel="noopener noreferrer" style="color: #ffffff; text-decoration: none; display: flex; align-items: center; gap: 8px; padding: 0 12px; transition: opacity 0.2s;">
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline-block; vertical-align: middle; flex-shrink: 0;">
+							<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+							<circle cx="12" cy="10" r="3"></circle>
+						</svg>
+						<span style="white-space: nowrap;">Store Locator</span>
+					</a>
+				</div>
+				<script>
+					// Load page links dynamically and update if available
+					(function() {
+						const defaultLinks = [
+							{ label: 'About Us', url: 'about-us', icon: 'home', order: 1, active: true, target: '_self' },
+							{ label: 'Certifications', url: 'certificates', icon: 'certificate', order: 2, active: true, target: '_self' },
+							{ label: 'Blog', url: 'blog', icon: 'link', order: 3, active: true, target: '_self' },
+							{ label: 'Register as Merchant', url: 'https://merchant.ligenpower.com/register', icon: 'link', order: 4, active: true, target: '_blank' },
+							{ label: 'Store Locator', url: 'https://merchant.ligenpower.com/', icon: 'map-pin', order: 5, active: true, target: '_blank' }
+						];
+
+						const iconMap = {
+							'home': '<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline>',
+							'users': '<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path>',
+							'certificate': '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline>',
+							'map-pin': '<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle>',
+							'link': '<path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>'
+						};
+
+						function renderLinks(links) {
+							const container = document.getElementById('top-links-container');
+							if (!container) return;
+
+							// Filter active links and sort by order
+							const activeLinks = links.filter(link => link.active !== false).sort((a, b) => (a.order || 999) - (b.order || 999));
+
+							if (activeLinks.length === 0) {
+								return; // Keep default links
+							}
+
+							container.innerHTML = activeLinks.map((link, index) => {
+								const iconSvg = iconMap[link.icon] || iconMap['link'];
+								const separator = index > 0 ? '<span style="border-left: 1px solid rgba(255,255,255,0.3); height: 18px; margin: 0 8px; flex-shrink: 0;"></span>' : '';
+								const targetAttr = link.target === '_blank' ? ' target="_blank" rel="noopener noreferrer"' : '';
+								
+								return separator + `
+									<a href="${link.url}"${targetAttr} style="color: #ffffff; text-decoration: none; display: flex; align-items: center; gap: 8px; padding: 0 12px; transition: opacity 0.2s;">
+										<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline-block; vertical-align: middle; flex-shrink: 0;">
+											${iconSvg}
+										</svg>
+										<span style="white-space: nowrap;">${link.label}</span>
+									</a>
+								`;
+							}).join('');
+						}
+
+						// Try to load from API and update links if available
+						fetch('api/manage-links.php')
+							.then(response => response.json())
+							.then(data => {
+								if (data.success && data.links && data.links.length > 0) {
+									renderLinks(data.links);
+									localStorage.setItem('page_links', JSON.stringify(data.links));
+								}
+							})
+							.catch(error => {
+								// Keep default links, don't update
+							});
+					})();
+				</script>
+			</div>
+		</div>
+		<!-- Mobile / tablet: always-visible merchant registration -->
+		<div class="mobile-register-bar elementor-hidden-desktop" role="navigation" aria-label="Quick registration links">
+			<a href="https://merchant.ligenpower.com/register" target="_blank" rel="noopener" class="mobile-register-bar-merchant">Register as Merchant</a>
+			<a href="https://warranty.ligenpower.com/" target="_blank" rel="noopener" class="mobile-register-bar-product">Register your product</a>
+		</div>
+    		<header data-elementor-type="header" data-elementor-id="2530" class="elementor elementor-2530 elementor-location-header" data-elementor-post-type="elementor_library">
+			<div class="etheme-elementor-header-sticky elementor-element elementor-element-61b00ad etheme-elementor-header-sticky e-flex e-con-boxed e-con e-parent" data-id="61b00ad" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;etheme_header_sticky&quot;:&quot;sticky&quot;,&quot;etheme_header_sticky_on&quot;:[&quot;tablet&quot;,&quot;mobile&quot;],&quot;etheme_header_sticky_type&quot;:&quot;custom&quot;,&quot;etheme_header_sticky_offset&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;etheme_header_sticky_offset_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;etheme_header_sticky_offset_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-a5fc9f3 etheme-elementor-widget-loaded elementor-widget elementor-widget-theme-etheme_site-logo elementor-widget-image" data-id="a5fc9f3" data-element_type="widget" data-widget_type="theme-etheme_site-logo.default">
+											<a href="/">
+			<img height="81" src="assets/images/Ligen-Registered-logo.png" class="attachment-full size-full wp-image-87" alt="Ligen Power® - Power Inverters, BMS, Solar Inverter, Electric Cycle India" style="width: auto; height: 81px;" />				</a>
+											</div>
+				<!-- Clean Mobile Menu - No Elementor Dependencies -->
+				<div class="mobile-menu-wrapper elementor-hidden-desktop">
+					<!-- Hamburger Button -->
+					<button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Mobile Menu" aria-expanded="false">
+						<svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M3 12h18M3 6h18M3 18h18" stroke="#33766c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</button>
+					
+					<!-- Menu Panel -->
+					<div class="mobile-menu-panel" id="mobile-menu-panel">
+						<!-- Close Button -->
+						<button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close Menu">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<line x1="18" y1="6" x2="6" y2="18"></line>
+								<line x1="6" y1="6" x2="18" y2="18"></line>
+							</svg>
+						</button>
+						
+						<!-- Menu Content -->
+						<div class="mobile-menu-content">
+							<!-- Logo -->
+							<div class="mobile-menu-logo">
+								<a href="/">
+									<img src="assets/images/Ligen-Registered-logo.png" alt="Ligen Power® Logo" height="81" />
+								</a>
+							</div>
+							
+							<!-- Navigation -->
+							<nav class="mobile-menu-nav" role="navigation" aria-label="Mobile Menu">
+								<ul class="mobile-menu-list">
+									<li><a href="/">Home</a></li>
+									<li><a href="mobility">Mobility</a></li>
+									<li><a href="about-us">About</a></li>
+									<li><a href="certificates">Certifications</a></li>
+									<li><a href="https://merchant.ligenpower.com/register" target="_blank" rel="noopener noreferrer"><strong>Register as Merchant</strong></a></li>
+									<li><a href="https://warranty.ligenpower.com/" target="_blank" rel="noopener noreferrer">Register your product</a></li>
+									<li><a href="https://merchant.ligenpower.com/" target="_blank" rel="noopener noreferrer">Store Locator</a></li>
+									<li><a href="power-inverter">Power Management</a></li>
+									<li><a href="bms">BMS</a></li>
+									<li><a href="battery-bank">Battery Bank</a></li>
+									<li><a href="solar-street-light">Solar Street Light</a></li>
+									<li><a href="mobility">Mobility Solutions</a></li>
+									<li><a href="news-events">News & Events</a></li>
+									<li><a href="blog">Blog</a></li>
+									<li class="mobile-menu-item-has-children">
+										<button class="mobile-menu-dropdown-toggle" aria-expanded="false">Resources</button>
+										<ul class="mobile-menu-sublist">
+											<li><a href="user-manual">User Manual</a></li>
+											<li><a href="datasheet">Datasheet</a></li>
+										</ul>
+									</li>
+									<li><a href="career">Career</a></li>
+									<li><a href="contact">Contact us</a></li>
+								</ul>
+							</nav>
+							
+							<!-- Social Icons -->
+							<div class="mobile-menu-social">
+								<a href="https://www.facebook.com/ligenpower/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+									<i class="fab fa-facebook-f"></i>
+								</a>
+								<a href="https://www.linkedin.com/company/ligen-power/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+									<i class="fab fa-linkedin-in"></i>
+								</a>
+								<a href="https://www.instagram.com/ligenpower/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+									<i class="fab fa-instagram"></i>
+								</a>
+								<a href="https://www.youtube.com/watch?v=MJ8viEaiVl0" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+									<i class="fab fa-youtube"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-6ff25ca e-flex e-con-boxed e-con e-child" data-id="6ff25ca" data-element_type="container" style="flex: 1 1 55%; max-width: 55%; padding-right: 20px; box-sizing: border-box;">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-d51fe12 etheme-elementor-widget-loaded elementor-widget elementor-widget-theme-etheme_ajax_search" data-id="d51fe12" data-element_type="widget" data-settings="{&quot;animated_placeholder_text&quot;:&quot;power Inverter\nBMS\nPower Battery\nPower E cycle\nSolar Street Light&quot;,&quot;trending_searches_list&quot;:&quot;Bluetooth,  Xbox,  JBL Go 2, iPhone 14, iPad,  Laptop, Controller, Smartphone, Gadget, Tesla&quot;,&quot;animated_placeholder&quot;:&quot;yes&quot;,&quot;ajax_search&quot;:&quot;yes&quot;,&quot;min_chars&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;post_types&quot;:[&quot;product&quot;,&quot;post&quot;],&quot;ajax_search_results_heading_type&quot;:&quot;headings&quot;,&quot;posts_per_page&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;post_limit&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:5,&quot;sizes&quot;:[]},&quot;product_stock&quot;:&quot;yes&quot;,&quot;product_category&quot;:&quot;yes&quot;,&quot;product_price&quot;:&quot;yes&quot;,&quot;global_post_type_image&quot;:&quot;yes&quot;,&quot;global_post_type_date&quot;:&quot;yes&quot;,&quot;post_type_content_mobile&quot;:[&quot;image&quot;,&quot;title&quot;,&quot;product_price&quot;],&quot;trending_searches&quot;:&quot;yes&quot;,&quot;trending_searches_limit&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:5,&quot;sizes&quot;:[]},&quot;results_max_height&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:500,&quot;sizes&quot;:[]}}" data-widget_type="theme-etheme_ajax_search.default">
+				<div class="elementor-widget-container">
+					
+        <form class="etheme-search-form" role="search" action="#" method="get" type="inline">
+                        <div class="etheme-search-input-form-wrapper">
+
+                
+                <div class="etheme-search-input-wrapper">
+
+                    
+                    <input class="etheme-search-form-input" type="search" name="s" title="Search" value="" placeholder="Search for Ligen Power® Inverter">
+
+                                            <input type="hidden" name="et_search" value="true">
+                    
+                    
+
+	                
+                    <input type="hidden" name="post_type" value="product">
+
+                                            <span class="etheme-search-form-clear">
+                            <svg xmlns="http://www.w3.org/2000/svg" width=".7em" height=".7em" viewBox="0 0 24 24" fill="currentColor"><path d="M13.056 12l10.728-10.704c0.144-0.144 0.216-0.336 0.216-0.552 0-0.192-0.072-0.384-0.216-0.528-0.144-0.12-0.336-0.216-0.528-0.216 0 0 0 0 0 0-0.192 0-0.408 0.072-0.528 0.216l-10.728 10.728-10.704-10.728c-0.288-0.288-0.768-0.288-1.056 0-0.168 0.144-0.24 0.336-0.24 0.528 0 0.216 0.072 0.408 0.216 0.552l10.728 10.704-10.728 10.704c-0.144 0.144-0.216 0.336-0.216 0.552s0.072 0.384 0.216 0.528c0.288 0.288 0.768 0.288 1.056 0l10.728-10.728 10.704 10.704c0.144 0.144 0.336 0.216 0.528 0.216s0.384-0.072 0.528-0.216c0.144-0.144 0.216-0.336 0.216-0.528s-0.072-0.384-0.216-0.528l-10.704-10.704z"></path></svg>
+                        </span>
+                    
+                </div>
+
+                <div class="etheme-search-form-button-wrapper">
+
+                    <button class="etheme-search-form-submit" type="submit" title="Search" aria-label="Search">
+
+                        			<i aria-hidden="true" class="et-icon et-zoom"></i><span class="elementor-screen-only">Search</span>
+                    </button>
+                </div>
+
+            </div>
+                        <div class="etheme-search-ajax-results">        <div class="etheme-search-trending-searches-wrapper hidden">
+            <h3 class="etheme-search-trending-searches-heading etheme-search-form-title">
+                Recommended for you                <span class="etheme-search-trending-searches-refresh"><span class="et_b-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32">
+                        <path d="M29.76 8.16c0.288-1.248 0.896-3.744 1.056-4.992 0.064-0.512-0.064-0.864-0.544-0.992-0.512-0.16-0.832 0.096-1.056 0.672-0.288 0.768-0.768 3.296-0.768 3.296-2.080-2.688-5.248-4.736-8.704-5.6l-0.128-0.032c-4.128-0.992-8.32-0.256-11.904 1.888-7.136 4.352-9.088 12.672-6.752 19.008 0.096 0.224 0.352 0.416 0.64 0.48 0.224 0.064 0.448-0.032 0.608-0.096l0.032-0.032c0.416-0.192 0.608-0.672 0.384-1.184-2.048-5.856 0-12.992 6.208-16.672 3.136-1.856 6.72-2.432 10.432-1.536 2.784 0.672 5.728 2.368 7.552 4.8 0 0-2.56 0-3.424 0.032-0.64 0-0.96 0.16-1.056 0.608-0.128 0.48 0.128 0.992 0.608 1.024 1.568 0.096 5.664 0.128 5.664 0.128 0.16 0 0.192 0 0.384-0.032s0.416-0.192 0.544-0.352c0.096-0.16 0.224-0.416 0.224-0.416zM2.144 23.936c-0.288 1.248-0.864 3.744-1.056 4.992-0.064 0.512 0.064 0.864 0.544 0.992 0.512 0.128 0.832-0.128 1.056-0.704 0.288-0.768 0.768-3.296 0.768-3.296 2.080 2.688 5.28 4.736 8.736 5.6l0.128 0.032c4.128 0.992 8.32 0.256 11.904-1.888 7.136-4.32 9.088-12.672 6.752-19.008-0.096-0.224-0.352-0.416-0.64-0.48-0.224-0.064-0.448 0.032-0.608 0.096l-0.032 0.032c-0.416 0.192-0.608 0.672-0.384 1.184 2.048 5.856 0 12.992-6.208 16.672-3.136 1.856-6.72 2.432-10.432 1.536-2.784-0.672-5.728-2.368-7.552-4.8 0 0 2.56 0 3.424-0.032 0.64 0 0.96-0.16 1.056-0.608 0.128-0.48-0.128-0.992-0.608-1.024-1.568-0.096-5.664-0.128-5.664-0.128-0.16 0-0.192 0-0.384 0.032s-0.416 0.192-0.544 0.352c-0.096 0.16-0.256 0.448-0.256 0.448z"></path>
+                    </svg></span><span>Refresh</span></span>
+            </h3>
+
+            <div class="etheme-search-trending-searches"></div>
+        </div>
+        </div>
+        </form>
+        				</div>
+				</div>
+				<div class="elementor-element elementor-element-8cbbd96 etheme-elementor-nav-menu__align-left elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile etheme-elementor-menu etheme-elementor-widget-loaded elementor-widget elementor-widget-theme-etheme_nav_menu" data-id="8cbbd96" data-element_type="widget" data-widget_type="theme-etheme_nav_menu.default" style="display: none !important;">
+				<div class="elementor-widget-container">
+					        <nav class="etheme-elementor-nav-menu--main" aria-label="Menu">
+
+        <ul id="menu-1-8cbbd96" class="etheme-elementor-nav-menu dropdowns-right horizontal"><li id="menu-item-1299" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1299 item-level-0 item-design-dropdown"><a href="power-inverter" class="item-link etheme-elementor-nav-menu-item etheme-elementor-nav-menu-item-parent"><span class="elementor-item">Power Management</span></a></li>
+        <li class="etheme-elementor-nav-menu-item-separator-wrapper">
+            <span class="etheme-elementor-nav-menu-item-separator etheme-elementor-nav-menu-item etheme-elementor-nav-menu-item-parent etheme-elementor-nav-menu-item-icon">
+            &#10072;        </span>
+    </li>
+        <li id="menu-item-1300" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1300 item-level-0 item-design-dropdown"><a href="bms" class="item-link etheme-elementor-nav-menu-item etheme-elementor-nav-menu-item-parent"><span class="elementor-item">BMS</span></a></li>
+        <li class="etheme-elementor-nav-menu-item-separator-wrapper">
+            <span class="etheme-elementor-nav-menu-item-separator etheme-elementor-nav-menu-item etheme-elementor-nav-menu-item-parent etheme-elementor-nav-menu-item-icon">
+            &#10072;        </span>
+    </li>
+        <li id="menu-item-1301" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1301 item-level-0 item-design-dropdown"><a href="solar-street-light" class="item-link etheme-elementor-nav-menu-item etheme-elementor-nav-menu-item-parent"><span class="elementor-item">Solar Street Light</span></a></li>
+        <li class="etheme-elementor-nav-menu-item-separator-wrapper">
+            <span class="etheme-elementor-nav-menu-item-separator etheme-elementor-nav-menu-item etheme-elementor-nav-menu-item-parent etheme-elementor-nav-menu-item-icon">
+            &#10072;        </span>
+    </li>
+        <li id="menu-item-1302" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1302 item-level-0 item-design-dropdown"><a href="mobility" class="item-link etheme-elementor-nav-menu-item etheme-elementor-nav-menu-item-parent"><span class="elementor-item">Mobility Solutions</span></a></li>
+        </ul>
+        </nav>
+        				</div>
+				</div>
+					</div>
+				</div>
+				<div class="elementor-element elementor-element-5fde32b elementor-align-left elementor-hidden-tablet elementor-hidden-mobile etheme-elementor-widget-loaded elementor-widget elementor-widget-etheme_icon_box" data-id="5fde32b" data-element_type="widget" data-settings="{&quot;icon_type&quot;:&quot;icon&quot;}" data-widget_type="etheme_icon_box.default" style="margin-left: 24px; margin-right: 16px; flex: 0 0 auto;">
+				<div class="elementor-widget-container">
+								<a href="tel:+919031086082" style="text-decoration: none; color: inherit; display: block; cursor: pointer;">
+								<div class="etheme-icon-box etheme-icon-box-icon-position-left">
+        
+                            
+                <div class="etheme-icon-box-icon etheme-icon-box-icon-type-icon">
+        
+                <i aria-hidden="true" class="et-icon et-phone-call"></i>        
+                </div>
+            
+                <div class="etheme-icon-box-content">
+		
+                                        
+                                            <h3 class="etheme-icon-box-title">
+                            <span>Need help? Call us: </span>
+                        </h3>
+                    		
+                                            <p class="etheme-icon-box-description">
+                            <span style="color: inherit;">+91-9031086082</span>                        </p>
+                    
+                            
+                </div>
+			</div>
+						</a>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-facebook-icon elementor-widget__width-auto etheme-elementor-off-canvas-toggle-content etheme-elementor-off-canvas-right etheme-elementor-off-canvas etheme-elementor-off-canvas-design-separated elementor-widget elementor-widget-html elementor-hidden-mobile" data-id="facebook-icon" data-element_type="widget" data-widget_type="html.default" style="margin-left: 36px;">
+				<div class="elementor-widget-container" style="width: auto; height: auto;">
+					<div class="etheme-elementor-off-canvas__toggle elementor-button-wrapper" style="width: auto; height: auto;">
+						<div class="elementor-button-wrapper" style="width: auto; height: auto;">
+							<a href="https://www.facebook.com/ligenpower/" target="_blank" rel="noopener noreferrer" class="elementor-button elementor-button-link etheme-elementor-off-canvas__toggle_button social-media-link" aria-label="Facebook" style="background: transparent; border: none; padding: 0; display: flex; align-items: center; justify-content: center; width: auto; height: auto;">
+								<span class="elementor-button-content-wrapper flex-wrap" style="width: auto; height: auto;">
+									<span class="elementor-button-icon" style="width: auto; height: auto; display: flex; align-items: center; justify-content: center;">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 24px !important; height: 24px !important; max-width: none !important; max-height: none !important;"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+									</span>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-linkedin-icon elementor-widget__width-auto etheme-elementor-off-canvas-toggle-content etheme-elementor-off-canvas-right etheme-elementor-off-canvas etheme-elementor-off-canvas-design-separated elementor-widget elementor-widget-html elementor-hidden-mobile" data-id="linkedin-icon" data-element_type="widget" data-widget_type="html.default" style="margin-left: 28px;">
+				<div class="elementor-widget-container" style="width: auto; height: auto;">
+					<div class="etheme-elementor-off-canvas__toggle elementor-button-wrapper" style="width: auto; height: auto;">
+						<div class="elementor-button-wrapper" style="width: auto; height: auto;">
+							<a href="https://www.linkedin.com/company/ligen-power/" target="_blank" rel="noopener noreferrer" class="elementor-button elementor-button-link etheme-elementor-off-canvas__toggle_button social-media-link" aria-label="LinkedIn" style="background: transparent; border: none; padding: 0; display: flex; align-items: center; justify-content: center; width: auto; height: auto;">
+								<span class="elementor-button-content-wrapper flex-wrap" style="width: auto; height: auto;">
+									<span class="elementor-button-icon" style="width: auto; height: auto; display: flex; align-items: center; justify-content: center;">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 24px !important; height: 24px !important; max-width: none !important; max-height: none !important;"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+									</span>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-instagram-icon elementor-widget__width-auto etheme-elementor-off-canvas-toggle-content etheme-elementor-off-canvas-right etheme-elementor-off-canvas etheme-elementor-off-canvas-design-separated elementor-widget elementor-widget-html elementor-hidden-mobile" data-id="instagram-icon" data-element_type="widget" data-widget_type="html.default" style="margin-left: 28px;">
+				<div class="elementor-widget-container" style="width: auto; height: auto;">
+					<div class="etheme-elementor-off-canvas__toggle elementor-button-wrapper" style="width: auto; height: auto;">
+						<div class="elementor-button-wrapper" style="width: auto; height: auto;">
+							<a href="https://www.instagram.com/ligenpower/" target="_blank" rel="noopener noreferrer" class="elementor-button elementor-button-link etheme-elementor-off-canvas__toggle_button social-media-link" aria-label="Instagram" style="background: transparent; border: none; padding: 0; display: flex; align-items: center; justify-content: center; width: auto; height: auto;">
+								<span class="elementor-button-content-wrapper flex-wrap" style="width: auto; height: auto;">
+									<span class="elementor-button-icon" style="width: auto; height: auto; display: flex; align-items: center; justify-content: center;">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 24px !important; height: 24px !important; max-width: none !important; max-height: none !important;"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+									</span>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-youtube-icon elementor-widget__width-auto etheme-elementor-off-canvas-toggle-content etheme-elementor-off-canvas-right etheme-elementor-off-canvas etheme-elementor-off-canvas-design-separated elementor-widget elementor-widget-html elementor-hidden-mobile" data-id="youtube-icon" data-element_type="widget" data-widget_type="html.default" style="margin-left: 28px;">
+				<div class="elementor-widget-container" style="width: auto; height: auto;">
+					<div class="etheme-elementor-off-canvas__toggle elementor-button-wrapper" style="width: auto; height: auto;">
+						<div class="elementor-button-wrapper" style="width: auto; height: auto;">
+							<a href="https://www.youtube.com/watch?v=MJ8viEaiVl0" target="_blank" rel="noopener noreferrer" class="elementor-button elementor-button-link etheme-elementor-off-canvas__toggle_button social-media-link" aria-label="YouTube" style="background: transparent; border: none; padding: 0; display: flex; align-items: center; justify-content: center; width: auto; height: auto;">
+								<span class="elementor-button-content-wrapper flex-wrap" style="width: auto; height: auto;">
+									<span class="elementor-button-icon" style="width: auto; height: auto; display: flex; align-items: center; justify-content: center;">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 24px !important; height: 24px !important; max-width: none !important; max-height: none !important;"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+									</span>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<!-- Clean Desktop Menu - No Elementor Dependencies -->
+		<div class="desktop-menu-container elementor-hidden-mobile">
+			<div class="desktop-menu-wrapper">
+				<!-- Explore Ligen Power® Menu -->
+				<nav class="desktop-menu-explore">
+					<ul class="desktop-menu-list">
+						<li class="desktop-menu-item desktop-menu-item-has-children explore-ligen-power-item">
+							<button class="desktop-menu-link" aria-expanded="false" aria-haspopup="true">
+								<span class="desktop-menu-icon" style="background-color: #34776b; border-radius: 6px; padding: 6px; display: inline-flex; align-items: center; justify-content: center;">
+									<i aria-hidden="true" class="et-icon et-dev-menu" style="color: #ffffff;"></i>
+								</span>
+								<span>Explore Ligen Power®</span>
+								<span class="desktop-menu-arrow">
+									<i aria-hidden="true" class="et-icon et-down-arrow"></i>
+								</span>
+							</button>
+							<ul class="desktop-menu-dropdown">
+								<li><a href="power-inverter">
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 0L12.5 7.5H20L13.75 12.5L16.25 20L10 15L3.75 20L6.25 12.5L0 7.5H7.5L10 0Z" fill="#111111"/><path d="M10 4L8.5 8H4L7 10.5L5.5 14.5L10 12L14.5 14.5L13 10.5L16 8H11.5L10 4Z" fill="#111111" opacity="0.3"/></svg>
+									<span>Grid Inverters</span>
+								</a></li>
+								<li><a href="solar-inverter">
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2V4M10 16V18M18 10H16M4 10H2M15.6569 4.34315L14.2426 5.75736M5.75736 14.2426L4.34315 15.6569M15.6569 15.6569L14.2426 14.2426M5.75736 5.75736L4.34315 4.34315" stroke="#111111" stroke-width="1.5" stroke-linecap="round"/><circle cx="10" cy="10" r="3" stroke="#111111" stroke-width="1.5" fill="none"/><rect x="8" y="16" width="4" height="2" rx="0.5" fill="#111111"/><path d="M9 16V13M11 16V13" stroke="#111111" stroke-width="1" stroke-linecap="round"/></svg>
+									<span>Solar Inverter</span>
+								</a></li>
+								<li><a href="bms">
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="4" y="2" width="12" height="16" rx="1.5" stroke="#111111" stroke-width="1.5" fill="none"/><rect x="6" y="5" width="8" height="10" rx="0.5" fill="#111111" opacity="0.2"/><path d="M7 8H13M7 10H13M7 12H11" stroke="#111111" stroke-width="1" stroke-linecap="round"/><circle cx="10" cy="15" r="1" fill="#111111"/></svg>
+									<span>BMS</span>
+								</a></li>
+								<li><a href="power-battery">
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="4" y="6" width="11" height="8" rx="1" stroke="#111111" stroke-width="1.5" fill="none"/><rect x="6" y="8" width="7" height="4" fill="#111111" opacity="0.3"/><path d="M15 9V11" stroke="#111111" stroke-width="1.5" stroke-linecap="round"/><path d="M5 10H7M9 10H11" stroke="#111111" stroke-width="1" stroke-linecap="round"/></svg>
+									<span>Power Battery</span>
+								</a></li>
+								<li><a href="battery-bank">
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="4" width="14" height="12" rx="1.5" stroke="#111111" stroke-width="1.5" fill="none"/><rect x="5" y="6" width="10" height="8" rx="0.5" fill="#111111" opacity="0.15"/><path d="M7 14h6" stroke="#111111" stroke-width="1.2" stroke-linecap="round"/></svg>
+									<span>Battery Bank</span>
+								</a></li>
+								<li><a href="electric-cycle">
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="6" cy="13" r="3" stroke="#111111" stroke-width="1.5" fill="none"/><circle cx="14" cy="13" r="3" stroke="#111111" stroke-width="1.5" fill="none"/><path d="M6 10L8 6H12L14 10" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 6V4C8 3.44772 8.44772 3 9 3H11C11.5523 3 12 3.44772 12 4V6" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 6V10" stroke="#111111" stroke-width="1.5" stroke-linecap="round"/></svg>
+									<span>Power E cycle</span>
+								</a></li>
+								<li><a href="solar-street-light">
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2V4M10 16V18M18 10H16M4 10H2M15.6569 4.34315L14.2426 5.75736M5.75736 14.2426L4.34315 15.6569M15.6569 15.6569L14.2426 14.2426M5.75736 5.75736L4.34315 4.34315" stroke="#111111" stroke-width="1.5" stroke-linecap="round"/><circle cx="10" cy="10" r="3" stroke="#111111" stroke-width="1.5" fill="none"/><rect x="8" y="16" width="4" height="2" rx="0.5" fill="#111111"/><path d="M9 16V13M11 16V13" stroke="#111111" stroke-width="1" stroke-linecap="round"/></svg>
+									<span>Solar Street Light</span>
+								</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				
+				<!-- Main Navigation Menu -->
+				<nav class="desktop-menu-main">
+					<ul class="desktop-menu-list">
+						<li class="desktop-menu-item"><a href="/">Home</a></li>
+						<li class="desktop-menu-item"><a href="mobility">Mobility</a></li>
+						<li class="desktop-menu-item"><a href="news-events">News & Events</a></li>
+						<li class="desktop-menu-item"><a href="blog">Blog</a></li>
+						<li class="desktop-menu-item desktop-menu-item-has-children resources-menu-item">
+							<button class="desktop-menu-link" aria-expanded="false" aria-haspopup="true">
+								<span>Resources</span>
+								<span class="desktop-menu-arrow">
+									<i aria-hidden="true" class="et-icon et-down-arrow"></i>
+								</span>
+							</button>
+							<ul class="desktop-menu-dropdown">
+								<li><a href="user-manual">User Manual</a></li>
+								<li><a href="datasheet">Datasheet</a></li>
+							</ul>
+						</li>
+						<li class="desktop-menu-item"><a href="career">Career</a></li>
+						<li class="desktop-menu-item desktop-menu-item-has-children contact-menu-item">
+							<button class="desktop-menu-link" aria-expanded="false" aria-haspopup="true">
+								<span>Contact us</span>
+								<span class="desktop-menu-arrow">
+									<i aria-hidden="true" class="et-icon et-down-arrow"></i>
+								</span>
+							</button>
+							<ul class="desktop-menu-dropdown">
+								<li><a href="contact">Contact Us</a></li>
+								<li><a href="suggestions-grievances">Suggestions & Grievances</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				
+				<!-- Register buttons -->
+				<div class="desktop-menu-register">
+					<a href="https://merchant.ligenpower.com/register" target="_blank" rel="noopener" class="desktop-menu-register-btn desktop-menu-register-btn-merchant" role="button">
+						<span>Register as Merchant</span>
+					</a>
+					<a href="https://warranty.ligenpower.com/?_gl=1*1buh5w5*_ga*MjA0OTkwNzIwNy4xNzY2NDA4MTQz*_ga_9QB9J6N2KN*czE3NjY0MDgxNDIkbzEkZzEkdDE3NjY0MDg0NjYkajYwJGwwJGgw" target="_blank" rel="noopener" class="desktop-menu-register-btn" role="button">
+						<span>Register your product</span>
+					</a>
+				</div>
+			</div>
+		</div>
+				</header>
+<style>
+li.explore-ligen-power-item .elementor-item,
+li.explore-ligen-power-item .elementor-item:hover,
+li.explore-ligen-power-item .elementor-item:focus,
+li.explore-ligen-power-item .elementor-item:active,
+li.explore-ligen-power-item:hover .elementor-item,
+li.explore-ligen-power-item:hover .elementor-item > span:not(.etheme-elementor-nav-menu-item-arrow):not(.etheme-elementor-nav-menu-item-icon):not(.etheme-elementor-nav-menu-item-element) {
+	color: #000000 !important;
+	font-weight: 600 !important;
+}
+li.explore-ligen-power-item .elementor-item > span:not(.etheme-elementor-nav-menu-item-arrow):not(.etheme-elementor-nav-menu-item-icon):not(.etheme-elementor-nav-menu-item-element),
+li.explore-ligen-power-item .elementor-item:hover > span:not(.etheme-elementor-nav-menu-item-arrow):not(.etheme-elementor-nav-menu-item-icon):not(.etheme-elementor-nav-menu-item-element),
+li.explore-ligen-power-item .elementor-item:focus > span:not(.etheme-elementor-nav-menu-item-arrow):not(.etheme-elementor-nav-menu-item-icon):not(.etheme-elementor-nav-menu-item-element),
+li.explore-ligen-power-item .elementor-item:active > span:not(.etheme-elementor-nav-menu-item-arrow):not(.etheme-elementor-nav-menu-item-icon):not(.etheme-elementor-nav-menu-item-element),
+li.explore-ligen-power-item:hover .elementor-item,
+li.explore-ligen-power-item .etheme-elementor-nav-menu-item:hover .elementor-item,
+li.explore-ligen-power-item .etheme-elementor-nav-menu-item:hover .elementor-item > span:not(.etheme-elementor-nav-menu-item-arrow):not(.etheme-elementor-nav-menu-item-icon):not(.etheme-elementor-nav-menu-item-element) {
+	color: #000000 !important;
+}
+li.explore-ligen-power-item .etheme-elementor-nav-menu-item-element.etheme-elementor-nav-menu-item-icon {
+	background-color: #34776b !important;
+	border-radius: 6px !important;
+	border: none !important;
+	box-shadow: none !important;
+	outline: none !important;
+	padding: 6px !important;
+	display: inline-flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+}
+li.explore-ligen-power-item .etheme-elementor-nav-menu-item-icon .et-icon,
+li.explore-ligen-power-item .etheme-elementor-nav-menu-item-element .et-icon {
+	color: #ffffff !important;
+}
+/* Keep dropdown arrow black in all states */
+li.explore-ligen-power-item .etheme-elementor-nav-menu-item-arrow .et-icon,
+li.explore-ligen-power-item .etheme-elementor-nav-menu-item-arrow .etheme-elementor-nav-menu-item-icon .et-icon,
+li.explore-ligen-power-item .etheme-elementor-nav-menu-item-arrow .etheme-elementor-nav-menu-item-icon-opened .et-icon,
+li.explore-ligen-power-item .etheme-elementor-nav-menu-item-arrow .etheme-elementor-nav-menu-item-icon-closed .et-icon,
+li.explore-ligen-power-item:hover .etheme-elementor-nav-menu-item-arrow .et-icon,
+li.explore-ligen-power-item .etheme-elementor-nav-menu-item:hover .etheme-elementor-nav-menu-item-arrow .et-icon {
+	color: #000000 !important;
+}
+/* Dropdown menu items - black text */
+li.explore-ligen-power-item .etheme-elementor-nav-menu--dropdown .elementor-item,
+li.explore-ligen-power-item .etheme-elementor-nav-menu--dropdown .elementor-item:hover,
+li.explore-ligen-power-item .etheme-elementor-nav-menu--dropdown .elementor-item:focus,
+li.explore-ligen-power-item .etheme-elementor-nav-menu--dropdown .elementor-item:active,
+li.explore-ligen-power-item .etheme-elementor-nav-menu--dropdown .elementor-item > span:not(.etheme-elementor-nav-menu-item-arrow):not(.etheme-elementor-nav-menu-item-icon):not(.etheme-elementor-nav-menu-item-element),
+li.explore-ligen-power-item .etheme-elementor-nav-menu--dropdown .etheme-elementor-nav-menu-item .elementor-item,
+li.explore-ligen-power-item .etheme-elementor-nav-menu--dropdown .etheme-elementor-nav-menu-item:hover .elementor-item {
+	color: #000000 !important;
+}
+/* Remove background from dropdown menu item icons */
+li.explore-ligen-power-item .etheme-elementor-nav-menu--dropdown .etheme-elementor-nav-menu-item-element.etheme-elementor-nav-menu-item-icon {
+	background-color: transparent !important;
+	background: none !important;
+}
+/* Dropdown menu background and styling */
+li.explore-ligen-power-item .etheme-elementor-nav-menu--dropdown.nav-sublist-dropdown {
+	background-color: #ffffff !important;
+	border: 1px solid #e5e5e5 !important;
+	border-radius: 8px !important;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+	padding: 8px 0 !important;
+	margin-top: 8px !important;
+}
+li.explore-ligen-power-item .etheme-elementor-nav-menu--dropdown .etheme-elementor-nav-menu-item {
+	color: #000000 !important;
+}
+li.explore-ligen-power-item .etheme-elementor-nav-menu--dropdown .etheme-elementor-nav-menu-item:hover {
+	background-color: #f5f5f5 !important;
+	color: #000000 !important;
+}
+li.explore-ligen-power-item .etheme-elementor-nav-menu--dropdown .etheme-elementor-nav-menu-item a {
+	color: #000000 !important;
+}
+li.explore-ligen-power-item .etheme-elementor-nav-menu--dropdown .etheme-elementor-nav-menu-item a:hover {
+	color: #000000 !important;
+	background-color: #f5f5f5 !important;
+}
+</style>
+<style>
+/* Announcement Bar - Ensure visible on mobile */
+.top-announcement-bar {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 9999 !important;
+}
+
+@media (max-width: 1024px) {
+    .top-announcement-bar {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        padding: 10px 0 !important;
+        font-size: 12px !important;
+    }
+    
+    .top-announcement-bar > div {
+        padding: 0 15px !important;
+        flex-wrap: wrap !important;
+    }
+    
+    .top-announcement-bar span:first-child {
+        font-size: 11px !important;
+        padding: 0 4px !important;
+    }
+    
+    .top-announcement-bar marquee,
+    .top-announcement-bar #announcement-marquee {
+        font-size: 11px !important;
+        display: inline-block !important;
+        visibility: visible !important;
+    }
+    
+    /* On mobile/tablet show compact top link for merchant registration */
+    .top-announcement-bar #top-links-container {
+        display: flex !important;
+        flex-wrap: nowrap;
+        gap: 0;
+    }
+    .top-announcement-bar #top-links-container a:not([href*="merchant.ligenpower.com/register"]) {
+        display: none !important;
+    }
+    .top-announcement-bar #top-links-container span[style*="border-left"] {
+        display: none !important;
+    }
+}
+
+/* Mobile / tablet registration strip (below announcement bar) */
+.mobile-register-bar {
+    display: none;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 16px;
+    gap: 10px;
+    background: #e8f3ef;
+    border-bottom: 1px solid #c5ddd4;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 1024px) {
+    .mobile-register-bar {
+        display: flex !important;
+    }
+}
+.mobile-register-bar a {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.mobile-register-bar-merchant {
+    background: #33766c;
+    color: #fff !important;
+}
+.mobile-register-bar-product {
+    background: #111;
+    color: #fff !important;
+}
+
+@media (max-width: 768px) {
+    .top-announcement-bar {
+        padding: 14px 0 !important;
+        font-size: 11px !important;
+    }
+    
+    .top-announcement-bar > div {
+        padding: 0 10px !important;
+    }
+    
+    .top-announcement-bar span:first-child {
+        font-size: 10px !important;
+    }
+    
+    .top-announcement-bar marquee,
+    .top-announcement-bar #announcement-marquee {
+        font-size: 10px !important;
+    }
+}
+
+/* ========================================
+   CLEAN MOBILE MENU - NO ELEMENTOR
+   ======================================== */
+
+/* Hide mobile menu wrapper on desktop */
+@media (min-width: 1025px) {
+    .mobile-menu-wrapper {
+        display: none !important;
+    }
+}
+
+/* Mobile Menu Wrapper - Visible on mobile only - Position on Right */
+@media (max-width: 1024px) {
+    .mobile-menu-wrapper {
+        display: flex !important;
+        justify-content: flex-end !important;
+        align-items: center !important;
+        position: relative;
+        z-index: 9999;
+        margin-left: auto !important;
+        order: 999 !important;
+        flex: 0 0 auto !important;
+    }
+}
+
+/* Hamburger Toggle Button - Position on Right */
+@media (max-width: 1024px) {
+    .mobile-menu-toggle {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        min-height: 48px;
+        padding: 0;
+        background: #ffffff;
+        border: 2px solid #33766c;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        z-index: 10000;
+        transition: all 0.3s ease;
+        margin-left: auto !important;
+        margin-right: 15px !important;
+    }
+}
+
+.mobile-menu-toggle:hover,
+.mobile-menu-toggle:focus {
+    background: rgba(51, 118, 108, 0.1);
+    outline: 2px solid #4CAF50;
+    outline-offset: 2px;
+}
+
+.mobile-menu-toggle svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Overlay removed - no blocking background */
+
+/* Menu Panel - Side drawer */
+.mobile-menu-panel {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    max-width: 400px;
+    height: 100vh;
+    background: #ffffff;
+    z-index: 99999;
+    transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.mobile-menu-panel.active {
+    right: 0;
+}
+
+/* Close Button */
+.mobile-menu-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.05);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 100001;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-close:hover {
+    background: rgba(0, 0, 0, 0.1);
+    transform: rotate(90deg);
+}
+
+.mobile-menu-close svg {
+    width: 20px;
+    height: 20px;
+    stroke: #000000;
+}
+
+/* Menu Content */
+.mobile-menu-content {
+    padding: 20px;
+    padding-top: 80px;
+}
+
+/* Logo */
+.mobile-menu-logo {
+    text-align: center;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.mobile-menu-logo img {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Navigation */
+.mobile-menu-nav {
+    margin-bottom: 30px;
+}
+
+.mobile-menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu-list li {
+    margin: 0;
+    padding: 0;
+}
+
+.mobile-menu-list a {
+    display: block;
+    padding: 15px 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-list a:hover {
+    background: #f5f5f5;
+    color: #33766c;
+    padding-left: 25px;
+}
+
+/* Mobile Menu Dropdown Items (Resources submenu) */
+.mobile-menu-item-has-children {
+    position: relative;
+}
+
+.mobile-menu-dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px 20px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-dropdown-toggle::after {
+    content: '▼';
+    font-size: 12px;
+    transition: transform 0.3s ease;
+    margin-left: auto;
+    padding-left: 10px;
+}
+
+.mobile-menu-item-has-children[aria-expanded="true"] .mobile-menu-dropdown-toggle::after {
+    transform: rotate(180deg);
+}
+
+.mobile-menu-dropdown-toggle:hover {
+    background: #f5f5f5;
+    color: #33766c;
+}
+
+.mobile-menu-sublist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.mobile-menu-item-has-children[aria-expanded="true"] .mobile-menu-sublist {
+    max-height: 500px; /* Large enough to show all items */
+}
+
+.mobile-menu-sublist li {
+    margin: 0;
+    padding: 0;
+}
+
+.mobile-menu-sublist a {
+    display: block;
+    padding: 12px 20px 12px 40px; /* Indented for submenu */
+    color: #666;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-sublist a:hover {
+    background: #f5f5f5;
+    color: #33766c;
+    padding-left: 45px;
+}
+
+/* Social Icons */
+.mobile-menu-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 0 20px 0;
+    border-top: 1px solid #e5e5e5;
+}
+
+.mobile-menu-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f5f5f5;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 18px;
+}
+
+.mobile-menu-social a:hover {
+    background: #33766c;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Prevent body scroll when menu is open */
+body.mobile-menu-open {
+    overflow: hidden;
+}
+
+/* Remove any overlay/blur effects that might block menu visibility */
+body.mobile-menu-open::before,
+body.mobile-menu-open::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* Desktop: Hide mobile menu completely */
+@media (min-width: 1025px) {
+    .mobile-menu-wrapper {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        width: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+    }
+    
+    .mobile-menu-wrapper * {
+        display: none !important;
+    }
+}
+
+/* ========================================
+   OLD ELEMENTOR CSS REMOVED - Clean menu above
+   ======================================== */
+
+/* Custom Search Results Styles */
+.custom-search-results {
+    position: absolute;
+    top: 100%;
+    left: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    max-width: 400px !important;
+    height: 100vh !important;
+    background: #ffffff !important;
+    z-index: 99999 !important;
+    transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    overflow-y: auto !important;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1) !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: block !important;
+    /* Override any Elementor hiding */
+    pointer-events: auto !important;
+    transform: none !important;
+}
+
+/* Ensure menu is always in DOM and visible when active */
+.etheme-elementor-off-canvas__container[data-mobile-menu-container="true"].mobile-menu-active {
+    right: 0 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: translateX(0) !important;
+    /* Remove any conflicting positioning */
+    bottom: auto !important;
+    left: auto !important;
+}
+
+/* Remove elementor-lightbox hiding - CRITICAL for menu visibility */
+.etheme-elementor-off-canvas__container[data-mobile-menu-container="true"].elementor-lightbox,
+.elementor-lightbox[data-mobile-menu-container="true"] {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    position: fixed !important;
+    top: 0 !important;
+    right: -100% !important;
+    left: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    max-width: 400px !important;
+    height: 100vh !important;
+    background: #ffffff !important;
+    z-index: 99999 !important;
+    /* Override Elementor's default lightbox styles */
+    transform: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.elementor-lightbox[data-mobile-menu-container="true"].mobile-menu-active,
+.etheme-elementor-off-canvas__container[data-mobile-menu-container="true"].elementor-lightbox.mobile-menu-active {
+    right: 0 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+/* OVERRIDE ELEMENTOR LIGHTBOX HIDING - CRITICAL */
+.elementor-lightbox[data-mobile-menu-container="true"].mobile-menu-active .etheme-elementor-off-canvas__main,
+.elementor-lightbox[data-mobile-menu-container="true"].mobile-menu-active .etheme-elementor-off-canvas_content,
+.elementor-lightbox[data-mobile-menu-container="true"].mobile-menu-active * {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* CRITICAL: Override Elementor lightbox overlay pseudo-elements that might block menu */
+.elementor-lightbox[data-mobile-menu-container="true"]::before,
+.elementor-lightbox[data-mobile-menu-container="true"]::after {
+    display: none !important;
+    content: none !important;
+    background: transparent !important;
+    z-index: -1 !important;
+}
+
+/* Ensure menu container has white background when active */
+.etheme-elementor-off-canvas__container[data-mobile-menu-container="true"].mobile-menu-active,
+.elementor-lightbox[data-mobile-menu-container="true"].mobile-menu-active {
+    background: #ffffff !important;
+}
+
+/* Menu content must be visible and above everything with proper z-index stacking */
+.etheme-elementor-off-canvas__container[data-mobile-menu-container="true"].mobile-menu-active .etheme-elementor-off-canvas__main,
+.elementor-lightbox[data-mobile-menu-container="true"].mobile-menu-active .etheme-elementor-off-canvas__main,
+.etheme-elementor-off-canvas__container[data-mobile-menu-container="true"].mobile-menu-active .etheme-elementor-off-canvas__main[aria-hidden="true"],
+.etheme-elementor-off-canvas__container[data-mobile-menu-container="true"].mobile-menu-active .etheme-elementor-off-canvas__main[aria-hidden="false"],
+.elementor-lightbox[data-mobile-menu-container="true"].mobile-menu-active .etheme-elementor-off-canvas__main[aria-hidden="true"],
+.elementor-lightbox[data-mobile-menu-container="true"].mobile-menu-active .etheme-elementor-off-canvas__main[aria-hidden="false"] {
+    background: #ffffff !important;
+    z-index: 100000 !important;
+    position: relative !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 100vh !important;
+    padding: 20px !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
+
+/* Ensure inner content wrapper is visible */
+.etheme-elementor-off-canvas__container[data-mobile-menu-container="true"].mobile-menu-active .etheme-elementor-off-canvas_content,
+.elementor-lightbox[data-mobile-menu-container="true"].mobile-menu-active .etheme-elementor-off-canvas_content {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 100001 !important;
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    padding: 0 !important;
+}
+
+/* CRITICAL: Force all menu elements to be visible when menu is active */
+.etheme-elementor-off-canvas__container[data-mobile-menu-container="true"].mobile-menu-active .etheme-elementor-mobile-menu-element,
+.elementor-lightbox[data-mobile-menu-container="true"].mobile-menu-active .etheme-elementor-mobile-menu-element {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    position: relative !important;
+    z-index: 100002 !important;
+}
+
+/* Force logo to be visible */
+.etheme-elementor-off-canvas__container[data-mobile-menu-container="true"].mobile-menu-active .etheme-elementor-mobile-menu-logo,
+.elementor-lightbox[data-mobile-menu-container="true"].mobile-menu-active .etheme-elementor-mobile-menu-logo {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin-bottom: 30px !important;
+}
+
+/* Force navigation menu to be visible */
+.etheme-elementor-off-canvas__container[data-mobile-menu-container="true"].mobile-menu-active .etheme-elementor-mobile-menu-menu,
+.elementor-lightbox[data-mobile-menu-container="true"].mobile-menu-active .etheme-elementor-mobile-menu-menu {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    margin-bottom: 30px !important;
+}
+
+/* Force social icons to be visible */
+.etheme-elementor-off-canvas__container[data-mobile-menu-container="true"].mobile-menu-active .etheme-elementor-mobile-menu-social,
+.elementor-lightbox[data-mobile-menu-container="true"].mobile-menu-active .etheme-elementor-mobile-menu-social {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    padding: 20px 0 !important;
+}
+
+/* But exclude button from above rule */
+.elementor-lightbox[data-mobile-menu-container="true"].mobile-menu-active .etheme-elementor-off-canvas__toggle_button {
+    display: none !important; /* Hide the toggle button inside the menu */
+}
+
+/* Ensure menu content is visible - OVERRIDE ALL HIDING RULES */
+.etheme-elementor-off-canvas__main[aria-hidden="true"],
+.etheme-elementor-off-canvas__main[aria-hidden="false"],
+.etheme-elementor-off-canvas__main,
+.mobile-menu-active .etheme-elementor-off-canvas__main {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: 100% !important;
+    max-height: 100vh !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    padding: 20px !important;
+    width: 100% !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+/* Ensure inner content is visible */
+.etheme-elementor-off-canvas_content {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    height: auto !important;
+    padding: 0 !important;
+}
+
+/* Show menu items when menu is active - MOBILE ONLY */
+@media (max-width: 1024px) {
+    .etheme-elementor-off-canvas__container.mobile-menu-active .etheme-elementor-off-canvas__main,
+    .etheme-elementor-off-canvas__container.mobile-menu-active .etheme-elementor-off-canvas_content,
+    .etheme-elementor-off-canvas__container.mobile-menu-active .etheme-elementor-mobile-menu-element {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+}
+
+/* ========================================
+   CLEAN DESKTOP MENU - NO ELEMENTOR
+   ======================================== */
+@media (min-width: 1025px) {
+    /* Desktop Menu Container */
+    .desktop-menu-container {
+        width: 100%;
+        background: #f0f7f5; /* Match original teal-green background */
+        display: block !important; /* Force block display on new line */
+        clear: both !important; /* Clear any floats */
+        margin-top: 0 !important; /* No top margin - appears directly below social icons */
+        padding-top: 15px; /* Add top padding */
+        padding-bottom: 15px; /* Add bottom padding */
+    }
+
+    .desktop-menu-wrapper {
+        --desktop-menu-gap: 22px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: var(--desktop-menu-gap);
+        padding: 0 24px;
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .desktop-menu-explore,
+    .desktop-menu-main,
+    .desktop-menu-register {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        min-width: 0;
+    }
+
+    .desktop-menu-main {
+        justify-content: center;
+    }
+
+    .desktop-menu-main .desktop-menu-list {
+        justify-content: center;
+    }
+    
+    .desktop-menu-register {
+        margin-left: 0;
+        display: flex !important;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: var(--desktop-menu-gap);
+        align-items: center;
+        justify-content: flex-end;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    .desktop-menu-register-btn-merchant {
+        background-color: #33766c;
+    }
+    
+    .desktop-menu-register-btn-merchant:hover {
+        background-color: #ffffff;
+        color: #33766c;
+    }
+    
+    .desktop-menu-register-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 14px;
+        background-color: #000000;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: 500;
+        font-size: 13px;
+        white-space: nowrap;
+        flex-shrink: 0;
+        transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    }
+    
+    .desktop-menu-register-btn:hover {
+        background-color: #ffffff;
+        color: #000000;
+        transform: translateY(-1px);
+    }
+
+    /* Menu List - Horizontal, equal gap between every item */
+    .desktop-menu-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: var(--desktop-menu-gap, 22px);
+    }
+
+    /* Menu Item */
+    .desktop-menu-item {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin: 0;
+    }
+
+    .desktop-menu-item + .desktop-menu-item {
+        margin-left: 0;
+    }
+
+    /* Menu Link - Button style for dropdowns */
+    .desktop-menu-link {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        background: none;
+        border: none;
+        padding: 8px 12px;
+        color: #000;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+    .desktop-menu-item > a {
+        display: block;
+        padding: 8px 12px;
+        color: #000;
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: color 0.3s ease;
+    }
+
+    .desktop-menu-item > a:hover {
+        color: #33766c;
+    }
+
+    /* Explore Ligen Power® Icon */
+    .desktop-menu-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Dropdown Arrow */
+    .desktop-menu-arrow {
+        display: inline-flex;
+        align-items: center;
+        margin-left: 5px;
+    }
+
+    .desktop-menu-arrow .et-icon {
+        font-size: 12px;
+        transition: transform 0.3s ease;
+    }
+
+    .desktop-menu-item-has-children[aria-expanded="true"] .desktop-menu-arrow .et-icon {
+        transform: rotate(180deg);
+    }
+
+    /* Dropdown Menu */
+    .desktop-menu-dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #ffffff;
+        border: 1px solid #e5e5e5;
+        border-radius: 8px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        list-style: none;
+        padding: 10px 0;
+        margin: 8px 0 0;
+        min-width: 220px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+        z-index: 1000;
+    }
+
+    .desktop-menu-item-has-children[aria-expanded="true"] .desktop-menu-dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .desktop-menu-dropdown li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .desktop-menu-dropdown a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 20px;
+        color: #000;
+        text-decoration: none;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+    }
+
+    .desktop-menu-dropdown a:hover {
+        background-color: #f5f5f5;
+    }
+
+    .desktop-menu-dropdown svg {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+    }
+}
+
+/* DESKTOP MENU - Ensure it's not affected by mobile styles */
+/* Only hide mobile menu elements on desktop, let Elementor handle desktop menu styling completely */
+@media (min-width: 1025px) {
+    /* Hide mobile menu container on desktop */
+    .etheme-elementor-off-canvas__container[data-mobile-menu-container="true"] {
+        display: none !important;
+        visibility: hidden !important;
+    }
+    
+    /* Ensure hamburger menu is hidden on desktop */
+    .elementor-element-780ca1f {
+        display: none !important;
+        visibility: hidden !important;
+    }
+    
+}
+
+/* Force menu items and navigation to be visible - AGGressive override - MOBILE ONLY */
+@media (max-width: 1024px) {
+    .etheme-elementor-off-canvas__container.mobile-menu-active nav,
+    .etheme-elementor-off-canvas__container.mobile-menu-active .etheme-elementor-mobile-menu-menu,
+    .etheme-elementor-off-canvas__container.mobile-menu-active .etheme-elementor-nav-menu,
+    .etheme-elementor-off-canvas__container.mobile-menu-active ul[id*="mobile-menu"],
+    .etheme-elementor-off-canvas__container.mobile-menu-active .etheme-elementor-mobile-menu,
+    .elementor-lightbox.mobile-menu-active nav,
+    .elementor-lightbox.mobile-menu-active .etheme-elementor-mobile-menu-menu,
+    .elementor-lightbox.mobile-menu-active .etheme-elementor-nav-menu,
+    .elementor-lightbox.mobile-menu-active ul[id*="mobile-menu"],
+    .elementor-lightbox.mobile-menu-active .etheme-elementor-mobile-menu {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: 100% !important;
+        height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+        position: relative !important;
+        z-index: 2 !important;
+    }
+}
+
+/* Force individual menu items to be visible - AGGressive override - MOBILE ONLY */
+@media (max-width: 1024px) {
+    .etheme-elementor-off-canvas__container.mobile-menu-active .menu-item,
+    .etheme-elementor-off-canvas__container.mobile-menu-active .etheme-elementor-nav-menu-item,
+    .etheme-elementor-off-canvas__container.mobile-menu-active .item-link,
+    .etheme-elementor-off-canvas__container.mobile-menu-active a.etheme-elementor-nav-menu-item,
+    .elementor-lightbox.mobile-menu-active .menu-item,
+    .elementor-lightbox.mobile-menu-active .etheme-elementor-nav-menu-item,
+    .elementor-lightbox.mobile-menu-active .item-link,
+    .elementor-lightbox.mobile-menu-active a.etheme-elementor-nav-menu-item {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: 100% !important;
+        padding: 12px 20px !important;
+        color: #333 !important;
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+        text-decoration: none !important;
+        border-bottom: 1px solid #eee !important;
+        background: transparent !important;
+        cursor: pointer !important;
+    }
+
+    .etheme-elementor-off-canvas__container.mobile-menu-active .menu-item:hover,
+    .elementor-lightbox.mobile-menu-active .menu-item:hover {
+        background: #f5f5f5 !important;
+    }
+}
+
+/* Make menu list items visible - AGGressive override - MOBILE ONLY */
+@media (max-width: 1024px) {
+    .etheme-elementor-off-canvas__container.mobile-menu-active ul.etheme-elementor-nav-menu li,
+    .etheme-elementor-off-canvas__container.mobile-menu-active ul[id*="mobile-menu"] li,
+    .elementor-lightbox.mobile-menu-active ul.etheme-elementor-nav-menu li,
+    .elementor-lightbox.mobile-menu-active ul[id*="mobile-menu"] li {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: 100% !important;
+        list-style: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        position: relative !important;
+        z-index: 2 !important;
+    }
+
+    /* Show sub-menus if they exist */
+    .etheme-elementor-off-canvas__container.mobile-menu-active .etheme-elementor-nav-menu--dropdown,
+    .etheme-elementor-off-canvas__container.mobile-menu-active .nav-sublist-dropdown,
+    .etheme-elementor-off-canvas__container.mobile-menu-active ul ul,
+    .elementor-lightbox.mobile-menu-active .etheme-elementor-nav-menu--dropdown,
+    .elementor-lightbox.mobile-menu-active .nav-sublist-dropdown,
+    .elementor-lightbox.mobile-menu-active ul ul {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: 100% !important;
+        padding-left: 20px !important;
+    }
+}
+
+/* Ensure separators are visible but subtle - MOBILE ONLY */
+@media (max-width: 1024px) {
+    .etheme-elementor-off-canvas__container.mobile-menu-active .etheme-elementor-nav-menu-item-separator-wrapper,
+    .elementor-lightbox.mobile-menu-active .etheme-elementor-nav-menu-item-separator-wrapper {
+        display: block !important;
+        visibility: visible !important;
+        padding: 5px 20px !important;
+        opacity: 0.5 !important;
+    }
+}
+
+/* Force ALL children to be visible when menu is active - MOBILE ONLY */
+@media (max-width: 1024px) {
+    .mobile-menu-active *:not(.etheme-elementor-off-canvas__toggle_button) {
+        visibility: visible !important;
+    }
+
+    /* But be more specific - only force visibility of actual menu content */
+    .mobile-menu-active .etheme-elementor-off-canvas__main *,
+    .mobile-menu-active .etheme-elementor-off-canvas_content * {
+        display: revert !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    /* Override any height: 0 or max-height: 0 rules */
+    .mobile-menu-active .etheme-elementor-off-canvas__main,
+    .mobile-menu-active .etheme-elementor-off-canvas_content,
+    .mobile-menu-active nav,
+    .mobile-menu-active ul,
+    .mobile-menu-active li {
+        height: auto !important;
+        max-height: none !important;
+        min-height: auto !important;
+    }
+}
+
+/* Force social icons to be visible */
+.etheme-elementor-off-canvas__container.mobile-menu-active .etheme-elementor-mobile-menu-social,
+.etheme-elementor-off-canvas__container.mobile-menu-active .elementor-social-icons-wrapper {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    padding: 20px !important;
+    gap: 15px !important;
+}
+
+/* Overlay removed - no blocking background needed */
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Mobile menu toggle button - CSS-ONLY (No JS dependency) - ensure it's clickable - ONLY for burger menu */
+.elementor-element-780ca1f .etheme-elementor-off-canvas__toggle_button,
+.elementor-element-780ca1f a.elementor-button.etheme-elementor-off-canvas__toggle_button {
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    z-index: 10000 !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 8px 12px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    -webkit-tap-highlight-color: rgba(0,0,0,0.1) !important;
+    touch-action: manipulation !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+}
+
+.elementor-element-780ca1f .etheme-elementor-off-canvas__toggle_button:hover,
+.elementor-element-780ca1f .etheme-elementor-off-canvas__toggle_button:active,
+.elementor-element-780ca1f .etheme-elementor-off-canvas__toggle_button:focus,
+.elementor-element-780ca1f a.elementor-button.etheme-elementor-off-canvas__toggle_button:hover,
+.elementor-element-780ca1f a.elementor-button.etheme-elementor-off-canvas__toggle_button:active,
+.elementor-element-780ca1f a.elementor-button.etheme-elementor-off-canvas__toggle_button:focus {
+    background: rgba(0, 0, 0, 0.05) !important;
+    border-radius: 4px !important;
+    outline: 2px solid #4CAF50 !important;
+    outline-offset: 2px !important;
+}
+
+/* Ensure parent containers don't block clicks */
+.etheme-elementor-off-canvas__toggle,
+.etheme-elementor-off-canvas__toggle_wrapper,
+.elementor-button-wrapper {
+    pointer-events: auto !important;
+    z-index: 10000 !important;
+    position: relative !important;
+}
+
+/* Make sure nothing overlays the button */
+.etheme-elementor-off-canvas__toggle_button::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    z-index: -1;
+}
+
+/* Only apply hover to burger menu, not social icons (CSS-only) */
+.elementor-element-780ca1f .etheme-elementor-off-canvas__toggle_button:hover,
+.elementor-element-780ca1f .etheme-elementor-off-canvas__toggle_button:focus,
+.elementor-element-780ca1f a.elementor-button.etheme-elementor-off-canvas__toggle_button:hover,
+.elementor-element-780ca1f a.elementor-button.etheme-elementor-off-canvas__toggle_button:focus {
+    background: rgba(0, 0, 0, 0.05) !important;
+    border-radius: 4px !important;
+}
+
+.etheme-elementor-off-canvas__toggle_button .et-icon {
+    font-size: 24px !important;
+    color: #000000 !important;
+    display: block !important;
+}
+
+/* Hamburger icon will be handled by SVG method in mobile media query below */
+
+/* PROTECT SOCIAL MEDIA ICONS - They should NOT be affected by burger menu CSS */
+.elementor-element-facebook-icon .etheme-elementor-off-canvas__toggle_button .elementor-button-icon,
+.elementor-element-linkedin-icon .etheme-elementor-off-canvas__toggle_button .elementor-button-icon,
+.elementor-element-instagram-icon .etheme-elementor-off-canvas__toggle_button .elementor-button-icon,
+.elementor-element-youtube-icon .etheme-elementor-off-canvas__toggle_button .elementor-button-icon {
+    background: none !important;
+    background-image: none !important;
+    width: auto !important;
+    height: auto !important;
+    display: flex !important;
+}
+
+.elementor-element-facebook-icon .etheme-elementor-off-canvas__toggle_button .elementor-button-icon svg,
+.elementor-element-linkedin-icon .etheme-elementor-off-canvas__toggle_button .elementor-button-icon svg,
+.elementor-element-instagram-icon .etheme-elementor-off-canvas__toggle_button .elementor-button-icon svg,
+.elementor-element-youtube-icon .etheme-elementor-off-canvas__toggle_button .elementor-button-icon svg {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 24px !important;
+    height: 24px !important;
+}
+
+/* Close button styling */
+.etheme-elementor-off-canvas__close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    z-index: 100001;
+}
+
+.etheme-elementor-off-canvas__close-button:hover {
+    background: rgba(0, 0, 0, 0.1);
+    transform: rotate(90deg);
+}
+
+.etheme-elementor-off-canvas__close-button svg {
+    width: 20px;
+    height: 20px;
+    fill: #000000;
+}
+
+/* Mobile menu content - Side menu styling */
+.etheme-elementor-off-canvas__main {
+    padding: 20px;
+    padding-top: 80px;
+    padding-bottom: 30px;
+}
+
+/* Remove drag handle - not needed for side menu */
+
+.etheme-elementor-mobile-menu-element {
+    margin-bottom: 20px;
+}
+
+/* Mobile menu logo */
+.etheme-elementor-mobile-menu-logo {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 20px;
+}
+
+.etheme-elementor-mobile-menu-logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Mobile menu search */
+.etheme-elementor-mobile-menu-search {
+    margin-bottom: 20px;
+}
+
+/* Mobile menu navigation */
+.etheme-elementor-mobile-menu-wp_menu {
+    margin-bottom: 20px;
+}
+
+.etheme-elementor-mobile-menu-wp_menu .etheme-elementor-nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.etheme-elementor-mobile-menu-wp_menu .etheme-elementor-nav-menu li {
+    margin-bottom: 8px;
+}
+
+.etheme-elementor-mobile-menu-wp_menu .etheme-elementor-nav-menu a {
+    display: block;
+    padding: 12px 16px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.etheme-elementor-mobile-menu-wp_menu .etheme-elementor-nav-menu a:hover {
+    background: #f5f5f5;
+    color: #4CAF50;
+}
+
+/* Mobile menu action buttons */
+.etheme-elementor-mobile-menu-account,
+.etheme-elementor-mobile-menu-cart,
+.etheme-elementor-mobile-menu-wishlist,
+.etheme-elementor-mobile-menu-compare {
+    margin-bottom: 12px;
+}
+
+.etheme-elementor-mobile-menu-account a,
+.etheme-elementor-mobile-menu-cart a,
+.etheme-elementor-mobile-menu-wishlist a,
+.etheme-elementor-mobile-menu-compare a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-size: 15px;
+}
+
+.etheme-elementor-mobile-menu-account a:hover,
+.etheme-elementor-mobile-menu-cart a:hover,
+.etheme-elementor-mobile-menu-wishlist a:hover,
+.etheme-elementor-mobile-menu-compare a:hover {
+    background: #f5f5f5;
+    color: #4CAF50;
+}
+
+/* Ensure burger button is visible and clickable on mobile */
+/* Hide social media icons on mobile - Header only */
+@media (max-width: 1024px) {
+    /* Hide social media icons in header on mobile */
+    .elementor-element-facebook-icon.elementor-hidden-mobile,
+    .elementor-element-linkedin-icon.elementor-hidden-mobile,
+    .elementor-element-instagram-icon.elementor-hidden-mobile,
+    .elementor-element-youtube-icon.elementor-hidden-mobile {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    /* Hide search bar on mobile */
+    .elementor-element-d51fe12 {
+        display: none !important;
+        visibility: hidden !important;
+        width: 0 !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Ensure header parent container allows flex layout */
+    .elementor-element-61b00ad.e-flex {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+    }
+    
+    .elementor-element-61b00ad .e-con-inner {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+    }
+    
+    /* Ensure mobile menu wrapper is on the right */
+    .elementor-element-61b00ad .e-con-inner > .mobile-menu-wrapper {
+        margin-left: auto !important;
+        order: 999 !important;
+    }
+    
+    /* Logo and hamburger menu side-by-side on mobile */
+    .elementor-element-61b00ad .e-con-inner > .elementor-element-a5fc9f3,
+    .elementor-element-61b00ad .e-con-inner > .elementor-element-780ca1f {
+        display: flex !important;
+        align-items: center !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* Ensure logo comes first, then hamburger menu */
+    .elementor-element-61b00ad .e-con-inner > .elementor-element-a5fc9f3 {
+        order: 1 !important;
+        margin-right: 10px !important;
+    }
+
+    .elementor-element-61b00ad .e-con-inner > .elementor-element-780ca1f {
+        order: 2 !important;
+        margin-left: 0 !important;
+        margin-right: auto !important;
+    }
+
+    /* Push other elements (search, etc.) to the right */
+    .elementor-element-61b00ad .e-con-inner > .elementor-element-6ff25ca {
+        order: 3 !important;
+        flex: 1 1 auto !important;
+        margin-left: auto !important;
+    }
+    
+    /* Ensure parent container is visible and properly sized for hamburger menu */
+    .elementor-element-6ff25ca {
+        display: flex !important;
+        flex: 0 0 auto !important;
+        max-width: none !important;
+        width: auto !important;
+        min-width: 48px !important;
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+        justify-content: flex-end !important;
+        align-items: center !important;
+        order: 999 !important; /* Ensure it appears at the end */
+        margin: 0 !important;
+    }
+    
+    .elementor-element-6ff25ca .e-con-inner {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+        width: auto !important;
+        min-width: 48px !important;
+        gap: 0 !important;
+    }
+    
+    /* ============================================
+       CSS-ONLY MOBILE MENU FIX (No JavaScript Dependency)
+       Targets .elementor-element-780ca1f parent class directly
+       ============================================ */
+    
+    /* 1. CRITICAL: Override Elementor's default hiding for elementor-hidden-desktop
+       This MUST come first and be VERY specific to override Elementor's CSS */
+    .elementor-element-780ca1f.elementor-hidden-desktop,
+    div.elementor-element.elementor-element-780ca1f.elementor-hidden-desktop,
+    div[data-id="780ca1f"].elementor-hidden-desktop,
+    .elementor-widget-theme-etheme_mobile_menu.elementor-hidden-desktop {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: auto !important;
+        min-width: 48px !important;
+        height: 48px !important;
+        min-height: 48px !important;
+        max-height: 48px !important;
+        position: relative !important;
+        z-index: 9999 !important;
+        flex: 0 0 auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        clip: unset !important;
+        clip-path: none !important;
+        overflow: visible !important;
+    }
+    
+    /* Force the container widget to be visible */
+    .elementor-element-780ca1f,
+    .elementor-element-780ca1f.elementor-widget__width-auto,
+    div[data-id="780ca1f"] {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: auto !important;
+        max-width: none !important;
+        position: relative !important;
+        z-index: 9999 !important;
+        flex: 0 0 auto !important;
+        min-width: 48px !important;
+        height: 48px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Ensure widget container and wrappers are visible */
+    .elementor-element-780ca1f .elementor-widget-container,
+    .elementor-element-780ca1f .etheme-elementor-off-canvas__wrapper,
+    .elementor-element-780ca1f .etheme-elementor-off-canvas__toggle_wrapper {
+        display: block !important;
+        visibility: visible !important;
+        position: relative !important;
+        width: auto !important;
+        height: auto !important;
+    }
+    
+    /* Override any child hiding rules - Force visibility */
+    .elementor-element-780ca1f.elementor-hidden-desktop *,
+    .elementor-element-780ca1f.elementor-widget__width-auto * {
+        display: revert !important;
+        visibility: revert !important;
+    }
+    
+    /* CRITICAL: Override Elementor's default widget width restrictions */
+    .elementor-element-780ca1f.elementor-widget__width-auto {
+        width: auto !important;
+        max-width: none !important;
+        flex-shrink: 0 !important;
+    }
+    
+    /* Force all wrapper elements to be visible */
+    .elementor-element-780ca1f .etheme-elementor-off-canvas__toggle,
+    .elementor-element-780ca1f .elementor-button-wrapper {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    /* 2. Style the button using the Parent Class (No JS dependency) */
+    .elementor-element-780ca1f .etheme-elementor-off-canvas__toggle_button,
+    .elementor-element-780ca1f a.elementor-button.etheme-elementor-off-canvas__toggle_button,
+    .elementor-element-780ca1f a[role="button"].etheme-elementor-off-canvas__toggle_button {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 44px !important;
+        height: 44px !important;
+        min-width: 44px !important;
+        min-height: 44px !important;
+        max-width: 44px !important;
+        max-height: 44px !important;
+        background-color: #ffffff !important;
+        border: 2px solid #33766c !important;
+        border-radius: 4px !important;
+        padding: 0 !important;
+        margin: 0 0 0 10px !important; /* Spacing */
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        position: relative !important;
+        z-index: 100000 !important;
+        overflow: visible !important;
+        clip: unset !important;
+        clip-path: none !important;
+    }
+    
+    /* 3. Hide internal broken icons/spans */
+    .elementor-element-780ca1f .etheme-elementor-off-canvas__toggle_button > *,
+    .elementor-element-780ca1f a.elementor-button > * {
+        display: none !important;
+    }
+    
+    /* 4. Draw the icon purely with CSS (SVG Background) */
+    .elementor-element-780ca1f .etheme-elementor-off-canvas__toggle_button::after,
+    .elementor-element-780ca1f a.elementor-button.etheme-elementor-off-canvas__toggle_button::after {
+        content: '' !important;
+        display: block !important;
+        width: 24px !important;
+        height: 24px !important;
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 12h18M3 6h18M3 18h18' stroke='%2333766c' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") !important;
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
+        background-size: contain !important;
+        z-index: 2 !important;
+        pointer-events: none !important;
+    }
+
+    /* 4. PROTECT Social Icons from the rule above */
+    .elementor-element-facebook-icon .etheme-elementor-off-canvas__toggle_button,
+    .elementor-element-linkedin-icon .etheme-elementor-off-canvas__toggle_button,
+    .elementor-element-instagram-icon .etheme-elementor-off-canvas__toggle_button,
+    .elementor-element-youtube-icon .etheme-elementor-off-canvas__toggle_button {
+        width: auto !important;
+        height: auto !important;
+        border: none !important;
+        background: transparent !important;
+    }
+
+    /* Unhide children for social icons */
+    .elementor-element-facebook-icon .etheme-elementor-off-canvas__toggle_button > *,
+    .elementor-element-linkedin-icon .etheme-elementor-off-canvas__toggle_button > *,
+    .elementor-element-instagram-icon .etheme-elementor-off-canvas__toggle_button > *,
+    .elementor-element-youtube-icon .etheme-elementor-off-canvas__toggle_button > * {
+        display: flex !important;
+    }
+
+    /* Remove pseudo-element from social icons */
+    .elementor-element-facebook-icon .etheme-elementor-off-canvas__toggle_button::after,
+    .elementor-element-linkedin-icon .etheme-elementor-off-canvas__toggle_button::after,
+    .elementor-element-instagram-icon .etheme-elementor-off-canvas__toggle_button::after,
+    .elementor-element-youtube-icon .etheme-elementor-off-canvas__toggle_button::after {
+        display: none !important;
+    }
+}
+
+/* ============================================
+   ADDITIONAL MOBILE MENU RULES (CSS-Only, No JS Dependency)
+   Backup rules to ensure menu is always visible
+   ============================================ */
+@media (max-width: 1024px) {
+    /* Ensure parent containers don't hide the menu */
+    .elementor-element-6ff25ca {
+        display: flex !important;
+        flex: 0 0 auto !important;
+        width: auto !important;
+        min-width: 48px !important;
+        justify-content: flex-end !important;
+        align-items: center !important;
+    }
+    
+    /* AGGRESSIVE OVERRIDE - Target by any possible selector combination */
+    div[data-id="780ca1f"].elementor-hidden-desktop,
+    .elementor-widget-theme-etheme_mobile_menu.elementor-hidden-desktop,
+    [data-widget_type="theme-etheme_mobile_menu.default"].elementor-hidden-desktop {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    /* Additional button targeting (CSS-only, no data attributes) */
+    .elementor-element-780ca1f a.etheme-elementor-off-canvas__toggle_button,
+    .elementor-element-780ca1f a[role="button"][aria-label="Menu"] {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: 44px !important;
+        height: 44px !important;
+        background-color: #ffffff !important;
+        border: 2px solid #33766c !important;
+        border-radius: 4px !important;
+        position: relative !important;
+        z-index: 100000 !important;
+    }
+    
+    /* Force ::after icon on the link element directly (CSS-only) */
+    .elementor-element-780ca1f a.etheme-elementor-off-canvas__toggle_button::after,
+    .elementor-element-780ca1f a[role="button"][aria-label="Menu"]::after {
+        content: '' !important;
+        display: block !important;
+        width: 24px !important;
+        height: 18px !important;
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M3 12h18M3 6h18M3 18h18' stroke='%2333766c' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") !important;
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
+        background-size: contain !important;
+        z-index: 10 !important;
+        pointer-events: none !important;
+    }
+}
+
+/* PROTECT SOCIAL MEDIA ICONS - They should NOT be affected by burger menu CSS */
+/* Ensure social media containers are visible and clickable */
+.elementor-element-facebook-icon,
+.elementor-element-linkedin-icon,
+.elementor-element-instagram-icon,
+.elementor-element-youtube-icon {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+/* Ensure social media links are clickable */
+.elementor-element-facebook-icon .etheme-elementor-off-canvas__toggle_button,
+.elementor-element-linkedin-icon .etheme-elementor-off-canvas__toggle_button,
+.elementor-element-instagram-icon .etheme-elementor-off-canvas__toggle_button,
+.elementor-element-youtube-icon .etheme-elementor-off-canvas__toggle_button {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: auto !important;
+    height: auto !important;
+    min-width: auto !important;
+    min-height: auto !important;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    text-decoration: none !important;
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+.elementor-element-facebook-icon .etheme-elementor-off-canvas__toggle_button .elementor-button-icon,
+.elementor-element-linkedin-icon .etheme-elementor-off-canvas__toggle_button .elementor-button-icon,
+.elementor-element-instagram-icon .etheme-elementor-off-canvas__toggle_button .elementor-button-icon,
+.elementor-element-youtube-icon .etheme-elementor-off-canvas__toggle_button .elementor-button-icon {
+    background: none !important;
+    background-image: none !important;
+    width: auto !important;
+    height: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.elementor-element-facebook-icon .etheme-elementor-off-canvas__toggle_button .elementor-button-icon svg,
+.elementor-element-linkedin-icon .etheme-elementor-off-canvas__toggle_button .elementor-button-icon svg,
+.elementor-element-instagram-icon .etheme-elementor-off-canvas__toggle_button .elementor-button-icon svg,
+.elementor-element-youtube-icon .etheme-elementor-off-canvas__toggle_button .elementor-button-icon svg {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 24px !important;
+    height: 24px !important;
+    pointer-events: none !important; /* Let parent handle clicks */
+}
+
+/* Hover effect for social media icons */
+.elementor-element-facebook-icon .etheme-elementor-off-canvas__toggle_button:hover,
+.elementor-element-linkedin-icon .etheme-elementor-off-canvas__toggle_button:hover,
+.elementor-element-instagram-icon .etheme-elementor-off-canvas__toggle_button:hover,
+.elementor-element-youtube-icon .etheme-elementor-off-canvas__toggle_button:hover,
+.social-media-link:hover {
+    opacity: 0.7 !important;
+    transform: scale(1.1) !important;
+    transition: all 0.2s ease !important;
+}
+
+/* Ensure social media links work - override any blocking */
+.social-media-link,
+.elementor-element-facebook-icon a,
+.elementor-element-linkedin-icon a,
+.elementor-element-instagram-icon a,
+.elementor-element-youtube-icon a {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+    z-index: 100 !important;
+    position: relative !important;
+}
+
+.etheme-elementor-off-canvas__toggle,
+.etheme-elementor-off-canvas__toggle_wrapper,
+.etheme-elementor-off-canvas__wrapper,
+.elementor-button-wrapper {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 10000 !important;
+}
+
+/* Ensure the entire mobile menu widget container is visible */
+/* CRITICAL: Only apply on mobile (max-width: 1024px) - NOT on desktop */
+@media (max-width: 1024px) {
+    .elementor-element-780ca1f {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: auto !important;
+        height: auto !important;
+        min-width: 48px !important;
+        position: relative !important;
+        z-index: 9999 !important;
+    }
+}
+
+/* MAXIMUM SPECIFICITY: Target exact HTML structure on mobile */
+@media (max-width: 1024px) {
+    div.elementor-element.elementor-element-780ca1f.elementor-widget__width-auto.elementor-hidden-desktop,
+    div[data-id="780ca1f"].elementor-widget__width-auto.elementor-hidden-desktop {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: auto !important;
+        max-width: none !important;
+        min-width: 48px !important;
+        height: 48px !important;
+        position: relative !important;
+        z-index: 9999 !important;
+        flex: 0 0 auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Target the button with maximum specificity */
+    div.elementor-element-780ca1f a.elementor-button.etheme-elementor-off-canvas__toggle_button[aria-label="Menu"],
+    div[data-id="780ca1f"] a.elementor-button.etheme-elementor-off-canvas__toggle_button[aria-label="Menu"] {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: 44px !important;
+        height: 44px !important;
+        min-width: 44px !important;
+        min-height: 44px !important;
+        background-color: #ffffff !important;
+        border: 2px solid #33766c !important;
+        border-radius: 4px !important;
+        position: relative !important;
+        z-index: 100000 !important;
+        pointer-events: auto !important;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .etheme-elementor-off-canvas__container[data-mobile-menu-container="true"] {
+        max-width: 85% !important;
+        width: 85% !important;
+    }
+    
+    .etheme-elementor-off-canvas__main {
+        padding: 20px;
+        padding-top: 70px;
+        padding-bottom: 30px;
+    }
+    
+    /* Ensure menu is visible on mobile */
+    .etheme-elementor-off-canvas__container[data-mobile-menu-container="true"] {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+}
+
+/* Prevent body scroll when menu is open */
+body.mobile-menu-open {
+    overflow: hidden !important;
+    position: fixed;
+    width: 100%;
+}
+
+.search-section {
+    margin-bottom: 24px;
+}
+
+.search-section:last-child {
+    margin-bottom: 0;
+}
+
+.search-section-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 12px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e5e5e5;
+}
+
+.search-results-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.search-result-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #1a1a1a;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.search-result-item:hover {
+    background: #ffffff;
+    border-color: #4CAF50;
+    box-shadow: 0 4px 12px rgba(76,175,80,0.15);
+    transform: translateX(4px);
+}
+
+.search-result-content {
+    flex: 1;
+}
+
+.search-result-item h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+    color: #1a1a1a;
+}
+
+.search-result-category,
+.search-result-type {
+    font-size: 12px;
+    color: #666;
+    display: inline-block;
+    padding: 2px 8px;
+    background: #e5e5e5;
+    border-radius: 4px;
+    margin-top: 4px;
+}
+
+.search-result-type {
+    background: #4CAF50;
+    color: #ffffff;
+}
+
+.search-no-results {
+    padding: 40px 20px;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Scrollbar styling */
+.custom-search-results::-webkit-scrollbar {
+    width: 8px;
+}
+
+.custom-search-results::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.custom-search-results::-webkit-scrollbar-thumb {
+    background: #4CAF50;
+    border-radius: 4px;
+}
+
+.custom-search-results::-webkit-scrollbar-thumb:hover {
+    background: #45a049;
+}
+
+/* Ensure search input wrapper is positioned relative */
+.etheme-search-input-form-wrapper {
+    position: relative;
+}
+
+/* Make search input accessible and ensure placeholder doesn't block it */
+.etheme-search-input-wrapper {
+    position: relative;
+}
+
+.etheme-search-form-input[type="search"] {
+    position: relative;
+    z-index: 10;
+    background: transparent;
+    width: 100%;
+    min-height: 46px;
+}
+
+/* Ensure input is always accessible and clickable */
+.etheme-search-input-wrapper {
+    position: relative;
+}
+
+.etheme-search-input-wrapper input[type="search"] {
+    position: relative !important;
+    z-index: 999 !important;
+    background: transparent !important;
+    width: 100% !important;
+    min-height: 46px !important;
+    padding: 12px 15px !important;
+    cursor: text !important;
+    pointer-events: auto !important;
+    color: #1a1a1a !important;
+    border: none !important;
+    outline: none !important;
+}
+
+.etheme-search-input-wrapper input[type="search"]:focus {
+    outline: 2px solid #4CAF50 !important;
+    outline-offset: 2px !important;
+}
+
+/* Force input to always be on top and interactive */
+.etheme-search-input-wrapper input[type="search"] {
+    z-index: 999 !important;
+    pointer-events: auto !important;
+    position: relative !important;
+}
+
+@media (max-width: 768px) {
+    .custom-search-results {
+        max-height: 400px;
+        padding: 16px;
+    }
+    
+    .search-result-item {
+        padding: 10px 12px;
+    }
+    
+    .search-result-item h4 {
+        font-size: 14px;
+    }
+}
+
+/* Duplicate section removed - hamburger menu CSS is already handled in the mobile media query above */
+</style>
+<!-- Mobile menu logic is centralized in assets/js/header-loader.js -->
+<!-- Scripts are loaded separately after header is inserted via header-loader.js -->

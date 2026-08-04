@@ -1,0 +1,127 @@
+# Ligen Power Website - Hostinger Configuration
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Pretty blog URLs: /blog/post-slug or /blog/post-slug.html
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^blog/([a-z0-9-]+)/?$ blog-single.html?slug=$1 [L,QSA,NC]
+    RewriteRule ^blog/([a-z0-9-]+)\.html$ blog-single.html?slug=$1 [L,QSA,NC]
+
+    # Redirect legacy blog-single.html?slug=... to /blog/slug
+    RewriteCond %{QUERY_STRING} (^|&)slug=([a-z0-9-]+)(&|$) [NC]
+    RewriteRule ^blog-single\.html$ /blog/%2? [R=301,L,NE]
+
+    # Redirect legacy news-single URLs to individual news pages
+    RewriteCond %{QUERY_STRING} (^|&)id=7(&|$) [NC]
+    RewriteRule ^news-single\.html$ /ligen-power-at-swadeshi-mela-jamshedpur-visit-us-at-stall-no-404-405? [R=301,L,NE]
+    RewriteCond %{QUERY_STRING} (^|&)id=8(&|$) [NC]
+    RewriteRule ^news-single\.html$ /1st-international-consignment-flagging-off-ceremony-to-nigeria-a-historic-milestone-for-bihars-startup-ecosystem? [R=301,L,NE]
+    RewriteCond %{QUERY_STRING} (^|&)id=9(&|$) [NC]
+    RewriteRule ^news-single\.html$ /empowering-innovation-iit-patna-incubates-bihars-first-international-tech-export? [R=301,L,NE]
+    RewriteCond %{QUERY_STRING} (^|&)id=10(&|$) [NC]
+    RewriteRule ^news-single\.html$ /empowering-bihars-future-ligen-power-shines-at-the-bihar-2047-vision-conclave? [R=301,L,NE]
+    RewriteCond %{QUERY_STRING} (^|&)id=11(&|$) [NC]
+    RewriteRule ^news-single\.html$ /festive-highlights-ligen-powers-christmas-celebrations? [R=301,L,NE]
+    RewriteCond %{QUERY_STRING} (^|&)id=12(&|$) [NC]
+    RewriteRule ^news-single\.html$ /amossys-portable-power-llp-hosts-successful-dealers-meet-in-jamshedpur? [R=301,L,NE]
+    RewriteCond %{QUERY_STRING} (^|&)id=13(&|$) [NC]
+    RewriteRule ^news-single\.html$ /ligen-power-organizes-a-meditation-session-in-your-society? [R=301,L,NE]
+    RewriteCond %{QUERY_STRING} (^|&)id=14(&|$) [NC]
+    RewriteRule ^news-single\.html$ /ligen-power-shines-at-bihar-connect-2024-empowering-innovation-and-collaboration? [R=301,L,NE]
+    RewriteRule ^news-single/?$ /news-events? [R=301,L,NE]
+    RewriteRule ^news-single\.html$ /news-events? [R=301,L,NE]
+
+    # Redirect index.html to site root
+    RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+    RewriteRule ^ / [R=301,L]
+
+    # Redirect other .html URLs to extensionless paths
+    RewriteCond %{THE_REQUEST} \s/+([^?\s]*?)\.html[\s?] [NC]
+    RewriteRule ^ /%1? [R=301,L,NE]
+
+    # Serve .html files for extensionless URLs
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.html -f
+    RewriteRule ^(.+?)/?$ $1.html [L]
+</IfModule>
+
+# Enable PHP (usually not needed, but good to have)
+AddHandler application/x-httpd-php .php
+
+# Set default PHP version (adjust if needed)
+# AddHandler application/x-httpd-php80 .php
+
+# Enable CORS for API endpoints (if needed)
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type"
+</IfModule>
+
+# Prevent directory listing
+Options -Indexes
+
+# Default index file
+DirectoryIndex index.html index.php
+
+# Enable compression (optional, for better performance)
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
+
+# Cache static files (optional, for better performance)
+<IfModule mod_expires.c>
+    ExpiresActive On
+    # Images - cache for 1 year
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    # CSS - cache for 1 week (reduced from 1 month for easier updates)
+    ExpiresByType text/css "access plus 1 week"
+    # JavaScript - cache for 1 week (reduced from 1 month for easier updates)
+    ExpiresByType application/javascript "access plus 1 week"
+    # HTML files - no cache (always fetch fresh)
+    ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+# Disable caching for HTML files and menu scripts
+<IfModule mod_headers.c>
+    # No cache for HTML files
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires "0"
+    </FilesMatch>
+    # Shorter cache for menu scripts (in case of updates)
+    <FilesMatch "(mobile-menu-clean|desktop-menu-clean|header-loader)\.js$">
+        Header set Cache-Control "max-age=3600, must-revalidate"
+    </FilesMatch>
+</IfModule>
+
+# Security: Prevent access to config files directly
+<FilesMatch "\.(json)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order deny,allow
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Allow API to read config files
+<FilesMatch "^smtp-config\.json$|^announcement\.json$|^page-links\.json$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order deny,allow
+        Deny from all
+    </IfModule>
+</FilesMatch>
+

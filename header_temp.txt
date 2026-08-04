@@ -1,0 +1,2410 @@
+    		<div class="top-announcement-bar" style="background-color: #00a651; color: #ffffff; padding: 12px 0; font-size: 13px; width: 100%; box-sizing: border-box; position: relative; z-index: 9999; display: block;">
+			<div style="width: 100%; max-width: 100%; margin: 0 auto; padding: 0 60px; display: flex; justify-content: space-between; align-items: center; box-sizing: border-box;">
+				<div style="display: flex; align-items: center; gap: 0; flex: 0 0 auto;">
+					<div style="display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 0 8px;">
+						<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline-block; vertical-align: middle; flex-shrink: 0;">
+							<circle cx="12" cy="12" r="10" fill="#DC143C"></circle>
+							<path d="M12 2 L12 8 M12 16 L12 22 M2 12 L8 12 M16 12 L22 12" stroke="white" stroke-width="1.5"></path>
+							<path d="M12 2 L9 9 L2 12 L9 15 L12 22 L15 15 L22 12 L15 9 Z" fill="white"></path>
+						</svg>
+						<span style="font-weight: 500; white-space: nowrap;">English</span>
+						<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="display: inline-block; vertical-align: middle; margin-left: 4px; flex-shrink: 0;">
+							<polyline points="6 9 12 15 18 9"></polyline>
+						</svg>
+					</div>
+					<span style="border-left: 1px solid rgba(255,255,255,0.3); height: 18px; margin: 0 20px; flex-shrink: 0;"></span>
+					<div style="display: flex; align-items: center; gap: 8px; padding: 0 8px;">
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline-block; vertical-align: middle; flex-shrink: 0;">
+							<path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+							<line x1="7" y1="7" x2="7.01" y2="7"></line>
+						</svg>
+						<span style="white-space: nowrap;">Midseason Sale: 20% Off - Limited Time Only</span>
+					</div>
+				</div>
+				<div style="display: flex; align-items: center; gap: 0; flex: 0 0 auto; margin-left: auto;">
+					<a href="about.html" style="color: #ffffff; text-decoration: none; display: flex; align-items: center; gap: 8px; padding: 0 12px; transition: opacity 0.2s;">
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline-block; vertical-align: middle; flex-shrink: 0;">
+							<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+							<polyline points="9 22 9 12 15 12 15 22"></polyline>
+						</svg>
+						<span style="white-space: nowrap;">About Us</span>
+					</a>
+					<span style="border-left: 1px solid rgba(255,255,255,0.3); height: 18px; margin: 0 8px; flex-shrink: 0;"></span>
+					<a href="#/certifications/" style="color: #ffffff; text-decoration: none; display: flex; align-items: center; gap: 8px; padding: 0 12px; transition: opacity 0.2s;">
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline-block; vertical-align: middle; flex-shrink: 0;">
+							<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+							<polyline points="14 2 14 8 20 8"></polyline>
+							<line x1="16" y1="13" x2="8" y2="13"></line>
+							<line x1="16" y1="17" x2="8" y2="17"></line>
+							<polyline points="10 9 9 9 8 9"></polyline>
+						</svg>
+						<span style="white-space: nowrap;">Certifications</span>
+					</a>
+					<span style="border-left: 1px solid rgba(255,255,255,0.3); height: 18px; margin: 0 8px; flex-shrink: 0;"></span>
+					<a href="#/store-locator/" style="color: #ffffff; text-decoration: none; display: flex; align-items: center; gap: 8px; padding: 0 12px; transition: opacity 0.2s;">
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline-block; vertical-align: middle; flex-shrink: 0;">
+							<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+							<circle cx="12" cy="10" r="3"></circle>
+						</svg>
+						<span style="white-space: nowrap;">Store Locator</span>
+					</a>
+				</div>
+			</div>
+		</div>
+    		<header data-elementor-type="header" data-elementor-id="2530" class="elementor elementor-2530 elementor-location-header" data-elementor-post-type="elementor_library">
+			<div class="etheme-elementor-header-sticky elementor-element elementor-element-61b00ad etheme-elementor-header-sticky e-flex e-con-boxed e-con e-parent" data-id="61b00ad" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;etheme_header_sticky&quot;:&quot;sticky&quot;,&quot;etheme_header_sticky_on&quot;:[&quot;tablet&quot;,&quot;mobile&quot;],&quot;etheme_header_sticky_type&quot;:&quot;custom&quot;,&quot;etheme_header_sticky_offset&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;etheme_header_sticky_offset_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;etheme_header_sticky_offset_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-a5fc9f3 etheme-elementor-widget-loaded elementor-widget elementor-widget-theme-etheme_site-logo elementor-widget-image" data-id="a5fc9f3" data-element_type="widget" data-widget_type="theme-etheme_site-logo.default">
+											<a href="#">
+			<img width="332" height="81" src="assets/images/Logo-2x.jpeg" class="attachment-full size-full wp-image-87" alt="" />				</a>
+											</div>
+		<div class="elementor-element elementor-element-6ff25ca e-flex e-con-boxed e-con e-child" data-id="6ff25ca" data-element_type="container" style="flex: 1 1 55%; max-width: 55%; padding-right: 20px; box-sizing: border-box;">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-d51fe12 etheme-elementor-widget-loaded elementor-widget elementor-widget-theme-etheme_ajax_search" data-id="d51fe12" data-element_type="widget" data-settings="{&quot;animated_placeholder_text&quot;:&quot;power Inverter\nBMS\nPower Battery\nPower E cycle\nSolar Street Light&quot;,&quot;trending_searches_list&quot;:&quot;Bluetooth,  Xbox,  JBL Go 2, iPhone 14, iPad,  Laptop, Controller, Smartphone, Gadget, Tesla&quot;,&quot;animated_placeholder&quot;:&quot;yes&quot;,&quot;ajax_search&quot;:&quot;yes&quot;,&quot;min_chars&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;post_types&quot;:[&quot;product&quot;,&quot;post&quot;],&quot;ajax_search_results_heading_type&quot;:&quot;headings&quot;,&quot;posts_per_page&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;post_limit&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:5,&quot;sizes&quot;:[]},&quot;product_stock&quot;:&quot;yes&quot;,&quot;product_category&quot;:&quot;yes&quot;,&quot;product_price&quot;:&quot;yes&quot;,&quot;global_post_type_image&quot;:&quot;yes&quot;,&quot;global_post_type_date&quot;:&quot;yes&quot;,&quot;post_type_content_mobile&quot;:[&quot;image&quot;,&quot;title&quot;,&quot;product_price&quot;],&quot;trending_searches&quot;:&quot;yes&quot;,&quot;trending_searches_limit&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:5,&quot;sizes&quot;:[]},&quot;results_max_height&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:500,&quot;sizes&quot;:[]}}" data-widget_type="theme-etheme_ajax_search.default">
+				<div class="elementor-widget-container">
+					
+        <form class="etheme-search-form" role="search" action="#" method="get" type="inline">
+                        <div class="etheme-search-input-form-wrapper">
+
+                
+                <div class="etheme-search-input-wrapper">
+
+                    
+        <span class="etheme-search-form-input etheme-search-input-placeholder">
+            <span class="etheme-search-placeholder">
+                Search for            </span>
+            
+            <span class="etheme-search-placeholder-text etheme-search-placeholder-text-active">Ligen&nbsp;power&nbsp;Inverter</span><span class="etheme-search-placeholder-text ">Ligen&nbsp;Battery&nbsp;Management</span><span class="etheme-search-placeholder-text ">Ligen&nbsp;Power&nbsp;Battery</span><span class="etheme-search-placeholder-text ">Ligen&nbsp;Power&nbsp;Cycle</span><span class="etheme-search-placeholder-text ">Solar&nbsp;Street&nbsp;Light</span>        </span>
+        
+                    <input class="etheme-search-form-input" type="search" name="s" title="Search" value="" placeholder="">
+
+                                            <input type="hidden" name="et_search" value="true">
+                    
+                    
+
+	                
+                    <input type="hidden" name="post_type" value="product">
+
+                                            <span class="etheme-search-form-clear">
+                            <svg xmlns="http://www.w3.org/2000/svg" width=".7em" height=".7em" viewBox="0 0 24 24" fill="currentColor"><path d="M13.056 12l10.728-10.704c0.144-0.144 0.216-0.336 0.216-0.552 0-0.192-0.072-0.384-0.216-0.528-0.144-0.12-0.336-0.216-0.528-0.216 0 0 0 0 0 0-0.192 0-0.408 0.072-0.528 0.216l-10.728 10.728-10.704-10.728c-0.288-0.288-0.768-0.288-1.056 0-0.168 0.144-0.24 0.336-0.24 0.528 0 0.216 0.072 0.408 0.216 0.552l10.728 10.704-10.728 10.704c-0.144 0.144-0.216 0.336-0.216 0.552s0.072 0.384 0.216 0.528c0.288 0.288 0.768 0.288 1.056 0l10.728-10.728 10.704 10.704c0.144 0.144 0.336 0.216 0.528 0.216s0.384-0.072 0.528-0.216c0.144-0.144 0.216-0.336 0.216-0.528s-0.072-0.384-0.216-0.528l-10.704-10.704z"></path></svg>
+                        </span>
+                    
+                </div>
+
+                <div class="etheme-search-form-button-wrapper">
+
+                    <button class="etheme-search-form-submit" type="submit" title="Search" aria-label="Search">
+
+                        			<i aria-hidden="true" class="et-icon et-zoom"></i><span class="elementor-screen-only">Search</span>
+                    </button>
+                </div>
+
+            </div>
+                        <div class="etheme-search-ajax-results">        <div class="etheme-search-trending-searches-wrapper hidden">
+            <h3 class="etheme-search-trending-searches-heading etheme-search-form-title">
+                Recommended for you                <span class="etheme-search-trending-searches-refresh"><span class="et_b-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32">
+                        <path d="M29.76 8.16c0.288-1.248 0.896-3.744 1.056-4.992 0.064-0.512-0.064-0.864-0.544-0.992-0.512-0.16-0.832 0.096-1.056 0.672-0.288 0.768-0.768 3.296-0.768 3.296-2.080-2.688-5.248-4.736-8.704-5.6l-0.128-0.032c-4.128-0.992-8.32-0.256-11.904 1.888-7.136 4.352-9.088 12.672-6.752 19.008 0.096 0.224 0.352 0.416 0.64 0.48 0.224 0.064 0.448-0.032 0.608-0.096l0.032-0.032c0.416-0.192 0.608-0.672 0.384-1.184-2.048-5.856 0-12.992 6.208-16.672 3.136-1.856 6.72-2.432 10.432-1.536 2.784 0.672 5.728 2.368 7.552 4.8 0 0-2.56 0-3.424 0.032-0.64 0-0.96 0.16-1.056 0.608-0.128 0.48 0.128 0.992 0.608 1.024 1.568 0.096 5.664 0.128 5.664 0.128 0.16 0 0.192 0 0.384-0.032s0.416-0.192 0.544-0.352c0.096-0.16 0.224-0.416 0.224-0.416zM2.144 23.936c-0.288 1.248-0.864 3.744-1.056 4.992-0.064 0.512 0.064 0.864 0.544 0.992 0.512 0.128 0.832-0.128 1.056-0.704 0.288-0.768 0.768-3.296 0.768-3.296 2.080 2.688 5.28 4.736 8.736 5.6l0.128 0.032c4.128 0.992 8.32 0.256 11.904-1.888 7.136-4.32 9.088-12.672 6.752-19.008-0.096-0.224-0.352-0.416-0.64-0.48-0.224-0.064-0.448 0.032-0.608 0.096l-0.032 0.032c-0.416 0.192-0.608 0.672-0.384 1.184 2.048 5.856 0 12.992-6.208 16.672-3.136 1.856-6.72 2.432-10.432 1.536-2.784-0.672-5.728-2.368-7.552-4.8 0 0 2.56 0 3.424-0.032 0.64 0 0.96-0.16 1.056-0.608 0.128-0.48-0.128-0.992-0.608-1.024-1.568-0.096-5.664-0.128-5.664-0.128-0.16 0-0.192 0-0.384 0.032s-0.416 0.192-0.544 0.352c-0.096 0.16-0.256 0.448-0.256 0.448z"></path>
+                    </svg></span><span>Refresh</span></span>
+            </h3>
+
+            <div class="etheme-search-trending-searches"></div>
+        </div>
+        </div>
+        </form>
+        				</div>
+				</div>
+				<div class="elementor-element elementor-element-8cbbd96 etheme-elementor-nav-menu__align-left elementor-hidden-tablet elementor-hidden-mobile etheme-elementor-menu etheme-elementor-widget-loaded elementor-widget elementor-widget-theme-etheme_nav_menu" data-id="8cbbd96" data-element_type="widget" data-widget_type="theme-etheme_nav_menu.default">
+				<div class="elementor-widget-container">
+					        <nav class="etheme-elementor-nav-menu--main" aria-label="Menu">
+
+        <ul id="menu-1-8cbbd96" class="etheme-elementor-nav-menu dropdowns-right horizontal"><li id="menu-item-1299" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1299 item-level-0 item-design-dropdown"><a href="/elementor3/electronic-mega-market/shop/" class="item-link etheme-elementor-nav-menu-item etheme-elementor-nav-menu-item-parent"><span class="elementor-item">Power Management</span></a></li>
+        <li class="etheme-elementor-nav-menu-item-separator-wrapper">
+            <span class="etheme-elementor-nav-menu-item-separator etheme-elementor-nav-menu-item etheme-elementor-nav-menu-item-parent etheme-elementor-nav-menu-item-icon">
+            &#10072;        </span>
+    </li>
+        <li id="menu-item-1300" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1300 item-level-0 item-design-dropdown"><a href="/elementor3/electronic-mega-market/shop/" class="item-link etheme-elementor-nav-menu-item etheme-elementor-nav-menu-item-parent"><span class="elementor-item">BMS</span></a></li>
+        <li class="etheme-elementor-nav-menu-item-separator-wrapper">
+            <span class="etheme-elementor-nav-menu-item-separator etheme-elementor-nav-menu-item etheme-elementor-nav-menu-item-parent etheme-elementor-nav-menu-item-icon">
+            &#10072;        </span>
+    </li>
+        <li id="menu-item-1301" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1301 item-level-0 item-design-dropdown"><a href="/elementor3/electronic-mega-market/shop/" class="item-link etheme-elementor-nav-menu-item etheme-elementor-nav-menu-item-parent"><span class="elementor-item">Solar Solutions</span></a></li>
+        <li class="etheme-elementor-nav-menu-item-separator-wrapper">
+            <span class="etheme-elementor-nav-menu-item-separator etheme-elementor-nav-menu-item etheme-elementor-nav-menu-item-parent etheme-elementor-nav-menu-item-icon">
+            &#10072;        </span>
+    </li>
+        <li id="menu-item-1302" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1302 item-level-0 item-design-dropdown"><a href="/elementor3/electronic-mega-market/shop/" class="item-link etheme-elementor-nav-menu-item etheme-elementor-nav-menu-item-parent"><span class="elementor-item">Mobility Solutions</span></a></li>
+        </ul>
+        </nav>
+        				</div>
+				</div>
+					</div>
+				</div>
+				<div class="elementor-element elementor-element-5fde32b elementor-align-left elementor-hidden-tablet elementor-hidden-mobile etheme-elementor-widget-loaded elementor-widget elementor-widget-etheme_icon_box" data-id="5fde32b" data-element_type="widget" data-settings="{&quot;icon_type&quot;:&quot;icon&quot;}" data-widget_type="etheme_icon_box.default" style="margin-left: 24px; margin-right: 16px; flex: 0 0 auto;">
+				<div class="elementor-widget-container">
+								<div class="etheme-icon-box etheme-icon-box-icon-position-left">
+        
+                            
+                <div class="etheme-icon-box-icon etheme-icon-box-icon-type-icon">
+        
+                <i aria-hidden="true" class="et-icon et-phone-call"></i>        
+                </div>
+            
+                <div class="etheme-icon-box-content">
+		
+                                        
+                                            <h3 class="etheme-icon-box-title">
+                            <span>Need help? Call us: </span>
+                        </h3>
+                    		
+                                            <p class="etheme-icon-box-description">
+                            +91-9031086082                        </p>
+                    
+                            
+                </div>
+			</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-facebook-icon elementor-widget__width-auto etheme-elementor-off-canvas-toggle-content etheme-elementor-off-canvas-right etheme-elementor-off-canvas etheme-elementor-off-canvas-design-separated elementor-widget elementor-widget-html" data-id="facebook-icon" data-element_type="widget" data-widget_type="html.default" style="margin-left: 36px;">
+				<div class="elementor-widget-container" style="width: auto; height: auto;">
+					<div class="etheme-elementor-off-canvas__toggle elementor-button-wrapper" style="width: auto; height: auto;">
+						<div class="elementor-button-wrapper" style="width: auto; height: auto;">
+							<a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="elementor-button elementor-button-link etheme-elementor-off-canvas__toggle_button" role="button" aria-expanded="false" data-e-disable-page-transition="true" aria-label="Facebook" style="background: transparent; border: none; padding: 0; display: flex; align-items: center; justify-content: center; width: auto; height: auto;">
+								<span class="elementor-button-content-wrapper flex-wrap" style="width: auto; height: auto;">
+									<span class="elementor-button-icon" style="width: auto; height: auto; display: flex; align-items: center; justify-content: center;">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 24px !important; height: 24px !important; max-width: none !important; max-height: none !important;"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+									</span>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-linkedin-icon elementor-widget__width-auto etheme-elementor-off-canvas-toggle-content etheme-elementor-off-canvas-right etheme-elementor-off-canvas etheme-elementor-off-canvas-design-separated elementor-widget elementor-widget-html" data-id="linkedin-icon" data-element_type="widget" data-widget_type="html.default" style="margin-left: 28px;">
+				<div class="elementor-widget-container" style="width: auto; height: auto;">
+					<div class="etheme-elementor-off-canvas__toggle elementor-button-wrapper" style="width: auto; height: auto;">
+						<div class="elementor-button-wrapper" style="width: auto; height: auto;">
+							<a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="elementor-button elementor-button-link etheme-elementor-off-canvas__toggle_button" role="button" aria-expanded="false" data-e-disable-page-transition="true" aria-label="LinkedIn" style="background: transparent; border: none; padding: 0; display: flex; align-items: center; justify-content: center; width: auto; height: auto;">
+								<span class="elementor-button-content-wrapper flex-wrap" style="width: auto; height: auto;">
+									<span class="elementor-button-icon" style="width: auto; height: auto; display: flex; align-items: center; justify-content: center;">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 24px !important; height: 24px !important; max-width: none !important; max-height: none !important;"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+									</span>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-instagram-icon elementor-widget__width-auto etheme-elementor-off-canvas-toggle-content etheme-elementor-off-canvas-right etheme-elementor-off-canvas etheme-elementor-off-canvas-design-separated elementor-widget elementor-widget-html" data-id="instagram-icon" data-element_type="widget" data-widget_type="html.default" style="margin-left: 28px;">
+				<div class="elementor-widget-container" style="width: auto; height: auto;">
+					<div class="etheme-elementor-off-canvas__toggle elementor-button-wrapper" style="width: auto; height: auto;">
+						<div class="elementor-button-wrapper" style="width: auto; height: auto;">
+							<a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="elementor-button elementor-button-link etheme-elementor-off-canvas__toggle_button" role="button" aria-expanded="false" data-e-disable-page-transition="true" aria-label="Instagram" style="background: transparent; border: none; padding: 0; display: flex; align-items: center; justify-content: center; width: auto; height: auto;">
+								<span class="elementor-button-content-wrapper flex-wrap" style="width: auto; height: auto;">
+									<span class="elementor-button-icon" style="width: auto; height: auto; display: flex; align-items: center; justify-content: center;">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 24px !important; height: 24px !important; max-width: none !important; max-height: none !important;"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+									</span>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-youtube-icon elementor-widget__width-auto etheme-elementor-off-canvas-toggle-content etheme-elementor-off-canvas-right etheme-elementor-off-canvas etheme-elementor-off-canvas-design-separated elementor-widget elementor-widget-html" data-id="youtube-icon" data-element_type="widget" data-widget_type="html.default" style="margin-left: 28px;">
+				<div class="elementor-widget-container" style="width: auto; height: auto;">
+					<div class="etheme-elementor-off-canvas__toggle elementor-button-wrapper" style="width: auto; height: auto;">
+						<div class="elementor-button-wrapper" style="width: auto; height: auto;">
+							<a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="elementor-button elementor-button-link etheme-elementor-off-canvas__toggle_button" role="button" aria-expanded="false" data-e-disable-page-transition="true" aria-label="YouTube" style="background: transparent; border: none; padding: 0; display: flex; align-items: center; justify-content: center; width: auto; height: auto;">
+								<span class="elementor-button-content-wrapper flex-wrap" style="width: auto; height: auto;">
+									<span class="elementor-button-icon" style="width: auto; height: auto; display: flex; align-items: center; justify-content: center;">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 24px !important; height: 24px !important; max-width: none !important; max-height: none !important;"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+									</span>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-780ca1f elementor-widget__width-auto elementor-hidden-desktop etheme-elementor-off-canvas-right etheme-elementor-off-canvas-toggle-content etheme-elementor-off-canvas-zero-quantity-yes etheme-elementor-off-canvas__toggle-qty-top etheme-elementor-off-canvas etheme-elementor-off-canvas-design-separated etheme-elementor-widget-loaded elementor-widget elementor-widget-theme-etheme_mobile_menu" data-id="780ca1f" data-element_type="widget" data-settings="{&quot;off_canvas_toggle_type&quot;:&quot;click&quot;}" data-widget_type="theme-etheme_mobile_menu.default">
+				<div class="elementor-widget-container">
+					        <div class="etheme-elementor-off-canvas__wrapper">
+            <div class="etheme-elementor-off-canvas__toggle_wrapper">
+                                <div class="etheme-elementor-off-canvas__container elementor-lightbox" aria-hidden="false">
+                    <div class="etheme-elementor-off-canvas__main" aria-hidden="false">
+                                                    <div class="etheme-elementor-off-canvas__close-button outside">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
+                                     viewBox="0 0 24 24">
+                                    <path d="M13.056 12l10.728-10.704c0.144-0.144 0.216-0.336 0.216-0.552 0-0.192-0.072-0.384-0.216-0.528-0.144-0.12-0.336-0.216-0.528-0.216 0 0 0 0 0 0-0.192 0-0.408 0.072-0.528 0.216l-10.728 10.728-10.704-10.728c-0.288-0.288-0.768-0.288-1.056 0-0.168 0.144-0.24 0.336-0.24 0.528 0 0.216 0.072 0.408 0.216 0.552l10.728 10.704-10.728 10.704c-0.144 0.144-0.216 0.336-0.216 0.552s0.072 0.384 0.216 0.528c0.288 0.288 0.768 0.288 1.056 0l10.728-10.728 10.704 10.704c0.144 0.144 0.336 0.216 0.528 0.216s0.384-0.072 0.528-0.216c0.144-0.144 0.216-0.336 0.216-0.528s-0.072-0.384-0.216-0.528l-10.704-10.704z"></path>
+                                </svg>
+                            </div>
+                                                <div class="etheme-elementor-off-canvas_content">
+                                    <div class="etheme-elementor-mobile-menu-element etheme-elementor-mobile-menu-logo elementor-repeater-item-525ed90 text-center">
+                                        <a href="#">
+                    <img src="assets/images/Logo-2x.jpeg" title="Logo-2x" alt="Logo-2x" loading="lazy" />                </a>
+                    </div>
+                <div class="etheme-elementor-mobile-menu-element etheme-elementor-mobile-menu-search elementor-repeater-item-8ac07b8">
+        
+        <form class="etheme-search-form" role="search" action="#" method="get" type="inline" data-ajax-search="yes" data-post-types="product,post">
+                        <div class="etheme-search-input-form-wrapper">
+
+                
+                <div class="etheme-search-input-wrapper">
+
+                    
+                    <input placeholder="Search for products..." class="etheme-search-form-input" type="search" name="s" title="Search" value="">
+
+                                            <input type="hidden" name="et_search" value="true">
+                    
+                    
+
+	                
+                    <input type="hidden" name="post_type" value="product">
+
+                                            <span class="etheme-search-form-clear">
+                            <svg xmlns="http://www.w3.org/2000/svg" width=".7em" height=".7em" viewBox="0 0 24 24" fill="currentColor"><path d="M13.056 12l10.728-10.704c0.144-0.144 0.216-0.336 0.216-0.552 0-0.192-0.072-0.384-0.216-0.528-0.144-0.12-0.336-0.216-0.528-0.216 0 0 0 0 0 0-0.192 0-0.408 0.072-0.528 0.216l-10.728 10.728-10.704-10.728c-0.288-0.288-0.768-0.288-1.056 0-0.168 0.144-0.24 0.336-0.24 0.528 0 0.216 0.072 0.408 0.216 0.552l10.728 10.704-10.728 10.704c-0.144 0.144-0.216 0.336-0.216 0.552s0.072 0.384 0.216 0.528c0.288 0.288 0.768 0.288 1.056 0l10.728-10.728 10.704 10.704c0.144 0.144 0.336 0.216 0.528 0.216s0.384-0.072 0.528-0.216c0.144-0.144 0.216-0.336 0.216-0.528s-0.072-0.384-0.216-0.528l-10.704-10.704z"></path></svg>
+                        </span>
+                    
+                </div>
+
+                <div class="etheme-search-form-button-wrapper">
+
+                    <button class="etheme-search-form-submit" type="submit" title="Search" aria-label="Search">
+
+                        			<i aria-hidden="true" class="et-icon et-zoom"></i><span class="elementor-screen-only">Search</span>
+                    </button>
+                </div>
+
+            </div>
+                        <div class="etheme-search-ajax-results"></div>
+        </form>
+                </div>
+                <div class="etheme-elementor-mobile-menu-element etheme-elementor-mobile-menu-wp_menu elementor-repeater-item-0b6adfa">
+                                <div class="et_b-tabs-wrapper">
+                            <div class="et_b-tabs">
+                                <span class="et-tab active" data-tab="wp_menu">
+                                    Menu                                </span>
+                                <span class="et-tab" data-tab="wp_menu_extra">
+                                    Categories                                </span>
+                            </div>
+                                                <div class="et_b-tab-content active" data-tab-name="wp_menu">
+                        <ul id="menu-1-" class="etheme-elementor-nav-menu vertical"><li id="menu-item-3423" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3423 item-level-0 item-design-dropdown columns-2"><a href="#/shop/" class="item-link etheme-elementor-nav-menu-item etheme-elementor-nav-menu-item-parent"><span class="elementor-item">All Categories</span></a></li>
+<li id="menu-item-90" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-90 item-level-0 item-design-dropdown"><a href="#/product-category/audio-electronics/" class="item-link etheme-elementor-nav-menu-item etheme-elementor-nav-menu-item-parent"><span class="elementor-item">Audio</span></a></li>
+<li id="menu-item-92" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-92 item-level-0 item-design-dropdown"><a href="#/product-category/cell-phones/" class="item-link etheme-elementor-nav-menu-item etheme-elementor-nav-menu-item-parent"><span class="elementor-item">Cell Phones</span></a></li>
+<li id="menu-item-93" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-93 item-level-0 item-design-dropdown"><a href="#/product-category/computers/" class="item-link etheme-elementor-nav-menu-item etheme-elementor-nav-menu-item-parent"><span class="elementor-item">Computers</span></a></li>
+<li id="menu-item-94" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-94 item-level-0 item-design-dropdown"><a href="#/product-category/daily-deals/" class="item-link etheme-elementor-nav-menu-item etheme-elementor-nav-menu-item-parent"><span class="elementor-item">Daily Deals</span></a></li>
+<li id="menu-item-95" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-95 item-level-0 item-design-dropdown"><a href="#/product-category/ipad-tablets/" class="item-link etheme-elementor-nav-menu-item etheme-elementor-nav-menu-item-parent"><span class="elementor-item">iPad &amp; Tablets</span></a></li>
+<li id="menu-item-96" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-96 item-level-0 item-design-dropdown"><a href="#/product-category/portable-speakers/" class="item-link etheme-elementor-nav-menu-item etheme-elementor-nav-menu-item-parent"><span class="elementor-item">Portable Speakers</span></a></li>
+<li id="menu-item-97" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-97 item-level-0 item-design-dropdown"><a href="#/product-category/smart-home/" class="item-link etheme-elementor-nav-menu-item etheme-elementor-nav-menu-item-parent"><span class="elementor-item">Smart Home</span></a></li>
+<li id="menu-item-98" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-98 item-level-0 item-design-dropdown"><a href="#/product-category/tv-audio/" class="item-link etheme-elementor-nav-menu-item etheme-elementor-nav-menu-item-parent"><span class="elementor-item">TV &amp; Audio</span></a></li>
+<li id="menu-item-99" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-99 item-level-0 item-design-dropdown"><a href="#/product-category/wearable-technology/" class="item-link etheme-elementor-nav-menu-item etheme-elementor-nav-menu-item-parent"><span class="elementor-item">Wearable Technology</span></a></li>
+</ul>                        </div>
+                        <div class="et_b-tab-content" data-tab-name="wp_menu_extra">
+                            <div class="widget woocommerce widget_product_categories"><ul class="product-categories"><li class="cat-item cat-item-17"><a href="#/product-category/audio-electronics/"><span class="elementor-item">Audio</span></a></li>
+<li class="cat-item cat-item-19"><a href="#/product-category/cell-phones/"><span class="elementor-item">Cell Phones</span></a></li>
+<li class="cat-item cat-item-24"><a href="#/product-category/computers/"><span class="elementor-item">Computers</span></a></li>
+<li class="cat-item cat-item-16"><a href="#/product-category/daily-deals/"><span class="elementor-item">Daily Deals</span></a></li>
+<li class="cat-item cat-item-23"><a href="#/product-category/ipad-tablets/"><span class="elementor-item">iPad &amp; Tablets</span></a></li>
+<li class="cat-item cat-item-25"><a href="#/product-category/portable-speakers/"><span class="elementor-item">Portable Speakers</span></a></li>
+<li class="cat-item cat-item-22"><a href="#/product-category/smart-home/"><span class="elementor-item">Smart Home</span></a></li>
+<li class="cat-item cat-item-18"><a href="#/product-category/tv-audio/"><span class="elementor-item">TV &amp; Audio</span></a></li>
+<li class="cat-item cat-item-21"><a href="#/product-category/wearable-technology/"><span class="elementor-item">Wearable Technology</span></a></li>
+</ul></div>                            </div>
+                        </div>
+                                </div>
+                <div class="etheme-elementor-off-canvas__toggle etheme-elementor-mobile-menu-element etheme-elementor-mobile-menu-account elementor-repeater-item-ca3f329">
+                    <a class="elementor-button-link" href="#/my-account/">
+                <span >
+                                <span class="elementor-button-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="20" viewBox="0 0 17 20" fill="none"><path d="M11.74 9.63449C10.8177 10.5567 9.69606 11.0179 8.375 11.0179C7.05394 11.0179 5.91983 10.5567 4.97266 9.63449C4.05041 8.68731 3.58929 7.5532 3.58929 6.23214V0.25L5.98214 1.44643L8.375 0.25L10.7679 1.44643L13.1607 0.25V6.23214C13.1607 7.5532 12.6871 8.68731 11.74 9.63449ZM5.38393 5.03571V6.23214C5.38393 7.05469 5.67057 7.76507 6.24386 8.36328C6.84208 8.93657 7.55246 9.22321 8.375 9.22321C9.19755 9.22321 9.89546 8.93657 10.4688 8.36328C11.067 7.76507 11.3661 7.05469 11.3661 6.23214V5.03571H5.38393ZM11.74 11.6161C13.1109 11.6161 14.2824 12.1146 15.2545 13.1116C16.2515 14.0837 16.75 15.2552 16.75 16.6261V17.5982C16.75 18.0967 16.5755 18.5205 16.2266 18.8694C15.8776 19.2184 15.4539 19.3929 14.9554 19.3929H1.79464C1.29613 19.3929 0.872396 19.2184 0.523438 18.8694C0.174479 18.5205 0 18.0967 0 17.5982V16.6261C0 15.2552 0.486049 14.0837 1.45815 13.1116C2.45517 12.1146 3.63914 11.6161 5.01004 11.6161C5.38393 11.6161 5.7952 11.6908 6.24386 11.8404C6.94178 12.0897 7.65216 12.2143 8.375 12.2143C9.09784 12.2143 9.80822 12.0897 10.5061 11.8404C10.9548 11.6908 11.3661 11.6161 11.74 11.6161ZM14.9554 17.5982V16.6261C14.9554 15.7537 14.6313 15.006 13.9833 14.3828C13.3601 13.7347 12.6124 13.4107 11.74 13.4107C11.5655 13.4107 11.3536 13.4606 11.1044 13.5603C10.232 13.8594 9.32217 14.0089 8.375 14.0089C7.42783 14.0089 6.51804 13.8594 5.64565 13.5603C5.39639 13.4606 5.18452 13.4107 5.01004 13.4107C4.13765 13.4107 3.37742 13.7347 2.72935 14.3828C2.10621 15.006 1.79464 15.7537 1.79464 16.6261V17.5982H14.9554Z" fill="black"></path></svg>                            </span>
+                                <span class="button-text">
+                            Account                        </span>
+                                    </span>
+            </a>
+                </div>
+                <div class="etheme-elementor-off-canvas__toggle etheme-elementor-mobile-menu-element etheme-elementor-mobile-menu-cart elementor-repeater-item-befd06f">
+                    <a class="elementor-button-link" href="#/cart/">
+                <span >
+                                <span class="elementor-button-icon">
+                <i aria-hidden="true" class="et-icon et-shopping-cart"></i>                            </span>
+                                <span class="button-text">
+                            Cart            <span class="etheme-elementor-off-canvas-total-inner">
+                <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>0.00</bdi></span>            </span>
+                                </span>
+                                    </span>
+            </a>
+                </div>
+                <div class="etheme-elementor-off-canvas__toggle etheme-elementor-mobile-menu-element etheme-elementor-mobile-menu-wishlist elementor-repeater-item-49563a7">
+                    <a class="elementor-button-link" href="#/my-account/?et-wishlist-page">
+                <span >
+                                <span class="elementor-button-icon">
+                <i aria-hidden="true" class="et-icon et-heart"></i>                            </span>
+                                <span class="button-text">
+                            Wishlist                        </span>
+                                    </span>
+            </a>
+                </div>
+                <div class="etheme-elementor-off-canvas__toggle etheme-elementor-mobile-menu-element etheme-elementor-mobile-menu-compare elementor-repeater-item-052cefe">
+                    <a class="elementor-button-link" href="#/my-account/?et-compare-page">
+                <span >
+                                <span class="elementor-button-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9.4875 5.175C9.73906 5.175 9.93672 5.26484 10.0805 5.44453C10.2602 5.58828 10.35 5.78594 10.35 6.0375V16.3875C10.35 16.6391 10.2602 16.8367 10.0805 16.9805C9.93672 17.1602 9.73906 17.25 9.4875 17.25H7.7625C7.51094 17.25 7.29531 17.1602 7.11562 16.9805C6.97188 16.8367 6.9 16.6391 6.9 16.3875V6.0375C6.9 5.78594 6.97188 5.58828 7.11562 5.44453C7.29531 5.26484 7.51094 5.175 7.7625 5.175H9.4875ZM2.5875 10.35C2.83906 10.35 3.03672 10.4398 3.18047 10.6195C3.36016 10.7633 3.45 10.9609 3.45 11.2125V16.3875C3.45 16.6391 3.36016 16.8367 3.18047 16.9805C3.03672 17.1602 2.83906 17.25 2.5875 17.25H0.8625C0.610937 17.25 0.395312 17.1602 0.215625 16.9805C0.071875 16.8367 0 16.6391 0 16.3875V11.2125C0 10.9609 0.071875 10.7633 0.215625 10.6195C0.395312 10.4398 0.610937 10.35 0.8625 10.35H2.5875ZM16.3875 0C16.6391 0 16.8367 0.0898438 16.9805 0.269531C17.1602 0.413281 17.25 0.610937 17.25 0.8625V16.3875C17.25 16.6391 17.1602 16.8367 16.9805 16.9805C16.8367 17.1602 16.6391 17.25 16.3875 17.25H14.6625C14.4109 17.25 14.1953 17.1602 14.0156 16.9805C13.8719 16.8367 13.8 16.6391 13.8 16.3875V0.8625C13.8 0.610937 13.8719 0.413281 14.0156 0.269531C14.1953 0.0898438 14.4109 0 14.6625 0H16.3875Z" fill="black"></path></svg>                            </span>
+                                <span class="button-text">
+                            Compare                        </span>
+                                    </span>
+            </a>
+                </div>
+                                </div>
+                                            </div>
+                </div>
+                                <div class="etheme-elementor-off-canvas__toggle elementor-button-wrapper">
+                            <div class="elementor-button-wrapper">
+            <a class="elementor-button etheme-elementor-off-canvas__toggle_button" role="button" aria-expanded="false" aria-label="Menu">
+                <span class="elementor-button-content-wrapper flex-wrap">
+                                <span class="elementor-button-icon">
+                <i aria-hidden="true" class="et-icon et-burger"></i>                            </span>
+                    <span class="button-text full-width elementor-hidden-tablet elementor-hidden-mobile">
+                Menu            </span>
+        
+                        </span>
+            </a>
+        </div>
+                        </div>
+
+            </div>
+        </div>
+        				</div>
+				</div>
+					</div>
+				</div>
+		<div class="etheme-elementor-header-sticky elementor-element elementor-element-5bb7e79 elementor-hidden-tablet elementor-hidden-mobile etheme-elementor-header-sticky e-flex e-con-boxed e-con e-parent" data-id="5bb7e79" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;etheme_header_sticky&quot;:&quot;sticky&quot;,&quot;etheme_header_sticky_on&quot;:[&quot;desktop&quot;],&quot;etheme_header_sticky_type&quot;:&quot;smart&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-f8eacc0 etheme-elementor-nav-menu__align-left etheme-elementor-menu etheme-elementor-widget-loaded elementor-widget elementor-widget-theme-etheme_departments_menu" data-id="f8eacc0" data-element_type="widget" data-settings="{&quot;dropdown_items_limited&quot;:&quot;yes&quot;,&quot;dropdown_items_limited_more_text&quot;:&quot;Show more ({{count}})&quot;,&quot;dropdown_items_limited_less&quot;:&quot;yes&quot;,&quot;dropdown_items_limited_less_text&quot;:&quot;Show less \u2191&quot;,&quot;dropdown_items_limited_after&quot;:7}" data-widget_type="theme-etheme_departments_menu.default">
+				<div class="elementor-widget-container">
+					        <nav class="etheme-elementor-nav-menu--main">
+
+                    <ul class="etheme-elementor-nav-menu horizontal dropdowns-right" id="f8eacc0">
+                <li class="item-design-dropdown add-overlay-body-on-hover with-arrow">
+                    <span class="etheme-elementor-nav-menu-item etheme-elementor-nav-menu-item-parent">
+        <span class="elementor-item">
+                
+                    <span class="etheme-elementor-nav-menu-item-element etheme-elementor-nav-menu-item-icon">
+                                        <i aria-hidden="true" class="et-icon et-dev-menu"></i>                            </span>
+
+                <span class="">Explore Ligen Power®</span>        <span class="etheme-elementor-nav-menu-item-arrow">
+            <span class="etheme-elementor-nav-menu-item-icon etheme-elementor-nav-menu-item-icon-opened"><i aria-hidden="true" class="et-icon et-up-arrow"></i></span>
+            <span class="etheme-elementor-nav-menu-item-icon etheme-elementor-nav-menu-item-icon-closed"><i aria-hidden="true" class="et-icon et-down-arrow"></i></span>
+        </span>
+                        </span>
+        </span>
+                        <div class="etheme-elementor-nav-menu--dropdown nav-sublist-dropdown with-arrow">
+                                                                <ul class="etheme-elementor-nav-menu vertical">
+                                                            <li class="elementor-repeater-item-f338bea item-level-0">
+
+                                <a class="etheme-elementor-nav-menu-item e--pointer-overline e--pointer-overline-left e--animation-fade" href="power-inverter.html" onclick="window.location.href='power-inverter.html'; return true;">
+        <span class="elementor-item e-anchor">
+                
+                    <span class="etheme-elementor-nav-menu-item-element etheme-elementor-nav-menu-item-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 0L12.5 7.5H20L13.75 12.5L16.25 20L10 15L3.75 20L6.25 12.5L0 7.5H7.5L10 0Z" fill="#111111"/><path d="M10 4L8.5 8H4L7 10.5L5.5 14.5L10 12L14.5 14.5L13 10.5L16 8H11.5L10 4Z" fill="#111111" opacity="0.3"/></svg>                            </span>
+
+                <span class="">Power Inverter</span>
+                        </span>
+        </a>
+
+                        
+                    </li>
+                                        <li class="elementor-repeater-item-88c45dd item-level-0 item-design-mega-menu add-overlay-body-on-hover">
+
+                                <a class="etheme-elementor-nav-menu-item e--pointer-overline e--pointer-overline-left e--animation-fade" href="#">
+        <span class="elementor-item e-anchor">
+                
+                    <span class="etheme-elementor-nav-menu-item-element etheme-elementor-nav-menu-item-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="4" y="2" width="12" height="16" rx="1.5" stroke="#111111" stroke-width="1.5" fill="none"/><rect x="6" y="5" width="8" height="10" rx="0.5" fill="#111111" opacity="0.2"/><path d="M7 8H13M7 10H13M7 12H11" stroke="#111111" stroke-width="1" stroke-linecap="round"/><circle cx="10" cy="15" r="1" fill="#111111"/></svg>                            </span>
+
+                <span class="">BMS</span>        <span class="etheme-elementor-nav-menu-item-arrow">
+            <span class="etheme-elementor-nav-menu-item-icon etheme-elementor-nav-menu-item-icon-opened"><i aria-hidden="true" class="et-icon et-right-arrow"></i></span>
+            <span class="etheme-elementor-nav-menu-item-icon etheme-elementor-nav-menu-item-icon-closed"><i aria-hidden="true" class="et-icon et-right-arrow"></i></span>
+        </span>
+                        </span>
+        </a>
+        
+                        
+                            <div class="nav-sublist-dropdown etheme-elementor-nav-menu--dropdown etheme-elementor-nav-menu--dropdown-mega">
+                                <div class="container">
+                                    		<div data-elementor-type="wp-post" data-elementor-id="2647" class="elementor elementor-2647" data-elementor-post-type="etheme_mega_menus">
+				</div>
+		                                </div>
+                            </div>
+
+                        
+                    </li>
+                                        <li class="elementor-repeater-item-9393141 item-level-0 item-design-mega-menu add-overlay-body-on-hover">
+
+                                <a class="etheme-elementor-nav-menu-item e--pointer-overline e--pointer-overline-left e--animation-fade" href="#">
+        <span class="elementor-item e-anchor">
+                
+                    <span class="etheme-elementor-nav-menu-item-element etheme-elementor-nav-menu-item-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="4" y="6" width="11" height="8" rx="1" stroke="#111111" stroke-width="1.5" fill="none"/><rect x="6" y="8" width="7" height="4" fill="#111111" opacity="0.3"/><path d="M15 9V11" stroke="#111111" stroke-width="1.5" stroke-linecap="round"/><path d="M5 10H7M9 10H11" stroke="#111111" stroke-width="1" stroke-linecap="round"/></svg>                            </span>
+
+                <span class="">Power Battery</span>        <span class="etheme-elementor-nav-menu-item-arrow">
+            <span class="etheme-elementor-nav-menu-item-icon etheme-elementor-nav-menu-item-icon-opened"><i aria-hidden="true" class="et-icon et-right-arrow"></i></span>
+            <span class="etheme-elementor-nav-menu-item-icon etheme-elementor-nav-menu-item-icon-closed"><i aria-hidden="true" class="et-icon et-right-arrow"></i></span>
+        </span>
+                        </span>
+        </a>
+        
+                        
+                            <div class="nav-sublist-dropdown etheme-elementor-nav-menu--dropdown etheme-elementor-nav-menu--dropdown-mega">
+                                <div class="container">
+                                    		<div data-elementor-type="wp-post" data-elementor-id="2741" class="elementor elementor-2741" data-elementor-post-type="etheme_mega_menus">
+						<section class="elementor-section elementor-top-section elementor-element elementor-element-274353a elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="274353a" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-wider">
+					<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-1028ca8" data-id="1028ca8" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-311be4d elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="311be4d" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-5af98f1" data-id="5af98f1" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-11fe60f elementor-widget elementor-widget-image" data-id="11fe60f" data-element_type="widget" data-widget_type="image.default">
+															<img loading="lazy" width="80" height="80" src="assets/images/monitor.png" class="attachment-large size-large wp-image-2744   " alt=""  />															</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-66 elementor-inner-column elementor-element elementor-element-b28ff11" data-id="b28ff11" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-d111db7 elementor-widget elementor-widget-heading" data-id="d111db7" data-element_type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">Streaming</h2>				</div>
+				<div class="elementor-element elementor-element-12ab48e elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="12ab48e" data-element_type="widget" data-widget_type="divider.default">
+							<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+						</div>
+				<div class="elementor-element elementor-element-27df21c elementor-widget elementor-widget-et_menu_list" data-id="27df21c" data-element_type="widget" data-widget_type="et_menu_list.default">
+				<div class="elementor-widget-container">
+					        
+        <ul class="et-menu-list  menu-list-6687 text-left">
+    
+            <li class="menu-item menu-item-object-page menu-item-has-children menu-parent-item menu-item-942">
+
+    	    
+        	        		<div class="menu-sublist"><ul>
+            <li class="menu-item  menu-item-9591">
+
+            
+                <div class="subitem-title-holder    elementor-repeater-item-78740f4">
+
+                    <a class="menu-title et-column-title  " href="##" target="_self" title="Wireless Audio" > 
+
+                    <h3>Wireless Audio</h3>
+                    </a>
+
+                </div> 
+            
+            </li>
+
+        
+            <li class="menu-item  menu-item-8889">
+
+            
+                <div class="subitem-title-holder    elementor-repeater-item-529b142">
+
+                    <a class="menu-title et-column-title  " href="##" target="_self" title="Multimedia" > 
+
+                    <h3>Multimedia</h3>
+                    </a>
+
+                </div> 
+            
+            </li>
+
+        
+            <li class="menu-item  menu-item-8208">
+
+            
+                <div class="subitem-title-holder    elementor-repeater-item-1ff195f">
+
+                    <a class="menu-title et-column-title  " href="##" target="_self" title="Smart Speaker" > 
+
+                    <h3>Smart Speaker</h3>
+                    </a>
+
+                </div> 
+            
+            </li>
+
+        
+            <li class="menu-item  menu-item-4383">
+
+            
+                <div class="subitem-title-holder    elementor-repeater-item-20b5ea0">
+
+                    <a class="menu-title et-column-title  " href="##" target="_self" title="Internet Radio" > 
+
+                    <h3>Internet Radio</h3>
+                    </a>
+
+                </div> 
+            
+            </li>
+
+        </ul></div>
+        	
+            </li>
+
+        </ul>
+
+        				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-10112f8 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="10112f8" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-ad69e46" data-id="ad69e46" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-5c740dc elementor-widget elementor-widget-image" data-id="5c740dc" data-element_type="widget" data-widget_type="image.default">
+															<img loading="lazy" width="75" height="75" src="assets/images/boombox.png" class="attachment-large size-large wp-image-2948   " alt=""  />															</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-66 elementor-inner-column elementor-element elementor-element-2e5985b" data-id="2e5985b" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-bce4959 elementor-widget elementor-widget-heading" data-id="bce4959" data-element_type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">Boombox</h2>				</div>
+				<div class="elementor-element elementor-element-0ab1ef3 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="0ab1ef3" data-element_type="widget" data-widget_type="divider.default">
+							<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+						</div>
+				<div class="elementor-element elementor-element-7e116f9 elementor-widget elementor-widget-et_menu_list" data-id="7e116f9" data-element_type="widget" data-widget_type="et_menu_list.default">
+				<div class="elementor-widget-container">
+					        
+        <ul class="et-menu-list  menu-list-3260 text-left">
+    
+            <li class="menu-item menu-item-object-page menu-item-has-children menu-parent-item menu-item-190">
+
+    	    
+        	        		<div class="menu-sublist"><ul>
+            <li class="menu-item  menu-item-9645">
+
+            
+                <div class="subitem-title-holder    elementor-repeater-item-78740f4">
+
+                    <a class="menu-title et-column-title  " href="##" target="_self" title="Novelty Radio" > 
+
+                    <h3>Novelty Radio</h3>
+                    </a>
+
+                </div> 
+            
+            </li>
+
+        
+            <li class="menu-item  menu-item-9057">
+
+            
+                <div class="subitem-title-holder    elementor-repeater-item-529b142">
+
+                    <a class="menu-title et-column-title  " href="##" target="_self" title="Clock Radios" > 
+
+                    <h3>Clock Radios</h3>
+                    </a>
+
+                </div> 
+            
+            </li>
+
+        
+            <li class="menu-item  menu-item-5909">
+
+            
+                <div class="subitem-title-holder    elementor-repeater-item-1ff195f">
+
+                    <a class="menu-title et-column-title  " href="##" target="_self" title="Kitchen Radios" > 
+
+                    <h3>Kitchen Radios</h3>
+                    </a>
+
+                </div> 
+            
+            </li>
+
+        
+            <li class="menu-item  menu-item-5269">
+
+            
+                <div class="subitem-title-holder    elementor-repeater-item-20b5ea0">
+
+                    <a class="menu-title et-column-title  " href="##" target="_self" title="Shower Radios" > 
+
+                    <h3>Shower Radios</h3>
+                    </a>
+
+                </div> 
+            
+            </li>
+
+        </ul></div>
+        	
+            </li>
+
+        </ul>
+
+        				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-18820aa" data-id="18820aa" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-c15a8bb elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c15a8bb" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-af6fc85" data-id="af6fc85" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-29a8488 elementor-widget elementor-widget-image" data-id="29a8488" data-element_type="widget" data-widget_type="image.default">
+															<img loading="lazy" width="84" height="84" src="assets/images/separates.png" class="attachment-large size-large wp-image-2950   " alt=""  />															</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-66 elementor-inner-column elementor-element elementor-element-4a324f9" data-id="4a324f9" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-733ff5b elementor-widget elementor-widget-heading" data-id="733ff5b" data-element_type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">Separates</h2>				</div>
+				<div class="elementor-element elementor-element-06c031e elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="06c031e" data-element_type="widget" data-widget_type="divider.default">
+							<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+						</div>
+				<div class="elementor-element elementor-element-e38e9f2 elementor-widget elementor-widget-et_menu_list" data-id="e38e9f2" data-element_type="widget" data-widget_type="et_menu_list.default">
+				<div class="elementor-widget-container">
+					        
+        <ul class="et-menu-list  menu-list-1827 text-left">
+    
+            <li class="menu-item menu-item-object-page menu-item-has-children menu-parent-item menu-item-790">
+
+    	    
+        	        		<div class="menu-sublist"><ul>
+            <li class="menu-item  menu-item-8904">
+
+            
+                <div class="subitem-title-holder    elementor-repeater-item-78740f4">
+
+                    <a class="menu-title et-column-title  " href="##" target="_self" title="Cassette Player" > 
+
+                    <h3>Cassette Player</h3>
+                    </a>
+
+                </div> 
+            
+            </li>
+
+        
+            <li class="menu-item  menu-item-9876">
+
+            
+                <div class="subitem-title-holder    elementor-repeater-item-529b142">
+
+                    <a class="menu-title et-column-title  " href="##" target="_self" title="Amplifiers" > 
+
+                    <h3>Amplifiers</h3>
+                    </a>
+
+                </div> 
+            
+            </li>
+
+        
+            <li class="menu-item  menu-item-7862">
+
+            
+                <div class="subitem-title-holder    elementor-repeater-item-1ff195f">
+
+                    <a class="menu-title et-column-title  " href="##" target="_self" title="Preamplifiers" > 
+
+                    <h3>Preamplifiers</h3>
+                    </a>
+
+                </div> 
+            
+            </li>
+
+        
+            <li class="menu-item  menu-item-2922">
+
+            
+                <div class="subitem-title-holder    elementor-repeater-item-20b5ea0">
+
+                    <a class="menu-title et-column-title  " href="##" target="_self" title="Record Players" > 
+
+                    <h3>Record Players</h3>
+                    </a>
+
+                </div> 
+            
+            </li>
+
+        </ul></div>
+        	
+            </li>
+
+        </ul>
+
+        				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-b1c9bb5 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="b1c9bb5" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-fbe8cc7" data-id="fbe8cc7" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-e6f0735 elementor-widget elementor-widget-image" data-id="e6f0735" data-element_type="widget" data-widget_type="image.default">
+															<img loading="lazy" width="78" height="78" src="assets/images/receiver.png" class="attachment-large size-large wp-image-2949   " alt=""  />															</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-66 elementor-inner-column elementor-element elementor-element-2ceac06" data-id="2ceac06" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-07cfd19 elementor-widget elementor-widget-heading" data-id="07cfd19" data-element_type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">Receivers</h2>				</div>
+				<div class="elementor-element elementor-element-49c292c elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="49c292c" data-element_type="widget" data-widget_type="divider.default">
+							<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+						</div>
+				<div class="elementor-element elementor-element-9750b5b elementor-widget elementor-widget-et_menu_list" data-id="9750b5b" data-element_type="widget" data-widget_type="et_menu_list.default">
+				<div class="elementor-widget-container">
+					        
+        <ul class="et-menu-list  menu-list-5853 text-left">
+    
+            <li class="menu-item menu-item-object-page menu-item-has-children menu-parent-item menu-item-993">
+
+    	    
+        	        		<div class="menu-sublist"><ul>
+            <li class="menu-item  menu-item-6056">
+
+            
+                <div class="subitem-title-holder    elementor-repeater-item-78740f4">
+
+                    <a class="menu-title et-column-title  " href="##" target="_self" title="Wall Speakers" > 
+
+                    <h3>Wall Speakers</h3>
+                    </a>
+
+                </div> 
+            
+            </li>
+
+        
+            <li class="menu-item  menu-item-4004">
+
+            
+                <div class="subitem-title-holder    elementor-repeater-item-529b142">
+
+                    <a class="menu-title et-column-title  " href="##" target="_self" title="Centre Speaker" > 
+
+                    <h3>Centre Speaker</h3>
+                    </a>
+
+                </div> 
+            
+            </li>
+
+        
+            <li class="menu-item  menu-item-9059">
+
+            
+                <div class="subitem-title-holder    elementor-repeater-item-1ff195f">
+
+                    <a class="menu-title et-column-title  " href="##" target="_self" title="Soundbar" > 
+
+                    <h3>Soundbar</h3>
+                    </a>
+
+                </div> 
+            
+            </li>
+
+        
+            <li class="menu-item  menu-item-1181">
+
+            
+                <div class="subitem-title-holder    elementor-repeater-item-20b5ea0">
+
+                    <a class="menu-title et-column-title  " href="##" target="_self" title="Tower Speaker" > 
+
+                    <h3>Tower Speaker</h3>
+                    </a>
+
+                </div> 
+            
+            </li>
+
+        </ul></div>
+        	
+            </li>
+
+        </ul>
+
+        				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-ac80142" data-id="ac80142" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-df3725d elementor-widget elementor-widget-etheme_hotspot" data-id="df3725d" data-element_type="widget" data-settings="{&quot;tooltip_trigger&quot;:&quot;hover&quot;}" data-widget_type="etheme_hotspot.default">
+				<div class="elementor-widget-container">
+					        
+        <div class="etheme-hotspot-wrapper">
+		
+		    <img loading="lazy" width="453" height="430" src="assets/images/x-box.jpeg" class="attachment-large size-large wp-image-2757   " alt=""  />        
+            
+            <div class="etheme-hotspot elementor-repeater-item-9efeb1d  etheme-hotspot-tooltip-animation-fade etheme-hotspot-tooltip-on-hover">
+			    <div class="etheme-hotspot-item etheme-hotspot-animation etheme-hotspot-animation-shadow ">
+                                                                        <div class="etheme-hotspot-label">$210</div>
+                        </div>
+                    
+                                </div>
+            
+            
+            <div class="etheme-hotspot elementor-repeater-item-e0ab307  etheme-hotspot-tooltip-animation-fade etheme-hotspot-tooltip-on-hover">
+			    <div class="etheme-hotspot-item etheme-hotspot-animation etheme-hotspot-animation-shadow ">
+                                                                        <div class="etheme-hotspot-label">$175</div>
+                        </div>
+                    
+                                </div>
+            
+                        
+        </div>
+        
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+		                                </div>
+                            </div>
+
+                        
+                    </li>
+                                        <li class="elementor-repeater-item-af09d76 item-level-0 item-design-mega-menu add-overlay-body-on-hover">
+
+                                <a class="etheme-elementor-nav-menu-item e--pointer-overline e--pointer-overline-left e--animation-fade" href="#">
+        <span class="elementor-item e-anchor">
+                
+                    <span class="etheme-elementor-nav-menu-item-element etheme-elementor-nav-menu-item-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="6" cy="13" r="3" stroke="#111111" stroke-width="1.5" fill="none"/><circle cx="14" cy="13" r="3" stroke="#111111" stroke-width="1.5" fill="none"/><path d="M6 10L8 6H12L14 10" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 6V4C8 3.44772 8.44772 3 9 3H11C11.5523 3 12 3.44772 12 4V6" stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 6V10" stroke="#111111" stroke-width="1.5" stroke-linecap="round"/></svg>                            </span>
+
+                <span class="">Power E cycle</span>        <span class="etheme-elementor-nav-menu-item-arrow">
+            <span class="etheme-elementor-nav-menu-item-icon etheme-elementor-nav-menu-item-icon-opened"><i aria-hidden="true" class="et-icon et-right-arrow"></i></span>
+            <span class="etheme-elementor-nav-menu-item-icon etheme-elementor-nav-menu-item-icon-closed"><i aria-hidden="true" class="et-icon et-right-arrow"></i></span>
+        </span>
+                        </span>
+        </a>
+        
+                        
+                            <div class="nav-sublist-dropdown etheme-elementor-nav-menu--dropdown etheme-elementor-nav-menu--dropdown-mega">
+                                <div class="container">
+                                    		<div data-elementor-type="wp-post" data-elementor-id="2837" class="elementor elementor-2837" data-elementor-post-type="etheme_mega_menus">
+				</div>
+		                                </div>
+                            </div>
+
+                        
+                    </li>
+                                        <li class="elementor-repeater-item-2b3d482 item-level-0">
+
+                                <a class="etheme-elementor-nav-menu-item e--pointer-overline e--pointer-overline-left e--animation-fade" href="#">
+        <span class="elementor-item e-anchor">
+                
+                    <span class="etheme-elementor-nav-menu-item-element etheme-elementor-nav-menu-item-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2V4M10 16V18M18 10H16M4 10H2M15.6569 4.34315L14.2426 5.75736M5.75736 14.2426L4.34315 15.6569M15.6569 15.6569L14.2426 14.2426M5.75736 5.75736L4.34315 4.34315" stroke="#111111" stroke-width="1.5" stroke-linecap="round"/><circle cx="10" cy="10" r="3" stroke="#111111" stroke-width="1.5" fill="none"/><rect x="8" y="16" width="4" height="2" rx="0.5" fill="#111111"/><path d="M9 16V13M11 16V13" stroke="#111111" stroke-width="1" stroke-linecap="round"/></svg>                            </span>
+
+                <span class="">Solar Street Light</span>                </span>
+        </a>
+        
+                        
+                    </li>                                    </ul>
+                                                    </div>
+        </li>
+                     </ul>
+        
+        </nav>
+        				</div>
+				</div>
+				<div class="elementor-element elementor-element-5accd5d etheme-elementor-menu etheme-elementor-widget-loaded elementor-widget elementor-widget-theme-etheme_mega_menu" data-id="5accd5d" data-element_type="widget" data-widget_type="theme-etheme_mega_menu.default">
+				<div class="elementor-widget-container">
+					        <nav class="etheme-elementor-nav-menu--main">
+
+                    <ul class="etheme-elementor-nav-menu horizontal dropdowns-right" id="5accd5d">
+                            <li class="elementor-repeater-item-b0fc67d">
+
+                                <a class="etheme-elementor-nav-menu-item etheme-elementor-nav-menu-item-parent" href="#/">
+        <span class="elementor-item elementor-item-active">
+                <span class="">Home</span>                </span>
+        </a>
+        
+                        
+                    </li>
+                                        <li class="elementor-repeater-item-c4e049d">
+
+                                <a class="etheme-elementor-nav-menu-item etheme-elementor-nav-menu-item-parent" href="#/about-us/">
+        <span class="elementor-item">
+                <span class="">Our Story</span>                </span>
+        </a>
+        
+                        
+                    </li>
+                                        <li class="elementor-repeater-item-df3023c item-design-mega-menu">
+
+                                <a class="etheme-elementor-nav-menu-item etheme-elementor-nav-menu-item-parent" href="#/news/">
+        <span class="elementor-item">
+                <span class="">Blog</span>        <span class="etheme-elementor-nav-menu-item-arrow">
+            <span class="etheme-elementor-nav-menu-item-icon etheme-elementor-nav-menu-item-icon-opened"><i aria-hidden="true" class="et-icon et-up-arrow"></i></span>
+            <span class="etheme-elementor-nav-menu-item-icon etheme-elementor-nav-menu-item-icon-closed"><i aria-hidden="true" class="et-icon et-down-arrow"></i></span>
+        </span>
+                        </span>
+        </a>
+        
+                        
+                            <div class="nav-sublist-dropdown etheme-elementor-nav-menu--dropdown etheme-elementor-nav-menu--dropdown-stretched etheme-elementor-nav-menu--dropdown-mega">
+                                <div class="container">
+                                    		<div data-elementor-type="wp-post" data-elementor-id="2630" class="elementor elementor-2630" data-elementor-post-type="etheme_mega_menus">
+						<section class="elementor-section elementor-top-section elementor-element elementor-element-f725129 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="f725129" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-66 elementor-top-column elementor-element elementor-element-74c87ec" data-id="74c87ec" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-0579b10 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="0579b10" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-2987aab" data-id="2987aab" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-c7a74b5 elementor-widget elementor-widget-etheme_posts" data-id="c7a74b5" data-element_type="widget" data-settings="{&quot;cols&quot;:&quot;1&quot;,&quot;navigation&quot;:&quot;none&quot;,&quot;query_type&quot;:&quot;all&quot;,&quot;cols_gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;cols_gap_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;cols_gap_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;rows_gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;rows_gap_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;rows_gap_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="etheme_posts.default">
+				<div class="elementor-widget-container">
+					            <div class="etheme-posts-wrapper etheme-grid">
+                        <article class="etheme-post post-497 post type-post status-publish format-standard has-post-thumbnail hentry category-audio-electronics category-camera-drone category-cell-phones category-daily-deals category-ipad-tablets category-smart-home category-tv-audio category-wearable-tech">
+                <div class="etheme-post-image-wrapper etheme-image-hover etheme-image-hover-scaleIn">
+            <a class="etheme-post-image-inner" href="#/2023/01/02/announcing-the-new-fitbits-charge-6smart-fitness-tracker/">
+            <img loading="lazy" width="300" height="191" src="assets/images/Image-post-5-300x191.jpg" class="attachment-medium size-medium wp-image-507      " alt="" decoding="async"  />            </a>
+                            <span class="etheme-post-terms-label">
+                            <span class="etheme-post-terms etheme-post-categories"><a href="#/category/audio-electronics/">Audio Electronics</a></span>                        </span>
+                            </div>
+                        <div class="etheme-post-content ">
+                <h3 class="etheme-post-title"><a href="#/2023/01/02/announcing-the-new-fitbits-charge-6smart-fitness-tracker/">Announcing the new Fitbits Charge 6smart Fitness Tracker</a></h3><div class="etheme-post-excerpt">Recently, I was invited by Nintendo of Canada to attend a very special Nintendo Holiday Showcase exclusive preview event in New York City. Located in...</div>            </div>
+                </article>
+                    </div>
+            				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-a38f2af" data-id="a38f2af" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-67f3d35 elementor-widget elementor-widget-etheme_posts" data-id="67f3d35" data-element_type="widget" data-settings="{&quot;cols&quot;:&quot;1&quot;,&quot;navigation&quot;:&quot;none&quot;,&quot;query_type&quot;:&quot;all&quot;,&quot;cols_gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;cols_gap_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;cols_gap_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;rows_gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;rows_gap_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;rows_gap_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="etheme_posts.default">
+				<div class="elementor-widget-container">
+					            <div class="etheme-posts-wrapper etheme-grid">
+                        <article class="etheme-post post-498 post type-post status-publish format-standard has-post-thumbnail hentry category-audio-electronics category-camera-drone category-cell-phones category-daily-deals category-ipad-tablets category-smart-home category-tv-audio category-wearable-tech">
+                <div class="etheme-post-image-wrapper etheme-image-hover etheme-image-hover-scaleIn">
+            <a class="etheme-post-image-inner" href="#/2023/02/14/your-conversion-rate-on-amazon/">
+            <img loading="lazy" width="300" height="191" src="assets/images/Image-post-6-300x191.jpg" class="attachment-medium size-medium wp-image-508      " alt="" decoding="async"  />            </a>
+                            <span class="etheme-post-terms-label">
+                            <span class="etheme-post-terms etheme-post-categories"><a href="#/category/audio-electronics/">Audio Electronics</a></span>                        </span>
+                            </div>
+                        <div class="etheme-post-content ">
+                <h3 class="etheme-post-title"><a href="#/2023/02/14/your-conversion-rate-on-amazon/">Your Conversion Rate on Amazon</a></h3><div class="etheme-post-excerpt">Recently, I was invited by Nintendo of Canada to attend a very special Nintendo Holiday Showcase exclusive preview event in New York City. Located in...</div>            </div>
+                </article>
+                    </div>
+            				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<div class="elementor-element elementor-element-2644b6f elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="2644b6f" data-element_type="widget" data-widget_type="divider.default">
+							<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+						</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-59a7869 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="59a7869" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-4f8507e" data-id="4f8507e" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-080fb92 elementor-align-left etheme-elementor-widget-loaded elementor-widget elementor-widget-etheme_icon_box" data-id="080fb92" data-element_type="widget" data-settings="{&quot;icon_type&quot;:&quot;icon&quot;}" data-widget_type="etheme_icon_box.default">
+				<div class="elementor-widget-container">
+								<div class="etheme-icon-box etheme-icon-box-icon-position-left">
+        
+                            
+                <div class="etheme-icon-box-icon etheme-icon-box-icon-type-icon">
+        
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><g clip-path="url(#clip0_202_12857)"><path d="M10 0C4.46809 0 0 4.46809 0 10C0 15.532 4.46809 20 10 20C15.532 20 20 15.532 20 10C20 4.46809 15.5319 0 10 0ZM10 18.3404C5.40427 18.3404 1.65958 14.5957 1.65958 9.99998C1.65958 5.40423 5.40427 1.65958 10 1.65958C14.5958 1.65958 18.3405 5.40427 18.3405 10C18.3405 14.5958 14.5958 18.3404 10 18.3404Z" fill="#111111"></path><path d="M14.6809 5.36181C14.4256 5.10649 14.0426 5.02136 13.7022 5.19158L8.25536 7.87244C8.08514 7.95753 7.95748 8.08519 7.87238 8.25542L5.19153 13.6597C5.06387 14.0001 5.10644 14.3831 5.36176 14.6384C5.53198 14.8086 5.74474 14.8937 5.95749 14.8937C6.04258 14.8937 6.17024 14.8512 6.2979 14.8086L11.7447 12.1278C11.9149 12.0427 12.0426 11.915 12.1277 11.7448L14.8511 6.34052C14.9788 6.00011 14.9362 5.61713 14.6809 5.36181ZM10.7234 10.7235L7.74468 12.2129L9.23403 9.23413L12.2128 7.74478L10.7234 10.7235Z" fill="#111111"></path></g><defs><clipPath id="clip0_202_12857"><rect width="20" height="20" fill="white"></rect></clipPath></defs></svg>        
+                </div>
+            
+                <div class="etheme-icon-box-content">
+		
+                                        
+                                            <h3 class="etheme-icon-box-title">
+                            <span>Home Appliances</span>
+                        </h3>
+                    		
+                    
+                            
+                </div>
+			</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-b1b8fce elementor-widget elementor-widget-etheme_icon_list" data-id="b1b8fce" data-element_type="widget" data-widget_type="etheme_icon_list.default">
+				<div class="elementor-widget-container">
+					            <div class="etheme-icon-list">
+                                        <div class="etheme-icon-list-item elementor-repeater-item-4571300">
+                                                        
+                            <a class="etheme-icon-list-item-text" href="#">
+                                Refrigerators                            </a>
+                                                    </div>
+                                            <div class="etheme-icon-list-item elementor-repeater-item-addf4ff">
+                                                        
+                            <a class="etheme-icon-list-item-text" href="#">
+                                Washing Machine                            </a>
+                                                    </div>
+                                            <div class="etheme-icon-list-item elementor-repeater-item-d539f87">
+                                                        
+                            <a class="etheme-icon-list-item-text" href="#">
+                                Smart Home                            </a>
+                                                    </div>
+                                            <div class="etheme-icon-list-item elementor-repeater-item-762e82e">
+                                                        
+                            <a class="etheme-icon-list-item-text" href="#">
+                                Security Device                            </a>
+                                                    </div>
+                                </div>
+        
+        				</div>
+				</div>
+				<div class="elementor-element elementor-element-b1826a0 etheme-elementor-widget-loaded elementor-widget elementor-widget-text_button" data-id="b1826a0" data-element_type="widget" data-widget_type="text_button.default">
+				<div class="elementor-widget-container">
+					<div class="etheme-button-wrapper"><a href="#" class="fill-underline has-fill etheme-text-button elementor-button" role="button">
+        <span class="elementor-button-content-wrapper">
+            
+			<span class="elementor-button-text">View All Items</span>
+
+                        <span class="elementor-button-icon animation-background_ltr">
+                <i aria-hidden="true" class="et-icon et-right-arrow"></i>            </span>
+        
+            
+        </span></a></div>				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-d89e255" data-id="d89e255" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-ad5b637 elementor-align-left etheme-elementor-widget-loaded elementor-widget elementor-widget-etheme_icon_box" data-id="ad5b637" data-element_type="widget" data-settings="{&quot;icon_type&quot;:&quot;icon&quot;}" data-widget_type="etheme_icon_box.default">
+				<div class="elementor-widget-container">
+								<div class="etheme-icon-box etheme-icon-box-icon-position-left">
+        
+                            
+                <div class="etheme-icon-box-icon etheme-icon-box-icon-type-icon">
+        
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><g clip-path="url(#clip0_202_12876)"><path d="M17.1438 0.00767854L6.64388 1.50768C6.27439 1.56045 5.99996 1.87689 5.99996 2.25014V5.2501V12.5939C5.36814 12.2182 4.58564 12.0001 3.74998 12.0001C1.71818 12.0001 0 13.2886 0 15C0 16.7114 1.71814 18 3.74998 18C5.78179 18 7.49996 16.7114 7.49996 15V5.90059L16.4999 4.6149V10.344C15.8681 9.96825 15.0856 9.7501 14.2499 9.7501C12.2181 9.7501 10.4999 11.0386 10.4999 12.7501C10.4999 14.4615 12.2181 15.75 14.2499 15.75C16.2817 15.75 17.9999 14.4615 17.9999 12.7501V3.75014V0.750138C17.9999 0.293743 17.5956 -0.0568678 17.1438 0.00767854ZM3.74998 16.5C2.46816 16.5 1.5 15.7739 1.5 15C1.5 14.2261 2.46816 13.5 3.74998 13.5C5.0318 13.5 5.99996 14.2261 5.99996 15C5.99996 15.7739 5.0318 16.5 3.74998 16.5ZM7.49993 2.90059L16.4999 1.6149V3.09968L7.49993 4.38537V2.90059ZM14.2499 14.25C12.9681 14.25 11.9999 13.524 11.9999 12.75C11.9999 11.9761 12.9681 11.25 14.2499 11.25C15.5317 11.25 16.4999 11.9761 16.4999 12.75C16.4999 13.524 15.5317 14.25 14.2499 14.25Z" fill="#111111"></path></g><defs><clipPath id="clip0_202_12876"><rect width="18" height="18" fill="white"></rect></clipPath></defs></svg>        
+                </div>
+            
+                <div class="etheme-icon-box-content">
+		
+                                        
+                                            <h3 class="etheme-icon-box-title">
+                            <span>Audio Electronics</span>
+                        </h3>
+                    		
+                    
+                            
+                </div>
+			</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-526115e elementor-widget elementor-widget-etheme_icon_list" data-id="526115e" data-element_type="widget" data-widget_type="etheme_icon_list.default">
+				<div class="elementor-widget-container">
+					            <div class="etheme-icon-list">
+                                        <div class="etheme-icon-list-item elementor-repeater-item-4571300">
+                                                        
+                            <a class="etheme-icon-list-item-text" href="#">
+                                Gaming Devices                            </a>
+                                                    </div>
+                                            <div class="etheme-icon-list-item elementor-repeater-item-addf4ff">
+                                                        
+                            <a class="etheme-icon-list-item-text" href="#">
+                                TVs and Avs                            </a>
+                                                    </div>
+                                            <div class="etheme-icon-list-item elementor-repeater-item-d539f87">
+                                                        
+                            <a class="etheme-icon-list-item-text" href="#">
+                                Wearable Technology                            </a>
+                                                    </div>
+                                            <div class="etheme-icon-list-item elementor-repeater-item-762e82e">
+                                                        
+                            <a class="etheme-icon-list-item-text" href="#">
+                                iPads and Tablets                            </a>
+                                                    </div>
+                                </div>
+        
+        				</div>
+				</div>
+				<div class="elementor-element elementor-element-68d08bc etheme-elementor-widget-loaded elementor-widget elementor-widget-text_button" data-id="68d08bc" data-element_type="widget" data-widget_type="text_button.default">
+				<div class="elementor-widget-container">
+					<div class="etheme-button-wrapper"><a href="#" class="fill-underline has-fill etheme-text-button elementor-button" role="button">
+        <span class="elementor-button-content-wrapper">
+            
+			<span class="elementor-button-text">View All Items</span>
+
+                        <span class="elementor-button-icon animation-background_ltr">
+                <i aria-hidden="true" class="et-icon et-right-arrow"></i>            </span>
+        
+            
+        </span></a></div>				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-9ea67de" data-id="9ea67de" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-ed0fc5f elementor-section-height-min-height elementor-section-content-bottom elementor-section-boxed elementor-section-height-default" data-id="ed0fc5f" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-c38ec38" data-id="c38ec38" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-3976e93 elementor-align-center elementor-widget elementor-widget-etheme_advanced_headline" data-id="3976e93" data-element_type="widget" data-widget_type="etheme_advanced_headline.default">
+				<div class="elementor-widget-container">
+					        
+        <div class="etheme-a-h-wrapper">
+        
+                            <span class="etheme-a-h-text-before">
+                    Speakers                </span>
+            
+			
+        <h2 class="etheme-advanced-headline etheme-advanced-headline-mask">
+
+            45% Flat
+        </h2>
+		
+                            <p class="etheme-a-h-text-after">
+                    On Selected Brands                </p>
+                    
+        </div>
+        
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+		                                </div>
+                            </div>
+
+                        
+                    </li>
+                                        <li class="elementor-repeater-item-1c8613f">
+
+                                <a class="etheme-elementor-nav-menu-item etheme-elementor-nav-menu-item-parent" href="#/contact-us/">
+        <span class="elementor-item">
+                <span class="">Contacts</span>                </span>
+        </a>
+        
+                        
+                    </li>
+                                        <li class="elementor-repeater-item-career">
+
+                                <a class="etheme-elementor-nav-menu-item etheme-elementor-nav-menu-item-parent" href="#/career/">
+        <span class="elementor-item">
+                <span class="">Career</span>                </span>
+        </a>
+        
+                        
+                    </li>
+                                </ul>
+        
+        </nav>
+        				</div>
+				</div>
+		<div class="elementor-element elementor-element-76f4a3d e-flex e-con-boxed e-con e-child" data-id="76f4a3d" data-element_type="container">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-b3e0289 elementor-widget__width-auto etheme-elementor-menu etheme-elementor-widget-loaded elementor-widget elementor-widget-theme-etheme_nav_menu" data-id="b3e0289" data-element_type="widget" data-widget_type="theme-etheme_nav_menu.default">
+				<div class="elementor-widget-container">
+					        <nav class="etheme-elementor-nav-menu--main" aria-label="Menu">
+
+        <ul id="menu-1-b3e0289" class="etheme-elementor-nav-menu dropdowns-left horizontal"></ul>
+        </nav>
+        				</div>
+				</div>
+				<div class="elementor-element elementor-element-0ccdec8 elementor-widget__width-auto etheme-elementor-menu etheme-elementor-widget-loaded elementor-widget elementor-widget-theme-etheme_nav_menu" data-id="0ccdec8" data-element_type="widget" data-widget_type="theme-etheme_nav_menu.default">
+				<div class="elementor-widget-container">
+					        <nav class="etheme-elementor-nav-menu--main" aria-label="Menu">
+
+        <ul id="menu-1-0ccdec8" class="etheme-elementor-nav-menu dropdowns-left horizontal"></ul>
+        </nav>
+        				</div>
+				</div>
+				<div class="elementor-element elementor-element-99ff523 elementor-widget__width-auto elementor-align-right etheme-elementor-widget-loaded elementor-widget elementor-widget-text_button" data-id="99ff523" data-element_type="widget" data-widget_type="text_button.default">
+				<div class="elementor-widget-container">
+					<div class="etheme-button-wrapper"><a href="#/shop/" class="fill-bottom has-fill etheme-text-button elementor-button" role="button">
+        <span class="elementor-button-content-wrapper">
+            
+			<span class="elementor-button-text">Register your product</span>
+
+            
+            
+        </span></a></div>				</div>
+				</div>
+					</div>
+				</div>
+					</div>
+				</div>
+				</header>
+		
+
+<div class="container content-page sidebar-mobile-bottom">
+    <div class="sidebar-position-without">
+        <div class="row">
+
+            <div class="content col-md-12">
+                
+                    		<div data-elementor-type="wp-page" data-elementor-id="8" class="elementor elementor-8" data-elementor-post-type="page">
+						<section class="elementor-section elementor-top-section elementor-element elementor-element-f8a7336 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="f8a7336" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-custom">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-bf9e984" data-id="bf9e984" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-1835dfd elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1835dfd" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-custom">
+					<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-ec1eced" data-id="ec1eced" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-5f332f8 elementor-widget elementor-widget-banner" data-id="5f332f8" data-element_type="widget" data-settings="{&quot;use_default_tags&quot;:&quot;no&quot;}" data-widget_type="banner.default">
+				<div class="elementor-widget-container">
+					        <div id="banner-8398" class="banner  banner-type-2 et_image-with-hover et_image-hover-2 valign-middle font-style-dark" >
+
+			
+				<img loading="lazy" decoding="async" width="640" height="500" src="assets/images/slide01-min.jpeg" class="      " alt="" />                <div class="banner-content ">
+
+					<h2 class="banner-title "><span>Power Management</span></h2>                    <div class="content-inner">
+
+						<p>Efficient Energy Control. Smart Solutions.</p>
+                    </div>
+					                    <div class="button-wrap">
+
+						
+						
+                        <div onclick="window.open('/elementor3/electronic-mega-market/shop/','_blank')" class="banner-button btn medium inline-block  cursor-pointer">
+						View Details                    </div>
+
+                </div>
+			        </div>
+
+		        </div>
+
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-081ad17 elementor-hidden-mobile" data-id="081ad17" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-e5fd437 elementor-widget elementor-widget-banner" data-id="e5fd437" data-element_type="widget" data-settings="{&quot;use_default_tags&quot;:&quot;no&quot;}" data-widget_type="banner.default">
+				<div class="elementor-widget-container">
+					        <div id="banner-4130" class="banner  banner-type-2 et_image-with-hover et_image-hover-2 text-left valign-top font-style-dark" >
+
+			
+				<img loading="lazy" decoding="async" width="300" height="500" src="assets/images/Banner-2-min.jpeg" class="      " alt="" />                <div class="banner-content ">
+
+					<h2 class="banner-title "><span>Battery Management</span></h2>                    <div class="content-inner">
+
+						<p>Smart Power. Maximum Efficiency.</p>
+                    </div>
+					                    <div class="button-wrap">
+
+						
+						
+                        <div onclick="window.open('/elementor3/electronic-mega-market/shop/','_blank')" class="banner-button btn medium inline-block  cursor-pointer">
+						Shop now                    </div>
+
+                </div>
+			        </div>
+
+		        </div>
+
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-0f62add" data-id="0f62add" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-a7b776d elementor-widget elementor-widget-banner" data-id="a7b776d" data-element_type="widget" data-settings="{&quot;use_default_tags&quot;:&quot;no&quot;}" data-widget_type="banner.default">
+				<div class="elementor-widget-container">
+					        <div id="banner-1652" class="banner  banner-type-2 et_image-with-hover et_image-hover-2 valign-middle font-style-dark" >
+
+			
+				<img loading="lazy" decoding="async" width="430" height="240" src="assets/images/Banner-3-min.jpeg" class="      " alt="" />                <div class="banner-content ">
+
+					<h2 class="banner-title "><span>Solar solutions</span></h2>                    <div class="content-inner">
+
+						<p>Harness the Sun's Energy. Clean Renewable Power.</p>
+                    </div>
+					                    <div class="button-wrap">
+
+						
+						
+                        <div onclick="window.open('/elementor3/electronic-mega-market/shop/','_blank')" class="banner-button btn medium inline-block  cursor-pointer">
+						Shop now -&gt;                    </div>
+
+                </div>
+			        </div>
+
+		        </div>
+
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-f8412ac elementor-widget elementor-widget-banner" data-id="f8412ac" data-element_type="widget" data-settings="{&quot;use_default_tags&quot;:&quot;no&quot;}" data-widget_type="banner.default">
+				<div class="elementor-widget-container">
+					        <div id="banner-1357" class="banner  banner-type-2 et_image-with-hover et_image-hover-2 valign-middle font-style-dark" >
+
+			
+				<img loading="lazy" decoding="async" width="430" height="240" src="assets/images/Banner-4-min.jpeg" class="      " alt="" />                <div class="banner-content ">
+
+					<h2 class="banner-title "><span>Mobility Solutions</span></h2>                    <div class="content-inner">
+
+						<p>Smart Transportation. Efficient Mobility.</p>
+                    </div>
+					                    <div class="button-wrap">
+
+						
+						
+                        <div onclick="window.open('/elementor3/electronic-mega-market/shop/','_blank')" class="banner-button btn medium inline-block  cursor-pointer">
+						Shop now -&gt;                    </div>
+
+                </div>
+			        </div>
+
+		        </div>
+
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-1bf64fa elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1bf64fa" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-custom">
+					<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-fa149de" data-id="fa149de" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-07b1d12 elementor-align-left etheme-elementor-widget-loaded elementor-widget elementor-widget-etheme_icon_box" data-id="07b1d12" data-element_type="widget" data-settings="{&quot;icon_type&quot;:&quot;icon&quot;}" data-widget_type="etheme_icon_box.default">
+				<div class="elementor-widget-container">
+								<div class="etheme-icon-box etheme-icon-box-icon-position-left">
+        
+                            
+                <div class="etheme-icon-box-icon etheme-icon-box-icon-type-icon">
+        
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#222222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>        
+                </div>
+            
+                <div class="etheme-icon-box-content">
+		
+                                        
+                    		
+                                            <p class="etheme-icon-box-description" style="margin: 0; line-height: 1.5; text-align: left;">
+                            Reliable Power Supply<br>
+                            During Outages                        </p>
+                    
+                            
+                </div>
+			</div>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-6295768" data-id="6295768" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-2ff4414 elementor-align-left etheme-elementor-widget-loaded elementor-widget elementor-widget-etheme_icon_box" data-id="2ff4414" data-element_type="widget" data-settings="{&quot;icon_type&quot;:&quot;icon&quot;}" data-widget_type="etheme_icon_box.default">
+				<div class="elementor-widget-container">
+								<div class="etheme-icon-box etheme-icon-box-icon-position-left">
+        
+                            
+                <div class="etheme-icon-box-icon etheme-icon-box-icon-type-icon">
+        
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#222222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>        
+                </div>
+            
+                <div class="etheme-icon-box-content">
+		
+                                        
+                    		
+                                            <p class="etheme-icon-box-description" style="margin: 0; line-height: 1.5; text-align: left;">
+                            Hassle-Free, Maintenance-Free Operation                        </p>
+                    
+                            
+                </div>
+			</div>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-d76e52e elementor-hidden-mobile" data-id="d76e52e" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-3739e09 elementor-align-left etheme-elementor-widget-loaded elementor-widget elementor-widget-etheme_icon_box" data-id="3739e09" data-element_type="widget" data-settings="{&quot;icon_type&quot;:&quot;icon&quot;}" data-widget_type="etheme_icon_box.default">
+				<div class="elementor-widget-container">
+								<div class="etheme-icon-box etheme-icon-box-icon-position-left">
+        
+                            
+                <div class="etheme-icon-box-icon etheme-icon-box-icon-type-icon" style="font-size: 24px; font-weight: bold; color: #222222; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px;">
+                â‚¹        
+                </div>
+            
+                <div class="etheme-icon-box-content">
+		
+                                        
+                    		
+                                            <p class="etheme-icon-box-description" style="margin: 0; line-height: 1.5; text-align: left;">
+                            Long-Term Cost<br>
+                            Savings                        </p>
+                    
+                            
+                </div>
+			</div>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-b2700f7 elementor-hidden-mobile" data-id="b2700f7" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-f0ad023 elementor-align-left etheme-elementor-widget-loaded elementor-widget elementor-widget-etheme_icon_box" data-id="f0ad023" data-element_type="widget" data-settings="{&quot;icon_type&quot;:&quot;icon&quot;}" data-widget_type="etheme_icon_box.default">
+				<div class="elementor-widget-container">
+								<div class="etheme-icon-box etheme-icon-box-icon-position-left">
+        
+                            
+                <div class="etheme-icon-box-icon etheme-icon-box-icon-type-icon">
+        
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#222222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>        
+                </div>
+            
+                <div class="etheme-icon-box-content">
+		
+                                        
+                    		
+                                            <p class="etheme-icon-box-description" style="margin: 0; line-height: 1.5; text-align: left;">
+                            Fumeless, Safe<br>
+                            and Clean                        </p>
+                    
+                            
+                </div>
+			</div>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-51e1920 elementor-hidden-tablet" data-id="51e1920" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-9d58e07 elementor-align-left etheme-elementor-widget-loaded elementor-widget elementor-widget-etheme_icon_box" data-id="9d58e07" data-element_type="widget" data-settings="{&quot;icon_type&quot;:&quot;icon&quot;}" data-widget_type="etheme_icon_box.default">
+				<div class="elementor-widget-container">
+								<div class="etheme-icon-box etheme-icon-box-icon-position-left">
+        
+                            
+                <div class="etheme-icon-box-icon etheme-icon-box-icon-type-icon">
+        
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#222222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>        
+                </div>
+            
+                <div class="etheme-icon-box-content">
+		
+                                        
+                    		
+                                            <p class="etheme-icon-box-description" style="margin: 0; line-height: 1.5; text-align: left;">
+                            safe for electronics<br>
+                            & appliances                        </p>
+                    
+                            
+                </div>
+			</div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-new-image-text elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="new-image-text" data-element_type="section" data-settings="{&quot;_padding&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;100&quot;,&quot;right&quot;:&quot;0&quot;,&quot;bottom&quot;:&quot;100&quot;,&quot;left&quot;:&quot;0&quot;,&quot;isLinked&quot;:false},&quot;_margin&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;0&quot;,&quot;right&quot;:&quot;0&quot;,&quot;bottom&quot;:&quot;0&quot;,&quot;left&quot;:&quot;0&quot;,&quot;isLinked&quot;:false}}">
+						<div class="elementor-container elementor-column-gap-custom">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-new-img-col" data-id="new-img-col" data-element_type="column" data-settings="{&quot;_padding&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;0&quot;,&quot;right&quot;:&quot;15&quot;,&quot;bottom&quot;:&quot;0&quot;,&quot;left&quot;:&quot;0&quot;,&quot;isLinked&quot;:false}}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-new-img-widget elementor-widget elementor-widget-image" data-id="new-img-widget" data-element_type="widget" data-widget_type="image.default">
+															<img loading="lazy" decoding="async" width="690" height="550" src="assets/images/Image-1.jpeg" class="attachment-full size-full wp-image-113" alt="" />															</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-new-text-col" data-id="new-text-col" data-element_type="column" data-settings="{&quot;content_position&quot;:&quot;top&quot;,&quot;_padding&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;0&quot;,&quot;right&quot;:&quot;0&quot;,&quot;bottom&quot;:&quot;0&quot;,&quot;left&quot;:&quot;15&quot;,&quot;isLinked&quot;:false}}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-new-heading elementor-widget elementor-widget-heading" data-id="new-heading" data-element_type="widget" data-widget_type="heading.default" data-settings="{&quot;_margin&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;0&quot;,&quot;right&quot;:&quot;0&quot;,&quot;bottom&quot;:&quot;30&quot;,&quot;left&quot;:&quot;0&quot;,&quot;isLinked&quot;:false},&quot;_padding&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;0&quot;,&quot;right&quot;:&quot;0&quot;,&quot;bottom&quot;:&quot;0&quot;,&quot;left&quot;:&quot;0&quot;,&quot;isLinked&quot;:false}}">
+					<h2 class="elementor-heading-title elementor-size-default">About Ligen Power®</h2>
+					<p class="elementor-heading-tagline" style="margin-top: 10px; margin-bottom: 0; font-size: 18px; color: #666; font-weight: bold;">Powering a Self-Reliant India</p>				</div>
+				<div class="elementor-element elementor-element-new-text elementor-widget elementor-widget-text-editor" data-id="new-text" data-element_type="widget" data-widget_type="text-editor.default" data-settings="{&quot;_margin&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;0&quot;,&quot;right&quot;:&quot;0&quot;,&quot;bottom&quot;:&quot;0&quot;,&quot;left&quot;:&quot;0&quot;,&quot;isLinked&quot;:false},&quot;_padding&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;0&quot;,&quot;right&quot;:&quot;0&quot;,&quot;bottom&quot;:&quot;0&quot;,&quot;left&quot;:&quot;0&quot;,&quot;isLinked&quot;:false}}">
+									<p>At Ligen Power®, we are a Deeptech venture with a clear mission: to pioneer indigenous technologies that will redefine the future of energy. As a Deeptech pioneer, we directly address the most significant challenge in sustainable energy: storage and efficient use. By developing our own patented BMS, we are not simply assembling existing electronic components; we are creating fundamental innovations in battery safety, longevity, and efficiency. This purpose-driven R&amp;D, aimed at a critical clean energy problem, is the defining characteristic of a Sustainable Energy Deep Tech company.</p>
+									<p>At Ligen Power®, our core strength lies in our dedicated Research and Development (R&amp;D) team. This dynamic group of innovators possesses the technical prowess to constantly develop indigenous technologies that will redefine the future of energy. Our focus is on creating cutting-edge portable power modules and high-density components for rechargeable cells, all while upholding a steadfast commitment to sustainable development. We are dedicated to creating a greener and more secure energy landscape for everyone.</p>								</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-a12f6b0 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a12f6b0" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-extended">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-72bbf73" data-id="72bbf73" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-0c65d2d elementor-widget elementor-widget-etheme_slideshow" data-id="0c65d2d" data-element_type="widget" data-settings="{&quot;navigation&quot;:&quot;arrows&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;effect&quot;:&quot;slide&quot;,&quot;slides_per_view&quot;:1,&quot;space_between&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:20,&quot;sizes&quot;:[]},&quot;space_between_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;space_between_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;loop&quot;:&quot;yes&quot;,&quot;autoplay_speed&quot;:5000,&quot;autoheight&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;}" data-widget_type="etheme_slideshow.default">
+				<div class="elementor-widget-container">
+					<style type="text/css">[data-etheme_slide_template_id='3123']{background-repeat:no-repeat;background-position:center center;background-size:cover;display: flex;align-items: center;justify-content: center }[data-etheme_slide_template_id='3123'] > [data-elementor-id]{flex: 1; }[data-etheme_slide_template_id='3107']{background-repeat:no-repeat;background-position:center center;background-size:cover;display: flex;align-items: center;justify-content: center }[data-etheme_slide_template_id='3107'] > [data-elementor-id]{flex: 1; }[data-etheme_slide_template_id='3123']{background-repeat:no-repeat;background-position:center center;background-size:cover;display: flex;align-items: center;justify-content: center }[data-etheme_slide_template_id='3123'] > [data-elementor-id]{flex: 1; }[data-etheme_slide_template_id='3107']{background-repeat:no-repeat;background-position:center center;background-size:cover;display: flex;align-items: center;justify-content: center }[data-etheme_slide_template_id='3107'] > [data-elementor-id]{flex: 1; }</style>        
+        <div class="etheme-elementor-swiper-entry swiper-entry middle-inbox arrows-always">
+            <div class="swiper etheme-elementor-slider" dir="ltr" data-animation="">
+                <div class="swiper-wrapper">
+                    <div class="elementor-repeater-item-c06b7dc swiper-slide"><div class="swiper-slide-contents" data-etheme_slide_template_id="3123">		<div data-elementor-type="wp-post" data-elementor-id="3123" class="elementor elementor-3123" data-elementor-post-type="etheme_slides">
+						<section class="elementor-section elementor-top-section elementor-element elementor-element-29f1531a elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="29f1531a" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5ec0331" data-id="5ec0331" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-6e8b9174 elementor-widget elementor-widget-heading" data-id="6e8b9174" data-element_type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">Experience Sound</h2>				</div>
+				<div class="elementor-element elementor-element-475ca629 elementor-widget elementor-widget-heading" data-id="475ca629" data-element_type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">Freedom with AirPods</h2>				</div>
+				<div class="elementor-element elementor-element-39bc2eab elementor-widget__width-auto elementor-hidden-mobile elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="39bc2eab" data-element_type="widget" data-widget_type="divider.default">
+							<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+						</div>
+				<div class="elementor-element elementor-element-1a749fea elementor-hidden-mobile elementor-widget elementor-widget-text-editor" data-id="1a749fea" data-element_type="widget" data-widget_type="text-editor.default">
+									Unleash Wireless Sound Freedom.								</div>
+				<div class="elementor-element elementor-element-357b8e41 etheme-elementor-widget-loaded elementor-widget elementor-widget-text_button" data-id="357b8e41" data-element_type="widget" data-widget_type="text_button.default">
+				<div class="elementor-widget-container">
+					<div class="etheme-button-wrapper"><a href="#" class="fill-ltr has-fill etheme-text-button elementor-button" role="button">
+        <span class="elementor-button-content-wrapper">
+            
+			<span class="elementor-button-text">Discover</span>
+
+                        <span class="elementor-button-icon animation-background_ltr">
+                <i aria-hidden="true" class="et-icon et-right-arrow"></i>            </span>
+        
+            
+        </span></a></div>				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+		</div></div><div class="elementor-repeater-item-bd23ef8 swiper-slide"><div class="swiper-slide-contents" data-etheme_slide_template_id="3123">		<div data-elementor-type="wp-post" data-elementor-id="3123" class="elementor elementor-3123" data-elementor-post-type="etheme_slides">
+						<section class="elementor-section elementor-top-section elementor-element elementor-element-29f1531a elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="29f1531a" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5ec0331" data-id="5ec0331" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-6e8b9174 elementor-widget elementor-widget-heading" data-id="6e8b9174" data-element_type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">Experience Sound</h2>				</div>
+				<div class="elementor-element elementor-element-475ca629 elementor-widget elementor-widget-heading" data-id="475ca629" data-element_type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">Freedom with AirPods</h2>				</div>
+				<div class="elementor-element elementor-element-39bc2eab elementor-widget__width-auto elementor-hidden-mobile elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="39bc2eab" data-element_type="widget" data-widget_type="divider.default">
+							<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+						</div>
+				<div class="elementor-element elementor-element-1a749fea elementor-hidden-mobile elementor-widget elementor-widget-text-editor" data-id="1a749fea" data-element_type="widget" data-widget_type="text-editor.default">
+									Unleash Wireless Sound Freedom.								</div>
+				<div class="elementor-element elementor-element-357b8e41 etheme-elementor-widget-loaded elementor-widget elementor-widget-text_button" data-id="357b8e41" data-element_type="widget" data-widget_type="text_button.default">
+				<div class="elementor-widget-container">
+					<div class="etheme-button-wrapper"><a href="#" class="fill-ltr has-fill etheme-text-button elementor-button" role="button">
+        <span class="elementor-button-content-wrapper">
+            
+			<span class="elementor-button-text">Discover</span>
+
+                        <span class="elementor-button-icon animation-background_ltr">
+                <i aria-hidden="true" class="et-icon et-right-arrow"></i>            </span>
+        
+            
+        </span></a></div>				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+		</div></div><div class="elementor-repeater-item-36eb044 swiper-slide"><div class="swiper-slide-contents" data-etheme_slide_template_id="3107">		<div data-elementor-type="wp-post" data-elementor-id="3107" class="elementor elementor-3107" data-elementor-post-type="etheme_slides">
+						<section class="elementor-section elementor-top-section elementor-element elementor-element-6910a83b elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="6910a83b" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7e340eea" data-id="7e340eea" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-38f51598 elementor-widget elementor-widget-heading" data-id="38f51598" data-element_type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">New Camera. New Design.</h2>				</div>
+				<div class="elementor-element elementor-element-1380b7ca elementor-widget elementor-widget-heading" data-id="1380b7ca" data-element_type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">iPhone 15 Pro Max</h2>				</div>
+				<div class="elementor-element elementor-element-2fc55411 elementor-widget__width-auto elementor-hidden-mobile elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="2fc55411" data-element_type="widget" data-widget_type="divider.default">
+							<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+						</div>
+				<div class="elementor-element elementor-element-4c830cf5 elementor-hidden-mobile elementor-widget elementor-widget-text-editor" data-id="4c830cf5" data-element_type="widget" data-widget_type="text-editor.default">
+									Titanium. So Strong. So Light. So Pro.								</div>
+				<div class="elementor-element elementor-element-1a4f6006 etheme-elementor-widget-loaded elementor-widget elementor-widget-text_button" data-id="1a4f6006" data-element_type="widget" data-widget_type="text_button.default">
+				<div class="elementor-widget-container">
+					<div class="etheme-button-wrapper"><a href="#" class="fill-ltr has-fill etheme-text-button elementor-button" role="button">
+        <span class="elementor-button-content-wrapper">
+            
+			<span class="elementor-button-text">Shop now</span>
+
+                        <span class="elementor-button-icon animation-background_ltr">
+                <i aria-hidden="true" class="et-icon et-right-arrow"></i>            </span>
+        
+            
+        </span></a></div>				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+		</div></div>                </div>
+
+                		<div class="swiper-button-prev swiper-custom-left et-swiper-elementor-nav type-arrow style-1"></div>
+		<div class="swiper-button-next swiper-custom-right et-swiper-elementor-nav type-arrow style-1"></div>
+		
+            </div>
+
+                    </div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-a0878ab elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a0878ab" data-element_type="section" style="padding: 80px 0;">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-35f5a1f" data-id="35f5a1f" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-df9b3a9 elementor-widget elementor-widget-heading" data-id="df9b3a9" data-element_type="widget" data-widget_type="heading.default" style="text-align: center; margin-bottom: 10px;">
+					<h2 class="elementor-heading-title elementor-size-default" style="font-size: 36px; font-weight: bold; margin-bottom: 10px;">INDUSTRIES ASSISTED!</h2>				</div>
+						<div class="elementor-element elementor-widget elementor-widget-text-editor" style="text-align: center; margin-bottom: 50px;">
+					<p style="font-size: 18px; color: #666;">BEING BANKED BY THE VIVID VERTICALS AS THEIR POWER BANK</p>				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-eda54b0 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="eda54b0" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-custom industries-grid" style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(5, 1fr); gap: 30px 20px; padding: 0 20px;">
+					<div class="industry-item">
+						<div class="icon-container">
+							<i class="fas fa-car"></i>
+						</div>
+						<div class="industry-text">
+							<span class="green-dot"></span>
+							<span>Automotive</span>
+						</div>
+					</div>
+					<div class="industry-item">
+						<div class="icon-container">
+							<i class="fas fa-heartbeat"></i>
+						</div>
+						<div class="industry-text">
+							<span class="green-dot"></span>
+							<span>Healthcare</span>
+						</div>
+					</div>
+					<div class="industry-item">
+						<div class="icon-container">
+							<i class="fas fa-industry"></i>
+						</div>
+						<div class="industry-text">
+							<span class="green-dot"></span>
+							<span>Industry Automation</span>
+						</div>
+					</div>
+					<div class="industry-item">
+						<div class="icon-container">
+							<i class="fas fa-bolt"></i>
+						</div>
+						<div class="industry-text">
+							<span class="green-dot"></span>
+							<span>Smart Grid</span>
+						</div>
+					</div>
+					<div class="industry-item">
+						<div class="icon-container">
+							<i class="fas fa-shopping-cart"></i>
+						</div>
+						<div class="industry-text">
+							<span class="green-dot"></span>
+							<span>Retail</span>
+						</div>
+					</div>
+					<div class="industry-item">
+						<div class="icon-container">
+							<i class="fas fa-microchip"></i>
+						</div>
+						<div class="industry-text">
+							<span class="green-dot"></span>
+							<span>Semiconductor</span>
+						</div>
+					</div>
+					<div class="industry-item">
+						<div class="icon-container">
+							<i class="fas fa-solar-panel"></i>
+						</div>
+						<div class="industry-text">
+							<span class="green-dot"></span>
+							<span>Renewable Energy</span>
+						</div>
+					</div>
+					<div class="industry-item">
+						<div class="icon-container">
+							<i class="fas fa-gas-pump"></i>
+						</div>
+						<div class="industry-text">
+							<span class="green-dot"></span>
+							<span>Oil & Gas</span>
+						</div>
+					</div>
+					<div class="industry-item">
+						<div class="icon-container">
+							<i class="fas fa-truck"></i>
+						</div>
+						<div class="industry-text">
+							<span class="green-dot"></span>
+							<span>Transport & Logistics</span>
+						</div>
+					</div>
+					<div class="industry-item">
+						<div class="icon-container">
+							<i class="fas fa-network-wired"></i>
+						</div>
+						<div class="industry-text">
+							<span class="green-dot"></span>
+							<span>Networking</span>
+						</div>
+					</div>
+					</div>
+		</section>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-61d9ffa elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="61d9ffa" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-d1bd385" data-id="d1bd385" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-contact-form elementor-widget elementor-widget-html" data-id="contact-form" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+					<div class="contact-us-form-wrapper" style="background-color: transparent; padding: 40px 30px; border-radius: 8px; max-width: 100%;">
+						<div style="margin-bottom: 20px;">
+							<h3 style="font-size: 14px; font-weight: 600; color: #333; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 15px 0;">CONTACT US</h3>
+							<h2 style="font-size: 28px; font-weight: 700; color: #000000; text-transform: uppercase; letter-spacing: 0.5px; margin: 0; line-height: 1.3;">PLEASE DO NOT HESITATE, CONTACT US FOR ANY QUERY</h2>
+						</div>
+						<form class="contact-form" style="display: flex; flex-direction: column; gap: 15px;">
+							<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+								<div>
+									<input type="text" name="name" placeholder="Name" required style="width: 100%; padding: 12px 15px; border: 1px solid #DDD; border-radius: 4px; background-color: #FFFFFF; color: #333; font-size: 14px; box-sizing: border-box; font-family: inherit; transition: border-color 0.3s ease;">
+								</div>
+								<div style="position: relative;">
+									<div style="display: flex; align-items: center; background-color: #FFFFFF; border-radius: 4px; padding: 0; border: 1px solid #DDD; transition: border-color 0.3s ease;">
+										<div style="display: flex; align-items: center; padding: 0 10px; border-right: 1px solid #E0E0E0;">
+											<svg width="20" height="15" viewBox="0 0 20 15" style="margin-right: 5px;">
+												<rect width="20" height="15" fill="#FF9933"/>
+												<rect y="5" width="20" height="5" fill="#FFFFFF"/>
+												<rect y="10" width="20" height="5" fill="#138808"/>
+												<circle cx="10" cy="7.5" r="2.5" fill="#000080"/>
+												<circle cx="10" cy="7.5" r="1.5" fill="#FFFFFF"/>
+											</svg>
+											<select name="country_code" style="border: none; background: transparent; font-size: 14px; color: #333; padding: 0; margin: 0; cursor: pointer; outline: none; font-family: inherit;">
+												<option value="+91">+91</option>
+												<option value="+1">+1</option>
+												<option value="+44">+44</option>
+											</select>
+										</div>
+										<input type="tel" name="phone" placeholder="Phone No" required style="flex: 1; padding: 12px 15px; border: none; background-color: transparent; color: #333; font-size: 14px; outline: none; font-family: inherit;">
+									</div>
+								</div>
+							</div>
+							<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+								<div>
+									<input type="email" name="email" placeholder="Email" required style="width: 100%; padding: 12px 15px; border: 1px solid #DDD; border-radius: 4px; background-color: #FFFFFF; color: #333; font-size: 14px; box-sizing: border-box; font-family: inherit; transition: border-color 0.3s ease;">
+								</div>
+								<div>
+									<input type="text" name="city" placeholder="City" required style="width: 100%; padding: 12px 15px; border: 1px solid #DDD; border-radius: 4px; background-color: #FFFFFF; color: #333; font-size: 14px; box-sizing: border-box; font-family: inherit; transition: border-color 0.3s ease;">
+								</div>
+							</div>
+							<div>
+								<textarea name="message" placeholder="Message" rows="5" required style="width: 100%; padding: 12px 15px; border: 1px solid #DDD; border-radius: 4px; background-color: #FFFFFF; color: #333; font-size: 14px; box-sizing: border-box; resize: vertical; min-height: 100px; font-family: inherit; transition: border-color 0.3s ease;"></textarea>
+							</div>
+							<div>
+								<button type="submit" style="width: 100%; padding: 14px 20px; background-color: #333333; color: #FFFFFF; border: none; border-radius: 4px; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; transition: background-color 0.3s ease; font-family: inherit;">ENQUIRE NOW</button>
+							</div>
+						</form>
+					</div>
+					<style>
+						.contact-us-form-wrapper input::placeholder,
+						.contact-us-form-wrapper textarea::placeholder {
+							color: #999;
+						}
+						.contact-us-form-wrapper input:focus,
+						.contact-us-form-wrapper textarea:focus {
+							border-color: #4CAF50 !important;
+							outline: none;
+						}
+						.contact-us-form-wrapper div[style*="border: 1px solid"]:focus-within {
+							border-color: #4CAF50 !important;
+						}
+						.contact-us-form-wrapper select:focus {
+							outline: none;
+						}
+						.contact-us-form-wrapper button:hover {
+							background-color: #222222 !important;
+						}
+						@media (max-width: 768px) {
+							.contact-us-form-wrapper form > div[style*="grid-template-columns"] {
+								grid-template-columns: 1fr !important;
+							}
+						}
+					</style>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-0e7d54b" data-id="0e7d54b" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-5aca777 elementor-widget elementor-widget-banner" data-id="5aca777" data-element_type="widget" data-settings="{&quot;use_default_tags&quot;:&quot;no&quot;}" data-widget_type="banner.default">
+				<div class="elementor-widget-container">
+					        <div id="banner-7642" class="banner  banner-type-3 et_image-with-hover et_image-hover-3 with-border valign-middle font-style-dark" >
+
+			
+				<img loading="lazy" decoding="async" width="700" height="270" src="assets/images/Banner-1.jpeg" class="      " alt="" />                <div class="banner-content ">
+
+					<h2 class="banner-title "><span>Find Your Nearest Ligen Power® Dealer</span></h2>                    <div class="content-inner">
+
+						<p>Connect with authorized dealers and distributors across India</p>
+                    </div>
+					                    <div class="button-wrap">
+
+						
+						
+                        <div onclick="window.open('https://merchant.ligenpower.com/','_blank')" class="banner-button btn medium inline-block  cursor-pointer">
+						Find Dealer                    </div>
+
+                </div>
+			        </div>
+
+		        </div>
+
+						</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-b301b03 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="b301b03" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-custom">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-93e4e79" data-id="93e4e79" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-759adb3 elementor-widget elementor-widget-banner" data-id="759adb3" data-element_type="widget" data-settings="{&quot;use_default_tags&quot;:&quot;no&quot;}" data-widget_type="banner.default">
+				<div class="elementor-widget-container">
+					        <div id="banner-5270" class="banner  content-effect-on-hover banner-type-2 et_image-with-hover et_image-hover-2 text-left valign-bottom font-style-dark" >
+
+			
+				<img loading="lazy" decoding="async" width="340" height="270" src="assets/images/Banner-21.jpeg" class="      " alt="" />                <div class="banner-content ">
+
+					<h2 class="banner-title "><span>Dos & Don'ts</span></h2>                    <div class="content-inner">
+
+						<p>Safety Guidelines for Power Inverter</p>
+                    </div>
+					                    <div class="button-wrap">
+
+						
+						
+                        <div onclick="openDosDontsModal()" class="banner-button btn medium inline-block  cursor-pointer">
+						View Guidelines                    </div>
+
+                </div>
+			        </div>
+
+		        </div>
+
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-74a5abc" data-id="74a5abc" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-7de9a3a elementor-widget elementor-widget-banner" data-id="7de9a3a" data-element_type="widget" data-settings="{&quot;use_default_tags&quot;:&quot;no&quot;}" data-widget_type="banner.default">
+				<div class="elementor-widget-container">
+					        <div id="banner-3533" class="banner  content-effect-on-hover banner-type-2 et_image-with-hover et_image-hover-2 text-left valign-bottom font-style-dark" >
+
+			
+				<img loading="lazy" decoding="async" width="340" height="270" src="assets/images/Banner-41.jpeg" class="      " alt="" />                <div class="banner-content ">
+
+					<h2 class="banner-title "><span>Frequently Asked Questions</span></h2>
+					                    <div class="button-wrap">
+
+						
+						
+                        <div onclick="openFAQModal()" class="banner-button btn medium inline-block  cursor-pointer">
+						View FAQ                    </div>
+
+                </div>
+			        </div>
+
+		        </div>
+
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-testimonials elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="testimonials" data-element_type="section" style="background-color: #f5f5f6; padding: 80px 0;">
+						<div class="elementor-container elementor-column-gap-extended">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-testimonials-header" data-id="testimonials-header" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-testimonials-title elementor-widget elementor-widget-heading" data-id="testimonials-title" data-element_type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default" style="text-align: center; margin-bottom: 20px; font-size: 36px; font-weight: 700; color: #111;">What Our Customers Say</h2>				</div>
+				<div class="elementor-element elementor-element-testimonials-subtitle elementor-widget elementor-widget-text-editor" data-id="testimonials-subtitle" data-element_type="widget" data-widget_type="text-editor.default">
+					<p style="text-align: center; color: #666; font-size: 16px; margin-bottom: 50px; max-width: 600px; margin-left: auto; margin-right: auto;">Read what our satisfied customers have to say about our products and services</p>				</div>
+					</div>
+		</div>
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-testimonials-carousel-col" data-id="testimonials-carousel-col" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+				<div class="elementor-element elementor-element-testimonials-carousel elementor-widget elementor-widget-etheme_posts_carousel" data-id="testimonials-carousel" data-element_type="widget" data-settings="{&quot;slides_per_view&quot;:&quot;3&quot;,&quot;slides_per_view_tablet&quot;:&quot;2&quot;,&quot;slides_per_view_mobile&quot;:&quot;1&quot;,&quot;space_between&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:30,&quot;sizes&quot;:[]},&quot;space_between_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:20,&quot;sizes&quot;:[]},&quot;space_between_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:15,&quot;sizes&quot;:[]},&quot;loop&quot;:&quot;yes&quot;,&quot;navigation&quot;:&quot;arrows&quot;}" data-widget_type="etheme_posts_carousel.default">
+				<div class="elementor-widget-container">
+					            <div class="etheme-elementor-swiper-entry swiper-entry middle-inbox arrows-hover">
+                
+                <div class="swiper etheme-elementor-slider swiper-container-main testimonials-swiper" dir="ltr">
+            
+                    <div class="swiper-wrapper">
+                        
+                                                            <div class="swiper-slide">
+                                        		<div class="testimonial-card" style="background: #ffffff; padding: 24px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); height: 100%; display: flex; flex-direction: column;">
+					<div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+						<div style="width: 48px; height: 48px; border-radius: 50%; background: #4285F4; display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden;">
+							<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Crect width='48' height='48' fill='%234285F4'/%3E%3C/svg%3E" alt="Radheshyam kumar" style="width: 100%; height: 100%; object-fit: cover;" />
+						</div>
+						<div style="flex-grow: 1;">
+							<div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+								<h4 style="margin: 0; color: #111; font-size: 16px; font-weight: 600;">Radheshyam kumar</h4>
+								<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+							</div>
+							<p style="margin: 0; color: #666; font-size: 12px;">2025-08-29</p>
+						</div>
+					</div>
+					<div style="display: flex; align-items: center; gap: 4px; margin-bottom: 12px;">
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="#FFA000"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="#FFA000"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="#FFA000"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="#FFA000"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="#FFA000"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="#1A73E8" style="margin-left: 4px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+					</div>
+					<p style="color: #333; font-size: 14px; line-height: 1.6; margin-bottom: 12px; flex-grow: 1;">I recently purchased Ligen Power® 1000VA Lithium battery based inverter. The installation was smooth, and the performance has been excellent. The backup time is impressive and the build quality is solid.</p>
+					<a href="#" style="color: #666; font-size: 13px; text-decoration: none;">Read more</a>
+				</div>
+		                                    </div>
+                                                                    <div class="swiper-slide">
+                                        		<div class="testimonial-card" style="background: #ffffff; padding: 24px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); height: 100%; display: flex; flex-direction: column;">
+					<div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+						<div style="width: 48px; height: 48px; border-radius: 50%; background: #4285F4; display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden;">
+							<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Crect width='48' height='48' fill='%234285F4'/%3E%3C/svg%3E" alt="Kripa Shanker Sharan" style="width: 100%; height: 100%; object-fit: cover;" />
+						</div>
+						<div style="flex-grow: 1;">
+							<div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+								<h4 style="margin: 0; color: #111; font-size: 16px; font-weight: 600;">Kripa Shanker Sharan</h4>
+								<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+							</div>
+							<p style="margin: 0; color: #666; font-size: 12px;">2025-08-20</p>
+						</div>
+					</div>
+					<div style="display: flex; align-items: center; gap: 4px; margin-bottom: 12px;">
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="#FFA000"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="#FFA000"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="#FFA000"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="#FFA000"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="#FFA000"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="#1A73E8" style="margin-left: 4px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+					</div>
+					<p style="color: #333; font-size: 14px; line-height: 1.6; margin-bottom: 12px; flex-grow: 1;">Very Good Product and excellent Service by Ligen Staffs.</p>
+				</div>
+		                                    </div>
+                                                                    <div class="swiper-slide">
+                                        		<div class="testimonial-card" style="background: #ffffff; padding: 24px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); height: 100%; display: flex; flex-direction: column;">
+					<div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+						<div style="width: 48px; height: 48px; border-radius: 50%; background: #4285F4; display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden;">
+							<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Crect width='48' height='48' fill='%234285F4'/%3E%3C/svg%3E" alt="Swarnima Payal" style="width: 100%; height: 100%; object-fit: cover;" />
+						</div>
+						<div style="flex-grow: 1;">
+							<div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+								<h4 style="margin: 0; color: #111; font-size: 16px; font-weight: 600;">Swarnima Payal</h4>
+								<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+							</div>
+							<p style="margin: 0; color: #666; font-size: 12px;">2025-08-20</p>
+						</div>
+					</div>
+					<div style="display: flex; align-items: center; gap: 4px; margin-bottom: 12px;">
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="#FFA000"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="#FFA000"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="#FFA000"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="#FFA000"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="#FFA000"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="#1A73E8" style="margin-left: 4px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+					</div>
+					<p style="color: #333; font-size: 14px; line-height: 1.6; margin-bottom: 12px; flex-grow: 1;">This has been a wonderful product with lithium battery-inverter duo. It is environment friendly, leaves no residue and works efficiently even during power cuts.</p>
+					<a href="#" style="color: #666; font-size: 13px; text-decoration: none;">Read more</a>
+				</div>
+		                                    </div>
+                                                                    <div class="swiper-slide">
+                                        		<div class="testimonial-card" style="background: #ffffff; padding: 24px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); height: 100%; display: flex; flex-direction: column;">
+					<div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+						<div style="width: 48px; height: 48px; border-radius: 50%; background: #4285F4; display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden;">
+							<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Crect width='48' height='48' fill='%234285F4'/%3E%3C/svg%3E" alt="Amit Mishra" style="width: 100%; height: 100%; object-fit: cover;" />
+						</div>
+						<div style="flex-grow: 1;">
+							<div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+								<h4 style="margin: 0; color: #111; font-size: 16px; font-weight: 600;">Amit Mishra</h4>
+								<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+							</div>
+							<p style="margin: 0; color: #666; font-size: 12px;">2025-08-20</p>
+						</div>
+					</div>
+					<div style="display: flex; align-items: center; gap: 4px; margin-bottom: 12px;">
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="#FFA000"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="#FFA000"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="#FFA000"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="#FFA000"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="#FFA000"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="#1A73E8" style="margin-left: 4px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+					</div>
+					<p style="color: #333; font-size: 14px; line-height: 1.6; margin-bottom: 12px; flex-grow: 1;">I have purchased Ligen Power®-1500VA model inverter for my hometown Muzaffarpur, Bihar from Amossys Portable Power. The product quality is excellent and service is prompt.</p>
+					<a href="#" style="color: #666; font-size: 13px; text-decoration: none;">Read more</a>
+				</div>
+		                                    </div>
+                                                                    <div class="swiper-slide">
+                                        		<div class="testimonial-card" style="background: #ffffff; padding: 24px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); height: 100%; display: flex; flex-direction: column;">
+					<div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+						<div style="width: 48px; height: 48px; border-radius: 50%; background: #4285F4; display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden;">
+							<div style="width: 100%; height: 100%; background: #4285F4; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 20px;">M</div>
+						</div>
+						<div style="flex-grow: 1;">
+							<div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+								<h4 style="margin: 0; color: #111; font-size: 16px; font-weight: 600;">Mugdha Dubey</h4>
+								<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+							</div>
+							<p style="margin: 0; color: #666; font-size: 12px;">2025-08-20</p>
+						</div>
+					</div>
+					<div style="display: flex; align-items: center; gap: 4px; margin-bottom: 12px;">
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="#FFA000"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="#FFA000"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="#FFA000"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="#FFA000"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="#FFA000"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="#1A73E8" style="margin-left: 4px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+					</div>
+					<p style="color: #333; font-size: 14px; line-height: 1.6; margin-bottom: 12px; flex-grow: 1;">I recently purchased the Ligen 2000 Inverter, and I am very impressed with its performance. The backup time is excellent, and the build quality is robust. Highly recommended!</p>
+					<a href="#" style="color: #666; font-size: 13px; text-decoration: none;">Read more</a>
+				</div>
+		                                    </div>
+                                    
+                    </div>
+                    
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    
+                </div>
+	
+	                         
+            </div>
+							</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-b8e0555 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="b8e0555" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-extended">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-08d2fb7" data-id="08d2fb7" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-ff9e8d4 elementor-widget elementor-widget-heading" data-id="ff9e8d4" data-element_type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">From Our Articles</h2>				</div>
+				<div class="elementor-element elementor-element-201b537 elementor-widget elementor-widget-etheme_posts_carousel" data-id="201b537" data-element_type="widget" data-settings="{&quot;slides_per_view&quot;:&quot;4&quot;,&quot;slides_per_view_tablet&quot;:&quot;2&quot;,&quot;slides_per_view_mobile&quot;:&quot;1&quot;,&quot;space_between&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:20,&quot;sizes&quot;:[]},&quot;space_between_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;space_between_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;loop&quot;:&quot;yes&quot;,&quot;navigation&quot;:&quot;arrows&quot;}" data-widget_type="etheme_posts_carousel.default">
+				<div class="elementor-widget-container">
+					            <div class="etheme-elementor-swiper-entry swiper-entry middle-inbox arrows-hover">
+                
+                <div class="swiper etheme-elementor-slider swiper-container-main" dir="ltr">
+            
+                    <div class="swiper-wrapper">
+                        
+                                                            <div class="swiper-slide">
+                                        		<article class="etheme-post post-497 post type-post status-publish format-standard has-post-thumbnail hentry category-audio-electronics category-camera-drone category-cell-phones category-daily-deals category-ipad-tablets category-smart-home category-tv-audio category-wearable-tech">
+		            <div class="etheme-post-image-wrapper etheme-image-hover etheme-image-hover-scaleIn">
+                <a class="etheme-post-image-inner" href="#/2023/01/02/announcing-the-new-fitbits-charge-6smart-fitness-tracker/">
+                    <img decoding="async" src="assets/images/Image-post-5-qpjs616n89zxkqxhiag2deg6hmon8bhwebj740l35c.jpg" title="Image-post-#5" alt="Image-post-#5" loading="lazy" />                </a>
+                                        <span class="etheme-post-date-label inside">
+                            <span class="etheme-post-day">02</span><span class="etheme-post-month">Jan</span>                        </span>
+                                            <span class="etheme-post-terms-label">
+                            <span class="etheme-post-terms etheme-post-categories"><a href="#/category/audio-electronics/">Audio Electronics</a></span>                        </span>
+                                    </div>
+                        <div class="etheme-post-content ">
+				<h3 class="etheme-post-title"><a href="#/2023/01/02/announcing-the-new-fitbits-charge-6smart-fitness-tracker/">Announcing the new Fitbits Charge 6smart Fitness Tracker</a></h3><div class="etheme-post-excerpt">Recently, I was invited by Nintendo of Canada to attend a very special Nintendo Holiday Showcase exclusive preview event in New York City. Located in...</div>            </div>
+				</article>
+		                                    </div>
+                                                                    <div class="swiper-slide">
+                                        		<article class="etheme-post post-498 post type-post status-publish format-standard has-post-thumbnail hentry category-audio-electronics category-camera-drone category-cell-phones category-daily-deals category-ipad-tablets category-smart-home category-tv-audio category-wearable-tech">
+		            <div class="etheme-post-image-wrapper etheme-image-hover etheme-image-hover-scaleIn">
+                <a class="etheme-post-image-inner" href="#/2023/02/14/your-conversion-rate-on-amazon/">
+                    <img decoding="async" src="assets/images/Image-post-6-qpjs5xfagxusab2y48tk3fec4376dj2z1sx96wqnu8.jpg" title="Image-post-#6" alt="Image-post-#6" loading="lazy" />                </a>
+                                        <span class="etheme-post-date-label inside">
+                            <span class="etheme-post-day">14</span><span class="etheme-post-month">Feb</span>                        </span>
+                                            <span class="etheme-post-terms-label">
+                            <span class="etheme-post-terms etheme-post-categories"><a href="#/category/audio-electronics/">Audio Electronics</a></span>                        </span>
+                                    </div>
+                        <div class="etheme-post-content ">
+				<h3 class="etheme-post-title"><a href="#/2023/02/14/your-conversion-rate-on-amazon/">Your Conversion Rate on Amazon</a></h3><div class="etheme-post-excerpt">Recently, I was invited by Nintendo of Canada to attend a very special Nintendo Holiday Showcase exclusive preview event in New York City. Located in...</div>            </div>
+				</article>
+		                                    </div>
+                                                                    <div class="swiper-slide">
+                                        		<article class="etheme-post post-500 post type-post status-publish format-standard has-post-thumbnail hentry category-audio-electronics category-camera-drone category-cell-phones category-daily-deals category-ipad-tablets category-smart-home category-tv-audio category-wearable-tech">
+		            <div class="etheme-post-image-wrapper etheme-image-hover etheme-image-hover-scaleIn">
+                <a class="etheme-post-image-inner" href="#/2023/03/14/success-story-on-amazon/">
+                    <img decoding="async" src="assets/images/Image-post-8-qpjs5whga3thyp4b9qexixmvipbt5tz8po9rpms20g.jpg" title="Image-post-#8" alt="Image-post-#8" loading="lazy" />                </a>
+                                        <span class="etheme-post-date-label inside">
+                            <span class="etheme-post-day">14</span><span class="etheme-post-month">Mar</span>                        </span>
+                                            <span class="etheme-post-terms-label">
+                            <span class="etheme-post-terms etheme-post-categories"><a href="#/category/audio-electronics/">Audio Electronics</a></span>                        </span>
+                                    </div>
+                        <div class="etheme-post-content ">
+				<h3 class="etheme-post-title"><a href="#/2023/03/14/success-story-on-amazon/">Success Story on Amazon</a></h3><div class="etheme-post-excerpt">Recently, I was invited by Nintendo of Canada to attend a very special Nintendo Holiday Showcase exclusive preview event in New York City. Located in...</div>            </div>
+				</article>
+		                                    </div>
+                                                                    <div class="swiper-slide">
+                                        		<article class="etheme-post post-501 post type-post status-publish format-standard has-post-thumbnail hentry category-audio-electronics category-camera-drone category-cell-phones category-daily-deals category-ipad-tablets category-smart-home category-tv-audio category-wearable-tech">
+		            <div class="etheme-post-image-wrapper etheme-image-hover etheme-image-hover-scaleIn">
+                <a class="etheme-post-image-inner" href="#/2023/04/08/13-youtube-ads-targeting-options/">
+                    <img decoding="async" src="assets/images/Image-post-9-qpjs5tnxplpmzv8eq771tgchqjppiqo1pabb9sw8j4.jpg" title="Image-post-#9" alt="Image-post-#9" loading="lazy" />                </a>
+                                        <span class="etheme-post-date-label inside">
+                            <span class="etheme-post-day">08</span><span class="etheme-post-month">Apr</span>                        </span>
+                                            <span class="etheme-post-terms-label">
+                            <span class="etheme-post-terms etheme-post-categories"><a href="#/category/audio-electronics/">Audio Electronics</a></span>                        </span>
+                                    </div>
+                        <div class="etheme-post-content ">
+				<h3 class="etheme-post-title"><a href="#/2023/04/08/13-youtube-ads-targeting-options/">13 YouTube Ads Targeting Options</a></h3><div class="etheme-post-excerpt">Recently, I was invited by Nintendo of Canada to attend a very special Nintendo Holiday Showcase exclusive preview event in New York City. Located in...</div>            </div>
+				</article>
+		                                    </div>
+                                                                    <div class="swiper-slide">
+                                        		<article class="etheme-post post-496 post type-post status-publish format-standard has-post-thumbnail hentry category-audio-electronics category-camera-drone category-cell-phones category-daily-deals category-ipad-tablets category-smart-home category-tv-audio category-wearable-tech">
+		            <div class="etheme-post-image-wrapper etheme-image-hover etheme-image-hover-scaleIn">
+                <a class="etheme-post-image-inner" href="#/2023/05/14/learn-about-the-google-pixel-tabletsthen-enter-for-a-chance/">
+                    <img decoding="async" src="assets/images/Image-post-4-qpjs64xzzm52v6s0wc2kndi0v66433wtqu5514figg.jpg" title="Image-post-#4" alt="Image-post-#4" loading="lazy" />                </a>
+                                        <span class="etheme-post-date-label inside">
+                            <span class="etheme-post-day">14</span><span class="etheme-post-month">May</span>                        </span>
+                                            <span class="etheme-post-terms-label">
+                            <span class="etheme-post-terms etheme-post-categories"><a href="#/category/audio-electronics/">Audio Electronics</a></span>                        </span>
+                                    </div>
+                        <div class="etheme-post-content ">
+				<h3 class="etheme-post-title"><a href="#/2023/05/14/learn-about-the-google-pixel-tabletsthen-enter-for-a-chance/">Learn about the Google Pixel Tabletsthen enter for a chance</a></h3><div class="etheme-post-excerpt">Recently, I was invited by Nintendo of Canada to attend a very special Nintendo Holiday Showcase exclusive preview event in New York City. Located in...</div>            </div>
+				</article>
+		                                    </div>
+                                                        
+                    </div>
+	
+	                		<div class="swiper-button-prev swiper-custom-left et-swiper-elementor-nav type-arrow style-2"></div>
+		<div class="swiper-button-next swiper-custom-right et-swiper-elementor-nav type-arrow style-2"></div>
+		                 
+                </div>
+	
+	                         
+            </div>
+							</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-c95ade9 elementor-section-content-bottom elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c95ade9" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-extended">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-e2a4cc3" data-id="e2a4cc3" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-fa20c1a elementor-widget elementor-widget-banner" data-id="fa20c1a" data-element_type="widget" data-settings="{&quot;use_default_tags&quot;:&quot;no&quot;}" data-widget_type="banner.default">
+				<div class="elementor-widget-container">
+					        <div id="banner-4795" class="banner  banner-type-3 et_image-with-hover et_image-hover-3 with-diagonal valign-middle font-style-dark" >
+
+			
+				<img loading="lazy" decoding="async" width="524" height="234" src="assets/images/Item-1.jpeg" class="      " alt="" />                <div class="banner-content ">
+
+					<h2 class="banner-title "><span>Didn&#039;t find anything interesting?</span></h2>                    <div class="content-inner">
+
+						Perhaps you will find something
+among our promotions!
+                    </div>
+					                    <div class="button-wrap">
+
+						
+						
+                        <div onclick="window.open('/shop','_blank')" class="banner-button btn medium inline-block  cursor-pointer">
+						All Promotions                    </div>
+
+                </div>
+			        </div>
+
+		        </div>
+
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-77e86d7" data-id="77e86d7" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-e6b6e37 elementor-section-height-min-height elementor-section-content-middle elementor-section-boxed elementor-section-height-default" data-id="e6b6e37" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-custom">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-2ea6b9f" data-id="2ea6b9f" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-5a813e9 elementor-widget elementor-widget-heading" data-id="5a813e9" data-element_type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">Get the most interesting offers
+first to you!</h2>				</div>
+				<div class="elementor-element elementor-element-c1925b3 et-mailchimp dark  elementor-widget elementor-widget-shortcode" data-id="c1925b3" data-element_type="widget" data-widget_type="shortcode.default">
+							<div class="elementor-shortcode"><script>(function() {
+	window.mc4wp = window.mc4wp || {
+		listeners: [],
+		forms: {
+			on: function(evt, cb) {
+				window.mc4wp.listeners.push(
+					{
+						event   : evt,
+						callback: cb
+					}
+				);
+			}
+		}
+	}
+})();
+</script><!-- Mailchimp for WordPress v4.10.7 - https://wordpress.org/plugins/mailchimp-for-wp/ --><form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-574" method="post" data-id="574" data-name="Form electronic-mega-market" ><div class="mc4wp-form-fields"><div>
+    <p>
+	<input type="email" name="EMAIL" placeholder="Your Email" required />
+	<input type="submit" value="Subscribe" />
+    </p>
+</div></div><label style="display: none !important;">Leave this field empty if you're human: <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off" /></label><input type="hidden" name="_mc4wp_timestamp" value="1763464476" /><input type="hidden" name="_mc4wp_form_id" value="574" /><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1" /><div class="mc4wp-response"></div></form><!-- / Mailchimp for WordPress Plugin --></div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-5ba5283 elementor-hidden-mobile" data-id="5ba5283" data-element_type="column">
+			<div class="elementor-widget-wrap">
+							</div>
+		</div>
+					</div>
+		</section>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+		
+                    <div class="post-navigation"></div>
+
+                    
+                
+                
+            </div>
+
+            
+        </div><!-- end row-fluid -->
+
+    </div>
+</div><!-- end container -->
+
+    </div> <!-- page wrapper -->
+
+    </div> <!-- template-content -->
+
+    
+
+<div class="et-mobile-panel-wrapper dt-hide etheme-sticky-panel et_element pos-fixed bottom full-width" >
+	<div data-rocket-location-hash="f32162c059bc92515e4da807bff49572" class="et-mobile-panel">
+		<div class="et-row-container et-container">
+			<div class="et-wrap-columns flex align-items-stretch justify-content-between">        <div class="et_column flex align-items-center justify-content-center et-content-left et-content_toggle static pos-static et_b_mobile-panel-more_toggle">
+            <a href="#"                    class="currentColor flex flex-col align-items-center et-toggle"
+                     data-e-disable-page-transition="true">
+				
+				                    <span class="et_b-icon">
+							<span class="et-svg"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path d="M6.781 18.599c-3.738 0-6.781 3.006-6.781 6.701 0 1.773 0.702 3.452 1.975 4.725s2.952 1.975 4.725 1.975c1.775 0 3.453-0.702 4.727-1.975 1.272-1.273 1.974-2.951 1.974-4.725 0-3.694-2.97-6.701-6.62-6.701zM9.707 28.258c-0.787 0.797-1.826 1.236-2.926 1.236-1.11 0-2.161-0.439-2.958-1.237-0.797-0.797-1.236-1.848-1.236-2.957s0.439-2.16 1.236-2.957c0.798-0.798 1.849-1.237 2.958-1.237s2.159 0.439 2.957 1.237c0.797 0.797 1.236 1.848 1.236 2.956-0.038 1.12-0.488 2.171-1.267 2.959z"></path><path d="M23.611 18.599c-1.773 0-3.452 0.702-4.725 1.975s-1.975 2.952-1.975 4.725 0.702 3.452 1.975 4.725 2.952 1.975 4.725 1.975c1.775 0 3.453-0.702 4.727-1.975 1.272-1.273 1.974-2.951 1.974-4.725s-0.702-3.452-1.974-4.725c-1.273-1.273-2.952-1.975-4.727-1.975zM26.569 28.256c-0.798 0.798-1.849 1.237-2.958 1.237s-2.16-0.439-2.957-1.237c-0.797-0.797-1.236-1.848-1.236-2.957s0.439-2.16 1.236-2.957c0.798-0.798 1.848-1.237 2.957-1.237 1.11 0 2.161 0.439 2.958 1.237 0.797 0.797 1.236 1.848 1.236 2.957s-0.439 2.16-1.236 2.957z"></path><path d="M6.781 1.989c-3.738 0-6.781 3.023-6.781 6.74 0 3.673 3.006 6.66 6.701 6.66 1.775 0 3.453-0.697 4.727-1.962 1.272-1.266 1.974-2.934 1.974-4.698 0-1.773-0.688-3.456-1.935-4.737-1.256-1.292-2.921-2.003-4.685-2.003zM9.738 11.589c-0.798 0.793-1.848 1.229-2.957 1.229-1.11 0-2.161-0.437-2.958-1.229s-1.236-1.837-1.236-2.94 0.439-2.147 1.236-2.94c0.798-0.793 1.848-1.229 2.958-1.229 1.109 0 2.159 0.437 2.957 1.229 0.797 0.793 1.236 1.837 1.236 2.94s-0.439 2.147-1.236 2.94z"></path><path d="M31.496 7.118l-6.614-6.614c-0.672-0.672-1.76-0.672-2.432 0l-6.613 6.613c-0.672 0.672-0.672 1.76 0 2.432l6.614 6.614c0.672 0.672 1.76 0.672 2.432-0l6.613-6.613c0.672-0.672 0.672-1.76-0-2.432zM29.087 8.334l-5.42 5.42-5.421-5.421 5.42-5.42 5.421 5.421z"></path></svg></span>                                <span class="et-svg et-close">
+									<svg xmlns="http://www.w3.org/2000/svg" width=".8em" height=".8em"
+                                         viewBox="0 0 24 24">
+					                    <path d="M13.056 12l10.728-10.704c0.144-0.144 0.216-0.336 0.216-0.552 0-0.192-0.072-0.384-0.216-0.528-0.144-0.12-0.336-0.216-0.528-0.216 0 0 0 0 0 0-0.192 0-0.408 0.072-0.528 0.216l-10.728 10.728-10.704-10.728c-0.288-0.288-0.768-0.288-1.056 0-0.168 0.144-0.24 0.336-0.24 0.528 0 0.216 0.072 0.408 0.216 0.552l10.728 10.704-10.728 10.704c-0.144 0.144-0.216 0.336-0.216 0.552s0.072 0.384 0.216 0.528c0.288 0.288 0.768 0.288 1.056 0l10.728-10.728 10.704 10.704c0.144 0.144 0.336 0.216 0.528 0.216s0.384-0.072 0.528-0.216c0.144-0.144 0.216-0.336 0.216-0.528s-0.072-0.384-0.216-0.528l-10.704-10.704z"></path>
+					                </svg>
+					            </span>
+							
+													</span>
+								
+				                    <span class="text-nowrap">
+							Categories						</span>
+				
+            </a>
+			
+                <div class="et-mini-content et-mini-content-from-bottom full-bottom">
+                    <div class="et-content">
+
+			            	<span class="et-mini-content-head flex justify-content-center flex-wrap et-inline-type align-items-center">
+
+								<span class="et_b-icon">
+                                    <span class="et-svg"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path d="M6.781 18.599c-3.738 0-6.781 3.006-6.781 6.701 0 1.773 0.702 3.452 1.975 4.725s2.952 1.975 4.725 1.975c1.775 0 3.453-0.702 4.727-1.975 1.272-1.273 1.974-2.951 1.974-4.725 0-3.694-2.97-6.701-6.62-6.701zM9.707 28.258c-0.787 0.797-1.826 1.236-2.926 1.236-1.11 0-2.161-0.439-2.958-1.237-0.797-0.797-1.236-1.848-1.236-2.957s0.439-2.16 1.236-2.957c0.798-0.798 1.849-1.237 2.958-1.237s2.159 0.439 2.957 1.237c0.797 0.797 1.236 1.848 1.236 2.956-0.038 1.12-0.488 2.171-1.267 2.959z"></path><path d="M23.611 18.599c-1.773 0-3.452 0.702-4.725 1.975s-1.975 2.952-1.975 4.725 0.702 3.452 1.975 4.725 2.952 1.975 4.725 1.975c1.775 0 3.453-0.702 4.727-1.975 1.272-1.273 1.974-2.951 1.974-4.725s-0.702-3.452-1.974-4.725c-1.273-1.273-2.952-1.975-4.727-1.975zM26.569 28.256c-0.798 0.798-1.849 1.237-2.958 1.237s-2.16-0.439-2.957-1.237c-0.797-0.797-1.236-1.848-1.236-2.957s0.439-2.16 1.236-2.957c0.798-0.798 1.848-1.237 2.957-1.237 1.11 0 2.161 0.439 2.958 1.237 0.797 0.797 1.236 1.848 1.236 2.957s-0.439 2.16-1.236 2.957z"></path><path d="M6.781 1.989c-3.738 0-6.781 3.023-6.781 6.74 0 3.673 3.006 6.66 6.701 6.66 1.775 0 3.453-0.697 4.727-1.962 1.272-1.266 1.974-2.934 1.974-4.698 0-1.773-0.688-3.456-1.935-4.737-1.256-1.292-2.921-2.003-4.685-2.003zM9.738 11.589c-0.798 0.793-1.848 1.229-2.957 1.229-1.11 0-2.161-0.437-2.958-1.229s-1.236-1.837-1.236-2.94 0.439-2.147 1.236-2.94c0.798-0.793 1.848-1.229 2.958-1.229 1.109 0 2.159 0.437 2.957 1.229 0.797 0.793 1.236 1.837 1.236 2.94s-0.439 2.147-1.236 2.94z"></path><path d="M31.496 7.118l-6.614-6.614c-0.672-0.672-1.76-0.672-2.432 0l-6.613 6.613c-0.672 0.672-0.672 1.76 0 2.432l6.614 6.614c0.672 0.672 1.76 0.672 2.432-0l6.613-6.613c0.672-0.672 0.672-1.76-0-2.432zM29.087 8.334l-5.42 5.42-5.421-5.421 5.42-5.42 5.421 5.421z"></path></svg></span>			                    </span>
+			                    <span class="et-element-label pos-relative inline-block">
+			                        Categories			                    </span>
+							</span>
+						
+						<div class="menu-main-container"><ul id="menu-all-departments" class="menu"><li id="menu-item-3423" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3423 item-level-0 item-design-dropdown columns-2"><a href="#/shop/" class="item-link">All Categories</a></li>
+<li id="menu-item-90" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-90 item-level-0 item-design-dropdown"><a href="#/product-category/audio-electronics/" class="item-link">Audio</a></li>
+<li id="menu-item-92" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-92 item-level-0 item-design-dropdown"><a href="#/product-category/cell-phones/" class="item-link">Cell Phones</a></li>
+<li id="menu-item-93" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-93 item-level-0 item-design-dropdown"><a href="#/product-category/computers/" class="item-link">Computers</a></li>
+<li id="menu-item-94" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-94 item-level-0 item-design-dropdown"><a href="#/product-category/daily-deals/" class="item-link">Daily Deals</a></li>
+<li id="menu-item-95" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-95 item-level-0 item-design-dropdown"><a href="#/product-category/ipad-tablets/" class="item-link">iPad &amp; Tablets</a></li>
+<li id="menu-item-96" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-96 item-level-0 item-design-dropdown"><a href="#/product-category/portable-speakers/" class="item-link">Portable Speakers</a></li>
+<li id="menu-item-97" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-97 item-level-0 item-design-dropdown"><a href="#/product-category/smart-home/" class="item-link">Smart Home</a></li>
+<li id="menu-item-98" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-98 item-level-0 item-design-dropdown"><a href="#/product-category/tv-audio/" class="item-link">TV &amp; Audio</a></li>
+<li id="menu-item-99" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-99 item-level-0 item-design-dropdown"><a href="#/product-category/wearable-technology/" class="item-link">Wearable Technology</a></li>
+</ul></div>
+                    </div>
+                </div>
+				
+				        </div>
+		        <div class="et_column flex align-items-center justify-content-center  et_b_mobile-panel-custom">
+            <a href="#/contact-us/"                    class="currentColor flex flex-col align-items-center "
+                    >
+				
+				                    <span class="et_b-icon">
+							<span class="et-svg"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path d="M16.001 0c-5.824 0-10.563 4.739-10.563 10.563 0 0.939 0.142 1.978 0.456 3.265 0.123 0.492 0.271 1.004 0.446 1.532l0.053 0.159c0.163 0.482 0.347 0.978 0.555 1.493l0.078 0.192c0.198 0.482 0.414 0.978 0.65 1.487l0.081 0.173c0.716 1.526 1.532 3.062 2.494 4.692 2.346 3.984 4.695 7.065 4.715 7.089l1.031 1.355 1.039-1.351c0.022-0.027 2.368-3.105 4.717-7.093 0.966-1.638 1.784-3.175 2.498-4.7l0.075-0.161c0.238-0.512 0.455-1.010 0.651-1.49l0.079-0.192c0.205-0.514 0.391-1.013 0.555-1.498l0.051-0.154c0.176-0.53 0.324-1.041 0.469-1.622 0.291-1.199 0.432-2.238 0.432-3.176 0-5.824-4.738-10.563-10.562-10.563zM16.001 2.608c2.13 0 4.128 0.826 5.629 2.327s2.327 3.5 2.327 5.629c0 0.079-0.006 0.161-0.010 0.244l-0.009 0.144c-0.008 0.157-0.020 0.316-0.038 0.48v0.001c-0.415 3.732-3.209 8.798-4.391 10.803-1.547 2.622-2.811 4.397-3.508 5.34-0.688-0.931-1.951-2.702-3.508-5.34-1.183-2.008-3.977-7.080-4.391-10.804-0.018-0.162-0.029-0.32-0.045-0.595-0.006-0.092-0.012-0.183-0.012-0.272 0-2.13 0.826-4.128 2.327-5.629s3.499-2.327 5.628-2.327zM6.885 15.353c0 0 0 0 0 0l-0-0zM8.226 18.643c0 0 0 0 0 0v-0z"></path><path d="M16.001 14.952c2.421 0 4.389-1.969 4.389-4.389s-1.968-4.389-4.389-4.389c-2.42 0-4.389 1.969-4.389 4.389s1.969 4.389 4.389 4.389zM16.001 8.78c0.984 0 1.784 0.8 1.784 1.783s-0.8 1.783-1.784 1.783c-1 0-1.783-0.783-1.783-1.783 0-0.984 0.8-1.783 1.783-1.783z"></path></svg></span>						</span>
+								
+				                    <span class="text-nowrap">
+							Find us						</span>
+				
+            </a>
+			        </div>
+		        <div class="et_column flex align-items-center justify-content-center  et_b_mobile-panel-custom">
+            <a href="#/news/"                    class="currentColor flex flex-col align-items-center "
+                    >
+				
+				                    <span class="et_b-icon">
+							<span class="et-svg"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path d="M20.208 0.329l-0.354-0.326-14.424-0.003c-1.141 0-2.070 0.928-2.070 2.070v27.868c0 1.137 0.925 2.063 2.063 2.063h21.157c1.137 0 2.061-0.924 2.061-2.061v-21.139l-8.432-8.47zM20.212 10.497h5.995v19.070h-20.413v-27.133h12.351v5.995c0 1.141 0.928 2.068 2.068 2.068zM20.576 8.064v-3.895l3.895 3.895h-3.895z"></path><path d="M8.735 17.471h11.841v2.432h-11.841v-2.432z"></path><path d="M8.735 21.503h14.529v2.435h-14.529v-2.435z"></path><path d="M8.735 13.44h14.529v2.433h-14.529v-2.433z"></path></svg></span>						</span>
+								
+				                    <span class="text-nowrap">
+							Blog						</span>
+				
+            </a>
+			        </div>
+		        <div class="et_column flex align-items-center justify-content-center  et_b_mobile-panel-custom">
+            <a href="#/about-us/"                    class="currentColor flex flex-col align-items-center "
+                    >
+				
+				                    <span class="et_b-icon">
+							<span class="et-svg"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path d="M16-0c-8.823 0-16 7.178-16 16s7.178 16 16 16c8.822 0 16-7.178 16-16s-7.178-16-16-16zM16 29.408c-7.394 0-13.409-6.015-13.409-13.408s6.015-13.409 13.409-13.409 13.408 6.015 13.408 13.409-6.015 13.408-13.408 13.408z"></path><path d="M15.766 21.063c-0.434 0.005-0.847 0.182-1.134 0.484-0.303 0.313-0.464 0.708-0.464 1.145 0 0.439 0.169 0.848 0.471 1.147 0.311 0.313 0.71 0.478 1.154 0.478 0.434 0 0.829-0.159 1.143-0.461 0.318-0.306 0.493-0.72 0.493-1.164 0-0.436-0.17-0.846-0.48-1.156-0.308-0.307-0.787-0.49-1.183-0.473z"></path><path d="M16.117 7.18c-1.343 0-2.477 0.438-3.372 1.3-0.907 0.871-1.375 2.015-1.392 3.401l-0.012 1.081h2.683l0.014-1.054c0.009-0.641 0.186-1.118 0.557-1.503 0.354-0.368 0.838-0.54 1.522-0.54 0.613 0 1.046 0.158 1.361 0.495 0.333 0.36 0.495 0.876 0.495 1.578 0 0.412-0.042 0.757-0.122 1.027-0.077 0.256-0.204 0.512-0.38 0.76-0.139 0.195-0.447 0.563-1.132 1.202-0.72 0.673-1.206 1.298-1.482 1.912-0.281 0.615-0.431 1.383-0.446 2.283l-0.018 1.087h2.703v-1.069c0-0.99 0.305-1.689 0.986-2.225 0.986-0.895 1.642-1.684 2.005-2.41 0.38-0.751 0.572-1.609 0.572-2.551 0-1.409-0.414-2.565-1.232-3.434-0.833-0.889-1.947-1.34-3.309-1.34z"></path></svg></span>						</span>
+								

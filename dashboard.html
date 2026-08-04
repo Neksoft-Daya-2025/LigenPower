@@ -1,0 +1,2506 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/png" href="assets/images/Ligen-Registered-logo.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<title>Admin Dashboard | Ligen Power®</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://cdn.quilljs.com/1.3.7/quill.snow.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/brands.css" type="text/css" media="all" />
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		:root {
+			--primary: #4CAF50;
+			--primary-dark: #45a049;
+			--secondary: #667eea;
+			--accent: #f093fb;
+			--dark: #1a202c;
+			--dark-light: #2d3748;
+			--gray: #718096;
+			--gray-light: #e2e8f0;
+			--gray-lighter: #f7fafc;
+			--white: #ffffff;
+			--success: #48bb78;
+			--danger: #f56565;
+			--warning: #ed8936;
+			--info: #4299e1;
+		}
+		body {
+			font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+			background: #f8f9fa;
+			color: #333;
+			line-height: 1.6;
+		}
+		.dashboard-container {
+			display: flex;
+			min-height: 100vh;
+		}
+		.sidebar {
+			width: 280px;
+			background: #ffffff;
+			color: #2d3748;
+			padding: 0;
+			position: fixed;
+			height: 100vh;
+			top: 0;
+			overflow-y: auto;
+			box-shadow: 2px 0 20px rgba(0,0,0,0.08);
+			z-index: 1000;
+			border-right: 1px solid #e2e8f0;
+		}
+		.sidebar::-webkit-scrollbar {
+			width: 6px;
+		}
+		.sidebar::-webkit-scrollbar-track {
+			background: #f7fafc;
+		}
+		.sidebar::-webkit-scrollbar-thumb {
+			background: #cbd5e0;
+			border-radius: 3px;
+		}
+		.sidebar::-webkit-scrollbar-thumb:hover {
+			background: #a0aec0;
+		}
+		.sidebar-header {
+			padding: 32px 28px;
+			border-bottom: 1px solid #e2e8f0;
+			background: linear-gradient(135deg, #f7fafc 0%, #ffffff 100%);
+		}
+		.sidebar-header img {
+			width: 140px;
+			height: auto;
+			margin-bottom: 14px;
+		}
+		.sidebar-header h2 {
+			font-size: 15px;
+			font-weight: 700;
+			color: #1a202c;
+			letter-spacing: 0.5px;
+			text-transform: uppercase;
+		}
+		.sidebar-menu {
+			list-style: none;
+			padding: 16px 12px;
+		}
+		.sidebar-menu li {
+			margin-bottom: 4px;
+		}
+		.sidebar-menu a {
+			display: flex;
+			align-items: center;
+			gap: 14px;
+			padding: 14px 18px;
+			color: #4a5568;
+			text-decoration: none;
+			transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+			border-radius: 12px;
+			position: relative;
+			font-size: 14px;
+			font-weight: 500;
+			margin-bottom: 4px;
+		}
+		.sidebar-menu a i {
+			width: 22px;
+			text-align: center;
+			font-size: 18px;
+			color: #718096;
+			transition: all 0.3s ease;
+		}
+		.sidebar-menu a:hover {
+			background: linear-gradient(135deg, rgba(76,175,80,0.08) 0%, rgba(76,175,80,0.05) 100%);
+			color: #2d3748;
+			transform: translateX(4px);
+		}
+		.sidebar-menu a:hover i {
+			color: #4CAF50;
+			transform: scale(1.1);
+		}
+		.sidebar-menu a.active {
+			background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+			color: #ffffff;
+			font-weight: 600;
+			box-shadow: 0 4px 12px rgba(76,175,80,0.3);
+		}
+		.sidebar-menu a.active i {
+			color: #ffffff;
+		}
+		.sidebar-menu a.active::after {
+			content: '';
+			position: absolute;
+			right: 12px;
+			width: 6px;
+			height: 6px;
+			background: #ffffff;
+			border-radius: 50%;
+			box-shadow: 0 0 8px rgba(255,255,255,0.5);
+		}
+		.main-content {
+			flex: 1;
+			margin-left: 280px;
+			padding: 40px;
+			position: relative;
+		}
+		.dashboard-header {
+			background: #ffffff;
+			padding: 35px 40px;
+			border-radius: 16px;
+			margin-bottom: 30px;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+			border: 1px solid #e2e8f0;
+		}
+		.dashboard-header h1 {
+			font-size: 36px;
+			font-weight: 800;
+			color: #1a202c;
+			margin-bottom: 8px;
+			letter-spacing: -0.5px;
+		}
+		.dashboard-header p {
+			color: #718096;
+			font-size: 16px;
+			font-weight: 500;
+		}
+		.dashboard-cards {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+			gap: 24px;
+			margin-bottom: 30px;
+		}
+		.dashboard-card {
+			background: #ffffff;
+			padding: 28px;
+			border-radius: 16px;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+			transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+			border: 1px solid #e2e8f0;
+			position: relative;
+			overflow: hidden;
+		}
+		.dashboard-card::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 4px;
+			background: linear-gradient(90deg, #4CAF50 0%, #45a049 100%);
+			transform: scaleX(0);
+			transform-origin: left;
+			transition: transform 0.4s ease;
+		}
+		.dashboard-card:hover {
+			transform: translateY(-8px);
+			box-shadow: 0 16px 48px rgba(0,0,0,0.15);
+		}
+		.dashboard-card:hover::before {
+			transform: scaleX(1);
+		}
+		.dashboard-card-icon {
+			width: 64px;
+			height: 64px;
+			background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+			border-radius: 16px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 20px;
+			box-shadow: 0 8px 24px rgba(76,175,80,0.3);
+			transition: all 0.3s ease;
+		}
+		.dashboard-card:hover .dashboard-card-icon {
+			transform: scale(1.1) rotate(5deg);
+		}
+		.dashboard-card-icon i {
+			font-size: 28px;
+			color: #ffffff;
+		}
+		.dashboard-card h3 {
+			font-size: 16px;
+			font-weight: 600;
+			color: #718096;
+			margin-bottom: 8px;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+			font-size: 12px;
+		}
+		.dashboard-card p {
+			color: #1a202c;
+			font-size: 28px;
+			font-weight: 800;
+			line-height: 1.2;
+		}
+		.section {
+			background: #ffffff;
+			padding: 40px;
+			border-radius: 16px;
+			margin-bottom: 30px;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+			border: 1px solid #e2e8f0;
+		}
+		.section-header {
+			display: flex;
+			align-items: center;
+			gap: 14px;
+			margin-bottom: 30px;
+			padding-bottom: 20px;
+			border-bottom: 2px solid #e2e8f0;
+		}
+		.section-header i {
+			font-size: 28px;
+			background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+		}
+		.section-header h2 {
+			font-size: 26px;
+			font-weight: 800;
+			color: #1a202c;
+			letter-spacing: -0.5px;
+		}
+		.form-group {
+			margin-bottom: 24px;
+		}
+		.form-group label {
+			display: block;
+			font-weight: 600;
+			color: #2d3748;
+			margin-bottom: 10px;
+			font-size: 14px;
+			letter-spacing: 0.3px;
+		}
+		.form-group input,
+		.form-group select,
+		.form-group textarea {
+			width: 100%;
+			padding: 14px 18px;
+			border: 2px solid #e2e8f0;
+			border-radius: 12px;
+			font-size: 15px;
+			font-family: inherit;
+			transition: all 0.3s ease;
+			background: #ffffff;
+		}
+		.form-group input:focus,
+		.form-group select:focus,
+		.form-group textarea:focus {
+			outline: none;
+			border-color: #4CAF50;
+			box-shadow: 0 0 0 4px rgba(76,175,80,0.1);
+			transform: translateY(-2px);
+		}
+		.form-group textarea {
+			resize: vertical;
+			min-height: 120px;
+		}
+		.form-row {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 24px;
+		}
+		.btn {
+			display: inline-block;
+			padding: 14px 32px;
+			border: none;
+			border-radius: 12px;
+			font-size: 15px;
+			font-weight: 600;
+			cursor: pointer;
+			transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+			text-decoration: none;
+			letter-spacing: 0.3px;
+		}
+		.btn-primary {
+			background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+			color: #ffffff;
+			box-shadow: 0 6px 20px rgba(76,175,80,0.35);
+		}
+		.btn-primary:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 10px 30px rgba(76,175,80,0.5);
+		}
+		.btn-secondary {
+			background: #e2e8f0;
+			color: #2d3748;
+		}
+		.btn-secondary:hover {
+			background: #cbd5e0;
+			transform: translateY(-2px);
+		}
+		/* Quill toolbar HTML button – align with other toolbar buttons */
+		.ql-toolbar.ql-snow .ql-html {
+			width: auto;
+			padding: 3px 8px;
+			border: 1px solid #ccc;
+			border-radius: 3px;
+			background: #fff;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			height: 24px;
+			font-size: 12px;
+			font-weight: 500;
+			color: #444;
+			cursor: pointer;
+		}
+		.ql-toolbar.ql-snow .ql-html:hover {
+			background: #f3f3f3;
+			border-color: #999;
+		}
+		.ql-toolbar.ql-snow .ql-html span {
+			display: inline;
+			line-height: 1;
+		}
+		/* Tables in Quill editor */
+		#blog-content-editor .ql-editor table,
+		.ql-editor table {
+			border-collapse: collapse;
+			width: 100%;
+			margin: 1em 0;
+			display: table;
+		}
+		#blog-content-editor .ql-editor td,
+		#blog-content-editor .ql-editor th,
+		.ql-editor td,
+		.ql-editor th {
+			border: 1px solid #ccc;
+			padding: 8px 12px;
+			text-align: left;
+		}
+		#blog-content-editor .ql-editor th,
+		.ql-editor th {
+			background: #f5f5f5;
+			font-weight: 600;
+		}
+		.alert {
+			padding: 16px 20px;
+			border-radius: 12px;
+			margin-bottom: 24px;
+			display: none;
+			border-left: 4px solid;
+			animation: slideIn 0.3s ease;
+		}
+		@keyframes slideIn {
+			from {
+				opacity: 0;
+				transform: translateX(-20px);
+			}
+			to {
+				opacity: 1;
+				transform: translateX(0);
+			}
+		}
+		.alert-success {
+			background: #f0fff4;
+			color: #22543d;
+			border-color: #48bb78;
+		}
+		.alert-error {
+			background: #fff5f5;
+			color: #742a2a;
+			border-color: #f56565;
+		}
+		.products-table {
+			width: 100%;
+			border-collapse: separate;
+			border-spacing: 0;
+			margin-top: 24px;
+			background: #ffffff;
+			border-radius: 12px;
+			overflow: hidden;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+		}
+		.products-table th,
+		.products-table td {
+			padding: 16px;
+			text-align: left;
+			border-bottom: 1px solid #e2e8f0;
+		}
+		.products-table th {
+			background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+			font-weight: 700;
+			color: #2d3748;
+			text-transform: uppercase;
+			font-size: 12px;
+			letter-spacing: 0.5px;
+		}
+		.products-table tr:last-child td {
+			border-bottom: none;
+		}
+		.products-table tr:hover {
+			background: #f7fafc;
+		}
+		.badge {
+			display: inline-block;
+			padding: 6px 14px;
+			border-radius: 20px;
+			font-size: 12px;
+			font-weight: 600;
+			letter-spacing: 0.3px;
+		}
+		.badge-success {
+			background: #c6f6d5;
+			color: #22543d;
+		}
+		.badge-danger {
+			background: #fed7d7;
+			color: #742a2a;
+		}
+		.table-actions {
+			display: flex;
+			gap: 8px;
+		}
+		.table-actions button {
+			padding: 8px 16px;
+			border: none;
+			border-radius: 8px;
+			font-size: 13px;
+			font-weight: 600;
+			cursor: pointer;
+			transition: all 0.3s ease;
+		}
+		.table-actions .btn-edit {
+			background: #bee3f8;
+			color: #2c5282;
+		}
+		.table-actions .btn-edit:hover {
+			background: #90cdf4;
+			transform: translateY(-2px);
+		}
+		.table-actions .btn-delete {
+			background: #fed7d7;
+			color: #742a2a;
+		}
+		.table-actions .btn-delete:hover {
+			background: #fc8181;
+			color: #ffffff;
+			transform: translateY(-2px);
+		}
+		@media (max-width: 1024px) {
+			.sidebar {
+				width: 240px;
+			}
+			.main-content {
+				margin-left: 240px;
+			}
+		}
+		@media (max-width: 768px) {
+			.sidebar {
+				width: 100%;
+				position: relative;
+				height: auto;
+			}
+			.main-content {
+				margin-left: 0;
+				padding: 20px;
+			}
+			.dashboard-container {
+				flex-direction: column;
+			}
+			.form-row {
+				grid-template-columns: 1fr;
+			}
+			.dashboard-header h1 {
+				font-size: 28px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="dashboard-container">
+		<!-- Sidebar -->
+		<aside class="sidebar">
+			<div class="sidebar-header">
+				<img src="assets/images/Ligen-Registered-logo.png" alt="Ligen Power®" />
+				<h2>Admin Dashboard</h2>
+			</div>
+			<ul class="sidebar-menu">
+				<li><a href="#overview" class="active" onclick="showSection('overview'); return false;"><i class="fas fa-chart-line"></i> Overview</a></li>
+				<li><a href="#products" onclick="showSection('products'); return false;"><i class="fas fa-box"></i> Products</a></li>
+				<li><a href="#test-ride-requests" onclick="showSection('test-ride-requests'); return false;"><i class="fas fa-bicycle"></i> Test Ride Requests</a></li>
+				<li><a href="#quote-requests" onclick="showSection('quote-requests'); return false;"><i class="fas fa-file-invoice"></i> Quote Requests</a></li>
+				<li><a href="#announcement" onclick="showSection('announcement'); return false;"><i class="fas fa-bullhorn"></i> Announcement</a></li>
+				<li><a href="#page-links" onclick="showSection('page-links'); return false;"><i class="fas fa-link"></i> Page Links</a></li>
+				<li><a href="#blog" onclick="showSection('blog'); return false;"><i class="fas fa-blog"></i> Blog Posts</a></li>
+				<li><a href="#blog-comments" onclick="showSection('blog-comments'); return false;"><i class="fas fa-comments"></i> Blog Comments</a></li>
+				<li><a href="#pincodes" onclick="showSection('pincodes'); return false;"><i class="fas fa-map-pin"></i> Pincodes (Checkout)</a></li>
+				<li><a href="#merchant" onclick="showSection('merchant'); return false;"><i class="fas fa-map-marker-alt"></i> Merchant / Store Locator</a></li>
+				<li><a href="#smtp" onclick="showSection('smtp'); return false;"><i class="fas fa-envelope"></i> SMTP Settings</a></li>
+				<li><a href="#razorpay" onclick="showSection('razorpay'); return false;"><i class="fas fa-credit-card"></i> Razorpay Settings</a></li>
+				<li><a href="#orders" onclick="showSection('orders'); return false;"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+				<li><a href="/" target="_blank"><i class="fas fa-external-link-alt"></i> View Website</a></li>
+			</ul>
+		</aside>
+
+		<!-- Main Content -->
+		<main class="main-content">
+			<div class="dashboard-header">
+				<h1>Dashboard Overview</h1>
+				<p>Manage your website settings, products, and orders</p>
+			</div>
+
+			<!-- Overview Section -->
+			<div id="overview-section" class="section">
+				<div class="dashboard-cards">
+					<div class="dashboard-card">
+						<div class="dashboard-card-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+							<i class="fas fa-box"></i>
+						</div>
+						<h3>Total Products</h3>
+						<p id="total-products">1</p>
+					</div>
+					<div class="dashboard-card">
+						<div class="dashboard-card-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+							<i class="fas fa-shopping-cart"></i>
+						</div>
+						<h3>Total Orders</h3>
+						<p id="total-orders">0</p>
+					</div>
+					<div class="dashboard-card">
+						<div class="dashboard-card-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+							<i class="fas fa-rupee-sign"></i>
+						</div>
+						<h3>Total Revenue</h3>
+						<p id="total-revenue">₹0</p>
+					</div>
+					<div class="dashboard-card">
+						<div class="dashboard-card-icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+							<i class="fas fa-check-circle"></i>
+						</div>
+						<h3>SMTP Status</h3>
+						<p id="smtp-status" style="font-size: 14px; color: #718096;">Not Configured</p>
+					</div>
+					<div class="dashboard-card">
+						<div class="dashboard-card-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+							<i class="fas fa-credit-card"></i>
+						</div>
+						<h3>Razorpay Status</h3>
+						<p id="razorpay-status" style="font-size: 14px; color: #718096;">Not Configured</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Products Section -->
+			<div id="products-section" class="section" style="display: none;">
+				<div class="section-header">
+					<i class="fas fa-box"></i>
+					<h2>Product Management</h2>
+				</div>
+				<div id="products-alert" class="alert"></div>
+				<form id="product-form">
+					<div class="form-row">
+						<div class="form-group">
+							<label>Product Name *</label>
+							<input type="text" id="product-name" required placeholder="e.g., LIGEN E-WAY Electric Cycle">
+						</div>
+						<div class="form-group">
+							<label>Product Price (₹) *</label>
+							<input type="number" id="product-price" required placeholder="e.g., 25000" min="0" step="0.01">
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group">
+							<label>Product Image URL</label>
+							<input type="url" id="product-image" placeholder="e.g., assets/images/cycleproduct.png">
+						</div>
+						<div class="form-group">
+							<label>Product Page URL</label>
+							<input type="url" id="product-url" placeholder="e.g., electric-cycle">
+						</div>
+					</div>
+					<div class="form-group">
+						<label>Product Description</label>
+						<textarea id="product-description" placeholder="Enter product description"></textarea>
+					</div>
+					<div class="form-group">
+						<label>Stock Quantity</label>
+						<input type="number" id="product-stock" placeholder="e.g., 10" min="0">
+					</div>
+					<button type="submit" class="btn btn-primary">Add Product</button>
+				</form>
+				<div style="margin-top: 40px;">
+					<h3 style="margin-bottom: 20px; font-size: 20px;">Existing Products</h3>
+					<table class="products-table">
+						<thead>
+							<tr>
+								<th>Product Name</th>
+								<th>Price</th>
+								<th>Stock</th>
+								<th>Status</th>
+								<th>Actions</th>
+							</tr>
+						</thead>
+						<tbody id="products-list">
+							<!-- Products will be loaded here -->
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<!-- Test Ride Requests Section -->
+			<div id="test-ride-requests-section" class="section" style="display: none;">
+				<div class="section-header">
+					<i class="fas fa-bicycle"></i>
+					<h2>Test Ride Requests</h2>
+				</div>
+
+				<div id="test-ride-requests-alert" class="alert"></div>
+
+				<div style="display:flex; justify-content: space-between; align-items:center; gap: 12px; margin-bottom: 16px; flex-wrap: wrap;">
+					<div style="color:#718096; font-size: 13px;">
+						Requests submitted from the Electric Cycle test ride form.
+					</div>
+					<button type="button" class="btn btn-secondary" onclick="loadTestRideRequests()">Refresh</button>
+				</div>
+
+				<table class="products-table">
+					<thead>
+						<tr>
+							<th>Date</th>
+							<th>Name</th>
+							<th>Mobile</th>
+							<th>Email</th>
+							<th>City</th>
+							<th>Model</th>
+						</tr>
+					</thead>
+					<tbody id="test-ride-requests-list">
+						<tr>
+							<td colspan="6" style="text-align: center; padding: 40px; color: #999;">Loading requests...</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<!-- Quote Requests Section -->
+			<div id="quote-requests-section" class="section" style="display: none;">
+				<div class="section-header">
+					<i class="fas fa-file-invoice"></i>
+					<h2>Quote Requests</h2>
+				</div>
+
+				<div id="quote-requests-alert" class="alert"></div>
+
+				<div style="display:flex; justify-content: space-between; align-items:center; gap: 12px; margin-bottom: 16px; flex-wrap: wrap;">
+					<div style="color:#718096; font-size: 13px;">
+						Requests from Request Quote modals (Mobility, products, etc.).
+					</div>
+					<button type="button" class="btn btn-secondary" onclick="loadQuoteRequests()">Refresh</button>
+				</div>
+
+				<table class="products-table">
+					<thead>
+						<tr>
+							<th>Date</th>
+							<th>Product</th>
+							<th>Name</th>
+							<th>Phone</th>
+							<th>Email</th>
+							<th>Qty</th>
+							<th>Message</th>
+						</tr>
+					</thead>
+					<tbody id="quote-requests-list">
+						<tr>
+							<td colspan="7" style="text-align: center; padding: 40px; color: #999;">Loading requests...</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<!-- SMTP Section -->
+			<div id="smtp-section" class="section" style="display: none;">
+				<div class="section-header">
+					<i class="fas fa-envelope"></i>
+					<h2>SMTP Email Configuration</h2>
+				</div>
+				<div id="smtp-alert" class="alert"></div>
+				<form id="smtp-form">
+					<div class="form-row">
+						<div class="form-group">
+							<label>SMTP Host *</label>
+							<input type="text" id="smtp-host" required placeholder="e.g., smtp.gmail.com" value="smtp.hostinger.com">
+						</div>
+						<div class="form-group">
+							<label>SMTP Port *</label>
+							<input type="number" id="smtp-port" required placeholder="e.g., 587" value="465">
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group">
+							<label>SMTP Username (Email) *</label>
+							<input type="email" id="smtp-username" required placeholder="your-email@gmail.com" value="info@clasmentor.in">
+						</div>
+						<div class="form-group">
+							<label>SMTP Password *</label>
+							<input type="password" id="smtp-password" required placeholder="Your email password or app password">
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group">
+							<label>From Email *</label>
+							<input type="email" id="smtp-from-email" required placeholder="noreply@ligenpower.com" value="info@clasmentor.in">
+						</div>
+						<div class="form-group">
+							<label>From Name</label>
+							<input type="text" id="smtp-from-name" placeholder="Ligen Power®" value="Ligen Power®">
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group">
+							<label>Encryption</label>
+							<select id="smtp-encryption">
+								<option value="tls">TLS</option>
+								<option value="ssl" selected>SSL</option>
+								<option value="none">None</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label>Test Email Recipient</label>
+							<input type="email" id="smtp-test-email" placeholder="test@example.com">
+						</div>
+					</div>
+					<button type="submit" class="btn btn-primary">Save SMTP Settings</button>
+					<button type="button" class="btn btn-secondary" onclick="testSMTP()" style="margin-left: 10px;">Send Test Email</button>
+				</form>
+			</div>
+
+			<!-- Razorpay Section -->
+			<div id="razorpay-section" class="section" style="display: none;">
+				<div class="section-header">
+					<i class="fas fa-credit-card"></i>
+					<h2>Razorpay Payment Gateway Configuration</h2>
+				</div>
+				<div id="razorpay-alert" class="alert"></div>
+				<form id="razorpay-form">
+					<div class="form-row">
+						<div class="form-group">
+							<label>Razorpay Key ID *</label>
+							<input type="text" id="razorpay-key-id" required placeholder="rzp_test_xxxxxxxxxxxxx">
+						</div>
+						<div class="form-group">
+							<label>Razorpay Key Secret *</label>
+							<input type="password" id="razorpay-key-secret" required placeholder="Your Razorpay key secret">
+						</div>
+					</div>
+					<div class="form-group">
+						<label>Environment</label>
+						<select id="razorpay-environment">
+							<option value="test">Test Mode</option>
+							<option value="live">Live Mode</option>
+						</select>
+					</div>
+					<button type="submit" class="btn btn-primary">Save Razorpay Settings</button>
+				</form>
+				<div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+					<h3 style="margin-bottom: 15px; font-size: 18px;">How to get Razorpay Keys:</h3>
+					<ol style="padding-left: 20px; line-height: 1.8;">
+						<li>Sign up or log in to your <a href="https://razorpay.com" target="_blank">Razorpay Dashboard</a></li>
+						<li>Go to Settings → API Keys</li>
+						<li>Generate a new API key (or use existing one)</li>
+						<li>Copy the Key ID and Key Secret</li>
+						<li>Paste them in the form above</li>
+					</ol>
+				</div>
+			</div>
+
+			<!-- Announcement Section -->
+			<div id="announcement-section" class="section" style="display: none;">
+				<div class="section-header">
+					<i class="fas fa-bullhorn"></i>
+					<h2>Announcement Bar Settings</h2>
+				</div>
+				<div id="announcement-alert" class="alert"></div>
+				<form id="announcement-form">
+					<div class="form-group">
+						<label>Announcement Text *</label>
+						<input type="text" id="announcement-text" required placeholder="Happy Republic Day 2026! Celebrating 77 Years of Indian Democracy - Unity, Justice & Progress | Jai Hind!" maxlength="200">
+						<small style="color: #718096; font-size: 13px; margin-top: 6px; display: block;">This text will be displayed in the announcement bar at the top of your website</small>
+					</div>
+					<button type="submit" class="btn btn-primary">Save Announcement</button>
+				</form>
+				<div style="margin-top: 30px; padding: 20px; background: #f7fafc; border-radius: 12px; border-left: 4px solid #4CAF50;">
+					<h3 style="margin-bottom: 15px; font-size: 18px;">Preview:</h3>
+					<div style="background: #33766c; color: #ffffff; padding: 12px 20px; border-radius: 8px; font-size: 13px;">
+						<span style="font-weight: 800; margin-right: 12px;">Announcements</span>
+						<span id="announcement-preview">Happy Republic Day 2026! Celebrating 77 Years of Indian Democracy - Unity, Justice & Progress | Jai Hind!</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- Page Links Section -->
+			<div id="page-links-section" class="section" style="display: none;">
+				<div class="section-header">
+					<i class="fas fa-link"></i>
+					<h2>Page Links Management</h2>
+				</div>
+				<div id="page-links-alert" class="alert"></div>
+				
+				<!-- Add New Link Form -->
+				<div style="background: #f7fafc; padding: 24px; border-radius: 12px; margin-bottom: 30px; border: 2px dashed #e2e8f0;">
+					<h3 style="margin-bottom: 20px; font-size: 18px; color: #2d3748;">Add New Link</h3>
+					<form id="add-link-form">
+						<div class="form-row">
+							<div class="form-group">
+								<label>Link Label *</label>
+								<input type="text" id="link-label" required placeholder="e.g., About Us">
+							</div>
+							<div class="form-group">
+								<label>Link URL *</label>
+								<input type="text" id="link-url" required placeholder="e.g., about-us or https://example.com">
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-group">
+								<label>Icon (Font Awesome class)</label>
+								<input type="text" id="link-icon" placeholder="e.g., home, users, certificate, map-pin">
+								<small style="color: #718096; font-size: 12px;">Leave empty for default icon. Use Font Awesome icon names without 'fa-' prefix</small>
+							</div>
+							<div class="form-group">
+								<label>Order</label>
+								<input type="number" id="link-order" placeholder="Display order (1, 2, 3...)">
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-group">
+								<label>Target</label>
+								<select id="link-target">
+									<option value="_self">Same Window</option>
+									<option value="_blank">New Window</option>
+								</select>
+							</div>
+							<div class="form-group" style="display: flex; align-items: flex-end;">
+								<label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+									<input type="checkbox" id="link-active" checked style="width: 20px; height: 20px; cursor: pointer;">
+									<span>Active</span>
+								</label>
+							</div>
+						</div>
+						<button type="submit" class="btn btn-primary">Add Link</button>
+					</form>
+				</div>
+
+				<!-- Links List -->
+				<div>
+					<h3 style="margin-bottom: 20px; font-size: 18px; color: #2d3748;">Manage Links</h3>
+					<table class="products-table" id="links-table">
+						<thead>
+							<tr>
+								<th>Order</th>
+								<th>Label</th>
+								<th>URL</th>
+								<th>Icon</th>
+								<th>Target</th>
+								<th>Status</th>
+								<th>Actions</th>
+							</tr>
+						</thead>
+						<tbody id="links-list">
+							<tr>
+								<td colspan="7" style="text-align: center; padding: 40px; color: #999;">Loading links...</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<!-- Blog Posts Section -->
+			<div id="blog-section" class="section" style="display: none;">
+				<div class="section-header">
+					<i class="fas fa-blog"></i>
+					<h2>Blog Posts Management</h2>
+				</div>
+				<div id="blog-alert" class="alert"></div>
+				<p style="margin-bottom: 24px; color: #718096;">Add, edit, or delete blog posts. Changes appear on <a href="blog" target="_blank">blog</a>.</p>
+
+				<!-- Add/Edit Post Form -->
+				<div style="background: #f7fafc; padding: 24px; border-radius: 12px; margin-bottom: 30px; border: 2px dashed #e2e8f0;">
+					<h3 style="margin-bottom: 20px; font-size: 18px; color: #2d3748;" id="blog-form-title">Add New Post</h3>
+					<form id="blog-post-form">
+						<input type="hidden" id="blog-post-id" value="">
+						<div class="form-row">
+							<div class="form-group" style="flex: 2;">
+								<label>Title *</label>
+								<input type="text" id="blog-title" required placeholder="e.g., Understanding Battery Management Systems">
+							</div>
+							<div class="form-group">
+								<label>Category</label>
+								<input type="text" id="blog-category" placeholder="e.g., Battery Technology">
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-group">
+								<label>Slug (URL-friendly)</label>
+								<input type="text" id="blog-slug" placeholder="URL slug, e.g. blog/your-post-title (auto from title if empty)">
+							</div>
+							<div class="form-group">
+								<label>Date</label>
+								<input type="date" id="blog-date-picker" title="Pick publish date">
+								<input type="hidden" id="blog-date">
+								<input type="hidden" id="blog-date-iso">
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-group" style="flex: 2;">
+								<label>Featured Image</label>
+								<div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-start;">
+									<div>
+										<input type="file" id="blog-image-file" accept="image/jpeg,image/png,image/gif,image/webp" style="font-size: 14px;">
+										<button type="button" id="blog-image-upload-btn" class="btn btn-secondary" style="margin-top: 8px; padding: 8px 16px;">Upload image</button>
+									</div>
+									<input type="text" id="blog-image" placeholder="Or paste URL e.g. assets/images/slide01-min.jpeg" style="flex: 1; min-width: 200px;">
+								</div>
+								<div id="blog-image-preview" style="margin-top: 10px; min-height: 60px;"></div>
+							</div>
+							<div class="form-group">
+								<label>Author</label>
+								<input type="text" id="blog-author" placeholder="e.g., Admin">
+							</div>
+						</div>
+						<div class="form-group">
+							<label>Excerpt (short summary)</label>
+							<textarea id="blog-excerpt" rows="2" placeholder="Brief summary for listing page"></textarea>
+						</div>
+						<div style="background: #f0f9ff; padding: 20px; border-radius: 12px; margin-bottom: 24px; border: 1px solid #bae6fd;">
+							<h4 style="margin-bottom: 12px; color: #0369a1; font-size: 14px;">SEO (meta tags)</h4>
+							<div class="form-group">
+								<label>Meta description</label>
+								<textarea id="blog-meta-description" rows="2" placeholder="155–160 chars for search snippets. Leave empty to use excerpt." maxlength="320"></textarea>
+								<small style="color: #64748b; font-size: 12px;">Shown in Google results. Keep under 160 characters for best display.</small>
+							</div>
+							<div class="form-group">
+								<label>Meta keywords (optional)</label>
+								<input type="text" id="blog-meta-keywords" placeholder="e.g. BMS, battery, solar, inverter">
+							</div>
+						</div>
+						<div class="form-group">
+							<label>Content *</label>
+							<div id="blog-content-editor" style="min-height: 280px; background: #fff;"></div>
+							<input type="hidden" id="blog-content">
+							<!-- HTML source modal -->
+							<div id="blog-html-modal" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 10000; align-items: center; justify-content: center;" class="blog-html-modal-overlay">
+								<div style="background: #fff; border-radius: 12px; padding: 24px; max-width: 800px; width: 90%; max-height: 85vh; display: flex; flex-direction: column; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
+									<h4 style="margin-bottom: 12px;">Edit HTML</h4>
+									<textarea id="blog-html-source" rows="16" style="width: 100%; font-family: monospace; font-size: 13px; padding: 12px; border: 2px solid #e2e8f0; border-radius: 8px; resize: vertical; margin-bottom: 16px;"></textarea>
+									<div style="display: flex; gap: 10px;">
+										<button type="button" id="blog-html-apply" class="btn btn-primary">Apply</button>
+										<button type="button" id="blog-html-cancel" class="btn btn-secondary">Cancel</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+								<input type="checkbox" id="blog-published" checked style="width: 20px; height: 20px; cursor: pointer;">
+								<span>Published (visible on blog)</span>
+							</label>
+						</div>
+						<button type="submit" class="btn btn-primary" id="blog-submit-btn">Add Post</button>
+						<button type="button" class="btn btn-secondary" id="blog-cancel-btn" style="display: none; margin-left: 10px;">Cancel</button>
+					</form>
+				</div>
+
+				<!-- Posts List -->
+				<div>
+					<h3 style="margin-bottom: 20px; font-size: 18px; color: #2d3748;">All Posts</h3>
+					<table class="products-table" id="blog-posts-table">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Title</th>
+								<th>Category</th>
+								<th>Date</th>
+								<th>Status</th>
+								<th>Actions</th>
+							</tr>
+						</thead>
+						<tbody id="blog-posts-list">
+							<tr><td colspan="6" style="text-align: center; padding: 40px; color: #999;">Loading posts...</td></tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<!-- Blog Comments Section -->
+			<div id="blog-comments-section" class="section" style="display: none;">
+				<div class="section-header">
+					<i class="fas fa-comments"></i>
+					<h2>Blog Comments</h2>
+				</div>
+				<div id="blog-comments-alert" class="alert"></div>
+				<p style="margin-bottom: 24px; color: #718096;">View and remove comments from blog posts. Deleted comments are removed from the site immediately.</p>
+				<table class="products-table">
+					<thead>
+						<tr>
+							<th>Post</th>
+							<th>Author</th>
+							<th>Date</th>
+							<th>Comment</th>
+							<th>Actions</th>
+						</tr>
+					</thead>
+					<tbody id="blog-comments-list">
+						<tr><td colspan="5" style="text-align: center; padding: 40px; color: #999;">Loading comments...</td></tr>
+					</tbody>
+				</table>
+			</div>
+
+			<!-- Merchant / Store Locator Section -->
+			<div id="merchant-section" class="section" style="display: none;">
+				<div class="section-header">
+					<i class="fas fa-map-marker-alt"></i>
+					<h2>Merchant / Store Locator</h2>
+				</div>
+				<div id="merchant-alert" class="alert"></div>
+				<p style="margin-bottom: 24px; color: #718096;">The store locator runs at <strong>merchant.ligenpower.com</strong>. Use the panel below to manage dealers, states, districts, and CSV import/export. If you see the login page, sign in there once; then you can do everything from here.</p>
+				<div class="dashboard-cards" style="margin-bottom: 24px;">
+					<div class="dashboard-card" style="max-width: 200px;">
+						<div class="dashboard-card-icon" style="background: linear-gradient(135deg, #82ac3a 0%, #6b8a2e 100%);">
+							<i class="fas fa-store"></i>
+						</div>
+						<h3>Total</h3>
+						<p id="merchant-stats-total">–</p>
+					</div>
+					<div class="dashboard-card" style="max-width: 200px;">
+						<div class="dashboard-card-icon" style="background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);">
+							<i class="fas fa-check-circle"></i>
+						</div>
+						<h3>Active</h3>
+						<p id="merchant-stats-active">–</p>
+					</div>
+					<div class="dashboard-card" style="max-width: 200px;">
+						<div class="dashboard-card-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+							<i class="fas fa-user-tag"></i>
+						</div>
+						<h3>Dealers</h3>
+						<p id="merchant-stats-dealers">–</p>
+					</div>
+					<div class="dashboard-card" style="max-width: 200px;">
+						<div class="dashboard-card-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+							<i class="fas fa-truck"></i>
+						</div>
+						<h3>Distributors</h3>
+						<p id="merchant-stats-distributors">–</p>
+					</div>
+				</div>
+				<div style="display: flex; flex-wrap: wrap; gap: 12px;">
+					<a href="https://merchant.ligenpower.com/admin" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+						<i class="fas fa-cog"></i> Open Store Locator Admin
+					</a>
+					<a href="https://merchant.ligenpower.com/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="display: inline-flex; align-items: center; gap: 8px;">
+						<i class="fas fa-external-link-alt"></i> Open Store Locator (public)
+					</a>
+					<button type="button" class="btn btn-secondary" onclick="var f=document.getElementById('merchant-admin-iframe'); if(f) f.src=f.src;" style="display: inline-flex; align-items: center; gap: 8px;">
+						<i class="fas fa-sync-alt"></i> Refresh panel
+					</button>
+				</div>
+				<div style="margin-top: 20px;">
+					<iframe id="merchant-admin-iframe" src="https://merchant.ligenpower.com/admin" title="Store Locator Admin" style="width: 100%; height: min(800px, calc(100vh - 320px)); border: 1px solid #e2e8f0; border-radius: 12px; background: #fff;"></iframe>
+					<p style="margin-top: 10px; font-size: 13px; color: #718096;">Dealers, states, districts, and CSV upload/export are managed in the panel above. Data is saved on merchant.ligenpower.com and appears on the public store locator.</p>
+				</div>
+			</div>
+
+			<!-- Pincodes (Checkout) Section -->
+			<div id="pincodes-section" class="section" style="display: none;">
+				<div class="section-header">
+					<i class="fas fa-map-pin"></i>
+					<h2>Pincodes (Checkout)</h2>
+				</div>
+				<p style="margin-bottom: 24px; color: #718096;">Manage serviceable pincodes for <strong>checkout only</strong>. These determine delivery availability and auto-fill city/state when customers enter their pincode during checkout. This is separate from the Merchant / Store Locator.</p>
+				<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 20px;">
+					<a href="https://merchant.ligenpower.com/admin/pincodes" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+						<i class="fas fa-external-link-alt"></i> Open Pincode
+					</a>
+					<button type="button" class="btn btn-secondary" onclick="var f=document.getElementById('pincodes-iframe'); if(f) f.src=f.src;" style="display: inline-flex; align-items: center; gap: 8px;">
+						<i class="fas fa-sync-alt"></i> Refresh Panel
+					</button>
+				</div>
+				<iframe id="pincodes-iframe" src="https://merchant.ligenpower.com/admin/pincodes" title="Pincodes (Checkout)" style="width: 100%; height: min(800px, calc(100vh - 320px)); border: 1px solid #e2e8f0; border-radius: 12px; background: #fff;"></iframe>
+			</div>
+
+			<!-- Orders Section -->
+			<div id="orders-section" class="section" style="display: none;">
+				<div class="section-header">
+					<i class="fas fa-shopping-cart"></i>
+					<h2>Order Management</h2>
+				</div>
+				<table class="products-table">
+					<thead>
+						<tr>
+							<th>Order ID</th>
+							<th>Product</th>
+							<th>Customer</th>
+							<th>Amount</th>
+							<th>Status</th>
+							<th>Date</th>
+							<th>Actions</th>
+						</tr>
+					</thead>
+					<tbody id="orders-list">
+						<tr>
+							<td colspan="7" style="text-align: center; padding: 40px; color: #999;">No orders yet</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</main>
+	</div>
+
+	<script src="https://cdn.quilljs.com/1.3.7/quill.min.js"></script>
+	<script>
+		var blogQuill = null;
+		function escapeHtml(str) {
+			if (str == null) return '';
+			var div = document.createElement('div');
+			div.textContent = str;
+			return div.innerHTML;
+		}
+
+		// Load saved data
+		document.addEventListener('DOMContentLoaded', function() {
+			loadSMTPConfig();
+			loadRazorpayConfig();
+			loadAnnouncementConfig();
+			loadTestRideRequests();
+			loadPageLinks();
+			loadBlogPosts();
+			loadProducts();
+			loadOrders();
+			updateDashboardStats();
+			initBlogQuill();
+			initBlogImageUpload();
+			initBlogSlugAutofill();
+		});
+
+		function slugifyBlogTitle(title) {
+			return (title || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+		}
+
+		function initBlogSlugAutofill() {
+			var titleEl = document.getElementById('blog-title');
+			var slugEl = document.getElementById('blog-slug');
+			if (!titleEl || !slugEl) return;
+			titleEl.addEventListener('input', function() {
+				if (!slugEl.dataset.manual && !slugEl.value.trim()) {
+					slugEl.value = slugifyBlogTitle(titleEl.value);
+				}
+			});
+			slugEl.addEventListener('input', function() {
+				slugEl.dataset.manual = slugEl.value.trim() ? '1' : '';
+			});
+		}
+
+		// Section Navigation
+		function showSection(section) {
+			document.querySelectorAll('.section').forEach(s => s.style.display = 'none');
+			document.querySelectorAll('.sidebar-menu a').forEach(a => a.classList.remove('active'));
+			
+			document.getElementById(section + '-section').style.display = 'block';
+			event.target.classList.add('active');
+
+			if (section === 'test-ride-requests') {
+				loadTestRideRequests();
+			}
+			if (section === 'quote-requests') {
+				loadQuoteRequests();
+			}
+			if (section === 'blog' && !editingBlogId) {
+				setBlogDatePickerToday();
+			}
+			if (section === 'blog-comments') {
+				loadBlogComments();
+			}
+			if (section === 'merchant') {
+				loadMerchantStats();
+			}
+		}
+
+		function showTestRideAlert(message, type) {
+			// Reuse existing alert styles (success/warning/error) via showAlert if available
+			if (typeof showAlert === 'function') {
+				showAlert('test-ride-requests-alert', message, type);
+				return;
+			}
+			const el = document.getElementById('test-ride-requests-alert');
+			if (!el) return;
+			el.textContent = message;
+		}
+
+		function loadTestRideRequests() {
+			const tbody = document.getElementById('test-ride-requests-list');
+			if (!tbody) return;
+
+			// Loading state
+			tbody.innerHTML = '<tr><td colspan="6" style="text-align: center; padding: 40px; color: #999;">Loading requests...</td></tr>';
+
+			fetch('api/test-ride-requests.php?limit=300')
+				.then(r => r.json())
+				.then(data => {
+					if (!data || !data.success) {
+						throw new Error((data && data.message) ? data.message : 'Failed to load');
+					}
+
+					const items = Array.isArray(data.items) ? data.items : [];
+					if (items.length === 0) {
+						tbody.innerHTML = '<tr><td colspan="6" style="text-align: center; padding: 40px; color: #999;">No test ride requests yet.</td></tr>';
+						return;
+					}
+
+					// Build rows safely
+					tbody.innerHTML = '';
+					items.forEach(item => {
+						const tr = document.createElement('tr');
+
+						const dateTd = document.createElement('td');
+						const createdAt = item.created_at ? new Date(item.created_at) : null;
+						dateTd.textContent = createdAt && !isNaN(createdAt.getTime()) ? createdAt.toLocaleString() : (item.created_at || '');
+
+						const nameTd = document.createElement('td');
+						nameTd.textContent = item.fullName || '';
+
+						const mobileTd = document.createElement('td');
+						mobileTd.textContent = item.mobile || '';
+
+						const emailTd = document.createElement('td');
+						emailTd.textContent = item.email || '';
+
+						const cityTd = document.createElement('td');
+						cityTd.textContent = item.city || '';
+
+						const modelTd = document.createElement('td');
+						modelTd.textContent = item.model || '';
+
+						tr.appendChild(dateTd);
+						tr.appendChild(nameTd);
+						tr.appendChild(mobileTd);
+						tr.appendChild(emailTd);
+						tr.appendChild(cityTd);
+						tr.appendChild(modelTd);
+
+						tbody.appendChild(tr);
+					});
+				})
+				.catch(err => {
+					tbody.innerHTML = '<tr><td colspan="6" style="text-align: center; padding: 40px; color: #999;">Failed to load requests.</td></tr>';
+					showTestRideAlert('Failed to load test ride requests: ' + (err.message || err), 'warning');
+				});
+		}
+
+		function showQuoteAlert(message, type) {
+			if (typeof showAlert === 'function') {
+				showAlert('quote-requests-alert', message, type);
+				return;
+			}
+			const el = document.getElementById('quote-requests-alert');
+			if (!el) return;
+			el.textContent = message;
+		}
+
+		function loadQuoteRequests() {
+			const tbody = document.getElementById('quote-requests-list');
+			if (!tbody) return;
+
+			tbody.innerHTML = '<tr><td colspan="7" style="text-align: center; padding: 40px; color: #999;">Loading requests...</td></tr>';
+
+			fetch('api/quote-requests.php?limit=300')
+				.then(r => r.json())
+				.then(data => {
+					if (!data || !data.success) {
+						throw new Error((data && data.message) ? data.message : 'Failed to load');
+					}
+
+					const items = Array.isArray(data.items) ? data.items : [];
+					if (items.length === 0) {
+						tbody.innerHTML = '<tr><td colspan="7" style="text-align: center; padding: 40px; color: #999;">No quote requests yet.</td></tr>';
+						return;
+					}
+
+					tbody.innerHTML = '';
+					items.forEach(item => {
+						const tr = document.createElement('tr');
+
+						const dateTd = document.createElement('td');
+						const createdAt = item.created_at ? new Date(item.created_at) : null;
+						dateTd.textContent = createdAt && !isNaN(createdAt.getTime()) ? createdAt.toLocaleString() : (item.created_at || '');
+
+						const productTd = document.createElement('td');
+						productTd.textContent = item.product_name || '';
+						productTd.title = item.product_url || '';
+
+						const nameTd = document.createElement('td');
+						nameTd.textContent = item.name || '';
+
+						const phoneTd = document.createElement('td');
+						phoneTd.textContent = item.phone || '';
+
+						const emailTd = document.createElement('td');
+						emailTd.textContent = item.email || '';
+
+						const qtyTd = document.createElement('td');
+						qtyTd.textContent = item.quantity || '';
+
+						const msgTd = document.createElement('td');
+						const msg = item.message || '';
+						msgTd.textContent = msg.length > 80 ? msg.slice(0, 80) + '…' : msg;
+						msgTd.title = msg;
+
+						tr.appendChild(dateTd);
+						tr.appendChild(productTd);
+						tr.appendChild(nameTd);
+						tr.appendChild(phoneTd);
+						tr.appendChild(emailTd);
+						tr.appendChild(qtyTd);
+						tr.appendChild(msgTd);
+
+						tbody.appendChild(tr);
+					});
+				})
+				.catch(err => {
+					tbody.innerHTML = '<tr><td colspan="7" style="text-align: center; padding: 40px; color: #999;">Failed to load requests.</td></tr>';
+					showQuoteAlert('Failed to load quote requests: ' + (err.message || err), 'warning');
+				});
+		}
+
+		// SMTP Configuration
+		function loadSMTPConfig() {
+			// First try to load from backend API
+			fetch('api/get-smtp-config.php')
+				.then(response => {
+					// Check if response is actually JSON
+					const contentType = response.headers.get('content-type');
+					if (contentType && contentType.includes('application/json')) {
+						return response.json();
+					} else {
+						// Got non-JSON response (probably PHP code), return error
+						return response.text().then(text => {
+							throw new Error('PHP server not running. Got: ' + text.substring(0, 50));
+						});
+					}
+				})
+				.then(data => {
+					if (data.success && data.config) {
+						const config = data.config;
+						// Update form fields
+						document.getElementById('smtp-host').value = config.host || '';
+						document.getElementById('smtp-port').value = config.port || '587';
+						document.getElementById('smtp-username').value = config.username || '';
+						document.getElementById('smtp-password').value = config.password || '';
+						document.getElementById('smtp-from-email').value = config.fromEmail || '';
+						document.getElementById('smtp-from-name').value = config.fromName || 'Ligen Power®';
+						document.getElementById('smtp-encryption').value = config.encryption || 'tls';
+						// Update status
+						document.getElementById('smtp-status').textContent = 'Configured';
+						document.getElementById('smtp-status').style.color = '#4CAF50';
+						// Also save to localStorage for quick access
+						localStorage.setItem('smtp_config', JSON.stringify(config));
+					} else {
+						// Fallback to localStorage
+						const config = JSON.parse(localStorage.getItem('smtp_config') || '{}');
+						if (config.host) {
+							document.getElementById('smtp-host').value = config.host || '';
+							document.getElementById('smtp-port').value = config.port || '587';
+							document.getElementById('smtp-username').value = config.username || '';
+							document.getElementById('smtp-password').value = config.password || '';
+							document.getElementById('smtp-from-email').value = config.fromEmail || '';
+							document.getElementById('smtp-from-name').value = config.fromName || '';
+							document.getElementById('smtp-encryption').value = config.encryption || 'tls';
+							document.getElementById('smtp-status').textContent = 'Configured (Local)';
+							document.getElementById('smtp-status').style.color = '#ed8936';
+						} else {
+							document.getElementById('smtp-status').textContent = 'Not Configured';
+							document.getElementById('smtp-status').style.color = '#718096';
+						}
+					}
+				})
+				.catch(error => {
+					console.error('Error loading SMTP config from backend:', error);
+					// Fallback to localStorage
+					const config = JSON.parse(localStorage.getItem('smtp_config') || '{}');
+					if (config.host) {
+						document.getElementById('smtp-host').value = config.host || '';
+						document.getElementById('smtp-port').value = config.port || '587';
+						document.getElementById('smtp-username').value = config.username || '';
+						document.getElementById('smtp-password').value = config.password || '';
+						document.getElementById('smtp-from-email').value = config.fromEmail || '';
+						document.getElementById('smtp-from-name').value = config.fromName || '';
+						document.getElementById('smtp-encryption').value = config.encryption || 'tls';
+						document.getElementById('smtp-status').textContent = 'Configured (Local)';
+						document.getElementById('smtp-status').style.color = '#ed8936';
+					}
+				});
+		}
+
+		document.getElementById('smtp-form').addEventListener('submit', function(e) {
+			e.preventDefault();
+			const config = {
+				host: document.getElementById('smtp-host').value,
+				port: document.getElementById('smtp-port').value,
+				username: document.getElementById('smtp-username').value,
+				password: document.getElementById('smtp-password').value,
+				fromEmail: document.getElementById('smtp-from-email').value,
+				fromName: document.getElementById('smtp-from-name').value,
+				encryption: document.getElementById('smtp-encryption').value,
+				recipientEmail: document.getElementById('smtp-from-email').value // Default recipient to from email
+			};
+			localStorage.setItem('smtp_config', JSON.stringify(config));
+			
+			// Also save to backend
+			fetch('api/save-smtp-config.php', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({ config: config })
+			})
+			.then(response => {
+				// Check if response is actually JSON or if we got PHP code
+				const contentType = response.headers.get('content-type');
+				if (contentType && contentType.includes('application/json')) {
+					return response.json();
+				} else {
+					// Got non-JSON response (probably PHP code), throw error
+					return response.text().then(text => {
+						throw new Error('PHP server not running. Response: ' + text.substring(0, 100));
+					});
+				}
+			})
+			.then(data => {
+				if (data.success) {
+					showAlert('smtp-alert', 'SMTP settings saved successfully!', 'success');
+					document.getElementById('smtp-status').textContent = 'Configured';
+					document.getElementById('smtp-status').style.color = '#4CAF50';
+				} else {
+					showAlert('smtp-alert', 'Saved locally but failed to save to backend: ' + data.message, 'warning');
+				}
+			})
+			.catch(error => {
+				// If PHP server is not running, just save to localStorage
+				if (error.message && error.message.includes('PHP server not running')) {
+					showAlert('smtp-alert', 'SMTP settings saved to browser storage. Start PHP server (php -S localhost:8000) to save to backend.', 'warning');
+					document.getElementById('smtp-status').textContent = 'Saved (Local Only)';
+					document.getElementById('smtp-status').style.color = '#ed8936';
+				} else {
+					showAlert('smtp-alert', 'Saved locally but failed to save to backend: ' + error.message, 'warning');
+				}
+			});
+		});
+
+		function testSMTP() {
+			const testEmail = document.getElementById('smtp-test-email').value;
+			if (!testEmail) {
+				showAlert('smtp-alert', 'Please enter a test email address', 'error');
+				return;
+			}
+			
+			// First try to get config from backend, then fallback to localStorage
+			fetch('api/get-smtp-config.php')
+				.then(response => response.json())
+				.then(data => {
+					let config = null;
+					if (data.success && data.config) {
+						config = data.config;
+					} else {
+						config = JSON.parse(localStorage.getItem('smtp_config') || '{}');
+					}
+					
+					if (!config || !config.host) {
+						showAlert('smtp-alert', 'Please configure SMTP settings first', 'error');
+						return;
+					}
+					
+					// Send test email via PHP backend
+					fetch('api/send-email.php', {
+						method: 'POST',
+						headers: { 'Content-Type': 'application/json' },
+						body: JSON.stringify({
+							to: testEmail,
+							subject: 'Test Email from Ligen Power® Dashboard',
+							message: '<h2>Test Email from Ligen Power® Dashboard</h2><p>This is a test email from your Ligen Power® dashboard. SMTP configuration is working correctly!</p><p><strong>Time:</strong> ' + new Date().toLocaleString() + '</p>',
+							config: config
+						})
+					})
+					.then(response => response.json())
+					.then(result => {
+						if (result.success) {
+							showAlert('smtp-alert', 'Test email sent successfully to ' + testEmail + '!', 'success');
+						} else {
+							showAlert('smtp-alert', 'Failed to send test email: ' + result.message, 'error');
+						}
+					})
+					.catch(error => {
+						showAlert('smtp-alert', 'Error: ' + error.message, 'error');
+					});
+				})
+				.catch(error => {
+					// Fallback to localStorage
+					const config = JSON.parse(localStorage.getItem('smtp_config') || '{}');
+					if (!config.host) {
+						showAlert('smtp-alert', 'Please configure SMTP settings first', 'error');
+						return;
+					}
+					
+					fetch('api/send-email.php', {
+						method: 'POST',
+						headers: { 'Content-Type': 'application/json' },
+						body: JSON.stringify({
+							to: testEmail,
+							subject: 'Test Email from Ligen Power® Dashboard',
+							message: '<h2>Test Email from Ligen Power® Dashboard</h2><p>This is a test email from your Ligen Power® dashboard. SMTP configuration is working correctly!</p><p><strong>Time:</strong> ' + new Date().toLocaleString() + '</p>',
+							config: config
+						})
+					})
+					.then(response => response.json())
+					.then(result => {
+						if (result.success) {
+							showAlert('smtp-alert', 'Test email sent successfully to ' + testEmail + '!', 'success');
+						} else {
+							showAlert('smtp-alert', 'Failed to send test email: ' + result.message, 'error');
+						}
+					})
+					.catch(err => {
+						showAlert('smtp-alert', 'Error: ' + err.message, 'error');
+					});
+				});
+		}
+
+		// Razorpay Configuration
+		function loadRazorpayConfig() {
+			const config = JSON.parse(localStorage.getItem('razorpay_config') || '{}');
+			if (config.keyId) {
+				document.getElementById('razorpay-key-id').value = config.keyId || '';
+				document.getElementById('razorpay-key-secret').value = config.keySecret || '';
+				document.getElementById('razorpay-environment').value = config.environment || 'test';
+				document.getElementById('razorpay-status').textContent = 'Configured (' + (config.environment || 'test') + ')';
+				document.getElementById('razorpay-status').style.color = '#4CAF50';
+			}
+		}
+
+		document.getElementById('razorpay-form').addEventListener('submit', function(e) {
+			e.preventDefault();
+			const config = {
+				keyId: document.getElementById('razorpay-key-id').value,
+				keySecret: document.getElementById('razorpay-key-secret').value,
+				environment: document.getElementById('razorpay-environment').value
+			};
+			localStorage.setItem('razorpay_config', JSON.stringify(config));
+			showAlert('razorpay-alert', 'Razorpay settings saved successfully!', 'success');
+			document.getElementById('razorpay-status').textContent = 'Configured (' + config.environment + ')';
+			document.getElementById('razorpay-status').style.color = '#4CAF50';
+		});
+
+		// Announcement Configuration
+		function loadAnnouncementConfig() {
+			const defaultText = 'Happy Republic Day 2026! Celebrating 77 Years of Indian Democracy - Unity, Justice & Progress | Jai Hind!';
+
+			// If someone’s browser renders 🇮🇳 as "IN", clear it from cache
+			const cachedText = localStorage.getItem('announcement_text');
+			if (cachedText && cachedText.includes('🇮🇳')) {
+				localStorage.removeItem('announcement_text');
+			}
+
+			// Try to load from API first, fallback to localStorage
+			fetch('api/get-announcement.php')
+				.then(response => response.json())
+				.then(data => {
+					if (data.success && data.text) {
+						document.getElementById('announcement-text').value = data.text;
+						document.getElementById('announcement-preview').textContent = data.text;
+						localStorage.setItem('announcement_text', data.text);
+					} else {
+						// Fallback to localStorage
+						const text = localStorage.getItem('announcement_text') || defaultText;
+						document.getElementById('announcement-text').value = text;
+						document.getElementById('announcement-preview').textContent = text;
+					}
+				})
+				.catch(error => {
+					// Fallback to localStorage
+					const text = localStorage.getItem('announcement_text') || defaultText;
+					document.getElementById('announcement-text').value = text;
+					document.getElementById('announcement-preview').textContent = text;
+				});
+		}
+
+		// Update preview on input
+		document.getElementById('announcement-text').addEventListener('input', function() {
+			document.getElementById('announcement-preview').textContent = this.value || 'Happy Republic Day 2026! Celebrating 77 Years of Indian Democracy - Unity, Justice & Progress | Jai Hind!';
+		});
+
+		document.getElementById('announcement-form').addEventListener('submit', function(e) {
+			e.preventDefault();
+			const text = document.getElementById('announcement-text').value.trim();
+			
+			if (!text) {
+				showAlert('announcement-alert', 'Please enter announcement text', 'error');
+				return;
+			}
+
+			// Save to localStorage immediately
+			localStorage.setItem('announcement_text', text);
+			document.getElementById('announcement-preview').textContent = text;
+
+			// Try to save to backend API
+			fetch('api/get-announcement.php', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({ text: text })
+			})
+			.then(response => response.json())
+			.then(data => {
+				if (data.success) {
+					showAlert('announcement-alert', 'Announcement text saved successfully!', 'success');
+				} else {
+					showAlert('announcement-alert', 'Saved locally. Backend save failed: ' + (data.message || 'Unknown error'), 'warning');
+				}
+			})
+			.catch(error => {
+				showAlert('announcement-alert', 'Saved locally. Backend unavailable: ' + error.message, 'warning');
+			});
+		});
+
+		// Page Links Management
+		let pageLinks = [];
+		let editingLinkId = null;
+
+		function loadPageLinks() {
+			fetch('api/manage-links.php')
+				.then(response => response.json())
+				.then(data => {
+					if (data.success && data.links) {
+						pageLinks = data.links;
+						localStorage.setItem('page_links', JSON.stringify(pageLinks));
+						displayPageLinks();
+					} else {
+						// Fallback to localStorage
+						const stored = localStorage.getItem('page_links');
+						if (stored) {
+							pageLinks = JSON.parse(stored);
+							displayPageLinks();
+						}
+					}
+				})
+				.catch(error => {
+					// Fallback to localStorage
+					const stored = localStorage.getItem('page_links');
+					if (stored) {
+						pageLinks = JSON.parse(stored);
+						displayPageLinks();
+					}
+				});
+		}
+
+		function displayPageLinks() {
+			const tbody = document.getElementById('links-list');
+			if (pageLinks.length === 0) {
+				tbody.innerHTML = '<tr><td colspan="7" style="text-align: center; padding: 40px; color: #999;">No links added yet</td></tr>';
+				return;
+			}
+
+			// Sort by order
+			const sortedLinks = [...pageLinks].sort((a, b) => (a.order || 999) - (b.order || 999));
+
+			tbody.innerHTML = sortedLinks.map(link => `
+				<tr>
+					<td>${link.order || '-'}</td>
+					<td><strong>${link.label || 'Untitled'}</strong></td>
+					<td><code style="background: #f7fafc; padding: 4px 8px; border-radius: 4px; font-size: 12px;">${link.url || '#'}</code></td>
+					<td><i class="fas fa-${link.icon || 'link'}"></i> ${link.icon || 'link'}</td>
+					<td>${link.target === '_blank' ? '<span style="color: #4CAF50;">New Window</span>' : 'Same Window'}</td>
+					<td>${link.active ? '<span style="color: #4CAF50; font-weight: 600;">Active</span>' : '<span style="color: #999;">Inactive</span>'}</td>
+					<td>
+						<button onclick="editLink('${link.id}')" class="btn btn-secondary" style="padding: 8px 16px; font-size: 13px; margin-right: 8px;">Edit</button>
+						<button onclick="deleteLink('${link.id}')" class="btn" style="padding: 8px 16px; font-size: 13px; background: #f56565; color: white;">Delete</button>
+					</td>
+				</tr>
+			`).join('');
+		}
+
+		function editLink(id) {
+			const link = pageLinks.find(l => l.id === id);
+			if (!link) return;
+
+			editingLinkId = id;
+			document.getElementById('link-label').value = link.label || '';
+			document.getElementById('link-url').value = link.url || '';
+			document.getElementById('link-icon').value = link.icon || '';
+			document.getElementById('link-order').value = link.order || '';
+			document.getElementById('link-target').value = link.target || '_self';
+			document.getElementById('link-active').checked = link.active !== false;
+			
+			document.getElementById('add-link-form').querySelector('button').textContent = 'Update Link';
+			document.getElementById('add-link-form').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+		}
+
+		function deleteLink(id) {
+			if (!confirm('Are you sure you want to delete this link?')) return;
+
+			fetch('api/manage-links.php', {
+				method: 'DELETE',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({ id: id })
+			})
+			.then(response => response.json())
+			.then(data => {
+				if (data.success) {
+					pageLinks = data.links || pageLinks.filter(l => l.id !== id);
+					localStorage.setItem('page_links', JSON.stringify(pageLinks));
+					displayPageLinks();
+					showAlert('page-links-alert', 'Link deleted successfully!', 'success');
+				} else {
+					// Fallback to localStorage
+					pageLinks = pageLinks.filter(l => l.id !== id);
+					localStorage.setItem('page_links', JSON.stringify(pageLinks));
+					displayPageLinks();
+					showAlert('page-links-alert', 'Link deleted locally. Backend unavailable.', 'warning');
+				}
+			})
+			.catch(error => {
+				// Fallback to localStorage
+				pageLinks = pageLinks.filter(l => l.id !== id);
+				localStorage.setItem('page_links', JSON.stringify(pageLinks));
+				displayPageLinks();
+				showAlert('page-links-alert', 'Link deleted locally. Backend unavailable: ' + error.message, 'warning');
+			});
+		}
+
+		document.getElementById('add-link-form').addEventListener('submit', function(e) {
+			e.preventDefault();
+			
+			const linkData = {
+				label: document.getElementById('link-label').value.trim(),
+				url: document.getElementById('link-url').value.trim(),
+				icon: document.getElementById('link-icon').value.trim() || 'link',
+				order: parseInt(document.getElementById('link-order').value) || (pageLinks.length + 1),
+				target: document.getElementById('link-target').value,
+				active: document.getElementById('link-active').checked
+			};
+
+			if (!linkData.label || !linkData.url) {
+				showAlert('page-links-alert', 'Please fill in label and URL', 'error');
+				return;
+			}
+
+			const method = editingLinkId ? 'PUT' : 'POST';
+			const body = editingLinkId ? { ...linkData, id: editingLinkId } : linkData;
+
+			fetch('api/manage-links.php', {
+				method: method,
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(body)
+			})
+			.then(response => response.json())
+			.then(data => {
+				if (data.success) {
+					if (editingLinkId) {
+						showAlert('page-links-alert', 'Link updated successfully!', 'success');
+					} else {
+						showAlert('page-links-alert', 'Link added successfully!', 'success');
+					}
+					
+					if (data.links) {
+						pageLinks = data.links;
+					} else if (data.link) {
+						if (editingLinkId) {
+							const index = pageLinks.findIndex(l => l.id === editingLinkId);
+							if (index !== -1) {
+								pageLinks[index] = data.link;
+							}
+						} else {
+							pageLinks.push(data.link);
+						}
+					}
+					
+					localStorage.setItem('page_links', JSON.stringify(pageLinks));
+					displayPageLinks();
+					
+					// Reset form
+					document.getElementById('add-link-form').reset();
+					document.getElementById('link-active').checked = true;
+					document.getElementById('link-target').value = '_self';
+					editingLinkId = null;
+					document.getElementById('add-link-form').querySelector('button').textContent = 'Add Link';
+				} else {
+					showAlert('page-links-alert', 'Error: ' + (data.message || 'Unknown error'), 'error');
+				}
+			})
+			.catch(error => {
+				showAlert('page-links-alert', 'Error: ' + error.message, 'error');
+			});
+		});
+
+		// Blog Posts Management
+		let blogPosts = [];
+		let editingBlogId = null;
+
+		function initBlogQuill() {
+			var el = document.getElementById('blog-content-editor');
+			if (!el || blogQuill) return;
+			// Register table blots so Quill preserves <table>, <tr>, <td>, <th>, <thead>, <tbody>
+			var Block = typeof Quill !== 'undefined' && Quill.import && Quill.import('blots/block');
+			if (Block && !window.__blogQuillTableRegistered) {
+				function makeBlockBlot(blotName, tagName) {
+					function Blot() { Block.apply(this, arguments); }
+					Blot.blotName = blotName;
+					Blot.tagName = tagName;
+					Blot.prototype = Object.create(Block.prototype);
+					Blot.prototype.constructor = Blot;
+					return Blot;
+				}
+				Quill.register(makeBlockBlot('table', 'TABLE'));
+				Quill.register(makeBlockBlot('tableBody', 'TBODY'));
+				Quill.register(makeBlockBlot('tableHead', 'THEAD'));
+				Quill.register(makeBlockBlot('tableRow', 'TR'));
+				Quill.register(makeBlockBlot('tableCell', 'TD'));
+				Quill.register(makeBlockBlot('tableHeaderCell', 'TH'));
+				window.__blogQuillTableRegistered = true;
+			}
+			blogQuill = new Quill('#blog-content-editor', {
+				theme: 'snow',
+				placeholder: 'Write your post content...',
+				modules: {
+					toolbar: {
+						container: [
+							[{ header: [1, 2, 3, false] }],
+							['bold', 'italic', 'underline', 'strike'],
+							[{ list: 'ordered' }, { list: 'bullet' }],
+							['link', 'image'],
+							['clean']
+						],
+						handlers: {
+							image: function imageHandler() {
+								var range = blogQuill.getSelection(true);
+								if (!range) range = { index: blogQuill.getLength(), length: 0 };
+								var input = document.createElement('input');
+								input.setAttribute('type', 'file');
+								input.setAttribute('accept', 'image/jpeg,image/png,image/gif,image/webp');
+								input.style.display = 'none';
+								input.onchange = function() {
+									var file = input.files && input.files[0];
+									if (input.parentNode) input.parentNode.removeChild(input);
+									if (!file) return;
+									var formData = new FormData();
+									formData.append('image', file);
+									fetch('api/upload-image.php', { method: 'POST', body: formData })
+										.then(function(r) { return r.json(); })
+										.then(function(data) {
+											if (data.success && data.url) {
+												blogQuill.insertEmbed(range.index, 'image', data.url);
+												blogQuill.setSelection(range.index + 1);
+												showAlert('blog-alert', 'Image inserted.', 'success');
+											} else {
+												showAlert('blog-alert', data.message || 'Upload failed', 'error');
+											}
+										})
+										.catch(function(err) {
+											showAlert('blog-alert', 'Upload failed: ' + err.message, 'error');
+										});
+								};
+								document.body.appendChild(input);
+								input.click();
+							}
+						}
+					}
+				}
+			});
+			// Add HTML source button to Quill toolbar (wrapped like other toolbar groups)
+			var toolbar = document.querySelector('#blog-content-editor') && document.querySelector('#blog-content-editor').parentElement.querySelector('.ql-toolbar');
+			if (toolbar) {
+				var wrapper = document.createElement('span');
+				wrapper.className = 'ql-formats';
+				wrapper.style.marginLeft = '8px';
+				var htmlBtn = document.createElement('button');
+				htmlBtn.type = 'button';
+				htmlBtn.className = 'ql-html';
+				htmlBtn.setAttribute('title', 'Edit HTML');
+				htmlBtn.innerHTML = '<span>HTML</span>';
+				htmlBtn.onclick = function(e) {
+					e.preventDefault();
+					var modal = document.getElementById('blog-html-modal');
+					var ta = document.getElementById('blog-html-source');
+					var hidden = document.getElementById('blog-content');
+					if (modal && ta) {
+						// Prefer hidden field (raw HTML) so pasted HTML is not lost
+						ta.value = (hidden && hidden.value) ? hidden.value : (blogQuill ? blogQuill.root.innerHTML : '');
+						modal.style.display = 'flex';
+						ta.focus();
+					}
+				};
+				wrapper.appendChild(htmlBtn);
+				toolbar.appendChild(wrapper);
+			}
+			// HTML modal Apply / Cancel
+			var modal = document.getElementById('blog-html-modal');
+			if (modal) {
+				document.getElementById('blog-html-apply').addEventListener('click', function() {
+					var ta = document.getElementById('blog-html-source');
+					if (!ta) { modal.style.display = 'none'; return; }
+					var html = ta.value;
+					// Save raw HTML to hidden field so it's submitted exactly as entered
+					document.getElementById('blog-content').value = html;
+					if (blogQuill) {
+						var len = blogQuill.getLength();
+						blogQuill.deleteText(0, len);
+						var hasTable = /<\s*table[\s>]/i.test(html);
+						if (hasTable) {
+							// Tables: set DOM directly so table HTML is shown (Quill often strips tables)
+							blogQuill.root.innerHTML = html || '<p><br></p>';
+						} else {
+							try {
+								blogQuill.clipboard.dangerouslyPasteHTML(0, html || '<p><br></p>');
+							} catch (e) {
+								blogQuill.root.innerHTML = html || '<p><br></p>';
+							}
+						}
+					}
+					modal.style.display = 'none';
+				});
+				document.getElementById('blog-html-cancel').addEventListener('click', function() {
+					modal.style.display = 'none';
+				});
+				modal.addEventListener('click', function(e) {
+					if (e.target === modal) modal.style.display = 'none';
+				});
+			}
+		}
+
+		function syncBlogContentFromQuill() {
+			if (blogQuill && document.getElementById('blog-content')) {
+				document.getElementById('blog-content').value = blogQuill.root.innerHTML;
+			}
+		}
+
+		function initBlogImageUpload() {
+			function updateBlogImagePreview() {
+				var url = document.getElementById('blog-image').value.trim();
+				var preview = document.getElementById('blog-image-preview');
+				if (!preview) return;
+				if (!url) {
+					preview.innerHTML = '';
+					return;
+				}
+				preview.innerHTML = '<img src="' + url.replace(/"/g, '&quot;') + '" alt="Preview" style="max-width: 200px; max-height: 120px; object-fit: contain; border-radius: 8px; border: 1px solid #e2e8f0;">';
+			}
+			document.getElementById('blog-image').addEventListener('input', updateBlogImagePreview);
+			document.getElementById('blog-image').addEventListener('change', updateBlogImagePreview);
+
+			function doUpload() {
+				var fileInput = document.getElementById('blog-image-file');
+				if (!fileInput || !fileInput.files || !fileInput.files[0]) {
+					showAlert('blog-alert', 'Please choose an image file first', 'error');
+					return;
+				}
+				var formData = new FormData();
+				formData.append('image', fileInput.files[0]);
+				showAlert('blog-alert', 'Uploading...', 'warning');
+				fetch('api/upload-image.php', {
+					method: 'POST',
+					body: formData
+				})
+					.then(function(r) { return r.json(); })
+					.then(function(data) {
+						if (data.success && data.url) {
+							document.getElementById('blog-image').value = data.url;
+							updateBlogImagePreview();
+							showAlert('blog-alert', 'Image uploaded.', 'success');
+						} else {
+							showAlert('blog-alert', data.message || 'Upload failed', 'error');
+						}
+					})
+					.catch(function(err) {
+						showAlert('blog-alert', 'Upload failed: ' + err.message, 'error');
+					});
+			}
+			document.getElementById('blog-image-upload-btn').addEventListener('click', doUpload);
+			document.getElementById('blog-image-file').addEventListener('change', function() {
+				if (this.files && this.files[0]) doUpload();
+			});
+		}
+
+		function loadBlogPosts() {
+			fetch('api/get-posts.php?published=0')
+				.then(response => response.json())
+				.then(data => {
+					if (data.success && Array.isArray(data.posts)) {
+						blogPosts = data.posts;
+						displayBlogPosts();
+					} else {
+						document.getElementById('blog-posts-list').innerHTML = '<tr><td colspan="6" style="text-align: center; padding: 40px; color: #999;">No posts yet</td></tr>';
+					}
+				})
+				.catch(error => {
+					document.getElementById('blog-posts-list').innerHTML = '<tr><td colspan="6" style="text-align: center; padding: 40px; color: #c62828;">Failed to load posts. Is the server running?</td></tr>';
+				});
+		}
+
+		function displayBlogPosts() {
+			const tbody = document.getElementById('blog-posts-list');
+			if (!blogPosts || blogPosts.length === 0) {
+				tbody.innerHTML = '<tr><td colspan="6" style="text-align: center; padding: 40px; color: #999;">No posts yet. Add one above.</td></tr>';
+				return;
+			}
+			const sorted = [...blogPosts].sort((a, b) => (b.date_iso || '').localeCompare(a.date_iso || ''));
+			tbody.innerHTML = sorted.map(post => `
+				<tr>
+					<td>${post.id || '-'}</td>
+					<td><strong>${(post.title || 'Untitled').replace(/</g, '&lt;')}</strong></td>
+					<td>${(post.category || '-').replace(/</g, '&lt;')}</td>
+					<td>${(post.date || '-').replace(/</g, '&lt;')}</td>
+					<td>${post.published !== false ? '<span style="color: #4CAF50; font-weight: 600;">Published</span>' : '<span style="color: #999;">Draft</span>'}</td>
+					<td>
+						${post.slug ? `<a href="blog/${encodeURIComponent(post.slug || '')}" target="_blank" class="btn btn-secondary" style="padding: 8px 16px; font-size: 13px; margin-right: 8px; text-decoration: none; display: inline-block;">View</a>` : ''}
+						<button onclick="editBlogPost('${(post.id || '').toString().replace(/'/g, "\\'")}')" class="btn btn-secondary" style="padding: 8px 16px; font-size: 13px; margin-right: 8px;">Edit</button>
+						<button onclick="deleteBlogPost('${(post.id || '').toString().replace(/'/g, "\\'")}')" class="btn" style="padding: 8px 16px; font-size: 13px; background: #f56565; color: white;">Delete</button>
+					</td>
+				</tr>
+			`).join('');
+		}
+
+		function formatBlogDate(isoStr) {
+			if (!isoStr) return '';
+			const d = new Date(isoStr + 'T12:00:00');
+			if (isNaN(d.getTime())) return isoStr;
+			const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+			return months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
+		}
+
+		function syncBlogDateFromPicker() {
+			const picker = document.getElementById('blog-date-picker');
+			const iso = (picker && picker.value) || '';
+			document.getElementById('blog-date-iso').value = iso;
+			document.getElementById('blog-date').value = formatBlogDate(iso);
+		}
+
+		function editBlogPost(id) {
+			// Ensure blog section is visible so form elements exist
+			document.querySelectorAll('.section').forEach(function(s) { s.style.display = 'none'; });
+			document.querySelectorAll('.sidebar-menu a').forEach(function(a) { a.classList.remove('active'); });
+			var blogSection = document.getElementById('blog-section');
+			var blogLink = document.querySelector('.sidebar-menu a[href="#blog"]');
+			if (blogSection) blogSection.style.display = 'block';
+			if (blogLink) blogLink.classList.add('active');
+			fetch('api/get-post.php?id=' + encodeURIComponent(id))
+				.then(function(response) {
+					if (!response.ok) throw new Error('Network response was not ok');
+					return response.json();
+				})
+				.then(function(data) {
+					if (!data.success || !data.post) {
+						showAlert('blog-alert', data.message || 'Post not found', 'error');
+						return;
+					}
+					var p = data.post;
+					editingBlogId = p.id;
+					var set = function(id, val) { var el = document.getElementById(id); if (el) el.value = val || ''; };
+					set('blog-post-id', p.id);
+					set('blog-title', p.title);
+					set('blog-category', p.category);
+					set('blog-slug', p.slug);
+					set('blog-date', p.date);
+					set('blog-date-iso', p.date_iso);
+					set('blog-image', p.image);
+					set('blog-author', p.author);
+					set('blog-excerpt', p.excerpt);
+					set('blog-meta-description', p.meta_description);
+					set('blog-meta-keywords', p.meta_keywords);
+					set('blog-content', p.content);
+					var picker = document.getElementById('blog-date-picker');
+					if (picker && p.date_iso) picker.value = p.date_iso;
+					var imgEl = document.getElementById('blog-image');
+					if (imgEl) imgEl.dispatchEvent(new Event('input'));
+					if (blogQuill && p.content !== undefined) blogQuill.root.innerHTML = p.content || '';
+					var pub = document.getElementById('blog-published');
+					if (pub) pub.checked = p.published !== false;
+					var formTitle = document.getElementById('blog-form-title');
+					if (formTitle) formTitle.textContent = 'Edit Post';
+					var submitBtn = document.getElementById('blog-submit-btn');
+					if (submitBtn) submitBtn.textContent = 'Update Post';
+					var cancelBtn = document.getElementById('blog-cancel-btn');
+					if (cancelBtn) cancelBtn.style.display = 'inline-block';
+					var form = document.getElementById('blog-post-form');
+					if (form) form.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+				})
+				.catch(function(err) {
+					showAlert('blog-alert', 'Failed to load post: ' + (err.message || 'Check console'), 'error');
+					console.error('editBlogPost error', err);
+				});
+		}
+
+		function deleteBlogPost(id) {
+			if (!confirm('Are you sure you want to delete this post? This cannot be undone.')) return;
+			fetch('api/delete-post.php', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({ id: id })
+			})
+				.then(response => response.json())
+				.then(data => {
+					if (data.success) {
+						if (data.posts) blogPosts = data.posts;
+						else blogPosts = blogPosts.filter(p => (p.id || '').toString() !== (id || '').toString());
+						displayBlogPosts();
+						showAlert('blog-alert', 'Post deleted successfully.', 'success');
+						if (editingBlogId === id) {
+							editingBlogId = null;
+							document.getElementById('blog-post-form').reset();
+							document.getElementById('blog-form-title').textContent = 'Add New Post';
+							document.getElementById('blog-submit-btn').textContent = 'Add Post';
+							document.getElementById('blog-cancel-btn').style.display = 'none';
+						}
+					} else {
+						showAlert('blog-alert', data.message || 'Delete failed', 'error');
+					}
+				})
+				.catch(err => showAlert('blog-alert', 'Delete failed: ' + err.message, 'error'));
+		}
+
+		document.getElementById('blog-date-picker').addEventListener('change', syncBlogDateFromPicker);
+
+		function setBlogDatePickerToday() {
+			const today = new Date();
+			const iso = today.getFullYear() + '-' + String(today.getMonth() + 1).padStart(2, '0') + '-' + String(today.getDate()).padStart(2, '0');
+			const picker = document.getElementById('blog-date-picker');
+			if (picker && !picker.value) {
+				picker.value = iso;
+				syncBlogDateFromPicker();
+			}
+		}
+
+		document.getElementById('blog-post-form').addEventListener('submit', function(e) {
+			e.preventDefault();
+			syncBlogDateFromPicker();
+			var hiddenContentEl = document.getElementById('blog-content');
+			var rawHtmlBeforeSync = (hiddenContentEl && hiddenContentEl.value) ? hiddenContentEl.value.trim() : '';
+			syncBlogContentFromQuill();
+			// If hidden had raw HTML that Quill stripped (tables, etc.), keep the raw HTML for submit
+			if (rawHtmlBeforeSync && hiddenContentEl) {
+				var afterSync = hiddenContentEl.value.trim();
+				var rawHadTable = /<\s*table[\s>]/i.test(rawHtmlBeforeSync);
+				var afterHasTable = /<\s*table[\s>]/i.test(afterSync);
+				var quillLostContent = afterSync.length < rawHtmlBeforeSync.length * 0.5;
+				if ((rawHadTable && !afterHasTable) || quillLostContent) {
+					hiddenContentEl.value = rawHtmlBeforeSync;
+				}
+			}
+			const idEl = document.getElementById('blog-post-id');
+			const postData = {
+				title: document.getElementById('blog-title').value.trim(),
+				category: document.getElementById('blog-category').value.trim() || 'Uncategorized',
+				slug: document.getElementById('blog-slug').value.trim(),
+				date: document.getElementById('blog-date').value.trim(),
+				date_iso: document.getElementById('blog-date-iso').value.trim(),
+				image: document.getElementById('blog-image').value.trim() || 'assets/images/slide01-min.jpeg',
+				author: document.getElementById('blog-author').value.trim() || 'Admin',
+				excerpt: document.getElementById('blog-excerpt').value.trim(),
+				meta_description: document.getElementById('blog-meta-description').value.trim(),
+				meta_keywords: document.getElementById('blog-meta-keywords').value.trim(),
+				content: document.getElementById('blog-content').value.trim(),
+				published: document.getElementById('blog-published').checked
+			};
+			if (editingBlogId) postData.id = editingBlogId;
+			if (!postData.date_iso && document.getElementById('blog-date-picker').value) {
+				postData.date_iso = document.getElementById('blog-date-picker').value;
+				postData.date = formatBlogDate(postData.date_iso);
+			}
+			if (!postData.title) {
+				showAlert('blog-alert', 'Title is required', 'error');
+				return;
+			}
+			if (!postData.content || postData.content.trim() === '' || postData.content === '<p><br></p>') {
+				showAlert('blog-alert', 'Content is required', 'error');
+				return;
+			}
+			fetch('api/save-post.php', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(postData)
+			})
+				.then(response => response.json())
+				.then(data => {
+					if (data.success && data.post) {
+						showAlert('blog-alert', editingBlogId ? 'Post updated.' : 'Post created.', 'success');
+						if (data.posts) blogPosts = data.posts;
+						else {
+							const idx = blogPosts.findIndex(p => (p.id || '').toString() === (data.post.id || '').toString());
+							if (idx >= 0) blogPosts[idx] = data.post;
+							else blogPosts.push(data.post);
+						}
+						displayBlogPosts();
+						document.getElementById('blog-post-form').reset();
+						document.getElementById('blog-published').checked = true;
+						document.getElementById('blog-meta-description').value = '';
+						document.getElementById('blog-meta-keywords').value = '';
+						if (blogQuill) blogQuill.root.innerHTML = '';
+						document.getElementById('blog-content').value = '';
+						document.getElementById('blog-form-title').textContent = 'Add New Post';
+						document.getElementById('blog-submit-btn').textContent = 'Add Post';
+						document.getElementById('blog-cancel-btn').style.display = 'none';
+						idEl.value = '';
+						editingBlogId = null;
+					} else {
+						showAlert('blog-alert', (data.message || 'Save failed'), 'error');
+					}
+				})
+				.catch(err => showAlert('blog-alert', 'Save failed: ' + err.message, 'error'));
+		});
+
+		document.getElementById('blog-cancel-btn').addEventListener('click', function() {
+			editingBlogId = null;
+			document.getElementById('blog-post-form').reset();
+			document.getElementById('blog-post-id').value = '';
+			document.getElementById('blog-date-picker').value = '';
+			document.getElementById('blog-date').value = '';
+			document.getElementById('blog-date-iso').value = '';
+			document.getElementById('blog-meta-description').value = '';
+			document.getElementById('blog-meta-keywords').value = '';
+			if (blogQuill) blogQuill.root.innerHTML = '';
+			document.getElementById('blog-content').value = '';
+			document.getElementById('blog-form-title').textContent = 'Add New Post';
+			document.getElementById('blog-submit-btn').textContent = 'Add Post';
+			this.style.display = 'none';
+		});
+
+		// Blog Comments
+		function loadBlogComments() {
+			var tbody = document.getElementById('blog-comments-list');
+			if (!tbody) return;
+			tbody.innerHTML = '<tr><td colspan="5" style="text-align: center; padding: 40px; color: #999;">Loading comments...</td></tr>';
+			Promise.all([
+				fetch('api/get-comments.php').then(function(r) { return r.json(); }),
+				fetch('api/get-posts.php').then(function(r) { return r.json(); })
+			]).then(function(results) {
+				var commentsData = results[0];
+				var postsData = results[1];
+				var comments = (commentsData && commentsData.success && commentsData.comments) ? commentsData.comments : [];
+				var posts = (postsData && postsData.success && postsData.posts) ? postsData.posts : [];
+				var postTitles = {};
+				posts.forEach(function(p) {
+					postTitles[(p.id || '').toString()] = p.title || ('Post #' + (p.id || ''));
+				});
+				if (comments.length === 0) {
+					tbody.innerHTML = '<tr><td colspan="5" style="text-align: center; padding: 40px; color: #999;">No comments yet.</td></tr>';
+					return;
+				}
+				tbody.innerHTML = '';
+				comments.forEach(function(c) {
+					var tr = document.createElement('tr');
+					var postTitle = postTitles[(c.post_id || '').toString()] || ('Post #' + (c.post_id || ''));
+					var snippet = (c.comment || '').substring(0, 80);
+					if ((c.comment || '').length > 80) snippet += '…';
+					tr.innerHTML = '<td>' + escapeHtml(postTitle) + '</td><td>' + escapeHtml(c.name || '') + '</td><td>' + escapeHtml(c.date || '') + '</td><td title="' + escapeHtml(c.comment || '') + '">' + escapeHtml(snippet) + '</td><td><button type="button" class="btn-delete" data-comment-id="' + escapeHtml(c.id) + '">Delete</button></td>';
+					tr.querySelector('button.btn-delete').addEventListener('click', function() { deleteBlogComment(this.getAttribute('data-comment-id')); });
+					tbody.appendChild(tr);
+				});
+			}).catch(function(err) {
+				tbody.innerHTML = '<tr><td colspan="5" style="text-align: center; padding: 40px; color: #c53030;">Failed to load comments.</td></tr>';
+				console.error('loadBlogComments', err);
+			});
+		}
+		function loadMerchantStats() {
+			var base = 'https://merchant.ligenpower.com';
+			document.getElementById('merchant-stats-total').textContent = '–';
+			document.getElementById('merchant-stats-active').textContent = '–';
+			document.getElementById('merchant-stats-dealers').textContent = '–';
+			document.getElementById('merchant-stats-distributors').textContent = '–';
+			fetch(base + '/api/dealer-stats')
+				.then(function(r) { return r.json(); })
+				.then(function(d) {
+					if (d && d.success) {
+						document.getElementById('merchant-stats-total').textContent = d.total != null ? d.total : '–';
+						document.getElementById('merchant-stats-active').textContent = d.active != null ? d.active : '–';
+						document.getElementById('merchant-stats-dealers').textContent = d.dealers != null ? d.dealers : '–';
+						document.getElementById('merchant-stats-distributors').textContent = d.distributors != null ? d.distributors : '–';
+					}
+				})
+				.catch(function() {
+					document.getElementById('merchant-stats-total').textContent = '?';
+					document.getElementById('merchant-stats-active').textContent = '?';
+					document.getElementById('merchant-stats-dealers').textContent = '?';
+					document.getElementById('merchant-stats-distributors').textContent = '?';
+				});
+		}
+		function deleteBlogComment(id) {
+			if (!id || !confirm('Remove this comment? This cannot be undone.')) return;
+			fetch('api/delete-comment.php', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({ id: id })
+			})
+				.then(function(r) { return r.json(); })
+				.then(function(data) {
+					if (data.success) {
+						loadBlogComments();
+						showAlert('blog-comments-alert', 'Comment removed.', 'success');
+					} else {
+						showAlert('blog-comments-alert', data.message || 'Delete failed', 'error');
+					}
+				})
+				.catch(function(err) {
+					showAlert('blog-comments-alert', 'Delete failed: ' + (err.message || 'Network error'), 'error');
+				});
+		}
+
+		// Product Management
+		function loadProducts() {
+			const products = JSON.parse(localStorage.getItem('products') || '[]');
+			const tbody = document.getElementById('products-list');
+			if (products.length === 0) {
+				// Add default electric cycle product
+				const defaultProduct = {
+					id: 'electric-cycle-1',
+					name: 'LIGEN E-WAY Electric Cycle',
+					price: 25000,
+					image: 'assets/images/cycleproduct.png',
+					url: 'electric-cycle',
+					description: 'Premium Electric Cycle with Patented BMS Technology',
+					stock: 10,
+					active: true
+				};
+				products.push(defaultProduct);
+				localStorage.setItem('products', JSON.stringify(products));
+			}
+			displayProducts(products);
+		}
+
+		function displayProducts(products) {
+			const tbody = document.getElementById('products-list');
+			tbody.innerHTML = '';
+			products.forEach(product => {
+				const tr = document.createElement('tr');
+				tr.innerHTML = `
+					<td>${product.name}</td>
+					<td>₹${product.price.toLocaleString()}</td>
+					<td>${product.stock || 'N/A'}</td>
+					<td><span class="badge ${product.active ? 'badge-success' : 'badge-danger'}">${product.active ? 'Active' : 'Inactive'}</span></td>
+					<td>
+						<div class="table-actions">
+							<button onclick="editProduct('${product.id}')" class="btn-edit">Edit</button>
+							<button onclick="deleteProduct('${product.id}')" class="btn-delete">Delete</button>
+						</div>
+					</td>
+				`;
+				tbody.appendChild(tr);
+			});
+		}
+
+		document.getElementById('product-form').addEventListener('submit', function(e) {
+			e.preventDefault();
+			const products = JSON.parse(localStorage.getItem('products') || '[]');
+			const product = {
+				id: 'product-' + Date.now(),
+				name: document.getElementById('product-name').value,
+				price: parseFloat(document.getElementById('product-price').value),
+				image: document.getElementById('product-image').value,
+				url: document.getElementById('product-url').value,
+				description: document.getElementById('product-description').value,
+				stock: parseInt(document.getElementById('product-stock').value) || 0,
+				active: true
+			};
+			products.push(product);
+			localStorage.setItem('products', JSON.stringify(products));
+			displayProducts(products);
+			showAlert('products-alert', 'Product added successfully!', 'success');
+			document.getElementById('product-form').reset();
+			updateDashboardStats();
+		});
+
+		function editProduct(id) {
+			const products = JSON.parse(localStorage.getItem('products') || '[]');
+			const product = products.find(p => p.id === id);
+			if (product) {
+				document.getElementById('product-name').value = product.name;
+				document.getElementById('product-price').value = product.price;
+				document.getElementById('product-image').value = product.image || '';
+				document.getElementById('product-url').value = product.url || '';
+				document.getElementById('product-description').value = product.description || '';
+				document.getElementById('product-stock').value = product.stock || '';
+				// Scroll to form
+				document.getElementById('product-form').scrollIntoView({ behavior: 'smooth' });
+			}
+		}
+
+		function deleteProduct(id) {
+			if (confirm('Are you sure you want to delete this product?')) {
+				const products = JSON.parse(localStorage.getItem('products') || '[]');
+				const filtered = products.filter(p => p.id !== id);
+				localStorage.setItem('products', JSON.stringify(filtered));
+				displayProducts(filtered);
+				updateDashboardStats();
+			}
+		}
+
+		// Orders Management
+		function loadOrders() {
+			const orders = JSON.parse(localStorage.getItem('orders') || '[]');
+			displayOrders(orders);
+		}
+
+		function displayOrders(orders) {
+			const tbody = document.getElementById('orders-list');
+			if (orders.length === 0) {
+				tbody.innerHTML = '<tr><td colspan="7" style="text-align: center; padding: 40px; color: #999;">No orders yet</td></tr>';
+				return;
+			}
+			tbody.innerHTML = '';
+			orders.forEach(order => {
+				const tr = document.createElement('tr');
+				tr.innerHTML = `
+					<td>${order.id}</td>
+					<td>${order.productName}</td>
+					<td>${order.customerName}<br><small>${order.customerEmail}</small></td>
+					<td>₹${order.amount.toLocaleString()}</td>
+					<td><span class="badge ${order.status === 'completed' ? 'badge-success' : 'badge-danger'}">${order.status}</span></td>
+					<td>${new Date(order.date).toLocaleDateString()}</td>
+					<td>
+						<button onclick="viewOrder('${order.id}')" style="padding: 6px 12px; background: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer;">View</button>
+					</td>
+				`;
+				tbody.appendChild(tr);
+			});
+		}
+
+		function viewOrder(id) {
+			const orders = JSON.parse(localStorage.getItem('orders') || '[]');
+			const order = orders.find(o => o.id === id);
+			if (order) {
+				alert('Order Details:\n\nOrder ID: ' + order.id + '\nProduct: ' + order.productName + '\nCustomer: ' + order.customerName + '\nEmail: ' + order.customerEmail + '\nPhone: ' + order.customerPhone + '\nAmount: ₹' + order.amount + '\nStatus: ' + order.status);
+			}
+		}
+
+		// Dashboard Stats
+		function updateDashboardStats() {
+			const products = JSON.parse(localStorage.getItem('products') || '[]');
+			const orders = JSON.parse(localStorage.getItem('orders') || '[]');
+			const totalRevenue = orders.reduce((sum, order) => sum + (order.amount || 0), 0);
+			
+			document.getElementById('total-products').textContent = products.length;
+			document.getElementById('total-orders').textContent = orders.length;
+			document.getElementById('total-revenue').textContent = '₹' + totalRevenue.toLocaleString();
+		}
+
+		// Alert Helper
+		function showAlert(alertId, message, type) {
+			const alert = document.getElementById(alertId);
+			alert.textContent = message;
+			alert.className = 'alert alert-' + type;
+			alert.style.display = 'block';
+			setTimeout(() => {
+				alert.style.display = 'none';
+			}, 5000);
+		}
+	</script>
+</body>
+</html>

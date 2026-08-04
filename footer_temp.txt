@@ -1,0 +1,87 @@
+﻿    		<footer data-elementor-type="footer" data-elementor-id="420" class="elementor elementor-420 elementor-location-footer" data-elementor-post-type="elementor_library" style="background-image: url('assets/images/foterimage.png'); background-size: cover; background-position: center; background-repeat: no-repeat; color: #ffffff;">
+					<section class="elementor-section elementor-top-section elementor-element elementor-element-6dbb2f7 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="6dbb2f7" data-element_type="section" style="background-image: url('assets/images/foterimage.png'); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 60px 0 20px 0;">
+						<div class="elementor-container elementor-column-gap-extended" style="max-width: 1400px; margin: 0 auto; padding: 0 60px;">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-52550aa" data-id="52550aa" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-aaa5661 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="aaa5661" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-extended">
+					<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-about-us-footer" data-id="about-us-footer" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-about-us-title elementor-widget elementor-widget-heading" data-id="about-us-title" data-element_type="widget" data-widget_type="heading.default">
+					<h3 style="color: #ffffff; font-size: 18px; font-weight: 700; margin-bottom: 20px;">About Us</h3>				</div>
+				<div class="elementor-element elementor-element-about-us-content elementor-widget elementor-widget-text-editor" data-id="about-us-content" data-element_type="widget" data-widget_type="text-editor.default">
+					<p style="color: #cccccc; font-size: 14px; line-height: 1.6; margin-bottom: 15px;">We are a team of young, energetic entrepreneurs with a solid engineering background and extensive technological expertise. Our strong commitment lies in providing green and clean energy alternatives to the masses.</p>
+					<p style="color: #cccccc; font-size: 14px; margin: 0;">Mail: <a href="mailto:info@ligenpower.com" style="color: #4CAF50; text-decoration: none;">info@ligenpower.com</a></p>				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-information-footer" data-id="information-footer" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-information-title elementor-widget elementor-widget-heading" data-id="information-title" data-element_type="widget" data-widget_type="heading.default">
+					<h3 style="color: #ffffff; font-size: 18px; font-weight: 700; margin-bottom: 20px; border-bottom: 2px solid #4CAF50; padding-bottom: 10px; display: inline-block;">INFORMATION</h3>				</div>
+				<div class="elementor-element elementor-element-information-links elementor-widget elementor-widget-text-editor" data-id="information-links" data-element_type="widget" data-widget_type="text-editor.default">
+					<ul style="list-style: none; padding: 0; margin: 0;">
+						<li style="margin-bottom: 12px;"><a href="#/" style="color: #cccccc; text-decoration: none; font-size: 14px; display: flex; align-items: center; gap: 8px;"><span style="color: #4CAF50;">></span> Home</a></li>
+						<li style="margin-bottom: 12px;"><a href="about.html" style="color: #cccccc; text-decoration: none; font-size: 14px; display: flex; align-items: center; gap: 8px;"><span style="color: #4CAF50;">></span> About Us</a></li>
+						<li style="margin-bottom: 12px;"><a href="#/blog/" style="color: #cccccc; text-decoration: none; font-size: 14px; display: flex; align-items: center; gap: 8px;"><span style="color: #4CAF50;">></span> Blogs</a></li>
+						<li style="margin-bottom: 12px;"><a href="#/contact-us/" style="color: #cccccc; text-decoration: none; font-size: 14px; display: flex; align-items: center; gap: 8px;"><span style="color: #4CAF50;">></span> Contact Us</a></li>
+					</ul>				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-30 elementor-inner-column elementor-element elementor-element-contact-footer" data-id="contact-footer" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-contact-title elementor-widget elementor-widget-heading" data-id="contact-title" data-element_type="widget" data-widget_type="heading.default">
+					<h3 style="color: #ffffff; font-size: 18px; font-weight: 700; margin-bottom: 20px;">CONTACT US</h3>				</div>
+				<div class="elementor-element elementor-element-contact-content elementor-widget elementor-widget-text-editor" data-id="contact-content" data-element_type="widget" data-widget_type="text-editor.default">
+					<div style="color: #cccccc; font-size: 14px; line-height: 1.8;">
+						<p style="margin-bottom: 15px;"><strong style="color: #ffffff;">Registered Office:</strong><br>Amossys Portable Power LLP,<br>Shed No-B4-05(FF), B4-06(FF), B4-07(FF) & B4-08(FF), BIADA Industrial Area, Sikandarpur, Bihta, Patna, Bihar - 801103</p>
+						<p style="margin-bottom: 15px;"><strong style="color: #ffffff;">R&D Center:</strong><br>Amossys Portable Power LLP, 1st Floor,<br>Incubation Center, Indian Institute of Technology<br>Patna, Amhara Road, BIHTA - 801106, Patna, Bihar</p>
+						<p style="margin-bottom: 5px;"><strong style="color: #ffffff;">Support:</strong> <a href="tel:+919031086083" style="color: #4CAF50; text-decoration: none;">+91-9031086083</a></p>
+						<p style="margin: 0;"><strong style="color: #ffffff;">Sales:</strong> <a href="tel:+919031086082" style="color: #4CAF50; text-decoration: none;">+91-9031086082</a></p>
+					</div>				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-logos-footer" data-id="logos-footer" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-logo-amossys elementor-widget elementor-widget-image" data-id="logo-amossys" data-element_type="widget" data-widget_type="image.default">
+							<img src="assets/images/amossyslogo.png" alt="AMOSSYS PORTABLE POWER" style="max-width: 100%; height: auto; display: block;">
+						</div>
+				<div class="elementor-element elementor-element-logo-certifications elementor-widget elementor-widget-image" data-id="logo-certifications" data-element_type="widget" data-widget_type="image.default">
+							<img src="assets/images/patient.png" alt="Made In India - Intellectual Property India" style="max-width: 100%; height: auto; display: block;">
+						</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<br>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-d140376 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="d140376" data-element_type="section" style="display: flex; align-items: center; margin-top: 0; padding-top: 0; padding-bottom: 20px;">
+						<div class="elementor-container elementor-column-gap-custom" style="max-width: 1400px; margin: 0 auto; padding: 0 60px 10px 60px; width: 100%; display: flex; flex-direction: column;">
+							<hr style="border: none; border-top: 1px solid rgba(255,255,255,0.2); margin: 0 0 15px 0; width: 100%;">
+							<div style="display: flex; align-items: center; width: 100%;">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-9cd128c" data-id="9cd128c" data-element_type="column" style="display: flex; align-items: center; padding: 0;">
+			<div class="elementor-widget-wrap elementor-element-populated" style="width: 100%; padding: 0;">
+						<div class="elementor-element elementor-element-e142251 elementor-widget elementor-widget-text-editor" data-id="e142251" data-element_type="widget" data-widget_type="text-editor.default" style="margin: 0;">
+									<p style="color: #cccccc; font-size: 14px; margin: 0; padding: 0; line-height: 1.5;">Copyright Â© 2024, All Rights Reserved By <a href="https://neksoftconsultancy.com/" target="_blank" rel="noopener noreferrer" style="color: #4CAF50; text-decoration: none;">Neksoft Consultancy Services</a></p>								</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-c4d7671" data-id="c4d7671" data-element_type="column" style="display: flex; align-items: center; justify-content: flex-end; padding: 0;">
+			<div class="elementor-widget-wrap elementor-element-populated" style="width: 100%; padding: 0;">
+						<div class="elementor-element elementor-element-ecd1420 elementor-widget elementor-widget-text-editor" data-id="ecd1420" data-element_type="widget" data-widget_type="text-editor.default" style="margin: 0;">
+									<div style="display: flex; justify-content: flex-end; align-items: center; gap: 20px; flex-wrap: wrap; line-height: 1.5; margin: 0; padding: 0;">
+										<a href="#/terms-conditions/" style="color: #cccccc; text-decoration: none; font-size: 14px; white-space: nowrap;">Terms & Conditions</a>
+										<a href="#/privacy-policy/" style="color: #cccccc; text-decoration: none; font-size: 14px; white-space: nowrap;">Privacy Policy</a>
+										<a href="#/refund-policy/" style="color: #cccccc; text-decoration: none; font-size: 14px; white-space: nowrap;">Refund Policy</a>
+										<a href="#/sitemap/" style="color: #cccccc; text-decoration: none; font-size: 14px; white-space: nowrap;">Site Map</a>
+									</div>								</div>
+					</div>
+		</div>
+							</div>
+					</div>
+		</div>
+							</div>
+					</div>
+		</section>
+					</div>
+		</div>
+					</div>
+		</section>
+				</footer>

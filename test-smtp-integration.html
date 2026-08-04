@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMTP Integration Test - Ligen Power®</title>
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f6;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1a1a1a;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .test-section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 2px solid #e5e5e5;
+            border-radius: 8px;
+        }
+        .test-section h2 {
+            color: #333;
+            margin-top: 0;
+            font-size: 20px;
+        }
+        .status {
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-weight: 600;
+        }
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .status.info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        .status.warning {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+        button {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 5px;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(76,175,80,0.3);
+        }
+        pre {
+            background: #1a1a1a;
+            color: #00ff00;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-size: 12px;
+            margin: 10px 0;
+        }
+        .check-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 10px 0;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 6px;
+        }
+        .check-item .icon {
+            font-size: 20px;
+        }
+        .check-item.success .icon { color: #4CAF50; }
+        .check-item.error .icon { color: #f56565; }
+        .check-item.warning .icon { color: #ed8936; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 SMTP Integration Test</h1>
+        <p style="text-align: center; color: #666; margin-bottom: 30px;">Testing SMTP configuration alignment between Dashboard and Website</p>
+        
+        <div class="test-section">
+            <h2>1. Backend Configuration Check</h2>
+            <div id="backend-check"></div>
+            <button onclick="checkBackendConfig()">Check Backend Config</button>
+        </div>
+        
+        <div class="test-section">
+            <h2>2. LocalStorage Configuration Check</h2>
+            <div id="localstorage-check"></div>
+            <button onclick="checkLocalStorageConfig()">Check LocalStorage Config</button>
+        </div>
+        
+        <div class="test-section">
+            <h2>3. Configuration Alignment Check</h2>
+            <div id="alignment-check"></div>
+            <button onclick="checkAlignment()">Check Alignment</button>
+        </div>
+        
+        <div class="test-section">
+            <h2>4. API Endpoint Test</h2>
+            <div id="api-test"></div>
+            <button onclick="testAPIEndpoints()">Test API Endpoints</button>
+        </div>
+        
+        <div class="test-section">
+            <h2>5. Email Sending Test</h2>
+            <input type="email" id="test-email" placeholder="Enter test email" value="doprudra@gmail.com" style="width: 100%; padding: 12px; border: 2px solid #e5e5e5; border-radius: 8px; margin: 10px 0;">
+            <div id="email-test"></div>
+            <button onclick="testEmailSending()">Send Test Email</button>
+        </div>
+    </div>
+
+    <script>
+        async function checkBackendConfig() {
+            const div = document.getElementById('backend-check');
+            div.innerHTML = '<div class="status info">Checking backend configuration...</div>';
+            
+            try {
+                const response = await fetch('api/get-smtp-config.php');
+                const data = await response.json();
+                
+                if (data.success && data.config) {
+                    div.innerHTML = `
+                        <div class="status success">✅ Backend configuration found!</div>
+                        <pre>${JSON.stringify(data.config, null, 2)}</pre>
+                        <div class="check-item success">
+                            <span class="icon">✓</span>
+                            <span>Host: ${data.config.host}</span>
+                        </div>
+                        <div class="check-item success">
+                            <span class="icon">✓</span>
+                            <span>Port: ${data.config.port}</span>
+                        </div>
+                        <div class="check-item success">
+                            <span class="icon">✓</span>
+                            <span>From Email: ${data.config.fromEmail}</span>
+                        </div>
+                        <div class="check-item success">
+                            <span class="icon">✓</span>
+                            <span>Encryption: ${data.config.encryption}</span>
+                        </div>
+                    `;
+                } else {
+                    div.innerHTML = `
+                        <div class="status error">❌ No backend configuration found</div>
+                        <p>${data.message || 'SMTP not configured in backend'}</p>
+                    `;
+                }
+            } catch (error) {
+                div.innerHTML = `<div class="status error">❌ Error: ${error.message}</div>`;
+            }
+        }
+        
+        function checkLocalStorageConfig() {
+            const div = document.getElementById('localstorage-check');
+            const config = localStorage.getItem('smtp_config');
+            
+            if (config) {
+                try {
+                    const parsed = JSON.parse(config);
+                    div.innerHTML = `
+                        <div class="status success">✅ LocalStorage configuration found!</div>
+                        <pre>${JSON.stringify(parsed, null, 2)}</pre>
+                        <div class="check-item success">
+                            <span class="icon">✓</span>
+                            <span>Host: ${parsed.host || 'N/A'}</span>
+                        </div>
+                        <div class="check-item success">
+                            <span class="icon">✓</span>
+                            <span>Port: ${parsed.port || 'N/A'}</span>
+                        </div>
+                        <div class="check-item success">
+                            <span class="icon">✓</span>
+                            <span>From Email: ${parsed.fromEmail || 'N/A'}</span>
+                        </div>
+                    `;
+                } catch (e) {
+                    div.innerHTML = `<div class="status error">❌ Invalid JSON in LocalStorage</div>`;
+                }
+            } else {
+                div.innerHTML = `<div class="status warning">⚠️ No LocalStorage configuration found</div>`;
+            }
+        }
+        
+        async function checkAlignment() {
+            const div = document.getElementById('alignment-check');
+            div.innerHTML = '<div class="status info">Checking configuration alignment...</div>';
+            
+            try {
+                // Get backend config
+                const backendResponse = await fetch('api/get-smtp-config.php');
+                const backendData = await backendResponse.json();
+                
+                // Get localStorage config
+                const localConfig = localStorage.getItem('smtp_config');
+                const localParsed = localConfig ? JSON.parse(localConfig) : null;
+                
+                let html = '';
+                
+                if (backendData.success && backendData.config && localParsed) {
+                    const backend = backendData.config;
+                    const local = localParsed;
+                    
+                    const checks = [
+                        { name: 'Host', backend: backend.host, local: local.host },
+                        { name: 'Port', backend: backend.port, local: local.port },
+                        { name: 'Username', backend: backend.username, local: local.username },
+                        { name: 'From Email', backend: backend.fromEmail, local: local.fromEmail },
+                        { name: 'Encryption', backend: backend.encryption, local: local.encryption }
+                    ];
+                    
+                    let allMatch = true;
+                    checks.forEach(check => {
+                        const match = check.backend === check.local;
+                        allMatch = allMatch && match;
+                        html += `
+                            <div class="check-item ${match ? 'success' : 'error'}">
+                                <span class="icon">${match ? '✓' : '✗'}</span>
+                                <span><strong>${check.name}:</strong> Backend: "${check.backend || 'N/A'}" | Local: "${check.local || 'N/A'}"</span>
+                            </div>
+                        `;
+                    });
+                    
+                    if (allMatch) {
+                        div.innerHTML = `
+                            <div class="status success">✅ Perfect Alignment!</div>
+                            <p>Backend and LocalStorage configurations match perfectly.</p>
+                            ${html}
+                        `;
+                    } else {
+                        div.innerHTML = `
+                            <div class="status warning">⚠️ Configuration Mismatch</div>
+                            <p>Some values differ between backend and LocalStorage.</p>
+                            ${html}
+                        `;
+                    }
+                } else if (backendData.success && backendData.config) {
+                    div.innerHTML = `
+                        <div class="status warning">⚠️ Only Backend Config Found</div>
+                        <p>Backend has configuration but LocalStorage is empty. This is okay - website will load from backend.</p>
+                    `;
+                } else if (localParsed) {
+                    div.innerHTML = `
+                        <div class="status warning">⚠️ Only LocalStorage Config Found</div>
+                        <p>LocalStorage has configuration but backend is empty. Dashboard should save to backend.</p>
+                    `;
+                } else {
+                    div.innerHTML = `
+                        <div class="status error">❌ No Configuration Found</div>
+                        <p>Neither backend nor LocalStorage has SMTP configuration.</p>
+                    `;
+                }
+            } catch (error) {
+                div.innerHTML = `<div class="status error">❌ Error: ${error.message}</div>`;
+            }
+        }
+        
+        async function testAPIEndpoints() {
+            const div = document.getElementById('api-test');
+            div.innerHTML = '<div class="status info">Testing API endpoints...</div>';
+            
+            let html = '';
+            
+            // Test get-smtp-config.php
+            try {
+                const getResponse = await fetch('api/get-smtp-config.php');
+                const getData = await getResponse.json();
+                html += `
+                    <div class="check-item ${getResponse.ok ? 'success' : 'error'}">
+                        <span class="icon">${getResponse.ok ? '✓' : '✗'}</span>
+                        <span><strong>GET api/get-smtp-config.php:</strong> ${getResponse.ok ? 'OK' : 'Failed'} (${getResponse.status})</span>
+                    </div>
+                `;
+            } catch (e) {
+                html += `
+                    <div class="check-item error">
+                        <span class="icon">✗</span>
+                        <span><strong>GET api/get-smtp-config.php:</strong> Error - ${e.message}</span>
+                    </div>
+                `;
+            }
+            
+            // Test send-email.php (without actually sending)
+            try {
+                const sendResponse = await fetch('api/send-email.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        to: 'test@test.com',
+                        subject: 'Test',
+                        message: 'Test'
+                    })
+                });
+                const sendData = await sendResponse.json();
+                // We expect it to fail (no config or invalid email), but endpoint should be accessible
+                html += `
+                    <div class="check-item ${sendResponse.status === 400 || sendResponse.status === 405 ? 'success' : 'error'}">
+                        <span class="icon">${sendResponse.status === 400 || sendResponse.status === 405 ? '✓' : '✗'}</span>
+                        <span><strong>POST api/send-email.php:</strong> Endpoint accessible (${sendResponse.status})</span>
+                    </div>
+                `;
+            } catch (e) {
+                html += `
+                    <div class="check-item error">
+                        <span class="icon">✗</span>
+                        <span><strong>POST api/send-email.php:</strong> Error - ${e.message}</span>
+                    </div>
+                `;
+            }
+            
+            div.innerHTML = `
+                <div class="status info">API Endpoint Test Results:</div>
+                ${html}
+            `;
+        }
+        
+        async function testEmailSending() {
+            const div = document.getElementById('email-test');
+            const testEmail = document.getElementById('test-email').value.trim();
+            
+            if (!testEmail) {
+                div.innerHTML = '<div class="status error">Please enter a test email address</div>';
+                return;
+            }
+            
+            div.innerHTML = '<div class="status info">Sending test email...</div>';
+            
+            try {
+                // Load config (same way website forms do)
+                let config = null;
+                
+                // Try localStorage first (like quote-modal.js and form-handler.js)
+                const localConfig = localStorage.getItem('smtp_config');
+                if (localConfig) {
+                    config = JSON.parse(localConfig);
+                } else {
+                    // Try backend API
+                    const response = await fetch('api/get-smtp-config.php');
+                    const data = await response.json();
+                    if (data.success && data.config) {
+                        config = data.config;
+                    }
+                }
+                
+                if (!config || !config.host) {
+                    div.innerHTML = '<div class="status error">❌ SMTP not configured. Please configure in dashboard first.</div>';
+                    return;
+                }
+                
+                // Send email (same way website forms do)
+                const sendResponse = await fetch('api/send-email.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        to: testEmail,
+                        subject: 'SMTP Integration Test - Ligen Power®',
+                        message: `
+                            <h2>SMTP Integration Test</h2>
+                            <p>This is a test email to verify SMTP integration between Dashboard and Website.</p>
+                            <hr>
+                            <p><strong>Config Source:</strong> ${localConfig ? 'LocalStorage' : 'Backend API'}</p>
+                            <p><strong>SMTP Host:</strong> ${config.host}</p>
+                            <p><strong>SMTP Port:</strong> ${config.port}</p>
+                            <p><strong>From Email:</strong> ${config.fromEmail}</p>
+                            <p><strong>Time Sent:</strong> ${new Date().toLocaleString()}</p>
+                            <hr>
+                            <p><small>If you received this email, the SMTP integration is working correctly! ✅</small></p>
+                        `,
+                        config: config
+                    })
+                });
+                
+                const result = await sendResponse.json();
+                
+                if (result.success) {
+                    div.innerHTML = `
+                        <div class="status success">✅ Test email sent successfully!</div>
+                        <p>Email sent to: <strong>${testEmail}</strong></p>
+                        <p>Please check your inbox (and spam folder) for the test email.</p>
+                        <pre>${JSON.stringify(result, null, 2)}</pre>
+                    `;
+                } else {
+                    div.innerHTML = `
+                        <div class="status error">❌ Failed to send test email</div>
+                        <p>Error: ${result.message || 'Unknown error'}</p>
+                        <pre>${JSON.stringify(result, null, 2)}</pre>
+                    `;
+                }
+            } catch (error) {
+                div.innerHTML = `<div class="status error">❌ Error: ${error.message}</div>`;
+            }
+        }
+        
+        // Auto-run checks on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                checkBackendConfig();
+                checkLocalStorageConfig();
+            }, 500);
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,44 @@
+[
+    {
+        "id": "1",
+        "label": "About Us",
+        "url": "about-us.html",
+        "icon": "home",
+        "order": 1,
+        "active": true
+    },
+    {
+        "id": "2",
+        "label": "Dealers and Distributors",
+        "url": "#\/dealers-distributors\/",
+        "icon": "users",
+        "order": 2,
+        "active": false
+    },
+    {
+        "id": "3",
+        "label": "Certifications",
+        "url": "certificates.html",
+        "icon": "certificate",
+        "order": 3,
+        "active": true
+    },
+    {
+        "id": "4",
+        "label": "Store Locator",
+        "url": "https:\/\/merchant.ligenpower.com\/",
+        "icon": "map-pin",
+        "order": 4,
+        "active": true,
+        "target": "_blank"
+    },
+    {
+        "id": "5",
+        "label": "Datasheets",
+        "url": "https:\/\/ligenpower.com\/datasheet.html",
+        "icon": "link",
+        "order": 5,
+        "active": true,
+        "target": "_self"
+    }
+]

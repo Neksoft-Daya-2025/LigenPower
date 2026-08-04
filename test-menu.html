@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu Test</title>
+    <style>
+        body { margin: 0; padding: 20px; font-family: Arial; }
+        .test-result { padding: 10px; margin: 10px 0; border-radius: 5px; }
+        .success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .error { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .info { background: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+        pre { background: #f4f4f4; padding: 10px; border-radius: 5px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <h1>Mobile Menu Check</h1>
+    <div id="results"></div>
+    
+    <script>
+        function checkMenu() {
+            const results = document.getElementById('results');
+            results.innerHTML = '';
+            
+            function addResult(type, message) {
+                const div = document.createElement('div');
+                div.className = `test-result ${type}`;
+                div.innerHTML = message;
+                results.appendChild(div);
+            }
+            
+            // Check 1: Menu Container
+            const container = document.querySelector('[data-mobile-menu-container="true"]');
+            if (container) {
+                addResult('success', '✅ Menu container found in DOM');
+                const computed = window.getComputedStyle(container);
+                addResult('info', `📍 Position: ${computed.position}, Right: ${computed.right}, Display: ${computed.display}, Visibility: ${computed.visibility}`);
+                addResult('info', `📐 Size: ${computed.width} x ${computed.height}, Z-index: ${computed.zIndex}`);
+                addResult('info', `🎨 Background: ${computed.background}, Opacity: ${computed.opacity}`);
+                addResult('info', `🏷️ Classes: ${container.className.substring(0, 100)}...`);
+            } else {
+                addResult('error', '❌ Menu container NOT found!');
+            }
+            
+            // Check 2: Burger Button
+            const toggle = document.querySelector('[data-mobile-menu-toggle="true"]');
+            if (toggle) {
+                addResult('success', '✅ Burger button found in DOM');
+                const toggleComputed = window.getComputedStyle(toggle);
+                addResult('info', `📍 Button Display: ${toggleComputed.display}, Visibility: ${toggleComputed.visibility}`);
+                const rect = toggle.getBoundingClientRect();
+                addResult('info', `📐 Button Position: top=${rect.top}px, left=${rect.left}px, width=${rect.width}px, height=${rect.height}px`);
+            } else {
+                addResult('error', '❌ Burger button NOT found!');
+            }
+            
+            // Check 3: Menu Widget
+            const widget = document.querySelector('.elementor-element-780ca1f');
+            if (widget) {
+                addResult('success', '✅ Menu widget found');
+                const widgetComputed = window.getComputedStyle(widget);
+                addResult('info', `📍 Widget Display: ${widgetComputed.display}, Visibility: ${widgetComputed.visibility}`);
+                addResult('info', `🏷️ Widget Classes: ${widget.className.substring(0, 150)}...`);
+            } else {
+                addResult('error', '❌ Menu widget NOT found!');
+            }
+            
+            // Check 4: JavaScript Functions
+            if (window.LigenMobileMenu) {
+                addResult('success', '✅ LigenMobileMenu object exists');
+                addResult('info', `📊 Menu isOpen: ${window.LigenMobileMenu.isOpen}`);
+            } else {
+                addResult('error', '❌ LigenMobileMenu object NOT found!');
+            }
+            
+            if (window.openMobileMenu) {
+                addResult('success', '✅ openMobileMenu() function exists');
+            } else {
+                addResult('error', '❌ openMobileMenu() function NOT found!');
+            }
+            
+            // Check 5: CSS Rules
+            if (container) {
+                const hasActiveClass = container.classList.contains('mobile-menu-active');
+                addResult(hasActiveClass ? 'success' : 'info', 
+                    hasActiveClass ? '✅ Menu is ACTIVE (visible)' : 'ℹ️ Menu is INACTIVE (hidden - this is normal)');
+            }
+        }
+        
+        // Run check after page loads
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', checkMenu);
+        } else {
+            checkMenu();
+        }
+        
+        // Auto-refresh every 2 seconds to catch dynamic loading
+        setInterval(checkMenu, 2000);
+    </script>
+</body>
+</html>
+

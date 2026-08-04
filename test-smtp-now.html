@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test SMTP - Ligen Power®</title>
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f6;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #1a1a1a;
+            margin-bottom: 20px;
+        }
+        .status {
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .status.info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        button {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            border: none;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 18px;
+            margin: 10px;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(76,175,80,0.3);
+        }
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        pre {
+            background: #1a1a1a;
+            color: #00ff00;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-size: 12px;
+            text-align: left;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📧 SMTP Email Test</h1>
+        <p style="color: #666; margin-bottom: 30px;">Testing email functionality with configured SMTP settings</p>
+        
+        <div id="status-message"></div>
+        
+        <button onclick="testEmail()" id="test-btn">Send Test Email to doprudra@gmail.com</button>
+    </div>
+
+    <script>
+        async function testEmail() {
+            const statusDiv = document.getElementById('status-message');
+            const testBtn = document.getElementById('test-btn');
+            
+            statusDiv.innerHTML = '<div class="status info">⏳ Sending test email...</div>';
+            testBtn.disabled = true;
+            testBtn.textContent = 'Sending...';
+            
+            try {
+                // Load SMTP config
+                let smtpConfig = null;
+                
+                // Try localStorage first
+                const localConfig = localStorage.getItem('smtp_config');
+                if (localConfig) {
+                    smtpConfig = JSON.parse(localConfig);
+                } else {
+                    // Try backend API
+                    const configResponse = await fetch('api/get-smtp-config.php');
+                    const configData = await configResponse.json();
+                    if (configData.success && configData.config) {
+                        smtpConfig = configData.config;
+                        localStorage.setItem('smtp_config', JSON.stringify(smtpConfig));
+                    }
+                }
+                
+                // If still no config, use the hardcoded values
+                if (!smtpConfig) {
+                    smtpConfig = {
+                        host: 'smtp.hostinger.com',
+                        port: 465,
+                        username: 'info@clasmentor.in',
+                        password: '',
+                        fromEmail: 'info@clasmentor.in',
+                        fromName: 'Ligen Power®',
+                        encryption: 'ssl'
+                    };
+                    // Save it
+                    await fetch('api/save-smtp-config.php', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(smtpConfig)
+                    });
+                    localStorage.setItem('smtp_config', JSON.stringify(smtpConfig));
+                }
+                
+                statusDiv.innerHTML += '<div class="status info">📤 SMTP Config loaded. Sending email...</div>';
+                
+                // Send test email
+                const response = await fetch('api/send-email.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        to: 'doprudra@gmail.com',
+                        subject: 'Test Email from Ligen Power® - SMTP Configuration',
+                        message: `
+                            <h2>✅ SMTP Configuration Test</h2>
+                            <p>This is a test email sent from the Ligen Power® website.</p>
+                            <hr>
+                            <p><strong>SMTP Host:</strong> ${smtpConfig.host}</p>
+                            <p><strong>SMTP Port:</strong> ${smtpConfig.port}</p>
+                            <p><strong>Encryption:</strong> ${smtpConfig.encryption.toUpperCase()}</p>
+                            <p><strong>From Email:</strong> ${smtpConfig.fromEmail}</p>
+                            <p><strong>From Name:</strong> ${smtpConfig.fromName}</p>
+                            <hr>
+                            <p><strong>Time Sent:</strong> ${new Date().toLocaleString()}</p>
+                            <p><small>If you received this email, the SMTP configuration is working correctly! 🎉</small></p>
+                        `,
+                        config: smtpConfig
+                    })
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    statusDiv.innerHTML = `
+                        <div class="status success">
+                            ✅ <strong>SUCCESS!</strong><br>
+                            Test email sent successfully to doprudra@gmail.com<br>
+                            Please check the inbox (and spam folder) for the test email.
+                        </div>
+                        <pre>${JSON.stringify(result, null, 2)}</pre>
+                    `;
+                } else {
+                    statusDiv.innerHTML = `
+                        <div class="status error">
+                            ❌ <strong>FAILED</strong><br>
+                            ${result.message || 'Unknown error occurred'}
+                        </div>
+                        <pre>${JSON.stringify(result, null, 2)}</pre>
+                        <div class="status info">
+                            <strong>Note:</strong> If PHPMailer is not installed, the system will try to use PHP mail() function which may not work for SMTP. 
+                            Consider installing PHPMailer via Composer for better email reliability.
+                        </div>
+                    `;
+                }
+                
+            } catch (error) {
+                statusDiv.innerHTML = `
+                    <div class="status error">
+                        ❌ <strong>ERROR</strong><br>
+                        ${error.message}
+                    </div>
+                `;
+                console.error('Error:', error);
+            } finally {
+                testBtn.disabled = false;
+                testBtn.textContent = 'Send Test Email to doprudra@gmail.com';
+            }
+        }
+        
+        // Auto-load config on page load
+        window.addEventListener('DOMContentLoaded', async function() {
+            const statusDiv = document.getElementById('status-message');
+            statusDiv.innerHTML = '<div class="status info">📋 Loading SMTP configuration...</div>';
+            
+            try {
+                const response = await fetch('api/get-smtp-config.php');
+                const data = await response.json();
+                
+                if (data.success && data.config) {
+                    statusDiv.innerHTML = `
+                        <div class="status success">
+                            ✅ SMTP Configuration Found<br>
+                            <strong>Host:</strong> ${data.config.host}<br>
+                            <strong>Port:</strong> ${data.config.port}<br>
+                            <strong>From:</strong> ${data.config.fromEmail}
+                        </div>
+                    `;
+                    localStorage.setItem('smtp_config', JSON.stringify(data.config));
+                } else {
+                    statusDiv.innerHTML = `
+                        <div class="status info">
+                            ℹ️ No SMTP config found. Will use default values when testing.
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                statusDiv.innerHTML = `
+                    <div class="status info">
+                        ℹ️ Could not load config from backend. Will use default values when testing.
+                    </div>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>

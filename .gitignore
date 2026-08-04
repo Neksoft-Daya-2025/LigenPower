@@ -1,0 +1,21 @@
+# Local environment and dependency installs
+merchant/.env
+merchant/vendor/
+warranty/vendor/
+
+# Runtime data, caches, logs, and user uploads
+merchant/storage/
+merchant/bootstrap/cache/*.php
+warranty/writable/
+uploads/
+
+# Locally managed configuration and form submissions
+config/smtp-config.json
+config/quote-requests.json
+config/test-ride-requests.json
+config/comments.json
+
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+.vscode/
