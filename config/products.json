@@ -1,0 +1,19 @@
+{
+    "products": [
+        {
+            "id": "lfp-battery-1",
+            "name": "Ligen 12V 100Ah LFP Battery",
+            "price": 35000,
+            "image": "assets/images/product/pb1.jpg",
+            "url": "12v-100ah-lfp-battery",
+            "description": "Long-life LFP battery with advanced BMS protection.",
+            "stock": 10,
+            "category": "LFP Batteries",
+            "subcategory": "12V Battery",
+            "sku": "LP-LFP-12V100",
+            "active": true,
+            "updated_at": "2026-08-12T00:00:00+05:30"
+        }
+    ],
+    "updated_at": "2026-08-12T00:00:00+05:30"
+}

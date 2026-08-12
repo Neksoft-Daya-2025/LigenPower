@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dealer Login | Ligen Power</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; }
+        body { margin: 0; font-family: Inter, Arial, sans-serif; color: #14221f; background: #f4f8f6; min-height: 100vh; display: grid; place-items: center; padding: 24px; }
+        .login-shell { width: min(1040px, 100%); display: grid; grid-template-columns: 1.05fr .95fr; background: #fff; border: 1px solid #dbe7e2; box-shadow: 0 24px 70px rgba(23, 74, 61, .14); border-radius: 8px; overflow: hidden; }
+        .login-panel { padding: 54px; background: linear-gradient(135deg, #1f5b4f, #3a8f47); color: #fff; display: flex; flex-direction: column; justify-content: space-between; min-height: 580px; }
+        .brand { display: flex; align-items: center; gap: 14px; font-weight: 800; letter-spacing: .02em; }
+        .brand img { width: 64px; height: 64px; object-fit: contain; background: #fff; padding: 5px; border-radius: 8px; }
+        h1 { margin: 60px 0 14px; font-size: clamp(34px, 5vw, 56px); line-height: 1.02; letter-spacing: 0; }
+        .login-panel p { color: rgba(255,255,255,.88); font-size: 17px; line-height: 1.7; margin: 0; max-width: 520px; }
+        .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 40px; }
+        .proof div { border: 1px solid rgba(255,255,255,.28); padding: 16px; border-radius: 8px; background: rgba(255,255,255,.08); }
+        .proof strong { display: block; font-size: 24px; }
+        .proof span { color: rgba(255,255,255,.78); font-size: 13px; }
+        .form-panel { padding: 54px; display: flex; flex-direction: column; justify-content: center; }
+        .form-panel h2 { margin: 0 0 8px; font-size: 30px; }
+        .form-panel .hint { margin: 0 0 30px; color: #66756f; line-height: 1.6; }
+        label { display: block; margin: 18px 0 8px; color: #30443e; font-weight: 700; font-size: 14px; }
+        input { width: 100%; border: 1px solid #cbdad4; border-radius: 8px; padding: 14px 15px; font: inherit; outline: none; background: #fbfdfc; }
+        input:focus { border-color: #33766c; box-shadow: 0 0 0 4px rgba(51,118,108,.14); background: #fff; }
+        button { margin-top: 24px; width: 100%; border: 0; border-radius: 8px; padding: 15px 18px; background: #33766c; color: #fff; font: inherit; font-weight: 800; cursor: pointer; }
+        button:hover { background: #285f56; }
+        .alert { display: none; margin-top: 18px; padding: 13px 14px; border-radius: 8px; font-weight: 600; }
+        .alert.error { display: block; color: #8a1f1f; background: #fff0f0; border: 1px solid #ffd2d2; }
+        .demo { margin-top: 22px; padding: 14px; border-radius: 8px; background: #f1f7f4; color: #52655f; font-size: 13px; line-height: 1.6; }
+        .demo strong { color: #1f5b4f; }
+        @media (max-width: 820px) {
+            body { padding: 0; display: block; background: #fff; }
+            .login-shell { grid-template-columns: 1fr; min-height: 100vh; border: 0; border-radius: 0; box-shadow: none; }
+            .login-panel { min-height: auto; padding: 32px 22px; }
+            .form-panel { padding: 34px 22px; }
+            .proof { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <main class="login-shell">
+        <section class="login-panel">
+            <div class="brand"><img src="assets/images/Ligen-Registered-logo.png" alt="Ligen Power logo"><span>LIGEN POWER</span></div>
+            <div>
+                <h1>Dealer Stock Portal</h1>
+                <p>Secure access for dealers and distributors to view available stock and raise professional pre-booking requests.</p>
+                <div class="proof">
+                    <div><strong>Live</strong><span>Stock visibility</span></div>
+                    <div><strong>Fast</strong><span>Pre-booking</span></div>
+                    <div><strong>Admin</strong><span>Managed inventory</span></div>
+                </div>
+            </div>
+        </section>
+        <section class="form-panel">
+            <h2>Sign in</h2>
+            <p class="hint">Use your dealer or distributor credentials to continue.</p>
+            <form id="dealer-login-form">
+                <label for="dealer-email">Email address</label>
+                <input type="email" id="dealer-email" autocomplete="username" required placeholder="dealer@company.com">
+                <label for="dealer-password">Password</label>
+                <input type="password" id="dealer-password" autocomplete="current-password" required placeholder="Enter password">
+                <button type="submit" id="login-button">Login to Portal</button>
+                <div id="login-alert" class="alert"></div>
+            </form>
+            <div class="demo"><strong>Demo access:</strong><br>dealer@ligenpower.com / Dealer@123<br>distributor@ligenpower.com / Distributor@123</div>
+        </section>
+    </main>
+    <script>
+        document.getElementById('dealer-login-form').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const button = document.getElementById('login-button');
+            const alertBox = document.getElementById('login-alert');
+            alertBox.className = 'alert';
+            alertBox.textContent = '';
+            button.disabled = true;
+            button.textContent = 'Checking...';
+            try {
+                const response = await fetch('api/dealer-portal.php?action=login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        email: document.getElementById('dealer-email').value.trim(),
+                        password: document.getElementById('dealer-password').value
+                    })
+                });
+                const data = await response.json();
+                if (!data.success) throw new Error(data.message || 'Login failed.');
+                sessionStorage.setItem('ligen_dealer_user', JSON.stringify(data.user));
+                window.location.href = 'dealer-portal.html';
+            } catch (error) {
+                alertBox.textContent = error.message || 'Login failed.';
+                alertBox.className = 'alert error';
+            } finally {
+                button.disabled = false;
+                button.textContent = 'Login to Portal';
+            }
+        });
+    </script>
+</body>
+</html>

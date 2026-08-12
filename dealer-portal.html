@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dealer Stock Portal | Ligen Power</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; }
+        body { margin: 0; font-family: Inter, Arial, sans-serif; color: #14221f; background: #f4f8f6; }
+        header { background: #fff; border-bottom: 1px solid #dce9e4; position: sticky; top: 0; z-index: 10; }
+        .topbar { width: min(1180px, calc(100% - 32px)); margin: 0 auto; min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+        .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; }
+        .brand img { width: 54px; height: 54px; object-fit: contain; }
+        .user-chip { display: flex; align-items: center; gap: 12px; color: #53655f; font-size: 14px; }
+        .logout { border: 1px solid #cbdad4; background: #fff; color: #23443c; border-radius: 8px; padding: 10px 14px; font-weight: 800; cursor: pointer; }
+        main { width: min(1180px, calc(100% - 32px)); margin: 34px auto 54px; }
+        .hero { display: grid; grid-template-columns: 1fr auto; gap: 18px; align-items: end; margin-bottom: 24px; }
+        h1 { margin: 0 0 8px; font-size: clamp(30px, 5vw, 48px); letter-spacing: 0; }
+        .hero p { margin: 0; color: #63746e; font-size: 16px; line-height: 1.6; }
+        .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 22px 0; }
+        .stat { background: #fff; border: 1px solid #dce9e4; border-radius: 8px; padding: 18px; }
+        .stat strong { display: block; font-size: 28px; color: #1f5b4f; }
+        .stat span { color: #63746e; font-size: 13px; }
+        .toolbar { display: grid; grid-template-columns: 1fr 220px; gap: 12px; margin: 20px 0; }
+        input, select, textarea { width: 100%; border: 1px solid #cbdad4; border-radius: 8px; padding: 12px 13px; font: inherit; outline: none; background: #fff; }
+        input:focus, select:focus, textarea:focus { border-color: #33766c; box-shadow: 0 0 0 4px rgba(51,118,108,.14); }
+        .stock-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+        .card { background: #fff; border: 1px solid #dce9e4; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; min-height: 100%; box-shadow: 0 12px 34px rgba(23,74,61,.08); }
+        .card img { width: 100%; aspect-ratio: 16 / 10; object-fit: contain; background: #f7faf8; padding: 14px; }
+        .card-body { padding: 18px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
+        .badge { display: inline-flex; align-items: center; width: fit-content; border-radius: 999px; padding: 6px 10px; font-size: 12px; font-weight: 800; color: #1f5b4f; background: #eaf6ef; }
+        .title { margin: 0; font-size: 18px; line-height: 1.35; }
+        .desc { color: #64756f; line-height: 1.55; margin: 0; font-size: 14px; flex: 1; }
+        .meta { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .meta div { background: #f6faf8; border-radius: 8px; padding: 10px; }
+        .meta span { display: block; color: #71837d; font-size: 12px; }
+        .meta strong { color: #172c26; }
+        .book-btn { border: 0; border-radius: 8px; background: #33766c; color: #fff; padding: 12px 14px; font-weight: 800; cursor: pointer; }
+        .book-btn:disabled { background: #a7b5b0; cursor: not-allowed; }
+        .modal-overlay { position: fixed; inset: 0; background: rgba(9,24,20,.58); display: none; align-items: center; justify-content: center; padding: 16px; z-index: 50; }
+        .modal-overlay.open { display: flex; }
+        .modal { width: min(620px, 100%); max-height: 92vh; overflow: auto; background: #fff; border-radius: 8px; box-shadow: 0 28px 90px rgba(0,0,0,.24); }
+        .modal-head, .modal-foot { padding: 20px 24px; border-bottom: 1px solid #e3ece8; display: flex; justify-content: space-between; gap: 12px; align-items: center; }
+        .modal-foot { border-top: 1px solid #e3ece8; border-bottom: 0; justify-content: flex-end; }
+        .modal h2 { margin: 0; font-size: 22px; }
+        .modal-body { padding: 24px; }
+        label { display: block; margin: 14px 0 7px; font-weight: 700; font-size: 14px; }
+        .close { border: 0; background: #edf4f1; border-radius: 8px; width: 38px; height: 38px; cursor: pointer; font-size: 22px; }
+        .secondary { border: 1px solid #cbdad4; background: #fff; color: #23443c; border-radius: 8px; padding: 12px 15px; font-weight: 800; cursor: pointer; }
+        .primary { border: 0; background: #33766c; color: #fff; border-radius: 8px; padding: 12px 15px; font-weight: 800; cursor: pointer; }
+        .alert { display: none; margin: 0 0 16px; padding: 13px 14px; border-radius: 8px; font-weight: 700; }
+        .alert.success { display: block; background: #ecf8ef; color: #235b32; border: 1px solid #ccebd2; }
+        .alert.error { display: block; background: #fff0f0; color: #8a1f1f; border: 1px solid #ffd2d2; }
+        @media (max-width: 900px) {
+            .hero, .toolbar { grid-template-columns: 1fr; }
+            .stock-grid, .stats { grid-template-columns: 1fr; }
+            .topbar { align-items: flex-start; flex-direction: column; padding: 14px 0; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="topbar">
+            <div class="brand"><img src="assets/images/Ligen-Registered-logo.png" alt="Ligen Power logo"><span>LIGEN POWER DEALER PORTAL</span></div>
+            <div class="user-chip"><span id="dealer-summary">Loading...</span><button class="logout" id="logout-button">Logout</button></div>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div>
+                <h1>Available Stock</h1>
+                <p>View current inventory and submit pre-booking requests for confirmed dealer follow-up.</p>
+            </div>
+            <button class="secondary" id="refresh-products">Refresh Stock</button>
+        </section>
+        <div class="stats">
+            <div class="stat"><strong id="total-products">0</strong><span>Active products</span></div>
+            <div class="stat"><strong id="total-stock">0</strong><span>Total available units</span></div>
+            <div class="stat"><strong id="low-stock">0</strong><span>Low stock items</span></div>
+        </div>
+        <div class="toolbar">
+            <input type="search" id="stock-search" placeholder="Search product, SKU or category">
+            <select id="stock-category"><option value="">All Categories</option></select>
+        </div>
+        <div id="portal-alert" class="alert"></div>
+        <section class="stock-grid" id="stock-grid"></section>
+    </main>
+    <div class="modal-overlay" id="booking-modal">
+        <div class="modal">
+            <div class="modal-head"><h2>Pre-book Product</h2><button class="close" id="close-booking">&times;</button></div>
+            <form id="booking-form">
+                <div class="modal-body">
+                    <div id="booking-alert" class="alert"></div>
+                    <input type="hidden" id="booking-product-id">
+                    <label>Product</label>
+                    <input type="text" id="booking-product-name" readonly>
+                    <label>Quantity</label>
+                    <input type="number" id="booking-quantity" min="1" value="1" required>
+                    <label>Dealer Name</label>
+                    <input type="text" id="booking-dealer-name" required>
+                    <label>Email</label>
+                    <input type="email" id="booking-dealer-email" required>
+                    <label>Company</label>
+                    <input type="text" id="booking-company">
+                    <label>Note</label>
+                    <textarea id="booking-note" rows="4" placeholder="Any delivery preference or product requirement"></textarea>
+                </div>
+                <div class="modal-foot"><button type="button" class="secondary" id="cancel-booking">Cancel</button><button type="submit" class="primary" id="submit-booking">Submit Pre-booking</button></div>
+            </form>
+        </div>
+    </div>
+    <script>
+        const user = JSON.parse(sessionStorage.getItem('ligen_dealer_user') || 'null');
+        if (!user) window.location.href = 'dealer-login.html';
+        let products = [];
+        document.getElementById('dealer-summary').textContent = user ? `${user.name} - ${user.company}` : '';
+
+        function escapeHtml(value) {
+            return String(value || '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[char]));
+        }
+
+        function showAlert(id, message, type) {
+            const el = document.getElementById(id);
+            el.textContent = message;
+            el.className = `alert ${type}`;
+        }
+
+        async function loadProducts() {
+            try {
+                const response = await fetch('api/dealer-portal.php?action=products');
+                const data = await response.json();
+                if (!data.success) throw new Error(data.message || 'Could not load products.');
+                products = data.products || [];
+                renderProducts();
+            } catch (error) {
+                showAlert('portal-alert', error.message || 'Could not load stock.', 'error');
+            }
+        }
+
+        function renderProducts() {
+            const search = document.getElementById('stock-search').value.trim().toLowerCase();
+            const categorySelect = document.getElementById('stock-category');
+            const selected = categorySelect.value;
+            const categories = [...new Set(products.map(item => item.category || 'Uncategorized'))].sort();
+            categorySelect.innerHTML = '<option value="">All Categories</option>' + categories.map(category => `<option value="${escapeHtml(category)}">${escapeHtml(category)}</option>`).join('');
+            categorySelect.value = categories.includes(selected) ? selected : '';
+            const filtered = products.filter(item => {
+                const haystack = [item.name, item.sku, item.category, item.subcategory].join(' ').toLowerCase();
+                return (!search || haystack.includes(search)) && (!categorySelect.value || (item.category || 'Uncategorized') === categorySelect.value);
+            });
+            document.getElementById('total-products').textContent = products.length;
+            document.getElementById('total-stock').textContent = products.reduce((sum, item) => sum + (Number(item.stock) || 0), 0);
+            document.getElementById('low-stock').textContent = products.filter(item => (Number(item.stock) || 0) <= 5).length;
+            const grid = document.getElementById('stock-grid');
+            if (!filtered.length) {
+                grid.innerHTML = '<div class="card"><div class="card-body"><h3 class="title">No stock found</h3><p class="desc">Try another search or category filter.</p></div></div>';
+                return;
+            }
+            grid.innerHTML = filtered.map(item => {
+                const stock = Number(item.stock) || 0;
+                return `<article class="card">
+                    <img src="${escapeHtml(item.image || 'assets/images/Ligen-Registered-logo.png')}" alt="${escapeHtml(item.name)}">
+                    <div class="card-body">
+                        <span class="badge">${escapeHtml(item.category || 'Uncategorized')}</span>
+                        <h3 class="title">${escapeHtml(item.name)}</h3>
+                        <p class="desc">${escapeHtml(item.description || 'Available for dealer pre-booking.')}</p>
+                        <div class="meta"><div><span>SKU</span><strong>${escapeHtml(item.sku || '-')}</strong></div><div><span>Stock</span><strong>${stock} units</strong></div></div>
+                        <button class="book-btn" onclick="openBooking('${escapeHtml(item.id)}')" ${stock <= 0 ? 'disabled' : ''}>${stock > 0 ? 'Pre-book Now' : 'Out of Stock'}</button>
+                    </div>
+                </article>`;
+            }).join('');
+        }
+
+        function openBooking(id) {
+            const item = products.find(product => product.id === id);
+            if (!item) return;
+            document.getElementById('booking-form').reset();
+            document.getElementById('booking-alert').className = 'alert';
+            document.getElementById('booking-product-id').value = item.id;
+            document.getElementById('booking-product-name').value = `${item.name} (${Number(item.stock) || 0} units available)`;
+            document.getElementById('booking-quantity').max = Number(item.stock) || 1;
+            document.getElementById('booking-dealer-name').value = user.name || '';
+            document.getElementById('booking-dealer-email').value = user.email || '';
+            document.getElementById('booking-company').value = user.company || '';
+            document.getElementById('booking-modal').classList.add('open');
+        }
+
+        function closeBooking() {
+            document.getElementById('booking-modal').classList.remove('open');
+        }
+
+        document.getElementById('booking-form').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const button = document.getElementById('submit-booking');
+            button.disabled = true;
+            button.textContent = 'Submitting...';
+            try {
+                const response = await fetch('api/dealer-portal.php?action=prebook', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        product_id: document.getElementById('booking-product-id').value,
+                        quantity: document.getElementById('booking-quantity').value,
+                        dealer_name: document.getElementById('booking-dealer-name').value.trim(),
+                        dealer_email: document.getElementById('booking-dealer-email').value.trim(),
+                        company: document.getElementById('booking-company').value.trim(),
+                        note: document.getElementById('booking-note').value.trim()
+                    })
+                });
+                const data = await response.json();
+                if (!data.success) throw new Error(data.message || 'Could not submit booking.');
+                showAlert('booking-alert', data.message, 'success');
+                setTimeout(closeBooking, 900);
+            } catch (error) {
+                showAlert('booking-alert', error.message || 'Could not submit booking.', 'error');
+            } finally {
+                button.disabled = false;
+                button.textContent = 'Submit Pre-booking';
+            }
+        });
+
+        document.getElementById('logout-button').addEventListener('click', function() { sessionStorage.removeItem('ligen_dealer_user'); window.location.href = 'dealer-login.html'; });
+        document.getElementById('refresh-products').addEventListener('click', loadProducts);
+        document.getElementById('stock-search').addEventListener('input', renderProducts);
+        document.getElementById('stock-category').addEventListener('change', renderProducts);
+        document.getElementById('close-booking').addEventListener('click', closeBooking);
+        document.getElementById('cancel-booking').addEventListener('click', closeBooking);
+        document.getElementById('booking-modal').addEventListener('click', event => { if (event.target.id === 'booking-modal') closeBooking(); });
+        loadProducts();
+    </script>
+</body>
+</html>

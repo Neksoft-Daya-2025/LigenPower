@@ -24,10 +24,11 @@ $defaultLinks = [
     [
         'id' => '2',
         'label' => 'Dealers and Distributors',
-        'url' => '#/dealers-distributors/',
+        'url' => 'dealer-login.html',
         'icon' => 'users',
         'order' => 2,
-        'active' => false
+        'active' => true,
+        'target' => '_self'
     ],
     [
         'id' => '3',

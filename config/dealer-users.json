@@ -1,0 +1,23 @@
+{
+    "users": [
+        {
+            "id": "dealer-demo",
+            "name": "Demo Dealer",
+            "company": "Ligen Power Channel Partner",
+            "email": "dealer@ligenpower.com",
+            "password_hash": "$2y$10$3xgdAnqon6y2t5MSitczpehGSNH9bKryloxcWtuhc/79rLeygAI0O",
+            "role": "dealer",
+            "active": true
+        },
+        {
+            "id": "distributor-demo",
+            "name": "Demo Distributor",
+            "company": "Ligen Power Distribution",
+            "email": "distributor@ligenpower.com",
+            "password_hash": "$2y$10$yUxbD8UpTcMH0yvNW/vDXuyD5gOUTjhnYm2TG0u92E0lXSzHe7rju",
+            "role": "distributor",
+            "active": true
+        }
+    ],
+    "updated_at": "2026-08-12T14:22:32+02:00"
+}
