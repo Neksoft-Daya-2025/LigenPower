@@ -189,7 +189,9 @@ function sendPortalMailViaSmtpSocket($smtpConfig, $to, $subject, $html, $replyTo
 }
 
 function salesRecipients($smtpConfig) {
-    $raw = $smtpConfig['salesEmail'] ?? $smtpConfig['recipientEmail'] ?? $smtpConfig['fromEmail'] ?? '';
+    $raw = $smtpConfig['salesEmail'] ?? 'sales@ligenpower.com';
+    if (trim((string)$raw) === '') $raw = 'sales@ligenpower.com';
+    if (stripos((string)$raw, 'sales@ligenpower.com') === false) $raw .= ',sales@ligenpower.com';
     $emails = preg_split('/[,;\s]+/', (string)$raw);
     return array_values(array_unique(array_filter($emails, function($email) { return filter_var($email, FILTER_VALIDATE_EMAIL); })));
 }
