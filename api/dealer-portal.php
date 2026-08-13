@@ -81,12 +81,111 @@ function sendPortalMail($smtpConfig, $to, $subject, $html, $replyTo = '') {
         }
     }
 
+    $smtpResult = sendPortalMailViaSmtpSocket($smtpConfig, $to, $subject, $html, $replyTo);
+    if ($smtpResult['sent']) return $smtpResult;
+
     $fromEmail = $smtpConfig['fromEmail'] ?? 'no-reply@localhost';
     $fromName = $smtpConfig['fromName'] ?? 'Ligen Power';
     $headers = "From: {$fromName} <{$fromEmail}>\r\n";
     if ($replyTo && filter_var($replyTo, FILTER_VALIDATE_EMAIL)) $headers .= "Reply-To: {$replyTo}\r\n";
     $headers .= "MIME-Version: 1.0\r\nContent-Type: text/html; charset=UTF-8\r\n";
-    return @mail($to, $subject, $html, $headers) ? ['sent' => true, 'message' => 'Email sent'] : ['sent' => false, 'message' => 'mail() failed'];
+    return @mail($to, $subject, $html, $headers) ? ['sent' => true, 'message' => 'Email sent'] : ['sent' => false, 'message' => 'SMTP socket failed: ' . $smtpResult['message'] . '; mail() failed'];
+}
+
+function smtpReadLine($socket) {
+    $data = '';
+    while (!feof($socket)) {
+        $line = fgets($socket, 515);
+        if ($line === false) break;
+        $data .= $line;
+        if (isset($line[3]) && $line[3] === ' ') break;
+    }
+    return trim($data);
+}
+
+function smtpCommand($socket, $command, $expectedCodes) {
+    if ($command !== null) fwrite($socket, $command . "\r\n");
+    $response = smtpReadLine($socket);
+    $code = (int)substr($response, 0, 3);
+    if (!in_array($code, (array)$expectedCodes, true)) {
+        throw new Exception(trim($command ?: 'CONNECT') . ' failed: ' . $response);
+    }
+    return $response;
+}
+
+function smtpAddress($email) {
+    return '<' . str_replace(["\r", "\n", '<', '>'], '', $email) . '>';
+}
+
+function smtpHeaderText($value) {
+    $value = trim(str_replace(["\r", "\n"], ' ', (string)$value));
+    return preg_match('/[^\x20-\x7E]/', $value) ? '=?UTF-8?B?' . base64_encode($value) . '?=' : $value;
+}
+
+function smtpDotStuff($message) {
+    $message = str_replace(["\r\n", "\r"], "\n", $message);
+    $message = preg_replace('/^\./m', '..', $message);
+    return str_replace("\n", "\r\n", $message);
+}
+
+function sendPortalMailViaSmtpSocket($smtpConfig, $to, $subject, $html, $replyTo = '') {
+    if (empty($smtpConfig['host']) || empty($smtpConfig['username']) || empty($smtpConfig['password'])) {
+        return ['sent' => false, 'message' => 'SMTP host, username or password missing'];
+    }
+    $host = $smtpConfig['host'];
+    $port = (int)($smtpConfig['port'] ?? 587);
+    $encryption = strtolower($smtpConfig['encryption'] ?? 'tls');
+    $remote = $encryption === 'ssl' ? 'ssl://' . $host : $host;
+    $fromEmail = $smtpConfig['fromEmail'] ?? $smtpConfig['username'];
+    $fromName = $smtpConfig['fromName'] ?? 'Ligen Power';
+    $timeout = 25;
+    $errno = 0;
+    $errstr = '';
+
+    try {
+        $socket = @fsockopen($remote, $port, $errno, $errstr, $timeout);
+        if (!$socket) throw new Exception($errstr ?: 'Could not connect to SMTP server');
+        stream_set_timeout($socket, $timeout);
+        smtpCommand($socket, null, 220);
+        smtpCommand($socket, 'EHLO ' . ($_SERVER['SERVER_NAME'] ?? 'ligenpower.com'), 250);
+        if ($encryption === 'tls') {
+            smtpCommand($socket, 'STARTTLS', 220);
+            if (!stream_socket_enable_crypto($socket, true, STREAM_CRYPTO_METHOD_TLS_CLIENT)) {
+                throw new Exception('Could not enable TLS encryption');
+            }
+            smtpCommand($socket, 'EHLO ' . ($_SERVER['SERVER_NAME'] ?? 'ligenpower.com'), 250);
+        }
+        smtpCommand($socket, 'AUTH LOGIN', 334);
+        smtpCommand($socket, base64_encode($smtpConfig['username']), 334);
+        smtpCommand($socket, base64_encode($smtpConfig['password']), 235);
+        smtpCommand($socket, 'MAIL FROM:' . smtpAddress($fromEmail), 250);
+        smtpCommand($socket, 'RCPT TO:' . smtpAddress($to), [250, 251]);
+        smtpCommand($socket, 'DATA', 354);
+
+        $boundary = 'ligen_' . bin2hex(random_bytes(8));
+        $alt = trim(strip_tags(str_replace(['<br>', '<br/>', '<br />'], "\n", $html)));
+        $headers = [
+            'Date: ' . date(DATE_RFC2822),
+            'From: ' . smtpHeaderText($fromName) . ' ' . smtpAddress($fromEmail),
+            'To: ' . smtpAddress($to),
+            'Subject: ' . smtpHeaderText($subject),
+            'MIME-Version: 1.0',
+            'Content-Type: multipart/alternative; boundary="' . $boundary . '"'
+        ];
+        if ($replyTo && filter_var($replyTo, FILTER_VALIDATE_EMAIL)) $headers[] = 'Reply-To: ' . smtpAddress($replyTo);
+        $body = implode("\r\n", $headers) . "\r\n\r\n" .
+            '--' . $boundary . "\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Transfer-Encoding: 8bit\r\n\r\n" . $alt . "\r\n\r\n" .
+            '--' . $boundary . "\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Transfer-Encoding: 8bit\r\n\r\n" . $html . "\r\n\r\n" .
+            '--' . $boundary . "--";
+        fwrite($socket, smtpDotStuff($body) . "\r\n.\r\n");
+        smtpCommand($socket, null, 250);
+        smtpCommand($socket, 'QUIT', 221);
+        fclose($socket);
+        return ['sent' => true, 'message' => 'Email sent via SMTP'];
+    } catch (Exception $e) {
+        if (isset($socket) && is_resource($socket)) fclose($socket);
+        return ['sent' => false, 'message' => $e->getMessage()];
+    }
 }
 
 function salesRecipients($smtpConfig) {
