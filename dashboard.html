@@ -821,8 +821,8 @@
 				<div class="product-list-card">
 					<div class="product-list-heading"><div><h3>Reservation Requests</h3><span>Requests come from the secure dealer stock portal</span></div><span id="prebooking-count">0 requests</span></div>
 					<table class="products-table">
-						<thead><tr><th>Date</th><th>Dealer</th><th>Product</th><th>Qty</th><th>Status</th><th>Note</th></tr></thead>
-						<tbody id="prebookings-list"><tr><td colspan="6" style="text-align:center;padding:35px;color:#718096;">Loading pre-bookings...</td></tr></tbody>
+						<thead><tr><th>Date</th><th>Dealer</th><th>Product</th><th>Qty</th><th>Status</th><th>Note</th><th>Action</th></tr></thead>
+						<tbody id="prebookings-list"><tr><td colspan="7" style="text-align:center;padding:35px;color:#718096;">Loading pre-bookings...</td></tr></tbody>
 					</table>
 				</div>
 			</div>
@@ -3003,7 +3003,7 @@
 				const bookings = data.bookings || [];
 				document.getElementById('prebooking-count').textContent = `${bookings.length} request${bookings.length === 1 ? '' : 's'}`;
 				if (!bookings.length) {
-					list.innerHTML = '<tr><td colspan="6" style="text-align:center;padding:35px;color:#718096;">No dealer pre-booking requests yet.</td></tr>';
+					list.innerHTML = '<tr><td colspan="7" style="text-align:center;padding:35px;color:#718096;">No dealer pre-booking requests yet.</td></tr>';
 					return;
 				}
 				list.innerHTML = bookings.map(booking => {
@@ -3013,12 +3013,34 @@
 						<td><strong>${escapeProductText(booking.dealer_name || '-')}</strong><br><small style="color:#718096">${escapeProductText(booking.company || booking.dealer_email || '')}</small></td>
 						<td><strong>${escapeProductText(booking.product_name || '-')}</strong><br><small style="color:#718096">${escapeProductText(booking.sku || '')}</small></td>
 						<td>${Number(booking.quantity || 0)}</td>
-						<td><span class="badge badge-category">${escapeProductText(booking.status || 'Pending')}</span></td>
+						<td><select id="prebooking-status-${escapeProductText(booking.id)}" style="min-width:130px;padding:9px;border:1px solid #cbd5e0;border-radius:8px;">
+							${['Pending','Approved','Completed','Rejected'].map(status => `<option value="${status}" ${(booking.status || 'Pending') === status ? 'selected' : ''}>${status}</option>`).join('')}
+						</select></td>
 						<td>${escapeProductText(booking.note || '-')}</td>
+						<td><button class="btn-edit" onclick="updatePrebookingStatus('${escapeProductText(booking.id)}')">Update</button></td>
 					</tr>`;
 				}).join('');
 			} catch (error) {
-				list.innerHTML = `<tr><td colspan="6" style="text-align:center;padding:35px;color:#c53030;">${escapeProductText(error.message || 'Could not load pre-bookings.')}</td></tr>`;
+				list.innerHTML = `<tr><td colspan="7" style="text-align:center;padding:35px;color:#c53030;">${escapeProductText(error.message || 'Could not load pre-bookings.')}</td></tr>`;
+			}
+		}
+
+		async function updatePrebookingStatus(id) {
+			const select = document.getElementById('prebooking-status-' + id);
+			if (!select) return;
+			try {
+				const response = await fetch('api/dealer-portal.php?action=update-booking', {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({ id: id, status: select.value })
+				});
+				const data = await response.json();
+				if (!data.success) throw new Error(data.message || 'Status update failed.');
+				const emailNote = data.email && data.email.dealer && data.email.dealer.sent ? ' Email notification sent.' : ' Status saved; email was not confirmed.';
+				showAlert('prebookings-alert', data.message + emailNote, 'success');
+				loadPrebookings();
+			} catch (error) {
+				showAlert('prebookings-alert', error.message || 'Status update failed.', 'error');
 			}
 		}
 
