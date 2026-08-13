@@ -62,6 +62,7 @@ public function save_data(){
     $headers[] = 'Cookie: session_id=fJ5N1pneOTtiwh46l0NNZJCHaFEw5rufGUigukVbz2T_leI5oziEM2suSQ1nvXJCUwUxxWFEj72gBw_cXFB2';
     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
+    $result = curl_exec($ch);
     if (curl_errno($ch)) {
         $error = curl_error($ch);
         curl_close($ch);
