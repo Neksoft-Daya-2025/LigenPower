@@ -21,7 +21,13 @@ public function save_data(){
     $data = $this->request->getJSON(true); // true = return as array
  // print_r($data);exit;
     $p_date         = $data['p_date'] ?? null;
-    if($p_date <= date('Y-m-d')){
+    if (!$p_date || $p_date > date('Y-m-d')) {
+        return $this->response->setJSON([
+            'status' => 'error',
+            'message' => 'Future Date is Not Allowed'
+        ]);
+    }
+
     $serial_num     = $data['serial_num'] ?? null;
     $bill_num       = $data['bill_num'] ?? null;
     $seller_name    = $data['seller_name'] ?? null;
@@ -56,21 +62,22 @@ public function save_data(){
     $headers[] = 'Cookie: session_id=fJ5N1pneOTtiwh46l0NNZJCHaFEw5rufGUigukVbz2T_leI5oziEM2suSQ1nvXJCUwUxxWFEj72gBw_cXFB2';
     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
-    $result = curl_exec($ch);
-    $result_decode = json_decode($result);
-    $status = $result_decode->result->status;
-    $message = $result_decode->result->message;
-    $res['status'] = $status;
-    $res['message'] = $message;
-    echo json_encode($res);
     if (curl_errno($ch)) {
-        echo 'Error:' . curl_error($ch);exit;
+        $error = curl_error($ch);
+        curl_close($ch);
+        return $this->response->setJSON([
+            'status' => 'error',
+            'message' => 'Warranty service is currently unavailable. Please try again. ' . $error
+        ]);
     }
     curl_close($ch);
-    }else{
-        $res['status'] = 'error';
-        $res['message'] = 'Futute Date is Not Allowed';
-        echo json_encode($res);
-    }
+
+    $result_decode = json_decode($result);
+    $status = $result_decode->result->status ?? 'error';
+    $message = $result_decode->result->message ?? 'Warranty service returned an invalid response. Please try again.';
+    return $this->response->setJSON([
+        'status' => $status,
+        'message' => $message
+    ]);
     }
 }

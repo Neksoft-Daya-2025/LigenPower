@@ -62,7 +62,7 @@
             <div class="alert alert-danger text-center"><?= session()->getFlashdata('success') ?></div>
           <?php endif; ?>
     <h4 class="text-center mb-4 fw-bold text-success">Product Warranty Form</h4>
-    <form id="myForm" class="needs-validation" enctype="multipart/form-data">
+    <form id="myForm" class="needs-validation" enctype="multipart/form-data" novalidate>
       <?= csrf_field() ?>
       <div class="row g-3">
         <div class="col-md-4">
@@ -71,39 +71,39 @@
         </div>
         <div class="col-md-4">
           <label class="form-label">Purchase Date</label>
-          <input type="date" id="p_date" name="p_date" class="form-control">
+          <input type="date" id="p_date" name="p_date" class="form-control" required>
         </div>
         <div class="col-md-4">
           <label for="textOnlyInput" class="form-label">Bill Number</label>
-          <input type="text" id="bill_num" name="bill_num" class="form-control" placeholder="e.g., INV-00123"  >
+          <input type="text" id="bill_num" name="bill_num" class="form-control" placeholder="e.g., INV-00123" required>
         </div>
 
         <div class="col-md-6">
           <label class="form-label">Seller Name</label>
-          <input type="text" id="seller_name" name="seller_name" class="form-control" placeholder="e.g., Electronics Mart" onkeypress="return isTextOnly(event)" onpaste="return handlePaste(event)">
+          <input type="text" id="seller_name" name="seller_name" class="form-control" placeholder="e.g., Electronics Mart" onkeypress="return isTextOnly(event)" onpaste="return handlePaste(event)" required>
         </div>
         <div class="col-md-6">
           <label class="form-label">Customer Name</label>
-          <input type="text" id="customer_name" name="customer_name" class="form-control" placeholder="e.g., Jane Doe" onkeypress="return isTextOnly(event)" onpaste="return handlePaste(event)">
+          <input type="text" id="customer_name" name="customer_name" class="form-control" placeholder="e.g., Jane Doe" onkeypress="return isTextOnly(event)" onpaste="return handlePaste(event)" required>
         </div>
 
         <div class="col-md-6">
           <label class="form-label">Customer Email</label>
-          <input type="email" id="customer_email" name="customer_email" class="form-control" placeholder="e.g., warranty@example.com" oninput="validateEmail(this)">
+          <input type="email" id="customer_email" name="customer_email" class="form-control" placeholder="e.g., warranty@example.com" oninput="validateEmail(this)" required>
         </div>
         <div class="col-md-3">
           <label class="form-label">Customer Phone</label>
-          <input type="number" id="customer_phone" name="customer_phone" class="form-control" placeholder="e.g., 9876543210">
+          <input type="tel" id="customer_phone" name="customer_phone" class="form-control" placeholder="e.g., 9876543210" pattern="[0-9]{10}" maxlength="10" required>
         </div>
         <div class="col-md-3">
           <label class="form-label">Pincode</label>
-          <input type="number" id="pincode" name="pincode" class="form-control" placeholder="e.g., 123456">
+          <input type="tel" id="pincode" name="pincode" class="form-control" placeholder="e.g., 123456" pattern="[0-9]{6}" maxlength="6" required>
         </div>
 
         <div class="col-12">
           <label class="form-label">Upload Bill Receipt</label>
           <div class="upload-box">
-            <input class="form-control" id="imageFile" name="imageFile" type="file" accept=".pdf,.png,.jpg,.jpeg">
+            <input class="form-control" id="imageFile" name="imageFile" type="file" accept=".pdf,.png,.jpg,.jpeg" required>
             <small class="text-muted">Accepted: PDF, PNG, JPG (max 1MB)</small>
           </div>
         </div>
@@ -115,26 +115,37 @@
     </form>
   </div>
 </div>
-<script>
-    $(document).ready(function() { 
-        const myButton = document.getElementById('submitBtn');
-        myButton.disabled = true;
-    });
-</script>
 <script type="text/javascript">
  $('#submitBtn').click(function (e) {
     e.preventDefault();
+    const form = document.getElementById('myForm');
+    const button = this;
+    const originalButtonHtml = 'Submit';
+    const file = $('#imageFile')[0].files[0];
 
-     const button = this; // 'this' refers to the clicked button
-      button.innerHTML = `
-        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-        Loading...
-      `;
-      button.disabled = true; // Disable the button to prevent multiple submissions
+    form.classList.add('was-validated');
+    if (!form.checkValidity()) {
+        Swal.fire({ title: 'Missing details', text: 'Please fill all required fields correctly.', icon: 'warning', confirmButtonText: 'OK' });
+        return;
+    }
+    if (!file) {
+        Swal.fire({ title: 'Bill receipt required', text: 'Please upload bill receipt PDF, PNG or JPG.', icon: 'warning', confirmButtonText: 'OK' });
+        return;
+    }
+    const allowedTypes = ['application/pdf', 'image/png', 'image/jpeg'];
+    const allowedExt = /\.(pdf|png|jpe?g)$/i;
+    if (!allowedTypes.includes(file.type) && !allowedExt.test(file.name)) {
+        Swal.fire({ title: 'Invalid file', text: 'Only PDF, PNG and JPG files are allowed.', icon: 'error', confirmButtonText: 'OK' });
+        return;
+    }
+    if (file.size > 1024 * 1024) {
+        Swal.fire({ title: 'File too large', text: 'Please upload a file up to 1MB only.', icon: 'error', confirmButtonText: 'OK' });
+        return;
+    }
 
-    var file = $('#imageFile')[0].files[0]; // get the selected file
+    button.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...';
+    button.disabled = true;
 
-    if (file) {
         var reader = new FileReader();
 
         reader.onload = function (event) {
@@ -161,7 +172,7 @@
                 contentType: 'application/json',
                 data: JSON.stringify(formData),
                 success: function (response) {
-                    const check = JSON.parse(response);
+                    const check = typeof response === 'string' ? JSON.parse(response) : response;
                     const status = check.status;
                     const message = check.message;
                     if(status == 'error'){
@@ -181,19 +192,7 @@
                       Swal.fire({
                         title: 'Success!',
                         text: message,
-                        icon: 'Success',
-                        confirmButtonText: 'OK'
-                      }).then((result) => {
-                      if (result.isConfirmed) {
-                        location.reload();
-                      }
-                    });
-                    }
-                    if(status == 'error'){
-                      Swal.fire({
-                        title: 'Error!',
-                        text: message,
-                        icon: 'Success',
+                        icon: 'success',
                         confirmButtonText: 'OK'
                       }).then((result) => {
                       if (result.isConfirmed) {
@@ -204,14 +203,22 @@
                 },
                 error: function (error) {
                     console.error('Error:', error);
+                    Swal.fire({ title: 'Error!', text: 'Warranty submission failed. Please try again.', icon: 'error', confirmButtonText: 'OK' });
+                },
+                complete: function () {
+                    button.innerHTML = originalButtonHtml;
+                    button.disabled = false;
                 }
             });
         };
 
+        reader.onerror = function () {
+            button.innerHTML = originalButtonHtml;
+            button.disabled = false;
+            Swal.fire({ title: 'File error', text: 'Could not read uploaded receipt. Please try another file.', icon: 'error', confirmButtonText: 'OK' });
+        };
+
         reader.readAsDataURL(file); // convert to base64
-    } else {
-        alert('Please select an image first.');
-    }
 });
 </script>
 <script>
@@ -264,15 +271,6 @@ function handlePaste(evt) {
       }
     }
 
-    // Prevent form submission if invalid
-    const form = document.getElementById('emailForm');
-    form.addEventListener('submit', function(event) {
-      if (!form.checkValidity()) {
-        event.preventDefault();
-        event.stopPropagation();
-      }
-      form.classList.add('was-validated');
-    });
   </script>
 </body>
 </html>
